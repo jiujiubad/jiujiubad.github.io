@@ -24,7 +24,7 @@
     <!--Title-->
 
 
-<title>Archives | Hexo</title>
+<title>Ionic2 下处理 Android 设备下返回按钮的事件 | Hexo</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -116,75 +116,95 @@
     <section class="content-wrap">
         <div class="container">
             <div class="row">
-                <main class="col-md-8 main-content ">
-                    <div id="main">
-  <div id="post-list">
-    <ul class="archives-post-list">
-    	<h1 class="info">年 月</h1>
-        
-          <li class="post-items" _href="/2018/01/11/hello-world/">
-            <h3 class="post-item-title">
-            	<a href="/2018/01/11/hello-world/"> Hello World </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/2017/09/22/vscode/">
-            <h3 class="post-item-title">
-            	<a href="/2017/09/22/vscode/"> VSCode 高效开发必装插件视频教程 </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/2017/05/23/webpack2-tech-020/">
-            <h3 class="post-item-title">
-            	<a href="/2017/05/23/webpack2-tech-020/"> Webpack 2 视频教程 020 - Webpack 2 中的 HMR ( Hot Module Replacement ) </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/2017/05/21/webpack2-tech-018/">
-            <h3 class="post-item-title">
-            	<a href="/2017/05/21/webpack2-tech-018/"> Webpack 2 视频教程 018 - 使用可视化图表进行统计分析打包过程 </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/2017/05/15/webpack2-tech-012/">
-            <h3 class="post-item-title">
-            	<a href="/2017/05/15/webpack2-tech-012/"> Webpack 2 视频教程 012 - 理解Webpack 中的 CSS 作用域与 CSS Modules </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/2017/01/12/atom_video_lesson/">
-            <h3 class="post-item-title">
-            	<a href="/2017/01/12/atom_video_lesson/"> Atom 编辑器系列视频课程 </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/2016/12/28/ionic_super_starter/">
-            <h3 class="post-item-title">
-            	<a href="/2016/12/28/ionic_super_starter/"> Ionic 2 官方示例程序 Super Starter </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/2016/09/25/ionic2_android_handling-the-hardware-back-buttons/">
-            <h3 class="post-item-title">
-            	<a href="/2016/09/25/ionic2_android_handling-the-hardware-back-buttons/"> Ionic2 下处理 Android 设备下返回按钮的事件 </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/2016/04/26/ionic_chapter_2_install/">
-            <h3 class="post-item-title">
-            	<a href="/2016/04/26/ionic_chapter_2_install/"> Ionic 入门与实战之第二章第一节：Ionic 环境搭建之开发环境配置 </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/2013/01/04/DotNet_Performance_Tuning_ANTS_Performance_Profiler/">
-            <h3 class="post-item-title">
-            	<a href="/2013/01/04/DotNet_Performance_Tuning_ANTS_Performance_Profiler/"> .NET 性能调优之一：ANTS Performance Profiler 的使用 </a>
-            </h3>  
-          </li>
-        
-    </ul>
-  </div>
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="Ionic2 下处理 Android 设备下返回按钮的事件">
+            
+	            Ionic2 下处理 Android 设备下返回按钮的事件
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span>Ionic</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            Hybrid App
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2016/09/25</span>
+    </span>
 </div>
+
+            
+            
+            <p class="fa fa-exclamation-triangle warning">
+                本文于<strong>473</strong>天之前发表，文中内容可能已经过时。
+            </p>
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <p>本文分享了 Ionic2 下处理 Android 设备下返回按钮的事件，供参考。<br><a id="more"></a></p>
+<p>代码中我分享了如何捕捉 Ionic2 项目在 Android 设备下返回按钮事件，并在捕捉到的事件中可以灵活根据需求编写相关业务逻辑，如退出、返回等。<br>详细的逻辑处理参见下面代码即可。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;Component&#125; <span class="keyword">from</span> <span class="string">'@angular/core'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123;Platform, ionicBootstrap&#125; <span class="keyword">from</span> <span class="string">'ionic-angular'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123;StatusBar&#125; <span class="keyword">from</span> <span class="string">'ionic-native'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123;TabsPage&#125; <span class="keyword">from</span> <span class="string">'./pages/tabs/tabs'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123;App, NavController&#125; <span class="keyword">from</span> <span class="string">'ionic-angular'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123;ViewChild&#125; <span class="keyword">from</span> <span class="string">'@angular/core'</span>;</span><br><span class="line"></span><br><span class="line">@Component(&#123;</span><br><span class="line">  template: <span class="string">'&lt;ion-nav #rootNavController [root]="rootPage" #content swipe-back-enabled="false"&gt;&lt;/ion-nav&gt;'</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">MyApp</span> </span>&#123;</span><br><span class="line">  @ViewChild(<span class="string">'rootNavController'</span>) nav: NavController;</span><br><span class="line">  private rootPage: any;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">constructor</span>(private platform: Platform) &#123;</span><br><span class="line">    <span class="keyword">this</span>.rootPage = TabsPage;</span><br><span class="line"></span><br><span class="line">    platform.ready().then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// Okay, so the platform is ready and our plugins are available.</span></span><br><span class="line">      <span class="comment">// Here you can do any higher level native things you might need.</span></span><br><span class="line">      StatusBar.styleDefault();</span><br><span class="line">      <span class="comment">//退出按钮重写******开始******</span></span><br><span class="line">      <span class="built_in">document</span>.addEventListener(<span class="string">'backbutton'</span>, () =&gt; &#123;</span><br><span class="line">        <span class="keyword">let</span> activeVC = <span class="keyword">this</span>.nav.getActive();</span><br><span class="line">        <span class="keyword">let</span> page = activeVC.instance;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (!(page <span class="keyword">instanceof</span> TabsPage)) &#123;</span><br><span class="line">          <span class="keyword">if</span> (!<span class="keyword">this</span>.nav.canGoBack()) &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'检测到在根视图点击了返回按钮。'</span>);</span><br><span class="line">            <span class="keyword">return</span> platform.exitApp();</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="built_in">console</span>.log(<span class="string">'检测到在子路径中点击了返回按钮。'</span>);</span><br><span class="line">          <span class="keyword">return</span> <span class="keyword">this</span>.nav.pop();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">let</span> tabs = page.tabs;</span><br><span class="line">        <span class="keyword">let</span> activeNav = tabs.getSelected();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (!activeNav.canGoBack()) &#123;</span><br><span class="line">          <span class="built_in">console</span>.log(<span class="string">'检测到在 tab 页面的顶层点击了返回按钮。'</span>);</span><br><span class="line">          <span class="keyword">return</span> platform.exitApp();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'检测到当前 tab 弹出层的情况下点击了返回按钮。'</span>);</span><br><span class="line">        <span class="keyword">return</span> activeNav.pop();</span><br><span class="line"></span><br><span class="line">      &#125;, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">      <span class="comment">//退出按钮重写******结束******</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">ionicBootstrap(MyApp);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    <div class="post-footer">   
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>  
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2016/12/28/ionic_super_starter/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/2016/04/26/ionic_chapter_2_install/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMzA1MS85NjEz">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
 
 
 
