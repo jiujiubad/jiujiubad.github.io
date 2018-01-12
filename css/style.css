@@ -233,7 +233,7 @@ pre {
   width: 100%;
 }
 /*====================================================
-    header 
+    header
 ====================================================*/
 .main-header {
   position: relative;
@@ -678,7 +678,7 @@ pre {
   overflow: auto;
   line-height: 1.5;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  color: #808080;
+  color: #ddd;
   background-color: #f9f9f9;
 }
 .post-content pre code {
@@ -1006,7 +1006,7 @@ pre {
   color: #666666;
 }
 /*====================================================
-   back-to-top 
+   back-to-top
 ====================================================*/
 #back-to-top {
   position: fixed;
