@@ -214,15 +214,15 @@ jQuery是一套最多人使用的 JavaScript 函式库，可以撰写各种网�
     <article class="post">
         
             <div class="post-media">
-                <a href="/posts/d7c2c06c/">
-                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"  alt="ror-system-编程语言第一集">
+                <a href="/posts/7286171a/">
+                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"  alt="ror-system-网站安全">
                 </a>
             </div>
         
         <div class="post-content">
             <div class="post-head home-post-head">
                 <h1 class="post-title">
-                    <a href="/posts/d7c2c06c/">ror-system-编程语言第一集</a>
+                    <a href="/posts/7286171a/">ror-system-网站安全</a>
                 </h1>
                 <div class="post-meta">  &bull;
                     <time class="post-date" datetime="" title="">
@@ -231,18 +231,18 @@ jQuery是一套最多人使用的 JavaScript 函式库，可以撰写各种网�
                 </div>
             </div>
             <p class="brief">
-                程序是如何运作的？1、前言
-程序在计算机中是如何执行的?
-Ruby 编程语言和其他程式语言有什么不同?
-计算机的架构是什么？内存是干嘛的？
-操作系统是干嘛的?
-各种数据型态的差异
-为什么有乱码? 什么是 Unicode 万国码?
-什么是正规表示法 Regular Expression，这可以干嘛？
-什么是算法、数据结构？
-如何用 BigO 评估算法效能，了解不同数据结构的效能差异
+                第二章
+XSS跨站脚本攻击是什么？
+是恶意用户，把代码注入网页的，安全漏洞攻击。
 
-2、什么...
+
+
+
+①、sanitize 白名单**过滤**
+只允许部分的 HTML 标籤：&lt;%= sanitize comment.content %&gt;
+
+
+②、由于 Rails 默认会脱逸 HTML 的关系，所以 Rails 对 XSS 是有了基本的防御。需用.html_safe小心处理那些是安全的字符串、...
             </p>
         </div>
     </article>
@@ -447,12 +447,11 @@ Rails c 的代码很乱，可以重新排版
 
 
 
-
             </main>
             
     <aside class="col-md-3 sidebar">
         
-        
+        <!-- 
     <div class="widget">
         <h3 class="title">Search</h3>
         <div id="search-form">
@@ -479,7 +478,7 @@ Rails c 的代码很乱，可以重新排版
             </div>
         </div>
     </div>
-
+ -->
 
         
         

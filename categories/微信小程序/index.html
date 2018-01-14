@@ -271,14 +271,14 @@
         
             <div class="post-media">
                 <a href="/posts/6926316/">
-                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fng5pmwdonj30cd08u0sx.jpg"  alt="wx-system-99小程序项目后端api开发进度">
+                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fng5pmwdonj30cd08u0sx.jpg"  alt="wx-system-99小程序项目开发进度">
                 </a>
             </div>
         
         <div class="post-content">
             <div class="post-head home-post-head">
                 <h1 class="post-title">
-                    <a href="/posts/6926316/">wx-system-99小程序项目后端api开发进度</a>
+                    <a href="/posts/6926316/">wx-system-99小程序项目开发进度</a>
                 </h1>
                 <div class="post-meta">  &bull;
                     <time class="post-date" datetime="" title="">
@@ -287,9 +287,9 @@
                 </div>
             </div>
             <p class="brief">
-                92、can search category on product#index (many to many)1）在product#inde可以筛选分类category。product和category是多对多关系。
-2）参考教程http://superlei-blog.logdown.com/posts/1744668-a-many-to-many-classification-lines
-...
+                保证搜索css命名的唯一性，只要确保外层不同，外层一用product-Box，外层二用p_show-head，外层三用p_show-head-input。里层一般不加class，直接用image、button、icon等。——搜索的时候直接搜索外层，再稍微找找就能找到具体的css。
+css的class命名：！！目的是好搜、好找
+1）web端，box表示所有product页面都可以共用。最外层...
             </p>
         </div>
     </article>
@@ -334,14 +334,14 @@
         
             <div class="post-media">
                 <a href="/posts/6926316/">
-                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fng5pmwdonj30cd08u0sx.jpg"  alt="wx-system-99小程序项目开发进度">
+                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fng5pmwdonj30cd08u0sx.jpg"  alt="wx-system-99小程序项目后端api开发进度">
                 </a>
             </div>
         
         <div class="post-content">
             <div class="post-head home-post-head">
                 <h1 class="post-title">
-                    <a href="/posts/6926316/">wx-system-99小程序项目开发进度</a>
+                    <a href="/posts/6926316/">wx-system-99小程序项目后端api开发进度</a>
                 </h1>
                 <div class="post-meta">  &bull;
                     <time class="post-date" datetime="" title="">
@@ -350,9 +350,9 @@
                 </div>
             </div>
             <p class="brief">
-                保证搜索css命名的唯一性，只要确保外层不同，外层一用product-Box，外层二用p_show-head，外层三用p_show-head-input。里层一般不加class，直接用image、button、icon等。——搜索的时候直接搜索外层，再稍微找找就能找到具体的css。
-css的class命名：！！目的是好搜、好找
-1）web端，box表示所有product页面都可以共用。最外层...
+                92、can search category on product#index (many to many)1）在product#inde可以筛选分类category。product和category是多对多关系。
+2）参考教程http://superlei-blog.logdown.com/posts/1744668-a-many-to-many-classification-lines
+...
             </p>
         </div>
     </article>
@@ -430,15 +430,15 @@ css的class命名：！！目的是好搜、好找
     <article class="post">
         
             <div class="post-media">
-                <a href="/posts/e27ad1c4/">
-                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fnfwxbwogcj30dy0ccwer.jpg"  alt="wx-function-搜索的原理(实例)">
+                <a href="/posts/fc1e8879/">
+                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws3.sinaimg.cn/large/006tNc79gy1fnfuf5yqi5j30di09sq34.jpg"  alt="wx-page-商城分类页面排版美化">
                 </a>
             </div>
         
         <div class="post-content">
             <div class="post-head home-post-head">
                 <h1 class="post-title">
-                    <a href="/posts/e27ad1c4/">wx-function-搜索的原理(实例)</a>
+                    <a href="/posts/fc1e8879/">wx-page-商城分类页面排版美化</a>
                 </h1>
                 <div class="post-meta">  &bull;
                     <time class="post-date" datetime="" title="">
@@ -447,15 +447,9 @@ css的class命名：！！目的是好搜、好找
                 </div>
             </div>
             <p class="brief">
-                参考资料 微信小程序实战（二）—实现搜索页面 by杨小事er
-本案例github源码
-一、搜索原理
-1、数据的获取和页面跳转
- 需要元素：input页面、resul页面、官方文档api的数据缓存部分如wx.setStorageSync、wx.clearStorageSync()
-
-
-input绑定bindInput函数，将输入的值存在inputValue中
-button 用bindtap绑定...
+                
+1、搜索框wxml
+123456&lt;view class=&quot;search&quot;&gt;  &lt;navigator url=&quot;/pages/search/search&quot; class=&quot;input&quot;&gt;    &lt;image class=&quot;icon&quot;&gt;&lt;/image&gt;    &lt;t...
             </p>
         </div>
     </article>
@@ -473,12 +467,11 @@ button 用bindtap绑定...
 
 
 
-
             </main>
             
     <aside class="col-md-3 sidebar">
         
-        
+        <!-- 
     <div class="widget">
         <h3 class="title">Search</h3>
         <div id="search-form">
@@ -505,7 +498,7 @@ button 用bindtap绑定...
             </div>
         </div>
     </div>
-
+ -->
 
         
         
