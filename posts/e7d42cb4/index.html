@@ -1,0 +1,652 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>ror-system-编程语言第二集 | Hexo</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+    <div class="hide">
+    	<script src="https://s4.cnzz.com/z_stat.php?id=1263868967&web_id=1263868967" language="JavaScript"></script>
+    </div>
+
+
+
+
+
+
+    
+</head>
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner2.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="">
+            <img src="/img/avatar.jpg" alt="logo头像">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题">  
+             
+    	</div>
+    </div>
+</header>
+      <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation"><a href="/"><i class="fa fa-fw "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/前端/"><i class="fa fa-fw "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/后端/"><i class="fa fa-fw "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/工具/"><i class="fa fa-fw "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/资源/"><i class="fa fa-fw "></i>资源</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+      <section class="content-wra aa99">
+        <div class="row">
+            <main class="col-md-9 main-content m-post">
+                <p id="process"></p>
+<article class="post pp99">
+    <div class="post-head">
+        <h1 id="ror-system-编程语言第二集">
+            
+	            ror-system-编程语言第二集
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span>ror系统</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            ror系统
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/12/14</span>
+    </span>
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h1 id="函数式编程"><a href="#函数式编程" class="headerlink" title="函数式编程"></a>函数式编程</h1><h2 id="12、匿名函式"><a href="#12、匿名函式" class="headerlink" title="12、匿名函式"></a>12、匿名函式</h2><ul>
+<li><p>函式也是一种数据类型。又叫做 <a href="https://zh.wikipedia.org/wiki/%E5%A4%B4%E7%AD%89%E5%87%BD%E6%95%B0" target="_blank" rel="noopener">First-class function 头等函数</a>。</p>
+</li>
+<li><p>以下的 Ruby 程式码中，变量 <code>x</code> 就是一个<strong>函式变量</strong>。它的值 <code>-&gt;{ puts &quot;Hello World&quot;}</code> 叫做<strong>匿名函式</strong>。匿名函式要透过 <code>.call</code> 才会实际调用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = -&gt; &#123; puts &quot;Hello World&quot; &#125;</span><br><span class="line">x.call # 输出 Hello World</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>-&gt;</code> 等同于 <code>lambda</code> 等同于 <code>Proc.new</code></li>
+</ul>
+<p>​</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = function()&#123; console.log(&quot;Hello World&quot;) &#125;</span><br><span class="line">x() # 输出 Hello World</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在 JavaScript 中调用一个函式一定要加上括号，所以用 <code>x()</code> 表示触发调用。</li>
+</ul>
+</li>
+<li><p>既然函式也是一种数据类型，我们就可以将这个函式变量当作参数来传递</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">foo = -&gt; &#123; puts &quot;foo&quot; &#125;</span><br><span class="line"></span><br><span class="line">def bar(x)</span><br><span class="line">  puts &quot;bar&quot;</span><br><span class="line">  x.call</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">bar(foo)</span><br><span class="line"></span><br><span class="line"># 输出</span><br><span class="line"></span><br><span class="line"># bar</span><br><span class="line"></span><br><span class="line"># foo</span><br></pre></td></tr></table></figure>
+<ul>
+<li>注意到第一行宣告 <code>foo</code> 函式的时候，我们并没有真的调用它，直到 <code>x.call</code> 时才调用它。</li>
+</ul>
+</li>
+<li><p>直接内嵌的写法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def bar(x)</span><br><span class="line">  puts &quot;bar&quot;</span><br><span class="line">  x.call</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">bar( -&gt;&#123; puts &quot;zoo&quot; &#125; )</span><br><span class="line"></span><br><span class="line"># 输出</span><br><span class="line"></span><br><span class="line"># bar</span><br><span class="line"></span><br><span class="line"># zoo</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ruby写法</p>
+<ul>
+<li>如果参数列最后一个参数是匿名函式，那么就会用这种简化的写法：传入的匿名函式用 <code>{ ...}</code> 或 <code>do .... end</code> 表示，然后在函式里面用 <code>yield</code> 这个关键字来实际调用它。</li>
+<li>通常单行的程式会用 <code>{ ... }</code> 的写法，多行则会用 <code>do ... end</code> 的写法。这只是 Coding Style 惯例而已，作用是一样的。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">def bar</span><br><span class="line">  puts &quot;bar&quot;</span><br><span class="line">  yield(&quot;zoo&quot;)</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">bar do |x|</span><br><span class="line">  puts x</span><br><span class="line">  puts &quot;foo&quot;</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"># 输出</span><br><span class="line"></span><br><span class="line"># bar</span><br><span class="line"></span><br><span class="line"># zoo</span><br><span class="line"></span><br><span class="line"># foo</span><br><span class="line"></span><br><span class="line">其中 yield(&quot;zoo&quot;) 会将 &quot;zoo&quot; 带入匿名函式，也就是函式 bar 的 x 参数</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="13、匿名函式的应用"><a href="#13、匿名函式的应用" class="headerlink" title="13、匿名函式的应用"></a>13、匿名函式的应用</h2><ul>
+<li><p>匿名函式可以将函数当作参数。</p>
+</li>
+<li><p>pre-and post-processing前置和后置处理</p>
+<ul>
+<li><p>首先一定要打开档案，完成后一定要调用 <code>close</code> 方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">f = File.open(&quot;myfile.txt&quot;, &apos;w&apos;)  # 前置处理</span><br><span class="line">f.write(&quot;Lorem ipsum dolor sit amet&quot;)</span><br><span class="line">f.write(&quot;Lorem ipsum dolor sit amet&quot;)</span><br><span class="line">f.close  # 后置处理</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>改用传入 block 参数的写法，这样就会自动关档了：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">File.open(&quot;myfile.txt&quot;, &apos;w&apos;) do |f|</span><br><span class="line">  f.write(&quot;Lorem ipsum dolor sit amet&quot;)</span><br><span class="line">  f.write(&quot;Lorem ipsum dolor sit amet&quot;)</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>callback function</p>
+<p><a href="https://zh.wikipedia.org/wiki/%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0" target="_blank" rel="noopener">回调函数</a>的意思是先挖好坑，让调用这个 API 的人可以填要执行什么。</p>
+<ul>
+<li><p>例如 Rails ActiveRecord 可以注册 <a href="https://ihower.tw/rails/activerecord-lifecycle-cn.html#sec1" target="_blank" rel="noopener">callback 方法</a>，在 <code>save</code> 前后做一些事情。我们在百宝箱 2-3 自订 Model 网址曾经用过 <code>before_validation :generate_friendly_id, :on =&gt; :create</code>，这会在 <code>save</code> 前去调用 <code>generate_friendly_id</code> 方法。</p>
+</li>
+<li><p>调用函式在 JavaScript 用的就更多了，例如绑事件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;div&quot;).click(function()&#123;</span><br><span class="line">  console.log(&quot;click!&quot;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">这个 click 的参数就是一个回调函式用法，当我们真正 click 时，才会调用这个匿名函式。</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Closure 闭包特性</p>
+<p>意思是它会将外面的作用域(scope)一起包进来，函式内可以读取到函数外的变量，但是在匿名函式中新建立的变量，离开匿名函式后会清掉。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">arr = [1,2,3]</span><br><span class="line">outer = 1</span><br><span class="line"></span><br><span class="line">arr.each do</span><br><span class="line">  puts outer  # 可以读取到外面的 outer 变量</span><br><span class="line"></span><br><span class="line">  inner = 4   # 新建立一个 inner 变量</span><br><span class="line"></span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">inner  # 错误 NameError，找不到 inner 这个变量</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="14、Combinator-functions"><a href="#14、Combinator-functions" class="headerlink" title="14、Combinator functions"></a>14、Combinator functions</h2><ul>
+<li><p>Combinator functions，指的是处理容器的三个组合招数。</p>
+</li>
+<li><p>1、映射map，的意思就是将容器里面的元素，一对一变换成另一个新的容器。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">arr = [1,2,3,4,5,6,7,8,9,10]</span><br><span class="line"></span><br><span class="line">result = arr.map &#123; |i| i+1 &#125;</span><br><span class="line"></span><br><span class="line">puts result</span><br><span class="line"># 输出 [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>2、过滤select，就是将容器里的元素，根据某些条件过滤建立另一个容器。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">arr = [1,2,3,4,5,6,7,8,9,10]</span><br><span class="line"></span><br><span class="line">result = arr.select&#123; |i| i % 2 == 0 &#125;  # 这个匿名函式要回传 true 或 false</span><br><span class="line">puts result</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>3、归纳reduce，就是将一个容器里的元素，归纳成一个值：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">arr = [1,2,3,4,5,6,7,8,9,10]</span><br><span class="line">result = arr.reduce(0) &#123; |sum, i| sum + i &#125;</span><br><span class="line">puts result</span><br><span class="line"></span><br><span class="line">reduce 的第一个参数 0 是初始值，然后这个匿名函式依序走访容器，两个参数 sum 跟 i，前者 sum 是前一次循环的回传结果。i 是这次走访的元素。</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>找最大值其实也可以用 <code>reduce</code> 方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">arr = [9, 2, 10, 6, 2, 4, 5, 6, 0, 4]</span><br><span class="line"></span><br><span class="line">max = arr.reduce do |max, i|</span><br><span class="line">  if max &gt; i</span><br><span class="line">    max</span><br><span class="line">  else</span><br><span class="line">    i</span><br><span class="line">  end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">puts max</span><br><span class="line"># 输出 10</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>综合应用：假如我们想从以下的数据找出小于 1000 的最大的金额，要怎么找呢？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">tickets = [</span><br><span class="line">  &#123; name: &quot;Ticket A&quot;, amount: 100 &#125;,</span><br><span class="line">  &#123; name: &quot;Ticket B&quot;, amount: 1123 &#125;,</span><br><span class="line">  &#123; name: &quot;Ticket C&quot;, amount: 670 &#125;,</span><br><span class="line">  &#123; name: &quot;Ticket D&quot;, amount: 50 &#125;,</span><br><span class="line">  &#123; name: &quot;Ticket E&quot;, amount: 990 &#125;,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">result = tickets.map&#123; |t| t[:amount] &#125;.select&#123; |a| a &lt; 1000 &#125;.reduce&#123; |x,y|</span><br><span class="line">(x &gt; y)? x : y &#125;</span><br><span class="line"></span><br><span class="line">puts result</span><br><span class="line"># 输出 990</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h1><h2 id="15、什么是面向对象"><a href="#15、什么是面向对象" class="headerlink" title="15、什么是面向对象?"></a>15、什么是面向对象?</h2><ul>
+<li><p>所谓的对象(Object)就是指一个带有状态和方法的容器。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var my_object = &#123;</span><br><span class="line">  name: &quot;ihower&quot;,</span><br><span class="line">  move: function()&#123;</span><br><span class="line">    console.log( this.name + &quot; is moving&quot; )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">my_object.move()</span><br></pre></td></tr></table></figure>
+<p><code>my_object</code> 有两个属性，一个是 <code>name</code> 一个是 <code>move</code>，而 <code>move</code> 其实是一个匿名函式。这个对象有自己的状态(<code>name</code> 是 ihower)，有自己的方法(move)。我们把相关的数据和方法，一起包进物件里面。</p>
+<p><code>my_object.move()</code> 可以看成是朝对象 <code>my_object</code> 发送一个 <code>move</code> 讯息。接收者 <code>my_object</code> 接到一个 <code>move</code> 讯息。</p>
+</li>
+<li><p>所谓的类(Class)就是去定义了某一种类型的对象所拥有的属性和方法。除了 JavaScript，其他编程语言包括 Ruby，都是要先定义类(Class-based)才能创造对象。</p>
+<ul>
+<li>你可以想像类(Class)就是对象(Object)的模版</li>
+<li>由类产生出来的 Object对象，又叫做 Instance (实例)</li>
+</ul>
+</li>
+</ul>
+<h2 id="16、Ruby-语法说明"><a href="#16、Ruby-语法说明" class="headerlink" title="16、Ruby 语法说明"></a>16、Ruby 语法说明</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Person</span><br><span class="line"></span><br><span class="line">    def initialize(name)</span><br><span class="line">        @name = name</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    def say(word)</span><br><span class="line">        puts &quot;#&#123;word&#125;, #&#123;@name&#125;&quot;</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">p1 = Person.new(&quot;ihower&quot;)</span><br><span class="line">p2 = Person.new(&quot;ihover&quot;)</span><br><span class="line"></span><br><span class="line">p1.say(&quot;Hello&quot;) # 输出 Hello, ihower</span><br><span class="line"></span><br><span class="line">p2.say(&quot;Hello&quot;) # 输出 Hello, ihover</span><br></pre></td></tr></table></figure>
+<ul>
+<li>类一定是大写开头，也是一种常数</li>
+<li><code>initialize</code> 是<strong>对象的建构方法</strong>，当调用 <code>new</code> 的时候的会把参数传进这里</li>
+<li><code>@</code> 开头的变量，也就是范例中的 <code>@name</code> 叫做<strong>对象变量</strong>(instance variable)。这个是对象的内部状态。</li>
+<li><code>def</code> 会定义对象的方法</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class Person</span><br><span class="line"></span><br><span class="line">    @@name = “ihower”</span><br><span class="line"></span><br><span class="line">    def self.say</span><br><span class="line">        puts @@name</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">Person.say # 输出 ihower</span><br></pre></td></tr></table></figure>
+<ul>
+<li>两个 <code>@@</code> 开头的变量，也就是 <code>@@name</code> 叫做<strong>类变量</strong>(class variable)，这个是属于类的</li>
+<li>用 <code>self.def</code> 开头定义的方法，也就是 <code>def self.say</code> 叫做<strong>类方法</strong>。用 <code>Person.say</code> 就会调用。</li>
+</ul>
+<p>另外，对象变量(@开头)和类变量(@@开头)，都是封装在类内部，类外无法存取。都需透过定义方法才可以存取到。如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>​    </p>
+<ul>
+<li><p>attr_ 的用法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class Person</span><br><span class="line"></span><br><span class="line">  attr_accessor :name</span><br><span class="line"></span><br><span class="line">  attr_reader :foo</span><br><span class="line">  attr_writer :bar</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<p>其中 <code>attr_accessor :name</code> 等同于刚刚我们自定义的存取方法。<code>attr_reader</code> 只定义读、<code>attr_writer</code> 只定义写。</p>
+</li>
+<li><p>public(公开)、protected 和 private 不同，默认是 public。</p>
+<ul>
+<li>privated_method 或 protected_method。这两个方法只能在内部调用。</li>
+<li>protected 允许调用同一类的对象。private 则严格限制在内部调用。</li>
+<li>我们希望管控有哪些 public 方法。这些 public 是公开的 API 会给程序员调用的，如果有任何修改都会影响到软件的其他地方要一起修改。但是 private 但 protected 方法就只会影响这个对象的内部而已。</li>
+</ul>
+</li>
+</ul>
+<h2 id="17、特性一-封装-encapsulation"><a href="#17、特性一-封装-encapsulation" class="headerlink" title="17、特性一: 封装(encapsulation)"></a>17、特性一: 封装(encapsulation)</h2><ul>
+<li><p>面向对象的其中一个特色就是封装，调用者不需要关心内部结构，只需根据公开接口进行操作。这样内部的结构可以根据架构需求而修改，而不会影响到其他程式。</p>
+</li>
+<li><p>如果改用面向对象来写，首先定义分数的类：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">class MyRational</span><br><span class="line"></span><br><span class="line">  attr_accessor :x, :y</span><br><span class="line"></span><br><span class="line">  def initialize(x, y)</span><br><span class="line">    @x, @y = x, y</span><br><span class="line">  end</span><br><span class="line"></span><br><span class="line">  def add(target)</span><br><span class="line">    MyRational.new(@x*target.y + @y*target.x, @y*target.y)</span><br><span class="line">  end</span><br><span class="line"></span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"># 2/3 + 3/4</span><br><span class="line"></span><br><span class="line">a = MyRational.new(2,3)</span><br><span class="line">b = MyRational.new(3,4)</span><br><span class="line">c = a.add(b)</span><br><span class="line"></span><br><span class="line">puts &quot;#&#123;c.x&#125;/#&#123;c.y&#125;&quot;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>！！！！99：这个例子没看懂？？</p>
+<h2 id="18、特性二-继承-inheritance"><a href="#18、特性二-继承-inheritance" class="headerlink" title="18、特性二: 继承(inheritance)"></a>18、特性二: 继承(inheritance)</h2><ul>
+<li>继承可以让父类的定义都复制到子类，在 Ruby 中用 <code>class Child &lt; Parent</code> 符号表示：</li>
+<li>在 Rails 中也很常见继承，打开任一个 Model 档案，都是继承自 <code>ApplicationRecord</code>。再打开会发现 <code>ApplicationRecord</code> 继承自 <code>ActiveRecord::Base</code>。后者是 Rails 框架的核心类，我们之所以可以调用 <code>.save</code>、<code>.find</code>、<code>.where</code> 等等方法就是在 <code>ActiveRecord::Base</code> 中定义的。</li>
+<li>打开任一个 Controller 档案，都是继承自 <code>ApplicationController</code>，然后 <code>ApplicationController</code> 又是继承自 <code>ActionController::Base</code>，我们之所以可以调用 <code>before_action</code>、<code>render</code>、<code>redirect_to</code> 等等方法就是在 <code>ActionController::Base</code> 中定义的。</li>
+</ul>
+<ul>
+<li><p>module用法一：多重继承。如果有多个父类要继承，在 Ruby 中会用到 module：</p>
+<ul>
+<li>其中 module Ownership 会用 include 的语法 mix-in(混入)到 Car 里面。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">module Ownership</span><br><span class="line">  def show_owner</span><br><span class="line">    puts &quot;#&#123;self.class&#125; show_owner called&quot;</span><br><span class="line">  end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">class Vehicle</span><br><span class="line">  def move</span><br><span class="line">    puts &quot;move&quot;</span><br><span class="line">  end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"># Car has two parents: Car and Ownership</span><br><span class="line"></span><br><span class="line">class Car &lt; Vehicle</span><br><span class="line">  include Ownership</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">class House</span><br><span class="line">  include Ownership</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">car = Car.new</span><br><span class="line">house = House.new</span><br><span class="line"></span><br><span class="line">car.show_owner()</span><br><span class="line">house.show_owner()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>module用法二：命名空间</p>
+</li>
+</ul>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">module  A</span><br><span class="line">  class B</span><br><span class="line">  end</span><br><span class="line">end</span><br><span class="line">如果要使用它要用 A::B。</span><br></pre></td></tr></table></figure>
+<p>  如果 module A 已经定义过了，则可以这样写：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">class A::C</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>module用法三：定义模块方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">module MyUtil</span><br><span class="line"></span><br><span class="line">  def self.foobar</span><br><span class="line">    puts &quot;foobar&quot;</span><br><span class="line">  end</span><br><span class="line"></span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">MyUtil.foobar</span><br><span class="line"># 输出 foobar</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="19、特性三-多态-polymorphism"><a href="#19、特性三-多态-polymorphism" class="headerlink" title="19、特性三: 多态(polymorphism)"></a>19、特性三: 多态(polymorphism)</h2><ul>
+<li><p>多态的意思是可以把很多不一样的东西，当作同一种东西来处理。</p>
+<ul>
+<li>例如箱子有很多种，打开的实作方式各有不同(有的有锁、有的没锁)，但是这些箱子都有提供「打开」这个接口可以操作。下命令的人只需要知道呼叫这个指令即可。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">box1 = &#123; :name =&gt; &quot;Box1&quot;, :type =&gt; &quot;locked&quot; &#125;</span><br><span class="line">box2 = &#123; :name =&gt; &quot;Box2&quot;, :type =&gt; &quot;unlocked&quot;&#125;</span><br><span class="line">box3 = &#123; :name =&gt; &quot;Box3&quot;, :type =&gt; &quot;seal&quot; &#125;</span><br><span class="line"></span><br><span class="line">def open_box(box)</span><br><span class="line">  if box[:type] == &quot;locked&quot;</span><br><span class="line">    puts &quot;Open locked&quot;</span><br><span class="line">  elsif box[:type] == &quot;unlocked&quot;</span><br><span class="line">    puts &quot;Open unlocked&quot;</span><br><span class="line">  elsif box[:type] == &quot;seal&quot;</span><br><span class="line">    puts &quot;Open Seal&quot;</span><br><span class="line">  end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">arr = [box1, box2, box3]</span><br><span class="line">arr.each do |x|</span><br><span class="line">  open_box(x)</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">这样设计的缺点是不好扩充，维护性低。因为无论是新增不同的箱子，或是修改某一个箱子打开的行为，都得修改同一个方法，复杂度全部集中在 open_box 之中。</span><br></pre></td></tr></table></figure>
+<ul>
+<li>让我们改用面向对象来写：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">class Box</span><br><span class="line">  attr_accessor :name</span><br><span class="line"></span><br><span class="line">  def initialize(name)</span><br><span class="line">    @name = name</span><br><span class="line">  end</span><br><span class="line"></span><br><span class="line">  def open</span><br><span class="line">    puts &quot;Open default box&quot;</span><br><span class="line">  end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">class LockedBox &lt; Box</span><br><span class="line">  def open</span><br><span class="line">    puts &quot;Open locked&quot;</span><br><span class="line">  end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">class UnlockedBox &lt; Box</span><br><span class="line">  def open</span><br><span class="line">    puts &quot;Open Unlocked&quot;</span><br><span class="line">  end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">class SealBox &lt; Box</span><br><span class="line">  def open</span><br><span class="line">    puts &quot;Open seal&quot;</span><br><span class="line">  end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">box1 = LockedBox.new(&quot;Box1&quot;)</span><br><span class="line">box2 = UnlockedBox.new(&quot;Box2&quot;)</span><br><span class="line">box3 = SealBox.new(&quot;Box3&quot;)</span><br><span class="line"></span><br><span class="line">arr = [box1, box2, box3]</span><br><span class="line">arr.each do |x|</span><br><span class="line">  x.open()</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">代码看起来好像变多了，但是扩充性和维护性比较好。这种多型的特型让我们不需要担心确切的数据类型，只要接口一致(都有 open 方法)就可以操作。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>鸭子型别 Duck Typing</p>
+<p>在动态语言中，不同对象只要方法的接口一样，就可以有多态的特型，这又叫做 <a href="https://zh.wikipedia.org/wiki/%E9%B8%AD%E5%AD%90%E7%B1%BB%E5%9E%8B" target="_blank" rel="noopener">Duck Typing</a>：当看到一只鸟走起来像鸭子、游泳起来像鸭子、叫起来也像鸭子，那么这只鸟就可以被称为鸭子。</p>
+<ul>
+<li>名词释疑：方法的「接口(Interface)」指的是方法的名称和参数，方法的「实作(Implement)」指的是方法内实际要做的代码。上述的 LockedBox、UnlockedBox 和 SealBox 都有一样的 open 接口，但是子类别中定义了不同的实作。</li>
+</ul>
+</li>
+</ul>
+<h2 id="20、面向对象设计"><a href="#20、面向对象设计" class="headerlink" title="20、面向对象设计"></a>20、面向对象设计</h2><p>面向对象设计又是一门学问，有兴趣的学员，可以朝以下参考资源搜寻：</p>
+<ul>
+<li><a href="https://book.douban.com/subject/25795276/" target="_blank" rel="noopener">面向对象设计实践指南: Ruby 语言描述</a> 人民邮电</li>
+<li><a href="http://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29" target="_blank" rel="noopener">SOLID</a> OO 设计原则</li>
+<li><a href="https://zh.wikipedia.org/wiki/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F" target="_blank" rel="noopener">Design Patterns 设计模式</a>，最有名的即 GoF patterns。设计模式针对了特定的情境，提供设计解法(通常是如何设计你的类别)，并且「命名」这些模式让程序员可以方便沟通和当作命名的元素。另一方面也是提供一种可以临摹的设计范例。常见的设计模式包括 Factory, Adapter, Composite, Decorator, Iterator, Observer 等等</li>
+</ul>
+<h1 id="异常处理-Exception"><a href="#异常处理-Exception" class="headerlink" title="异常处理 Exception"></a>异常处理 Exception</h1><h2 id="21、什么是异常处理-Exception"><a href="#21、什么是异常处理-Exception" class="headerlink" title="21、什么是异常处理 Exception"></a>21、什么是异常处理 Exception</h2><ul>
+<li><p><code>RuntimeError</code> 是一个 Ruby 内建的默认异常对象，用来储存关于这个异常的信息。Rails 还有内建其他不同的异常对象，详见 <a href="https://ruby-doc.org/core-2.2.0/Exception.html" target="_blank" rel="noopener">Ruby API</a>。</p>
+</li>
+<li><p><code>raise</code> 的大多是 Ruby 本身或是我们使用的库和框架之中，例如：</p>
+<ul>
+<li>当你对一个对象调用一个不存在的方法时，Ruby 会丢出 <code>NoMethodError</code> 异常</li>
+<li>在 Rails 中当URL找不到任何路由规则可以符合时，会丢出 <code>Routing Error</code> 异常</li>
+</ul>
+</li>
+<li><p>Ruby 语法说明: rescue</p>
+<ul>
+<li>在 <code>rescue</code> 我们会写如何去处理(拯救)异常，而 <code>rescue =&gt; e</code> 的 <code>e</code> 是个异常对象，会储存关于这个异常的信息。</li>
+<li>常见的 <code>rescue</code> 可能是显示错误讯息，告诉用户这个操作失败了，然后程序回复正常继续执行。</li>
+</ul>
+</li>
+<li><p>Ruby 语法: ensure</p>
+<ul>
+<li><code>ensure</code> 部分则是不管有没有发生异常，都一定会执行到。</li>
+</ul>
+</li>
+<li><p>Ruby 语法: 顶层异常捕获</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">def 某个方法名称</span><br><span class="line">  # do something</span><br><span class="line"></span><br><span class="line">  raise &apos;An error has occured.&apos;</span><br><span class="line">rescue =&gt; e</span><br><span class="line">  puts &apos;I am rescued.&apos;</span><br><span class="line">ensure</span><br><span class="line">  puts &apos;This code gets executed always.&apos;</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">上述的 begin...rescue 语法，如果放在 def 方法定义中，则可以用以下的简略写法。也就是可以省略掉原本异常处理的 begin 跟结尾的 end。</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="22、什么是-callstack-和-backtrace"><a href="#22、什么是-callstack-和-backtrace" class="headerlink" title="22、什么是 callstack 和 backtrace"></a>22、什么是 callstack 和 backtrace</h2><ul>
+<li><p>在一个复杂的软件中，方法内会调用其他方法，然后方法又在调用其他方法，例如以下范例，c 方法调用 b 方法、b 方法内又调用 a 方法。这种一层一层的关系，又叫做 <code>callstack</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">def a</span><br><span class="line">  puts &quot;a&quot;</span><br><span class="line">  raise &quot;A error&quot;</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">def b</span><br><span class="line">  puts &quot;b&quot;</span><br><span class="line">  a()</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">def c</span><br><span class="line">  puts &quot;c&quot;</span><br><span class="line">  b()</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">begin</span><br><span class="line">  c()</span><br><span class="line">rescue =&gt; e</span><br><span class="line">  puts e.message</span><br><span class="line">  puts e.backtrace</span><br><span class="line">ensure</span><br><span class="line">  puts &quot;finally&quot;</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在上述的 <code>rescue</code> 中，我们用 <code>e.backtrace</code> 可以列出调用的 <code>callstack</code> 关系，<strong><code>backtrace</code> 的意思就是回朔当初的调用关系</strong>。</li>
+<li>在 Rails 中如果发生异常，根据 development 模式或 production 模式，最外层有不同的异常处理策略：在开发时最外层的 <code>rescue</code> 会显示错误的 backtrace，这样可以帮助我们了解发生错误的来龙去脉：</li>
+</ul>
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1flisbbmh8wj30v70jw41d.jpg" alt=""></p>
+<ul>
+<li>默认显示 Application Trace 也就是我们写的代码 backtrace，而 Framework Trace 则是发生在 Rails 框架内的 backtrace。</li>
+<li>如果是 production 模式，默认的最外层 <code>rescue</code> 其实是显示 500 错误画面(也就是 public/500.html)。</li>
+</ul>
+</li>
+</ul>
+<h2 id="23、异常处理策略"><a href="#23、异常处理策略" class="headerlink" title="23、异常处理策略"></a>23、异常处理策略</h2><ul>
+<li><p>在看 Ruby API 或是 gem 的 API 文档时，你可以注意一下它们是如何处理异常情况的。——在gem的页面，<strong>搜索<code>Exceptions</code></strong>即可看到相关语法。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1flisgjeylkj31iw0pyqah.jpg" alt=""></p>
+</li>
+<li><p>如果你用 <code>save</code> 的话，如果失败只会回传 <code>false</code> 然后就继续执行下去，用了 <code>save!</code> 如果失败程序会中断。</p>
+</li>
+</ul>
+<h2 id="24、关于-Rails-的异常处理"><a href="#24、关于-Rails-的异常处理" class="headerlink" title="24、关于 Rails 的异常处理"></a>24、关于 Rails 的异常处理</h2><ul>
+<li><p><code>find</code> API</p>
+<ul>
+<li>如果找不到数据，会丢 <code>ActiveRecord::RecordNotFound</code> 的例外。在 show action 我们经常用这个 API。</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>在 development 开发模式中，你会看到 ActiveRecord::RecordNotFound 异常。在 production 上线模式，会显示 404 页面(public/404.html)</p>
+</li>
+<li><p>在百宝箱第一集的「自定义 Model 网址」中，我们新增了一个 <code>friendly_id</code> 字段，然后 show action 改成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def show</span><br><span class="line">  @event = Event.find_by_friendly_id!(params[:id])</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<ul>
+<li>为什么这里偏好用抛出异常的策略呢？如果我们改用 <code>Event.find_by_friendly_id(params[:id])</code> 的话，找不到数据时会回传 <code>nil</code>，那么 @event 变成 <code>nil</code> 程序继续执行，抛出异常是 <code>NoMethodError</code> 最后程序中断。这时候要找到真正异常的原因就会多花一点时间。</li>
+<li>我们希望在异常发生的第一时间就中断程序(fail fast)，而不是让程序无声地继续执行下去，最后像一个未爆弹一样最后莫名其妙地炸掉。</li>
+</ul>
+</li>
+<li><p>可以在 controller 中宣告 <code>rescue_from</code> 去救回特定的异常对象。</p>
+</li>
+<li><p>gem用于异常通知</p>
+<ul>
+<li><a href="https://github.com/smartinez87/exception_notification" target="_blank" rel="noopener">Exception Notifier</a></li>
+<li><a href="https://rollbar.com" target="_blank" rel="noopener">Rollbar</a> 推荐这套，有免费额度一个月记录 5000 个异常</li>
+<li><a href="https://airbrake.io" target="_blank" rel="noopener">Airbrake</a></li>
+<li>这些第三方服务可以在网站发生异常错误的时候自动将错误讯息收集起来，并且提供了还蛮不错的后台可以浏览，还可以统计及追踪异常处理的情况。免费的方案对于小网站就很够用，非常推荐使用。</li>
+</ul>
+</li>
+</ul>
+<h1 id="元编程-Meta-Programming"><a href="#元编程-Meta-Programming" class="headerlink" title="元编程 Meta-Programming"></a>元编程 Meta-Programming</h1><h2 id="25、元编程-define-method"><a href="#25、元编程-define-method" class="headerlink" title="25、元编程: define_method"></a>25、元编程: define_method</h2><ul>
+<li><p>元编程(Meta-programming)的意思是让程序帮我们写程序。</p>
+<ul>
+<li>这就是 Rails 很多 API 用法之所以这么 magic 背后的秘密武器。撰写元编程的能力是库和框架作者的必备技巧。</li>
+<li>推荐<a href="https://book.douban.com/subject/26575429/" target="_blank" rel="noopener">Ruby元编程</a>一书。</li>
+</ul>
+</li>
+<li><p>define_method，是个 Ruby 的类方法，可以动态定义对象方法。</p>
+<ul>
+<li><p><code>define_method(:foo) { puts &quot;bar&quot; }</code> 等同于</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def foo</span><br><span class="line">  puts &quot;bar&quot;</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>区别与def，差别在 <code>define_method</code> 用匿名函式来定义方法，所以有 Closure(闭包) 特性。</p>
+</li>
+<li><p>Rails 很多这样的宣告背后，都是用 <code>define_method</code> 做出来的</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="26、元编程-method-missing"><a href="#26、元编程-method-missing" class="headerlink" title="26、元编程: method_missing"></a>26、元编程: method_missing</h2><ul>
+<li><p>Ruby 在调用方法找不到时，会改调用这个 <code>method_missing</code> 这个方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Car</span><br><span class="line">  def go(place)</span><br><span class="line">    puts &quot;go to #&#123;place&#125;&quot;</span><br><span class="line">  end</span><br><span class="line"></span><br><span class="line">  def method_missing(name, *args)</span><br><span class="line">    if name.to_s =~ /^go_to_(.*)/</span><br><span class="line">      go($1)</span><br><span class="line">    else</span><br><span class="line">      super</span><br><span class="line">    end</span><br><span class="line">  end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">car = Car.new</span><br><span class="line"></span><br><span class="line">car.go_to_taipei</span><br><span class="line"># go to taipei</span><br></pre></td></tr></table></figure>
+<p>car.blah # NoMethodError: undefined method <code>blah</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  * 当调用 `go_to_XXXX` 时，因为我们并没有特别定义这个方法，所以就会改成调用 `method_missing` 方法，在这个方法中我们再检查是不是 `go_to_` 开头，如果是的话就调用 `go` 方法，不然就改调用 `super` 回到原本的行为，也就是抛出 NoMethodError 异常。</span><br><span class="line">  * `super` 当你在类别中复写一个方法时，透过 `super` 可以调用到上一层被你复写的方法。</span><br><span class="line"></span><br><span class="line">* 例如 ActiveRecord 的 `find_by_XXX(&quot;YYY&quot;)` 功能，会变成 `where( :XXX =&gt; &quot;YYY&quot; ).first`</span><br><span class="line"></span><br><span class="line">* 又例如在 Web API 教程中，用到 Jbuilder 样板来输出 JSON。其中的 `number`、`available_seats` 和 `created_at` 方法其实都进到 `method_missing` 了。</span><br></pre></td></tr></table></figure>
+<p>app/views/api/v1/trains/show.json.jbuilder<br>json.number @train.number<br>json.available_seats @train.available_seats<br>json.created_at @train.created_at</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">！！！！！！！99：method_missing到底是什么鬼，完全看不懂？？？？</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 27、元编程: Monkey Patch</span><br><span class="line"></span><br><span class="line">* [猴子补丁](https://zh.wikipedia.org/wiki/%E7%8C%B4%E8%A1%A5%E4%B8%81)的意思是直接复写 Class 的定义去修改行为，在 Rails 中常用这招来扩增原本 Ruby 的行为，例如：</span><br><span class="line"></span><br><span class="line">* try方法</span><br><span class="line"></span><br><span class="line">  * try 这个方法的原理是什么呢？</span><br></pre></td></tr></table></figure>
+<p>class NilClass<br>  def try(*args)</p>
+<pre><code>nil
+</code></pre><p>  end<br>end</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* blank? 方法</span><br><span class="line"></span><br><span class="line">  * blank? 这个方法的原理是什么呢？</span><br></pre></td></tr></table></figure>
+<p>class Object    # 在 Ruby 中所有的类都会继承自 Object 这个类</p>
+<p>  def blank?</p>
+<pre><code>respond_to?(:empty?) ? empty? : !self
+</code></pre><p>  end</p>
+<p>  def present?</p>
+<pre><code>!blank?
+</code></pre><p>  end</p>
+<p>end</p>
+<p>class NilClass<br>  def blank?</p>
+<pre><code>true
+</code></pre><p>  end<br>end</p>
+<p>class FalseClass<br>  def blank?</p>
+<pre><code>true
+</code></pre><p>  end<br>end</p>
+<p>class TrueClass<br>  def blank?</p>
+<pre><code>false
+</code></pre><p>  end<br>end</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 编码风格</span><br><span class="line"></span><br><span class="line">## 28、编码风格 Coding Style</span><br><span class="line"></span><br><span class="line">编码风格对于团队开发十分重要，维持一惯的风格可以增加代码的可读性。在 Ruby 和 Rails 社区中，大多会遵守以下的风格指南：</span><br><span class="line"></span><br><span class="line">- [Ruby 风格指南](https://github.com/JuanitoFatas/ruby-style-guide/blob/master/README-zhCN.md)</span><br><span class="line">- [Rails 风格指南](https://github.com/JuanitoFatas/rails-style-guide/blob/master/README-zhCN.md)</span><br><span class="line">- [Udacity Frontend Nanodegree Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/index.html)</span><br><span class="line">- [A guide for programming in style](https://github.com/thoughtbot/guides/tree/master/style)</span><br><span class="line"></span><br><span class="line">对个人来说，编码风格也代表了你的代码有没有在编程语言社区「接地气」，更是代码给人的第一印象。一个缩进不佳的代码，给人的第一印象就是「不专业」。</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/posts/bf9570f4/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/posts/7286171a/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
+
+
+    <div id="comments">
+        
+   <p>评论系统未开启，无法评论！</p>
+
+    </div>
+
+
+            </main>
+            
+    <aside class="col-md-3 sidebar">
+        
+        
+    <div class="widget">    
+        <h3 class="title">搜索</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
+                    <button type="button" class="search-form-submit" id="search-local">站内搜索</button>
+                
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget notification">
+        <h3 class="title">网站公告</h3>
+        <div>
+            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
+主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+<hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
+</p>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget">
+      <h3 class="title">社交</h3> 
+        <div class="content social">
+            
+	            <a href="//github.com/shenliyang" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="git fa fa-git"></i>
+			    </a>
+            
+	            <a href="mailto:snippet@91h5.cc" rel="external nofollow" title="邮箱" target="_blank">
+			    	<i class="envelope-o fa fa-envelope-o"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="联系QQ" target="_blank">
+			    	<i class="qq fa fa-qq"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="微博" target="_blank">
+			    	<i class="weibo fa fa-weibo"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="QQ群" target="_blank">
+			    	<i class="users fa fa-users"></i>
+			    </a>
+            
+	            <a href="/atom.xml" rel="external nofollow" title="RSS" target="_blank">
+			    	<i class="feed fa fa-feed"></i>
+			    </a>
+            
+        </div>
+    </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">分类</h3>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ror功能/"><i class="fa" aria-hidden="true">ror功能</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror知识点/"><i class="fa" aria-hidden="true">ror知识点</i></a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror系统/"><i class="fa" aria-hidden="true">ror系统</i></a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web页面/"><i class="fa" aria-hidden="true">web页面</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link current" href="/categories/工具/"><i class="fa" aria-hidden="true">工具</i></a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/微信小程序/"><i class="fa" aria-hidden="true">微信小程序</i></a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/心得/"><i class="fa" aria-hidden="true">心得</i></a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/投资/"><i class="fa" aria-hidden="true">投资</i></a><span class="category-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+    <div class="widget">
+      <h3 class="title">归档</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/"><i class="fa" aria-hidden="true">November 2018</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/"><i class="fa" aria-hidden="true">January 2018</i></a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/"><i class="fa" aria-hidden="true">December 2017</i></a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/"><i class="fa" aria-hidden="true">November 2017</i></a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/"><i class="fa" aria-hidden="true">October 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/"><i class="fa" aria-hidden="true">September 2017</i></a><span class="archive-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+  <div class="widget">
+    <h3 class="title">标签云</h3>
+    <div class="content tag-cloud">
+        <a href="/tags/atom/" style="font-size: 14px;">atom</a> <a href="/tags/bug/" style="font-size: 18px;">bug</a> <a href="/tags/heroku/" style="font-size: 10px;">heroku</a> <a href="/tags/hexo/" style="font-size: 12px;">hexo</a> <a href="/tags/interview/" style="font-size: 11px;">interview</a> <a href="/tags/mac/" style="font-size: 12px;">mac</a> <a href="/tags/orid-day/" style="font-size: 10px;">orid-day</a> <a href="/tags/orid-month/" style="font-size: 10px;">orid-month</a> <a href="/tags/ror功能/" style="font-size: 12px;">ror功能</a> <a href="/tags/ror知识点/" style="font-size: 17px;">ror知识点</a> <a href="/tags/ror系统/" style="font-size: 19px;">ror系统</a> <a href="/tags/typora/" style="font-size: 10px;">typora</a> <a href="/tags/vps/" style="font-size: 16px;">vps</a> <a href="/tags/web页面/" style="font-size: 12px;">web页面</a> <a href="/tags/下载/" style="font-size: 10px;">下载</a> <a href="/tags/工具/" style="font-size: 20px;">工具</a> <a href="/tags/常用/" style="font-size: 12px;">常用</a> <a href="/tags/微信功能/" style="font-size: 13px;">微信功能</a> <a href="/tags/微信系统/" style="font-size: 15px;">微信系统</a> <a href="/tags/微信页面/" style="font-size: 11px;">微信页面</a> <a href="/tags/心得/" style="font-size: 13px;">心得</a> <a href="/tags/手机/" style="font-size: 10px;">手机</a> <a href="/tags/投资/" style="font-size: 10px;">投资</a> <a href="/tags/搬砖/" style="font-size: 10px;">搬砖</a> <a href="/tags/科学上网/" style="font-size: 14px;">科学上网</a> <a href="/tags/部署/" style="font-size: 13px;">部署</a>
+    </div>
+  </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">友链</h3>
+        <div class="content friends-link">
+        
+            <a href="http://www.shenliyang.com" class="fa" target="_blank">个人博客</a>
+        
+        </div>
+    </div>
+
+
+        
+    </aside>
+
+
+        </div>
+      </section>
+    </div>
+  </div>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2017
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>

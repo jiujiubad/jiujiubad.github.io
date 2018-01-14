@@ -1,0 +1,421 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>tool-atom-【转发】打code时如何减少手动挪光标的次数 | Hexo</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+    <div class="hide">
+    	<script src="https://s4.cnzz.com/z_stat.php?id=1263868967&web_id=1263868967" language="JavaScript"></script>
+    </div>
+
+
+
+
+
+
+    
+</head>
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner2.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="">
+            <img src="/img/avatar.jpg" alt="logo头像">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题">  
+             
+    	</div>
+    </div>
+</header>
+      <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation"><a href="/"><i class="fa fa-fw "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/前端/"><i class="fa fa-fw "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/后端/"><i class="fa fa-fw "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/工具/"><i class="fa fa-fw "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/资源/"><i class="fa fa-fw "></i>资源</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+      <section class="content-wra aa99">
+        <div class="row">
+            <main class="col-md-9 main-content m-post">
+                <p id="process"></p>
+<article class="post pp99">
+    <div class="post-head">
+        <h1 id="tool-atom-【转发】打code时如何减少手动挪光标的次数">
+            
+	            tool-atom-【转发】打code时如何减少手动挪光标的次数
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span>工具</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            工具
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/11/15</span>
+    </span>
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <p>原文by黄鸿亮：<a href="http://hongliang.site/2017/03/10/2017-03-10-how-to-add-your-own-custom-code-snippets-to-emmet-snippets/" target="_blank" rel="noopener">http://hongliang.site/2017/03/10/2017-03-10-how-to-add-your-own-custom-code-snippets-to-emmet-snippets/</a></p>
+<p>几个工具by黄鸿亮：<a href="http://activeliang-blog.logdown.com/posts/1433420-guangzhou-2017-2-19-offline-meetup-extracted-records" target="_blank" rel="noopener">http://activeliang-blog.logdown.com/posts/1433420-guangzhou-2017-2-19-offline-meetup-extracted-records</a></p>
+<h1 id="atom打code时如何减少手动挪光标的次数-amp-amp-emmet增加自定义片段的方法。"><a href="#atom打code时如何减少手动挪光标的次数-amp-amp-emmet增加自定义片段的方法。" class="headerlink" title="atom打code时如何减少手动挪光标的次数&amp;&amp;emmet增加自定义片段的方法。"></a>atom打code时如何减少手动挪光标的次数&amp;&amp;emmet增加自定义片段的方法。</h1><p><strong> 发表于 2017-03-10 | </strong> 分类于 <a href="http://hongliang.site/categories/mac/" target="_blank" rel="noopener">mac </a>| ** <a href="http://hongliang.site/2017/03/10/2017-03-10-how-to-add-your-own-custom-code-snippets-to-emmet-snippets/#comments" target="_blank" rel="noopener">0 Comments</a></p>
+<h4 id="写在前面：（可以直接看文未的方法）"><a href="#写在前面：（可以直接看文未的方法）" class="headerlink" title="写在前面：（可以直接看文未的方法）"></a>写在前面：（可以直接看文未的方法）</h4><p>web程序员应该都知道emmet有多好用。打code如飞，不知道的只可以去看看我的另一篇有emmet相关介绍的文档：<a href="http://activeliang-blog.logdown.com/posts/1433420-guangzhou-2017-2-19-offline-meetup-extracted-records" target="_blank" rel="noopener">文档链接（看第三张图你就明白了）</a> .在使用一段时间后发现一个问题，诸如：<code>&lt;%%&gt;</code>，没有快捷的输入方法，这对符号，我细数了一下，在先打头跟尾再把光标移动回中间的情况下要敲<code>9</code>个键。相信学ruby-on-rials的人都知道，这个符号是经常要作用的！所以我在想能否有快捷的输入，比如能：输入<code>%</code>+<code>tab键</code>自动补全这对符号，并把光标停留在中w间，那就太完美了！于是我开始寻找答案……</p>
+<h5 id="配置atom"><a href="#配置atom" class="headerlink" title="配置atom:"></a>配置atom:</h5><ul>
+<li><p>在atom内建的增加snippets的方法来实现，亲测有效，方法如下：（但：打开emmet后会被覆盖。）<a href="http://olmrxx9ks.bkt.clouddn.com/blog/2017-03-10-Snip20170310_2.png" target="_blank" rel="noopener"><img src="http://olmrxx9ks.bkt.clouddn.com/blog/2017-03-10-Snip20170310_2.png" alt="img"></a><a href="http://olmrxx9ks.bkt.clouddn.com/blog/2017-03-10-154048.jpg" target="_blank" rel="noopener"><img src="http://olmrxx9ks.bkt.clouddn.com/blog/2017-03-10-154048.jpg" alt="img"></a>注意：不开emmet的时候完美使用，开了emmet后这个方法无效，会补emmet原生默认的定义给覆盖掉。</p>
+<p>然后，我又开始找解决这种冲突的方法，最后我发现，最直接的方法就是直接在emmet上增加snippets.</p>
+</li>
+</ul>
+<h5 id="苦逼的解决问题之路："><a href="#苦逼的解决问题之路：" class="headerlink" title="苦逼的解决问题之路："></a>苦逼的解决问题之路：</h5><ul>
+<li><p>google了一圈发现全网竟然没有一篇可行的确定的教程，最ok的教程也只是跟你说有这么一个方法可以增加snippets来实现，但是没有给出具体方法。只是给了官方文档的链接。</p>
+</li>
+<li><p>官方文档只是跟你说了一堆杂七杂八的东西，然后关于怎么配置，一点儿也没有说。只是说这个东西需要自己来创建。后来算是找到了一个文件，但作者提供的路径我们根本找不到，（有可能是sublime的，但是我们用的是atom）自己创建一个文件加 路径后，无效！</p>
+</li>
+<li><h5 id="网上关于这个的99-9-的教程都不是mac下的atom下的emmet。大多不适用。"><a href="#网上关于这个的99-9-的教程都不是mac下的atom下的emmet。大多不适用。" class="headerlink" title="网上关于这个的99.9%的教程都不是mac下的atom下的emmet。大多不适用。"></a>网上关于这个的99.9%的教程都不是mac下的atom下的emmet。大多不适用。</h5></li>
+<li><p>能试的都试过了，甚至连下方中的正确方法都试过了，但是当时竟然没有成功，现在写这个教程的时候还在无限纳闷……</p>
+</li>
+<li><p>就这样一直在网络上游荡……就像警察抓小偷一样，明明有一点线索了但就是找不到一个完整的可行的方法！试多了，错多了，时间也折腾多了，就崩溃了，是的，我崩溃了，那一刻我多么想，不要再为这个浪费时间了，事实上我已经疯狂地追踪了十个小时了！真想找个人过来，给他点钱，帮我做出来，可以有钱也没有用啊，去哪里找？？</p>
+</li>
+<li><h5 id="最后，-我用google翻译，发邮件给emmet原作者，没想到他回复了，给了一些提示，我报着试一试的态度，竟然成功了！"><a href="#最后，-我用google翻译，发邮件给emmet原作者，没想到他回复了，给了一些提示，我报着试一试的态度，竟然成功了！" class="headerlink" title="最后， 我用google翻译，发邮件给emmet原作者，没想到他回复了，给了一些提示，我报着试一试的态度，竟然成功了！"></a>最后， 我用google翻译，发邮件给emmet原作者，没想到他回复了，给了一些提示，我报着试一试的态度，竟然成功了！</h5></li>
+</ul>
+<h5 id="这个方法来得太不容易了……！"><a href="#这个方法来得太不容易了……！" class="headerlink" title="这个方法来得太不容易了……！"></a>这个方法来得太不容易了……！</h5><h3 id="方法如下："><a href="#方法如下：" class="headerlink" title="方法如下："></a>方法如下：</h3><ol>
+<li><p>打开preferences,快捷键：<code>⌘</code>+<code>,</code><a href="http://olmrxx9ks.bkt.clouddn.com/blog/2017-03-10-161157.jpg" target="_blank" rel="noopener"><img src="http://olmrxx9ks.bkt.clouddn.com/blog/2017-03-10-161157.jpg" alt="img"></a>点击进入emmet,<a href="http://olmrxx9ks.bkt.clouddn.com/blog/2017-03-10-161246.jpg" target="_blank" rel="noopener"><img src="http://olmrxx9ks.bkt.clouddn.com/blog/2017-03-10-161246.jpg" alt="img"></a><a href="http://olmrxx9ks.bkt.clouddn.com/blog/2017-03-10-Snip20170310_5.png" target="_blank" rel="noopener"><img src="http://olmrxx9ks.bkt.clouddn.com/blog/2017-03-10-Snip20170310_5.png" alt="img"></a>代码在这里，请跟着复制粘贴：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;%&quot;:   &quot;&lt;%| %&gt;&quot;,</span><br></pre></td></tr></table></figure>
+<p>ok!保存，重启atom,实现你的打code如飞吧！</p>
+<p>注意：此功能只在html文件里有效，也只有html里需要这个功能！</p>
+<p>注意：此功能只在html文件里有效，也只有html里需要这个功能！</p>
+<p>注意：此功能只在html文件里有效，也只有html里需要这个功能！</p>
+<p>注意：此功能只在html文件里有效，也只有html里需要这个功能！</p>
+<p>注意：此功能只在html文件里有效，也只有html里需要这个功能！</p>
+<h4 id="演示："><a href="#演示：" class="headerlink" title="演示："></a>演示：</h4><p>展开后光标会停留在中间……<a href="http://olmrxx9ks.bkt.clouddn.com/blog/2017-03-10-123.gif" target="_blank" rel="noopener"><img src="http://olmrxx9ks.bkt.clouddn.com/blog/2017-03-10-123.gif" alt="img"></a></p>
+</li>
+</ol>
+<h4 id="再补充几点：基本就不用怎么手动挪光标了……"><a href="#再补充几点：基本就不用怎么手动挪光标了……" class="headerlink" title="再补充几点：基本就不用怎么手动挪光标了……"></a>再补充几点：基本就不用怎么手动挪光标了……</h4><h6 id="（基本就可以很少去挪动光标了）"><a href="#（基本就可以很少去挪动光标了）" class="headerlink" title="（基本就可以很少去挪动光标了）"></a>（基本就可以很少去挪动光标了）</h6><ol>
+<li><p>用上面的方法，再增加一个我们学ROR经常用的片段：<code>&quot;a&quot;: &quot;&lt;a href=\&quot;|\&quot; &gt;&lt;/a&gt;&quot;,</code>(请用复制粘贴)，这一次放在位置不一样：<a href="http://olmrxx9ks.bkt.clouddn.com/blog/2017-03-18-003323.jpg" target="_blank" rel="noopener"><img src="http://olmrxx9ks.bkt.clouddn.com/blog/2017-03-18-003323.jpg" alt="img"></a></p>
+</li>
+<li><p>插件emmet和编辑器atom均内置注释功能，快捷键均为<code>⌘</code>+<code>/</code>，通常emmet会覆盖掉atom。但atom的更好用点，我们为了想让atom来注释，需要这样做：把emmet的注释功能改掉。</p>
+<ul>
+<li>打开这个文件：<a href="http://olmrxx9ks.bkt.clouddn.com/blog/2017-04-15-121647.jpg" target="_blank" rel="noopener"><img src="http://olmrxx9ks.bkt.clouddn.com/blog/2017-04-15-121647.jpg" alt="img"></a></li>
+<li>按快捷键<code>⌘</code>+<code>⇪</code>+<code>f</code>，输入<code>emmet:toggle-comment</code>进行搜索。得到如图：<a href="http://olmrxx9ks.bkt.clouddn.com/blog/2017-04-15-122006.jpg" target="_blank" rel="noopener"><img src="http://olmrxx9ks.bkt.clouddn.com/blog/2017-04-15-122006.jpg" alt="img"></a>双击打开这个文件。<a href="http://olmrxx9ks.bkt.clouddn.com/blog/2017-04-15-122202.jpg" target="_blank" rel="noopener"><img src="http://olmrxx9ks.bkt.clouddn.com/blog/2017-04-15-122202.jpg" alt="img"></a>把<code>cmd-/</code>改掉，可以参考改成<code>cmd-0</code>,或者改成其他没有经常用的快捷键盘也行。</li>
+</ul>
+</li>
+<li><p>修改快速打开新文件的快捷键盘：参考这篇blog:<a href="http://activeliang-blog.logdown.com/posts/1623280-asdf" target="_blank" rel="noopener">如何修改Atom自带的快捷键&amp;&amp;使用⌘+E快速打开新文件~</a></p>
+</li>
+<li><h6 id="多用⌘-return-作用：无论你的光标在什么位置，快速在下面切入新的一行。"><a href="#多用⌘-return-作用：无论你的光标在什么位置，快速在下面切入新的一行。" class="headerlink" title="多用⌘+return,作用：无论你的光标在什么位置，快速在下面切入新的一行。"></a>多用<code>⌘</code>+<code>return</code>,作用：无论你的光标在什么位置，快速在下面切入新的一行。</h6></li>
+<li><h6 id="多用⌘-shift-return-作用：无论光标位置，快速在上方切入新的一行。"><a href="#多用⌘-shift-return-作用：无论光标位置，快速在上方切入新的一行。" class="headerlink" title="多用⌘+shift+return,作用：无论光标位置，快速在上方切入新的一行。"></a>多用<code>⌘</code>+<code>shift</code>+<code>return</code>,作用：无论光标位置，快速在上方切入新的一行。</h6></li>
+<li><h6 id="多掌握一些emmet的内建功能：比如：-试着自己操作感受下，请用复制粘贴的，输完按tab键，看看展开的结果。"><a href="#多掌握一些emmet的内建功能：比如：-试着自己操作感受下，请用复制粘贴的，输完按tab键，看看展开的结果。" class="headerlink" title="多掌握一些emmet的内建功能：比如：(试着自己操作感受下，请用复制粘贴的，输完按tab键，看看展开的结果。)"></a>多掌握一些emmet的内建功能：比如：(试着自己操作感受下，请用复制粘贴的，输完按<code>tab</code>键，看看展开的结果。)</h6><ul>
+<li><code>a.dropdown.dropdown-toggle[data-toggle=&quot;dropdown&quot;]#my.dropdown</code></li>
+<li><code>.container&gt;tbody&gt;thead&gt;tr&gt;td*5</code></li>
+<li>更多请看看这个图表：<a href="https://docs.emmet.io/cheat-sheet/" target="_blank" rel="noopener">https://docs.emmet.io/cheat-sheet/</a></li>
+</ul>
+</li>
+</ol>
+<h3 id="写在后面："><a href="#写在后面：" class="headerlink" title="写在后面："></a>写在后面：</h3><ul>
+<li>助教和老师都不赞成新手用这种偷懒的方式，新手请一个字一个字的打。李笑来老师甚至不太赞成新手用atom,sublime这种高级的编辑器！</li>
+<li>你也可以用这个方法增加你自己代码段！</li>
+</ul>
+<h5 id="类似的简单粗暴小教程："><a href="#类似的简单粗暴小教程：" class="headerlink" title="类似的简单粗暴小教程："></a>类似的简单粗暴小教程：</h5><ul>
+<li><a href="http://hongliang.site/2017/10/20/%E5%88%A9%E7%94%A8Heroku%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A2%AF%E5%AD%90%EF%BC%8C3%E6%AD%A5%E5%AE%9E%E7%8E%B0%E5%85%8D%E8%B4%B9%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E3%80%82" target="_blank" rel="noopener">利用Heroku搭建自己的梯子，3步实现免费科学上网。</a></li>
+<li><a href="http://hongliang.site/2017/10/18/mac%E4%B8%8A%E4%B8%80%E9%94%AE%E7%A6%BB%E7%BA%BF%E6%95%B4%E4%B8%AA%E7%BD%91%E7%AB%99%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%88%E4%BB%A5%E4%BE%BF%E6%96%AD%E7%BD%91%E6%B5%8F%E8%A7%88%EF%BC%89/" target="_blank" rel="noopener">mac上一键离线整个网站的方法（以便断网浏览）</a></li>
+<li><a href="http://hongliang.site/2017/10/18/Mac%E4%B8%8A%E9%AB%98%E9%80%9F%E4%B8%8B%E8%BD%BD%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E8%B5%84%E6%BA%90%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%882%E6%AD%A5%EF%BC%89/" target="_blank" rel="noopener">Mac上高速下载百度网盘资源的方法（2步）</a></li>
+<li><a href="http://hongliang.site/2017/03/10/2017-03-10-how-to-add-your-own-custom-code-snippets-to-emmet-snippets/" target="_blank" rel="noopener">打code时如何减少手动挪光标的次数&amp;&amp;emmet增加自定义片段的方法。</a></li>
+<li><a href="http://hongliang.site/2017/03/21/2017-03-21-asdf/" target="_blank" rel="noopener">如何修改Atom自带的快捷键&amp;&amp;使用⌘+E快速打开新文件~</a></li>
+</ul>
+<p>本文有帮你节约到时间吗？赏几个钢蹦玩玩~😄<a href="http://olmrxx9ks.bkt.clouddn.com/2017-10-18-094733.jpg" target="_blank" rel="noopener"><img src="http://olmrxx9ks.bkt.clouddn.com/2017-10-18-094733.jpg" alt="img"></a></p>
+<p><a href="http://hongliang.site/2017/03/10/2017-03-10-full-stack-camp-60-days-counted/" target="_blank" rel="noopener">**全栈营60天盘点</a></p>
+<p><a href="http://hongliang.site/2017/03/10/2017-03-10-how-to-enter-in-the-erb-has-also-put-the-cursor-in-the-middle/" target="_blank" rel="noopener">如何快速在erb中输入&lt;%%&gt;顺便把光标停留在中间**</a></p>
+
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/posts/a7e5943/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/posts/30a08ba7/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
+
+
+    <div id="comments">
+        
+   <p>评论系统未开启，无法评论！</p>
+
+    </div>
+
+
+            </main>
+            
+    <aside class="col-md-3 sidebar">
+        
+        
+    <div class="widget">    
+        <h3 class="title">搜索</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
+                    <button type="button" class="search-form-submit" id="search-local">站内搜索</button>
+                
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget notification">
+        <h3 class="title">网站公告</h3>
+        <div>
+            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
+主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+<hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
+</p>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget">
+      <h3 class="title">社交</h3> 
+        <div class="content social">
+            
+	            <a href="//github.com/shenliyang" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="git fa fa-git"></i>
+			    </a>
+            
+	            <a href="mailto:snippet@91h5.cc" rel="external nofollow" title="邮箱" target="_blank">
+			    	<i class="envelope-o fa fa-envelope-o"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="联系QQ" target="_blank">
+			    	<i class="qq fa fa-qq"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="微博" target="_blank">
+			    	<i class="weibo fa fa-weibo"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="QQ群" target="_blank">
+			    	<i class="users fa fa-users"></i>
+			    </a>
+            
+	            <a href="/atom.xml" rel="external nofollow" title="RSS" target="_blank">
+			    	<i class="feed fa fa-feed"></i>
+			    </a>
+            
+        </div>
+    </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">分类</h3>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ror功能/"><i class="fa" aria-hidden="true">ror功能</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror知识点/"><i class="fa" aria-hidden="true">ror知识点</i></a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror系统/"><i class="fa" aria-hidden="true">ror系统</i></a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web页面/"><i class="fa" aria-hidden="true">web页面</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link current" href="/categories/工具/"><i class="fa" aria-hidden="true">工具</i></a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/微信小程序/"><i class="fa" aria-hidden="true">微信小程序</i></a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/心得/"><i class="fa" aria-hidden="true">心得</i></a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/投资/"><i class="fa" aria-hidden="true">投资</i></a><span class="category-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+    <div class="widget">
+      <h3 class="title">归档</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/"><i class="fa" aria-hidden="true">November 2018</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/"><i class="fa" aria-hidden="true">January 2018</i></a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/"><i class="fa" aria-hidden="true">December 2017</i></a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/"><i class="fa" aria-hidden="true">November 2017</i></a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/"><i class="fa" aria-hidden="true">October 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/"><i class="fa" aria-hidden="true">September 2017</i></a><span class="archive-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+  <div class="widget">
+    <h3 class="title">标签云</h3>
+    <div class="content tag-cloud">
+        <a href="/tags/atom/" style="font-size: 14px;">atom</a> <a href="/tags/bug/" style="font-size: 18px;">bug</a> <a href="/tags/heroku/" style="font-size: 10px;">heroku</a> <a href="/tags/hexo/" style="font-size: 12px;">hexo</a> <a href="/tags/interview/" style="font-size: 11px;">interview</a> <a href="/tags/mac/" style="font-size: 12px;">mac</a> <a href="/tags/orid-day/" style="font-size: 10px;">orid-day</a> <a href="/tags/orid-month/" style="font-size: 10px;">orid-month</a> <a href="/tags/ror功能/" style="font-size: 12px;">ror功能</a> <a href="/tags/ror知识点/" style="font-size: 17px;">ror知识点</a> <a href="/tags/ror系统/" style="font-size: 19px;">ror系统</a> <a href="/tags/typora/" style="font-size: 10px;">typora</a> <a href="/tags/vps/" style="font-size: 16px;">vps</a> <a href="/tags/web页面/" style="font-size: 12px;">web页面</a> <a href="/tags/下载/" style="font-size: 10px;">下载</a> <a href="/tags/工具/" style="font-size: 20px;">工具</a> <a href="/tags/常用/" style="font-size: 12px;">常用</a> <a href="/tags/微信功能/" style="font-size: 13px;">微信功能</a> <a href="/tags/微信系统/" style="font-size: 15px;">微信系统</a> <a href="/tags/微信页面/" style="font-size: 11px;">微信页面</a> <a href="/tags/心得/" style="font-size: 13px;">心得</a> <a href="/tags/手机/" style="font-size: 10px;">手机</a> <a href="/tags/投资/" style="font-size: 10px;">投资</a> <a href="/tags/搬砖/" style="font-size: 10px;">搬砖</a> <a href="/tags/科学上网/" style="font-size: 14px;">科学上网</a> <a href="/tags/部署/" style="font-size: 13px;">部署</a>
+    </div>
+  </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">友链</h3>
+        <div class="content friends-link">
+        
+            <a href="http://www.shenliyang.com" class="fa" target="_blank">个人博客</a>
+        
+        </div>
+    </div>
+
+
+        
+    </aside>
+
+
+        </div>
+      </section>
+    </div>
+  </div>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2017
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>

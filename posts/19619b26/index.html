@@ -1,0 +1,438 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>ror-system-数据库SQL | Hexo</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+    <div class="hide">
+    	<script src="https://s4.cnzz.com/z_stat.php?id=1263868967&web_id=1263868967" language="JavaScript"></script>
+    </div>
+
+
+
+
+
+
+    
+</head>
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner2.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="">
+            <img src="/img/avatar.jpg" alt="logo头像">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题">  
+             
+    	</div>
+    </div>
+</header>
+      <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation"><a href="/"><i class="fa fa-fw "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/前端/"><i class="fa fa-fw "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/后端/"><i class="fa fa-fw "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/工具/"><i class="fa fa-fw "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/资源/"><i class="fa fa-fw "></i>资源</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+      <section class="content-wra aa99">
+        <div class="row">
+            <main class="col-md-9 main-content m-post">
+                <p id="process"></p>
+<article class="post pp99">
+    <div class="post-head">
+        <h1 id="ror-system-数据库SQL">
+            
+	            ror-system-数据库SQL
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span>ror系统</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            ror系统
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/12/14</span>
+    </span>
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="1-1、数据库"><a href="#1-1、数据库" class="headerlink" title="1.1、数据库"></a>1.1、数据库</h2><ul>
+<li>数据库，可以保存大量数据，还提供了方便的查询(Query)机制，以及提供 CRUD(Create, Read, Update, Delete) 操作。</li>
+</ul>
+<ul>
+<li>关系型数据库，这种数据库包括开源的 SQLite、MySQL、PostgreSQL，以及需要付费的 Oracle、Microsoft SQL Server 等等。<ul>
+<li>SQLite 是一套轻量级的关系型数据库，也是 Rails 开发时默认的数据库。它的一个数据库就是一个档案。</li>
+<li>MySQL 是目前最流行的开源数据库。可处理超级大量数据。</li>
+<li>PostgreSQL 经常与 MySQL 相提并论，是 Heroku 默认的数据库。功能更多。</li>
+<li>Oracle 和 MS SQL Server有更好的自调优功能。例如银行、保险业等会用。</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-1、关系型数据库的特性一-Schema"><a href="#2-1、关系型数据库的特性一-Schema" class="headerlink" title="2.1、关系型数据库的特性一: Schema"></a>2.1、关系型数据库的特性一: Schema</h2><ul>
+<li>Schema 纲要就是使用数据库存数据前，需要先定义 Tables(表) 和 Columns(字段)：</li>
+<li>通常只会在数据库里面纪录档案的 metadata 例如档名、大小、MimeType 等等，而实际的档案则放在档案系统上，或是上传到七牛或AWS S3等空间。</li>
+</ul>
+<h2 id="2-2、关系型数据库的特性二-SQL-标准语法"><a href="#2-2、关系型数据库的特性二-SQL-标准语法" class="headerlink" title="2.2、关系型数据库的特性二: SQL 标准语法"></a>2.2、关系型数据库的特性二: SQL 标准语法</h2><ul>
+<li><p>关系型数据库都支援使用一种叫做 SQL (Structured Query Language) 的结构化查询语言。我们会用这种语法来操作数据库，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO events VALUES (&quot;RubyConf&quot;, 100);</span><br><span class="line"></span><br><span class="line">Event.create( :name =&gt; &quot;RubyConf&quot;, :capacity =&gt; 100)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="2-3、关系型数据库的特性三-ACID"><a href="#2-3、关系型数据库的特性三-ACID" class="headerlink" title="2.3、关系型数据库的特性三: ACID"></a>2.3、关系型数据库的特性三: ACID</h2><ul>
+<li><p>要达成这种跨 Tables 多个 SQL 操作必须同时完成(或失败)的需求，就必须用上 <strong>Transaction 事务</strong>。例如你和别人同时同一秒钟互相转帐，数据库会不会算错馀额？</p>
+<ul>
+<li><p>语法是用 <code>BEGIN;</code> 和 <code>COMMIT;</code> 把 SQL 句包裹在一起，要么一起成功、要么一起失败。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">BEGIN;</span><br><span class="line">  INSERT INTO histories (user_id, amount) VALUES (1, -100);</span><br><span class="line">  INSERT INTO histories (user_id, amount) VALUES (2, 100);</span><br><span class="line">  UPDATE accounts SET balance=200 WHERE id=1;</span><br><span class="line">  UPDATE accounts SET balance=300 WHERE id=2;</span><br><span class="line">COMMIT;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>在 Rails 中，每个 model 的 <code>save</code> 其实都会用 Transaction 包起来，包括 model 里面的所有 callback</p>
+</li>
+<li><p>如果是跨 model 的话，你也可以用 <code>ActiveRecord::Base.transaction</code> 来包裹 <code>Transaction</code> 事务，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ActiveRecord::Base.transaction do</span><br><span class="line">  A.save</span><br><span class="line">  B.save</span><br><span class="line">  C.save</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ACID 其实就是在说明 Transactin 的能耐，以下取自 <a href="https://zh.wikipedia.org/zh-cn/ACID" target="_blank" rel="noopener">wikipedia</a>:</p>
+<ul>
+<li>Atomicity 原子性：一个事务（transaction）中的所有操作，要么全部完成，要么全部不完成。</li>
+<li>Consistency 一致性：在事务开始之前和事务结束以后，数据库的完整性没有被破坏。</li>
+<li>Isolation 隔离性：数据库允许多个并发事务同时对其数据进行读写和修改的能力。</li>
+<li>Durability 持久性：事务处理结束后，对数据的修改就是永久的，即便系统故障也不会丢失。</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-1、关系型数据库使用-SQL-语言-DDL"><a href="#3-1、关系型数据库使用-SQL-语言-DDL" class="headerlink" title="3.1、关系型数据库使用 SQL 语言: DDL"></a>3.1、关系型数据库使用 SQL 语言: DDL</h2><ul>
+<li>DDL(Data Definition Language)，就是告诉数据库如何去定义 Schema 纲要的SQL。</li>
+</ul>
+<ul>
+<li>关系型数据库使用 SQL(Structured Query Language) 语言，每个 SQL 句子叫做 SQL Query 或 SQL Statement。</li>
+<li>SQL 分成 DDL 和 DML 两种，都是用分号 <code>;</code> 结尾。</li>
+</ul>
+<h2 id="3-2、建立、删除和更名数据库"><a href="#3-2、建立、删除和更名数据库" class="headerlink" title="3.2、建立、删除和更名数据库"></a>3.2、建立、删除和更名数据库</h2><ul>
+<li>PostgrSQL 可用 utf-8、MySQL 可用 utf8mb4 编码。</li>
+</ul>
+<ul>
+<li><p>SQLite3的指令<code>sqlite3 your_db_name.db</code>。MySQL 指令是 <code>mysql -u root -p</code>。PostgreSQL 的指令是 <code>psql &lt;database_name&gt;</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">新建</span><br><span class="line">CREATE TABLE events (name VARCHAR(50) NOT NULL, capacity INTEGER, date DATE);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">修改</span><br><span class="line">改名 Table，例如 ALTER TABLE persons RENAME TO people;</span><br><span class="line">新增字串，例如 ALTER TABLE people ADD COLUMN status VARCHAR(50);</span><br><span class="line">修改和移除字段：SQLite3 没支援，需要开一个新 table 然后把资料复制过去</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">删除</span><br><span class="line">DROP TABLE IF EXISTS people;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>利用 Migration 来一致管理 Schema， Migration 代码也会放进版本控制系统 Git 里面。</p>
+</li>
+</ul>
+<h2 id="3-3、关系型数据库使用SQL-语言-DML"><a href="#3-3、关系型数据库使用SQL-语言-DML" class="headerlink" title="3.3、关系型数据库使用SQL 语言: DML"></a>3.3、关系型数据库使用SQL 语言: DML</h2><ul>
+<li><p>DML(Data Manipulation Language)就是操作数据的 SQL ，也就是做 CRUD 的操作。</p>
+</li>
+<li><p>新增资料：INSERT INTO xxxs (栏位1, 栏位2) VALUES (值1, 值2);</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">以下 SQL 会新增数据：</span><br><span class="line">INSERT INTO events (capacity, name) VALUES (200, &quot;JSConf&quot;);</span><br><span class="line">这个对应的 Rails 语法是 </span><br><span class="line">Event.create( :capacity =&gt; 200, :name =&gt; &quot;JSConf&quot;)</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">插入多笔 </span><br><span class="line">INSERT INTO events (capacity, name) VALUES (300, &quot;COSCUP&quot;), (300, &quot;OSDC.TW&quot;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查找资料：SELECT 栏位1, 栏位2 FROM xxxs;</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">捞全部 events 资料 </span><br><span class="line">SELECT * FROM events;</span><br><span class="line"></span><br><span class="line">对应的 Rails 语法是 </span><br><span class="line">Event.all</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">捞出指定的字段 </span><br><span class="line">SELECT name, capacity FROM events;</span><br><span class="line"></span><br><span class="line">对应的 Rails 语法是 </span><br><span class="line">Event.select(:name, :capacity).all</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">递增排序 SELECT name, capacity FROM events ORDER BY id; 或 SELECT name, capacity FROM events ORDER BY id ASC;</span><br><span class="line"></span><br><span class="line">递减排序 SELECT name, capacity FROM events ORDER BY id DESC;</span><br><span class="line"></span><br><span class="line">分页 SELECT name, capacity FROM events ORDER BY capacity DESC, name ASC LIMIT 20 OFFSET 20;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改资料：UPDATE xxxs SET 栏位1=值1, 栏位2=值2 WHERE 栏位3=值3; </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">以下 SQL 会修改 events table 的所有数据把 capacity 改成 10</span><br><span class="line">UPDATE events SET capacity=10; </span><br><span class="line"></span><br><span class="line">对应的 Rails 语法是 </span><br><span class="line">Event.update_all( :capacity =&gt; 10 )</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">用 WHERE 可以指定只有修改 name 是 &quot;RubyConf&quot; 的数据</span><br><span class="line">UPDATE events SET capacity=100 WHERE name=&quot;RubyConf&quot;; </span><br><span class="line"></span><br><span class="line">对应的 Rails 语法是 </span><br><span class="line">Event.where( :name =&gt; &quot;RubyConf&quot; ).update_all( :capacity =&gt; 100)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">修改 capacity 和 name</span><br><span class="line">UPDATE events SET capacity=100, name=&quot;RubyConf 2015&quot; WHERE name=&quot;RubyConf&quot;; </span><br><span class="line"></span><br><span class="line">对应的 Rails 语法是 </span><br><span class="line">Event.where( :name =&gt; &quot;RubyConf&quot; ).update_all( :capacity =&gt; 100, :name =&gt; &quot;RubyConf 2015&quot; )</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">在 Rails 中，比较常见只修改一笔，例如：</span><br><span class="line">@event = Event.find(123)</span><br><span class="line">@event.update( :capacity =&gt; 200)</span><br><span class="line"></span><br><span class="line">对应的 SQL 会是</span><br><span class="line">SELECT * FROM events WHERE id = 123;</span><br><span class="line">UPDATE events SET capacity=200 WHERE id=123;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>​</p>
+<p> 删除数据数据</p>
+</li>
+</ul>
+
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/posts/d646e837/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/posts/2682de6f/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
+
+
+    <div id="comments">
+        
+   <p>评论系统未开启，无法评论！</p>
+
+    </div>
+
+
+            </main>
+            
+    <aside class="col-md-3 sidebar">
+        
+        
+    <div class="widget">    
+        <h3 class="title">搜索</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
+                    <button type="button" class="search-form-submit" id="search-local">站内搜索</button>
+                
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget notification">
+        <h3 class="title">网站公告</h3>
+        <div>
+            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
+主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+<hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
+</p>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget">
+      <h3 class="title">社交</h3> 
+        <div class="content social">
+            
+	            <a href="//github.com/shenliyang" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="git fa fa-git"></i>
+			    </a>
+            
+	            <a href="mailto:snippet@91h5.cc" rel="external nofollow" title="邮箱" target="_blank">
+			    	<i class="envelope-o fa fa-envelope-o"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="联系QQ" target="_blank">
+			    	<i class="qq fa fa-qq"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="微博" target="_blank">
+			    	<i class="weibo fa fa-weibo"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="QQ群" target="_blank">
+			    	<i class="users fa fa-users"></i>
+			    </a>
+            
+	            <a href="/atom.xml" rel="external nofollow" title="RSS" target="_blank">
+			    	<i class="feed fa fa-feed"></i>
+			    </a>
+            
+        </div>
+    </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">分类</h3>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ror功能/"><i class="fa" aria-hidden="true">ror功能</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror知识点/"><i class="fa" aria-hidden="true">ror知识点</i></a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror系统/"><i class="fa" aria-hidden="true">ror系统</i></a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web页面/"><i class="fa" aria-hidden="true">web页面</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link current" href="/categories/工具/"><i class="fa" aria-hidden="true">工具</i></a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/微信小程序/"><i class="fa" aria-hidden="true">微信小程序</i></a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/心得/"><i class="fa" aria-hidden="true">心得</i></a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/投资/"><i class="fa" aria-hidden="true">投资</i></a><span class="category-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+    <div class="widget">
+      <h3 class="title">归档</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/"><i class="fa" aria-hidden="true">November 2018</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/"><i class="fa" aria-hidden="true">January 2018</i></a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/"><i class="fa" aria-hidden="true">December 2017</i></a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/"><i class="fa" aria-hidden="true">November 2017</i></a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/"><i class="fa" aria-hidden="true">October 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/"><i class="fa" aria-hidden="true">September 2017</i></a><span class="archive-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+  <div class="widget">
+    <h3 class="title">标签云</h3>
+    <div class="content tag-cloud">
+        <a href="/tags/atom/" style="font-size: 14px;">atom</a> <a href="/tags/bug/" style="font-size: 18px;">bug</a> <a href="/tags/heroku/" style="font-size: 10px;">heroku</a> <a href="/tags/hexo/" style="font-size: 12px;">hexo</a> <a href="/tags/interview/" style="font-size: 11px;">interview</a> <a href="/tags/mac/" style="font-size: 12px;">mac</a> <a href="/tags/orid-day/" style="font-size: 10px;">orid-day</a> <a href="/tags/orid-month/" style="font-size: 10px;">orid-month</a> <a href="/tags/ror功能/" style="font-size: 12px;">ror功能</a> <a href="/tags/ror知识点/" style="font-size: 17px;">ror知识点</a> <a href="/tags/ror系统/" style="font-size: 19px;">ror系统</a> <a href="/tags/typora/" style="font-size: 10px;">typora</a> <a href="/tags/vps/" style="font-size: 16px;">vps</a> <a href="/tags/web页面/" style="font-size: 12px;">web页面</a> <a href="/tags/下载/" style="font-size: 10px;">下载</a> <a href="/tags/工具/" style="font-size: 20px;">工具</a> <a href="/tags/常用/" style="font-size: 12px;">常用</a> <a href="/tags/微信功能/" style="font-size: 13px;">微信功能</a> <a href="/tags/微信系统/" style="font-size: 15px;">微信系统</a> <a href="/tags/微信页面/" style="font-size: 11px;">微信页面</a> <a href="/tags/心得/" style="font-size: 13px;">心得</a> <a href="/tags/手机/" style="font-size: 10px;">手机</a> <a href="/tags/投资/" style="font-size: 10px;">投资</a> <a href="/tags/搬砖/" style="font-size: 10px;">搬砖</a> <a href="/tags/科学上网/" style="font-size: 14px;">科学上网</a> <a href="/tags/部署/" style="font-size: 13px;">部署</a>
+    </div>
+  </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">友链</h3>
+        <div class="content friends-link">
+        
+            <a href="http://www.shenliyang.com" class="fa" target="_blank">个人博客</a>
+        
+        </div>
+    </div>
+
+
+        
+    </aside>
+
+
+        </div>
+      </section>
+    </div>
+  </div>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2017
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>

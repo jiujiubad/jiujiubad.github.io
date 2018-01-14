@@ -1,0 +1,385 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>wx-function-商城(实例)分类菜单动态绑定id、动态api | Hexo</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+    <div class="hide">
+    	<script src="https://s4.cnzz.com/z_stat.php?id=1263868967&web_id=1263868967" language="JavaScript"></script>
+    </div>
+
+
+
+
+
+
+    
+</head>
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner2.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="">
+            <img src="/img/avatar.jpg" alt="logo头像">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题">  
+             
+    	</div>
+    </div>
+</header>
+      <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation"><a href="/"><i class="fa fa-fw "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/前端/"><i class="fa fa-fw "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/后端/"><i class="fa fa-fw "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/工具/"><i class="fa fa-fw "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/资源/"><i class="fa fa-fw "></i>资源</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+      <section class="content-wra aa99">
+        <div class="row">
+            <main class="col-md-9 main-content m-post">
+                <p id="process"></p>
+<article class="post pp99">
+    <div class="post-head">
+        <h1 id="wx-function-商城(实例)分类菜单动态绑定id、动态api">
+            
+	            wx-function-商城(实例)分类菜单动态绑定id、动态api
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span>微信小程序</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            微信功能
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/12/22</span>
+    </span>
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fmpmtwhs0tj30hc0uk3yq.jpg" width="200"></p>
+<p>参考demo2，下载地址<a href="http://so.jb51.net/cse/search?q=%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%95%86%E5%9F%8E%E9%A1%B9%E7%9B%AE&amp;entry=1&amp;s=10520733385329581432&amp;stp=1&amp;nsid=0" target="_blank" rel="noopener"><em>微信小程序商城项目</em>之侧栏分类效果(1)</a></p>
+<p>api地址<a href="http://huanqiuxiaozhen.com/wemall/goodstype/typebrandList" target="_blank" rel="noopener">http://huanqiuxiaozhen.com/wemall/goodstype/typebrandList</a></p>
+<h1 id="一、初稿"><a href="#一、初稿" class="headerlink" title="一、初稿"></a>一、初稿</h1><p>wxml页面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--index.wxml--&gt;</span><br><span class="line">&lt;view class=&quot;container&quot; wx:key=&quot;index&quot;&gt;</span><br><span class="line">  &lt;view&gt;</span><br><span class="line">    &lt;button type=&quot;primary&quot; bindtap=&quot;loadData&quot;&gt;加载数据&lt;/button&gt;</span><br><span class="line">  &lt;/view&gt;</span><br><span class="line">  </span><br><span class="line">  &lt;view wx:for=&quot;&#123;&#123;newsdata&#125;&#125;&quot; style=&quot;width:25%&quot;&gt;</span><br><span class="line">    &lt;image sytle=&quot;width:300px;height:200px;&quot; src=&quot;&#123;&#123;item.image.url&#125;&#125;&quot;&gt;&lt;/image&gt;</span><br><span class="line">    [&#123;&#123;item.realtype&#125;&#125;]&#123;&#123;item.title&#125;&#125;——&#123;&#123;item.name&#125;&#125;</span><br><span class="line">  &lt;/view&gt;  </span><br><span class="line">&lt;/view&gt;</span><br></pre></td></tr></table></figure>
+<p>js页面，onShow是一开始显示的画面（接index的api）。loadData是自定义的事件，用bindtap的用法绑定在按钮上，点击按钮显示新的画面（接show的api）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">// pages/exercies/index.js</span><br><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">  </span><br><span class="line">  &#125;,</span><br><span class="line">  onShow: function () &#123;</span><br><span class="line">    var that = this;</span><br><span class="line">    wx.request(&#123;</span><br><span class="line">      url: &apos;https://luccake.top/api/v1/categories&apos;, //仅为示例，并非真实的接口地址</span><br><span class="line">      header: &#123;</span><br><span class="line">        &apos;content-type&apos;: &apos;application/json&apos; // 默认值</span><br><span class="line">      &#125;,</span><br><span class="line">      success: function (res) &#123;</span><br><span class="line">        console.log(res.data)</span><br><span class="line">        that.setData(&#123;</span><br><span class="line">          newsdata: res.data.category</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  loadData: function () &#123;</span><br><span class="line">    var that = this;</span><br><span class="line">    wx.request(&#123;</span><br><span class="line">      url: &apos;https://luccake.top/api/v1/categories/1&apos;, //仅为示例，并非真实的接口地址</span><br><span class="line">      header: &#123;</span><br><span class="line">        &apos;content-type&apos;: &apos;application/json&apos; // 默认值</span><br><span class="line">      &#125;,</span><br><span class="line">      success: function (res) &#123;</span><br><span class="line">        console.log(res.data)</span><br><span class="line">        that.setData(&#123;</span><br><span class="line">          newsdata: res.data.product</span><br><span class="line">        &#125;)        </span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h1 id="二、显示分类名，点击出现全部商品（因为还没有绑定分类id）"><a href="#二、显示分类名，点击出现全部商品（因为还没有绑定分类id）" class="headerlink" title="二、显示分类名，点击出现全部商品（因为还没有绑定分类id）"></a>二、显示分类名，点击出现全部商品（因为还没有绑定分类id）</h1><p>wxml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--index.wxml--&gt;</span><br><span class="line">&lt;view class=&quot;container&quot; wx:key=&quot;index&quot;&gt;</span><br><span class="line">  </span><br><span class="line">  &lt;view wx:for=&quot;&#123;&#123;newsda&#125;&#125;&quot; style=&quot;width:25%&quot; bindtap=&quot;loadData&quot; wx:key=&quot;&quot;&gt;</span><br><span class="line">    &#123;&#123;item.name&#125;&#125;</span><br><span class="line">  &lt;/view&gt;  </span><br><span class="line"></span><br><span class="line">  &lt;view wx:for=&quot;&#123;&#123;newsdata&#125;&#125;&quot; style=&quot;width:25%&quot; wx:key=&quot;&quot;&gt;</span><br><span class="line">    &lt;image sytle=&quot;width:300px;height:200px;&quot; src=&quot;&#123;&#123;item.image.url&#125;&#125;&quot;&gt;&lt;/image&gt;</span><br><span class="line">    [&#123;&#123;item.realtype&#125;&#125;]&#123;&#123;item.title&#125;&#125;——&#123;&#123;item.name&#125;&#125;</span><br><span class="line">  &lt;/view&gt;    </span><br><span class="line">&lt;/view&gt;</span><br></pre></td></tr></table></figure>
+<p>js，图片接口用了固定id=1，所以只能显示1分类的商品</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">// pages/exercies/index.js</span><br><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">  </span><br><span class="line">  &#125;,</span><br><span class="line">  onShow: function () &#123;</span><br><span class="line">    var that = this;</span><br><span class="line">    wx.request(&#123;</span><br><span class="line">      url: &apos;https://luccake.top/api/v1/categories&apos;, //仅为示例，并非真实的接口地址</span><br><span class="line">      header: &#123;</span><br><span class="line">        &apos;content-type&apos;: &apos;application/json&apos; // 默认值</span><br><span class="line">      &#125;,</span><br><span class="line">      success: function (res) &#123;</span><br><span class="line">        console.log(res.data)</span><br><span class="line">        that.setData(&#123;</span><br><span class="line">          newsda: res.data.category</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  loadData: function () &#123;</span><br><span class="line">    var that = this;</span><br><span class="line">    wx.request(&#123;</span><br><span class="line">      url: &apos;https://luccake.top/api/v1/categories/1&apos;, //仅为示例，并非真实的接口地址</span><br><span class="line">      header: &#123;</span><br><span class="line">        &apos;content-type&apos;: &apos;application/json&apos; // 默认值</span><br><span class="line">      &#125;,</span><br><span class="line">      success: function (res) &#123;</span><br><span class="line">        console.log(res.data)</span><br><span class="line">        that.setData(&#123;</span><br><span class="line">          newsdata: res.data.product</span><br><span class="line">        &#125;)        </span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h1 id="三、动态绑定分类id"><a href="#三、动态绑定分类id" class="headerlink" title="三、动态绑定分类id"></a>三、动态绑定分类id</h1><h2 id="1、关键代码"><a href="#1、关键代码" class="headerlink" title="1、关键代码"></a>1、关键代码</h2><p>1）目的是点击分类名称后显示相应分类id下的商品。</p>
+<p>所以要在带有bindtap的view标签里加入<code>data-categoryid=&quot;&quot;</code></p>
+<blockquote>
+<p>注意：这里的<code>data-变量名称</code>，在js调用时是不能带<code>data-</code>，而是直接用名称</p>
+</blockquote>
+<p>2）定义bindtap点击后指定的function，比如loadData: function (e)。</p>
+<p>最关键的代码：<code>参数名.target.dataset.变量名称</code>。</p>
+<p>如果传递的参数如上是<code>e</code>，那么调用方法就是<code>e.target.dataset.categoryid</code>。</p>
+<p>把代码加入到api的url中，代码如下。</p>
+<h2 id="2、代码"><a href="#2、代码" class="headerlink" title="2、代码"></a>2、代码</h2><p>wxml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--index.wxml--&gt;</span><br><span class="line">&lt;view class=&quot;container&quot; wx:key=&quot;index&quot;&gt;</span><br><span class="line">  </span><br><span class="line">  &lt;view wx:for=&quot;&#123;&#123;newsda&#125;&#125;&quot; style=&quot;width:25%&quot; bindtap=&quot;loadData&quot; data-categoryid=&quot;&#123;&#123;item.id&#125;&#125;&quot; wx:key=&quot;&quot;&gt;</span><br><span class="line">    &#123;&#123;item.name&#125;&#125;</span><br><span class="line">  &lt;/view&gt;  </span><br><span class="line"></span><br><span class="line">  &lt;view wx:for=&quot;&#123;&#123;newsdata&#125;&#125;&quot; style=&quot;width:25%&quot; wx:key=&quot;&quot;&gt;</span><br><span class="line">    &lt;image sytle=&quot;width:300px;height:200px;&quot; src=&quot;&#123;&#123;item.image.url&#125;&#125;&quot;&gt;&lt;/image&gt;</span><br><span class="line">    [&#123;&#123;item.realtype&#125;&#125;]&#123;&#123;item.title&#125;&#125;——&#123;&#123;item.name&#125;&#125;</span><br><span class="line">  &lt;/view&gt;    </span><br><span class="line">&lt;/view&gt;</span><br></pre></td></tr></table></figure>
+<p>js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">// pages/exercies/index.js</span><br><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line"></span><br><span class="line">  &#125;,</span><br><span class="line">  onShow: function () &#123;</span><br><span class="line">    var that = this;</span><br><span class="line">    wx.request(&#123;</span><br><span class="line">      url: &apos;https://luccake.top/api/v1/categories&apos;, //仅为示例，并非真实的接口地址</span><br><span class="line">      header: &#123;</span><br><span class="line">        &apos;content-type&apos;: &apos;application/json&apos; // 默认值</span><br><span class="line">      &#125;,</span><br><span class="line">      success: function (res) &#123;</span><br><span class="line">        console.log(res.data)</span><br><span class="line">        that.setData(&#123;</span><br><span class="line">          newsda: res.data.category</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  loadData: function (e) &#123;</span><br><span class="line">    var that = this;</span><br><span class="line">    console.log(e.target.dataset.categoryid); //测试console是否显示id号，这行可删除。</span><br><span class="line">    wx.request(&#123;</span><br><span class="line">      url: &apos;https://luccake.top/api/v1/categories/&apos; + e.target.dataset.categoryid, //仅为示例，并非真实的接口地址</span><br><span class="line">      header: &#123;</span><br><span class="line">        &apos;content-type&apos;: &apos;application/json&apos; // 默认值</span><br><span class="line">      &#125;,</span><br><span class="line">      success: function (res) &#123;</span><br><span class="line">        console.log(res.data)</span><br><span class="line">        that.setData(&#123;</span><br><span class="line">          newsdata: res.data.product</span><br><span class="line">        &#125;)</span><br><span class="line">        </span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h1 id="四、加上css"><a href="#四、加上css" class="headerlink" title="四、加上css"></a>四、加上css</h1><p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fmpmtwhs0tj30hc0uk3yq.jpg" width="200"></p>
+<p>wxml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--index.wxml--&gt;</span><br><span class="line">&lt;view class=&quot;container&quot;&gt;</span><br><span class="line">  &lt;view class=&quot;nav_left&quot;&gt;</span><br><span class="line">    &lt;block wx:for=&quot;&#123;&#123;newsda&#125;&#125;&quot; wx:key=&quot;&quot;&gt;</span><br><span class="line">      &lt;view class=&quot;nav_left_items &#123;&#123;cur_id == item.id ? &apos;active&apos; : &apos;&apos;&#125;&#125;&quot; bindtap=&quot;loadData&quot; data-categoryid=&quot;&#123;&#123;item.id&#125;&#125;&quot;&gt;</span><br><span class="line">        &#123;&#123;item.name&#125;&#125;</span><br><span class="line">      &lt;/view&gt;  </span><br><span class="line">    &lt;/block&gt;</span><br><span class="line">  &lt;/view&gt;</span><br><span class="line"></span><br><span class="line">  &lt;view class=&quot;nav_right&quot;&gt;</span><br><span class="line">    &lt;block wx:for=&quot;&#123;&#123;newsdata&#125;&#125;&quot; wx:key=&quot;&quot;&gt;</span><br><span class="line">      &lt;view class=&quot;nav_right_items&quot;&gt;</span><br><span class="line">        &lt;image src=&quot;&#123;&#123;item.image.url&#125;&#125;&quot;&gt;&lt;/image&gt;</span><br><span class="line">        &lt;text&gt;&#123;&#123;item.title&#125;&#125;&lt;/text&gt;</span><br><span class="line">      &lt;/view&gt;  </span><br><span class="line">    &lt;/block&gt;</span><br><span class="line">  &lt;/view&gt;   </span><br><span class="line">&lt;/view&gt;</span><br></pre></td></tr></table></figure>
+<p>js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">// pages/exercies/index.js</span><br><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    </span><br><span class="line">  &#125;,</span><br><span class="line">  onShow: function () &#123;</span><br><span class="line">    var that = this;</span><br><span class="line">    wx.request(&#123;</span><br><span class="line">      url: &apos;https://luccake.top/api/v1/categories&apos;, //仅为示例，并非真实的接口地址</span><br><span class="line">      header: &#123;</span><br><span class="line">        &apos;content-type&apos;: &apos;application/json&apos; // 默认值</span><br><span class="line">      &#125;,</span><br><span class="line">      success: function (res) &#123;</span><br><span class="line">        console.log(res.data)</span><br><span class="line">        that.setData(&#123;</span><br><span class="line">          newsda: res.data.category</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  loadData: function (e) &#123;</span><br><span class="line">    var that = this;</span><br><span class="line">    console.log(e.target.dataset.categoryid); //测试console是否显示id号，这行可删除。</span><br><span class="line">    wx.request(&#123;</span><br><span class="line">      url: &apos;https://luccake.top/api/v1/categories/&apos; + e.target.dataset.categoryid, //仅为示例，并非真实的接口地址</span><br><span class="line">      header: &#123;</span><br><span class="line">        &apos;content-type&apos;: &apos;application/json&apos; // 默认值</span><br><span class="line">      &#125;,</span><br><span class="line">      success: function (res) &#123;</span><br><span class="line">        console.log(res.data)</span><br><span class="line">        that.setData(&#123;</span><br><span class="line">          newsdata: res.data.product,</span><br><span class="line">          cur_id: e.target.dataset.categoryid</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>wxss</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line">page&#123;</span><br><span class="line">  background: #f5f5f5;</span><br><span class="line">&#125;</span><br><span class="line">/*总体主盒子*/</span><br><span class="line">.container &#123;</span><br><span class="line">  position: relative;</span><br><span class="line">  width: 100%;</span><br><span class="line">  height: 100%;</span><br><span class="line">  background-color: #fff;</span><br><span class="line">  color: #939393;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/*左侧栏主盒子*/</span><br><span class="line">.nav_left&#123;</span><br><span class="line">  /*设置行内块级元素（没使用定位）*/</span><br><span class="line">  display: inline-block;</span><br><span class="line">  width: 25%;</span><br><span class="line">  height: 100%;</span><br><span class="line">  /*主盒子设置背景色为灰色*/</span><br><span class="line">  background: #f5f5f5;</span><br><span class="line">  text-align: center;</span><br><span class="line">&#125;</span><br><span class="line">/*左侧栏list的item*/</span><br><span class="line">.nav_left .nav_left_items&#123;</span><br><span class="line">  /*每个高30px*/</span><br><span class="line">  height: 30px;</span><br><span class="line">  /*垂直居中*/</span><br><span class="line">  line-height: 30px;</span><br><span class="line">  /*再设上下padding增加高度，总高42px*/</span><br><span class="line">  padding: 6px 0;</span><br><span class="line">  /*只设下边线*/</span><br><span class="line">  border-bottom: 1px solid #dedede;</span><br><span class="line">  /*文字14px*/</span><br><span class="line">  font-size: 14px;</span><br><span class="line">&#125;</span><br><span class="line">/*左侧栏list的item被选中时*/</span><br><span class="line">.nav_left .nav_left_items.active&#123;</span><br><span class="line">  /*背景色变成白色*/</span><br><span class="line">  background: #fff;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/*右侧栏主盒子*/</span><br><span class="line">.nav_right&#123;</span><br><span class="line">  /*右侧盒子使用了绝对定位*/</span><br><span class="line">  position: absolute;</span><br><span class="line">  top: 0;</span><br><span class="line">  right: 0;</span><br><span class="line">  flex: 1;</span><br><span class="line">  /*宽度75%，高度占满，并使用百分比布局*/</span><br><span class="line">  width: 75%;</span><br><span class="line">  height: 100%;</span><br><span class="line">  padding: 10px;</span><br><span class="line">  box-sizing: border-box;</span><br><span class="line">  background: #fff;</span><br><span class="line">&#125;</span><br><span class="line">/*右侧栏list的item*/</span><br><span class="line">.nav_right .nav_right_items&#123;</span><br><span class="line">  /*浮动向左*/</span><br><span class="line">  float: left;</span><br><span class="line">  /*每个item设置宽度是33.33%*/</span><br><span class="line">  width: 33.33%;</span><br><span class="line">  height: 80px;</span><br><span class="line">  text-align: center;</span><br><span class="line">&#125;</span><br><span class="line">.nav_right .nav_right_items image&#123;</span><br><span class="line">  /*被图片设置宽高*/</span><br><span class="line">  width: 50px;</span><br><span class="line">  height: 30px;</span><br><span class="line">&#125;</span><br><span class="line">.nav_right .nav_right_items text&#123;</span><br><span class="line">  /*给text设成块级元素*/</span><br><span class="line">  display: block;</span><br><span class="line">  margin-top: 5px;</span><br><span class="line">  font-size: 10px;</span><br><span class="line">  /*设置文字溢出部分为...*/</span><br><span class="line">  overflow: hidden;</span><br><span class="line">  white-space: nowrap;</span><br><span class="line">  text-overflow: ellipsis;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="五、加上wx-if当没有图片或数据时的显示"><a href="#五、加上wx-if当没有图片或数据时的显示" class="headerlink" title="五、加上wx:if当没有图片或数据时的显示"></a>五、加上wx:if当没有图片或数据时的显示</h2>
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/posts/fc1e8879/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/posts/32fec826/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
+
+
+    <div id="comments">
+        
+   <p>评论系统未开启，无法评论！</p>
+
+    </div>
+
+
+            </main>
+            
+    <aside class="col-md-3 sidebar">
+        
+        
+    <div class="widget">    
+        <h3 class="title">搜索</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
+                    <button type="button" class="search-form-submit" id="search-local">站内搜索</button>
+                
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget notification">
+        <h3 class="title">网站公告</h3>
+        <div>
+            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
+主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+<hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
+</p>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget">
+      <h3 class="title">社交</h3> 
+        <div class="content social">
+            
+	            <a href="//github.com/shenliyang" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="git fa fa-git"></i>
+			    </a>
+            
+	            <a href="mailto:snippet@91h5.cc" rel="external nofollow" title="邮箱" target="_blank">
+			    	<i class="envelope-o fa fa-envelope-o"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="联系QQ" target="_blank">
+			    	<i class="qq fa fa-qq"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="微博" target="_blank">
+			    	<i class="weibo fa fa-weibo"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="QQ群" target="_blank">
+			    	<i class="users fa fa-users"></i>
+			    </a>
+            
+	            <a href="/atom.xml" rel="external nofollow" title="RSS" target="_blank">
+			    	<i class="feed fa fa-feed"></i>
+			    </a>
+            
+        </div>
+    </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">分类</h3>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ror功能/"><i class="fa" aria-hidden="true">ror功能</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror知识点/"><i class="fa" aria-hidden="true">ror知识点</i></a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror系统/"><i class="fa" aria-hidden="true">ror系统</i></a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web页面/"><i class="fa" aria-hidden="true">web页面</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link current" href="/categories/工具/"><i class="fa" aria-hidden="true">工具</i></a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/微信小程序/"><i class="fa" aria-hidden="true">微信小程序</i></a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/心得/"><i class="fa" aria-hidden="true">心得</i></a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/投资/"><i class="fa" aria-hidden="true">投资</i></a><span class="category-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+    <div class="widget">
+      <h3 class="title">归档</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/"><i class="fa" aria-hidden="true">November 2018</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/"><i class="fa" aria-hidden="true">January 2018</i></a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/"><i class="fa" aria-hidden="true">December 2017</i></a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/"><i class="fa" aria-hidden="true">November 2017</i></a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/"><i class="fa" aria-hidden="true">October 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/"><i class="fa" aria-hidden="true">September 2017</i></a><span class="archive-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+  <div class="widget">
+    <h3 class="title">标签云</h3>
+    <div class="content tag-cloud">
+        <a href="/tags/atom/" style="font-size: 14px;">atom</a> <a href="/tags/bug/" style="font-size: 18px;">bug</a> <a href="/tags/heroku/" style="font-size: 10px;">heroku</a> <a href="/tags/hexo/" style="font-size: 12px;">hexo</a> <a href="/tags/interview/" style="font-size: 11px;">interview</a> <a href="/tags/mac/" style="font-size: 12px;">mac</a> <a href="/tags/orid-day/" style="font-size: 10px;">orid-day</a> <a href="/tags/orid-month/" style="font-size: 10px;">orid-month</a> <a href="/tags/ror功能/" style="font-size: 12px;">ror功能</a> <a href="/tags/ror知识点/" style="font-size: 17px;">ror知识点</a> <a href="/tags/ror系统/" style="font-size: 19px;">ror系统</a> <a href="/tags/typora/" style="font-size: 10px;">typora</a> <a href="/tags/vps/" style="font-size: 16px;">vps</a> <a href="/tags/web页面/" style="font-size: 12px;">web页面</a> <a href="/tags/下载/" style="font-size: 10px;">下载</a> <a href="/tags/工具/" style="font-size: 20px;">工具</a> <a href="/tags/常用/" style="font-size: 12px;">常用</a> <a href="/tags/微信功能/" style="font-size: 13px;">微信功能</a> <a href="/tags/微信系统/" style="font-size: 15px;">微信系统</a> <a href="/tags/微信页面/" style="font-size: 11px;">微信页面</a> <a href="/tags/心得/" style="font-size: 13px;">心得</a> <a href="/tags/手机/" style="font-size: 10px;">手机</a> <a href="/tags/投资/" style="font-size: 10px;">投资</a> <a href="/tags/搬砖/" style="font-size: 10px;">搬砖</a> <a href="/tags/科学上网/" style="font-size: 14px;">科学上网</a> <a href="/tags/部署/" style="font-size: 13px;">部署</a>
+    </div>
+  </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">友链</h3>
+        <div class="content friends-link">
+        
+            <a href="http://www.shenliyang.com" class="fa" target="_blank">个人博客</a>
+        
+        </div>
+    </div>
+
+
+        
+    </aside>
+
+
+        </div>
+      </section>
+    </div>
+  </div>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2017
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>

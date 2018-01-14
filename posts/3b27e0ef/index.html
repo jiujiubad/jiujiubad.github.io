@@ -1,0 +1,689 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>tool-hexo-hexo主题篇之Next | Hexo</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+    <div class="hide">
+    	<script src="https://s4.cnzz.com/z_stat.php?id=1263868967&web_id=1263868967" language="JavaScript"></script>
+    </div>
+
+
+
+
+
+
+    
+</head>
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner2.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="">
+            <img src="/img/avatar.jpg" alt="logo头像">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题">  
+             
+    	</div>
+    </div>
+</header>
+      <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation"><a href="/"><i class="fa fa-fw "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/前端/"><i class="fa fa-fw "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/后端/"><i class="fa fa-fw "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/工具/"><i class="fa fa-fw "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/资源/"><i class="fa fa-fw "></i>资源</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+      <section class="content-wra aa99">
+        <div class="row">
+            <main class="col-md-9 main-content m-post">
+                <p id="process"></p>
+<article class="post pp99">
+    <div class="post-head">
+        <h1 id="tool-hexo-hexo主题篇之Next">
+            
+	            tool-hexo-hexo主题篇之Next
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span>工具</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            工具
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2018/11/12</span>
+    </span>
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="为什么选择hexo而不用vps搭建博客？"><a href="#为什么选择hexo而不用vps搭建博客？" class="headerlink" title="为什么选择hexo而不用vps搭建博客？"></a>为什么选择hexo而不用vps搭建博客？</h2><p>比起wp来说，hexo轻量级的多，而且易部署（指速度优化方面），也不需要一个专门的服务器来放置（这个其实是我选择hexo的最终原因。手里虽然有vps，但是因为跑着ss加上国内ping值太高，最终肯定影响国内速度，所以就一直没用来放blog）当然没有后台也就意味着不能随时随地写了就发，这个相对WP来说是弱势，但我感觉还好，毕竟不会常常在外面跑，而且写博客基本都是在电脑前，再不济也可以先把MD文件写完后拷回去发布。</p>
+<h2 id="css"><a href="#css" class="headerlink" title="css"></a>css</h2><p>1）两种在文字前加红竖线：<code>box-shadow: -20px 0px 0px -10px red;</code>，或<code>border-left: 3px solid #FF1700;</code></p>
+<p>2）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](./pic/pic1_50.png =100x100)</span><br></pre></td></tr></table></figure>
+<h2 id="标签用哪些"><a href="#标签用哪些" class="headerlink" title="标签用哪些"></a>标签用哪些</h2><p>ruby on rails、markdown、typora、vps、atom、bug、iterm</p>
+<h2 id="【问题】域名实名认证是不是就是已经备案？"><a href="#【问题】域名实名认证是不是就是已经备案？" class="headerlink" title="【问题】域名实名认证是不是就是已经备案？"></a>【问题】域名实名认证是不是就是已经备案？</h2><p>不是的。实名认证是在网站如阿里云里认证，而备案是国家备案局的。</p>
+<p><a href="http://icp.chinaz.com/searchs" target="_blank" rel="noopener">ChinaZ域名备案批量查询</a></p>
+<p><a href="http://www.beianbeian.com/" target="_blank" rel="noopener">ICP备案查询</a></p>
+<h2 id="【问题】如果没有域名解析会怎样？"><a href="#【问题】如果没有域名解析会怎样？" class="headerlink" title="【问题】如果没有域名解析会怎样？"></a>【问题】如果没有域名解析会怎样？</h2><p>99初步理解，访问jiujiubad.github.io.时会解析成购买的jiujiuba.top。</p>
+<h2 id="【问题】域名解析要额外的钱吗？"><a href="#【问题】域名解析要额外的钱吗？" class="headerlink" title="【问题】域名解析要额外的钱吗？"></a>【问题】域名解析要额外的钱吗？</h2><p>不用，购买阿里云域名的域名就可以配置解析。</p>
+<h2 id="【问题】用vps从头搭建博客好，还是用hexo？"><a href="#【问题】用vps从头搭建博客好，还是用hexo？" class="headerlink" title="【问题】用vps从头搭建博客好，还是用hexo？"></a>【问题】用vps从头搭建博客好，还是用hexo？</h2><p>用hexo好，因为搭建很容易，博客能用就行没必要占用太多注意力。另外，hexo部署可以选在在gihub，也可以选在部署在vps服务器上。</p>
+<h2 id="【问题】博客文件开头除了title、categories，还要添加什么信息？"><a href="#【问题】博客文件开头除了title、categories，还要添加什么信息？" class="headerlink" title="【问题】博客文件开头除了title、categories，还要添加什么信息？"></a>【问题】博客文件开头除了title、categories，还要添加什么信息？</h2><p>别搞那么复杂，写几个常用的就好，包括四个：title、date、categories、tags，指定文章再加上top。</p>
+<p>其他诸如版权、评论、密码，还是算了，太占用注意力。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &apos;20171014 搭建hexo博客&apos;</span><br><span class="line">date: 2017-12-08 12:06</span><br><span class="line">categories:      #分类</span><br><span class="line">tags:            #标签 </span><br><span class="line">- 方法</span><br><span class="line">- 但是</span><br><span class="line"></span><br><span class="line">top:        #置顶，需要先配置</span><br><span class="line"></span><br><span class="line">comments: true   #评论</span><br><span class="line">copyright: true  #版权信息，需要先配置</span><br><span class="line">password:   #密码，需要先配置</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h1 id="Mac上搭建Hexo博客：入门篇"><a href="#Mac上搭建Hexo博客：入门篇" class="headerlink" title="Mac上搭建Hexo博客：入门篇"></a>Mac上搭建Hexo博客：入门篇</h1><h3 id="参考链接："><a href="#参考链接：" class="headerlink" title="参考链接："></a>参考链接：</h3><p><a href="http://gonghonglou.com/2016/02/03/firstblog/" target="_blank" rel="noopener">【转发】Mac上搭建基于GitHub的Hexo博客</a></p>
+<p><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo官网</a></p>
+<p><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">hexo下的next主题配置官方文档</a></p>
+<p><a href="jiujiubad.top">【转发】Mac上搭建基于GitHub的Hexo博客</a></p>
+<p><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo官网</a></p>
+<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>第一到第四步，是hexo博客及next主题的安装。剩下的步骤是主题细节配置，按自己的使用习惯选择。</p>
+<h1 id="一、环境配置"><a href="#一、环境配置" class="headerlink" title="一、环境配置"></a>一、环境配置</h1><h2 id="1-Node-js"><a href="#1-Node-js" class="headerlink" title="1.Node.js"></a>1.Node.js</h2><p>用来生成静态页面。移步<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js官网</a>，下载v5.5.0 Stable 一路安装即可。</p>
+<h2 id="2-Git"><a href="#2-Git" class="headerlink" title="2.Git"></a>2.Git</h2><p>用来将本地Hexo内容提交到Github上。Xcode自带Git，这里不再赘述。如果没有Xcode可以参考<a href="https://hexo.io/docs" target="_blank" rel="noopener">Hexo官网</a>上的安装方法。</p>
+<h1 id="二、安装Hexo"><a href="#二、安装Hexo" class="headerlink" title="二、安装Hexo"></a>二、安装Hexo</h1><p>当Node.js和Git都安装好后就可以正式安装Hexo了，终端执行如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g hexo</span><br></pre></td></tr></table></figure>
+<p>输入管理员密码（Mac登录密码）即开始安装 (<code>sudo</code>:linux系统管理指令 <code>-g</code>:全局安装)</p>
+<blockquote>
+<p>注意坑一：<a href="https://hexo.io/docs" target="_blank" rel="noopener">Hexo官网</a>上的安装命令是<code>$ npm install -g hexo-cli</code>，安装时不要忘记前面加上<code>sudo</code>，否则会因为权限问题报错。</p>
+</blockquote>
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p>终端cd到一个你选定的目录，执行<code>hexo init</code>命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init blog</span><br></pre></td></tr></table></figure>
+<p><code>blog</code>是你建立的文件夹名称。cd到<code>blog</code>文件夹下，执行如下命令，安装npm：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<p>执行如下命令，开启hexo服务器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+<p>此时，浏览器中打开网址<a href="http://0.0.0.0:4000/" target="_blank" rel="noopener">http://localhost:4000</a>，能看到如下页面：</p>
+<p><a href="http://image.gonghonglou.com/firstblog/hexo4000.png" target="_blank" rel="noopener"><img src="http://image.gonghonglou.com/firstblog/hexo4000.png" alt="http://localhost:4000"></a></p>
+<p>本地设置好后，接下来开始关联Github。</p>
+<h1 id="三、关联Github"><a href="#三、关联Github" class="headerlink" title="三、关联Github"></a>三、关联Github</h1><h2 id="1、部署github"><a href="#1、部署github" class="headerlink" title="1、部署github"></a>1、部署github</h2><h3 id="Step1-新建仓库"><a href="#Step1-新建仓库" class="headerlink" title="Step1 新建仓库"></a>Step1 新建仓库</h3><p>1）登录你的Github帐号，新建仓库，名为<code>用户名.github.io</code>固定写法，如下图中<code>1</code>所示：</p>
+<p><img src="http://image.gonghonglou.com/firstblog/githubName.png" alt=""></p>
+<p>2）PS：本地的<code>blog</code>文件夹下内容为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">_config.yml	</span><br><span class="line">db.json </span><br><span class="line">node_modules </span><br><span class="line">package.json</span><br><span class="line">scaffolds</span><br><span class="line">source</span><br><span class="line">themes</span><br></pre></td></tr></table></figure>
+<h3 id="Step2-修改站点配置"><a href="#Step2-修改站点配置" class="headerlink" title="Step2 修改站点配置"></a>Step2 修改站点配置</h3><p>终端cd到<code>blog</code>文件夹下，<code>vim</code>打开站点配置文件<code>_config.yml</code>，用atom编辑或用linux命令<code>vim _config.yml</code>。</p>
+<p>打开下滑到最后，修改成下边的样子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/jiujiubad/jiujiubad.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>你需要将<code>repository</code>后<code>gonghonglou</code>换成你自己的用户名，地址在上图<code>2</code>位置获取。</p>
+<blockquote>
+<p>注意坑二：在配置所有的<code>_config.yml</code>文件时（包括theme中的），在所有的冒号<code>:</code>后边都要加一个空格，否则执行hexo命令会报错，切记 切记</p>
+</blockquote>
+<h3 id="Step3-生成静网站并部署"><a href="#Step3-生成静网站并部署" class="headerlink" title="Step3 生成静网站并部署"></a>Step3 生成静网站并部署</h3><p>1）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g //生成静态网站，对应专案下的public文件夹</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>此时若出现如下报错：<br>ERROR Local hexo not found in ~/blog<br>ERROR Try runing: ‘npm install hexo –save’</p>
+<p>则执行命令：<br>npm install hexo –save</p>
+<p>若无报错，自行忽略此步骤。</p>
+</blockquote>
+<p>2）执行配置命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d //部署到github</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意坑三：若执行命令<code>hexo d</code>仍然报错：无法连接git或找不到git，则执行如下命令来安装<a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="noopener">hexo-deployer-git</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; npm install hexo-deployer-git --save  </span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>&gt;</p>
+<blockquote>
+<p>再次执行<code>hexo g</code>和<code>hexo d</code>命令。</p>
+</blockquote>
+<p>若你未添加Github的SSH key，则执行<code>hexo d</code>命令时终端会提示你输入Github的用户名和密码，即</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Username for &apos;https://github.com&apos;: 输入github用户名</span><br><span class="line">Password for &apos;https://github.com&apos;: 输入github密码</span><br></pre></td></tr></table></figure>
+<p><code>hexo d</code>命令执行成功后，浏览器中打开网址<a href="http://gonghonglou.github.io/" target="_blank" rel="noopener">http://gonghonglou.github.io</a>（将<code>gonghonglou</code>换成你的用户名）能看到和打开<code>http://localhost:4000</code>时一样的页面。</p>
+<h2 id="2、添加公钥ssh-key（部署github不用输入账号密码）"><a href="#2、添加公钥ssh-key（部署github不用输入账号密码）" class="headerlink" title="2、添加公钥ssh key（部署github不用输入账号密码）"></a>2、添加公钥ssh key（部署github不用输入账号密码）</h2><h3 id="Step1-检查SSH-keys是否存在Github"><a href="#Step1-检查SSH-keys是否存在Github" class="headerlink" title="Step1 检查SSH keys是否存在Github"></a>Step1 检查SSH keys是否存在Github</h3><p>执行如下命令，检查SSH keys是否存在。如果有文件<code>id_rsa.pub</code>或<code>id_dsa.pub</code>，则直接进入步骤1.3将SSH key添加到Github中，否则进入下一步生成SSH key。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls -al ~/.ssh</span><br></pre></td></tr></table></figure>
+<h3 id="Step2-生成新的ssh-key"><a href="#Step2-生成新的ssh-key" class="headerlink" title="Step2 生成新的ssh key"></a>Step2 生成新的ssh key</h3><p>执行如下命令生成public/private rsa key pair，注意将<code>your_email@example.com</code>换成你自己注册Github的邮箱地址。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</span><br></pre></td></tr></table></figure>
+<p>默认会在相应路径下（<code>~/.ssh/id_rsa.pub</code>）生成<code>id_rsa</code>和<code>id_rsa.pub</code>两个文件。</p>
+<h3 id="Step3-将ssh-key添加到Github中"><a href="#Step3-将ssh-key添加到Github中" class="headerlink" title="Step3 将ssh key添加到Github中"></a>Step3 将ssh key添加到Github中</h3><ul>
+<li><p>Find前往文件夹<code>~/.ssh/id_rsa.pub</code>打开id_rsa.pub文件，里面的信息即为SSH key，将这些信息复制到Github的Add SSH key页面即可。</p>
+<ul>
+<li>mac显示隐藏文件夹和文件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">defaults write com.apple.finder AppleShowAllFiles -boolean true ; killall Finder</span><br></pre></td></tr></table></figure>
+<ul>
+<li>再次隐藏输入</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">defaults write com.apple.finder AppleShowAllFiles -boolean false ; killall Finder</span><br></pre></td></tr></table></figure>
+<ul>
+<li>id_rsa.pub这种pub结尾的文件怎么打开？</li>
+<li>用atom等编辑器，打开后全部复制粘贴到github的ssh设置中</li>
+</ul>
+</li>
+<li><p>进入Github –&gt; Settings –&gt; SSH keys –&gt; add SSH key:</p>
+</li>
+<li><p>Title里任意添一个标题（或不添加），将复制的内容粘贴到Key里，点击下方<code>Add key</code>绿色按钮即可。</p>
+</li>
+</ul>
+<h2 id="3、发布文章"><a href="#3、发布文章" class="headerlink" title="3、发布文章"></a>3、发布文章</h2><p>终端cd到<code>blog</code>文件夹下，执行如下命令新建文章：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &quot;postName&quot;</span><br></pre></td></tr></table></figure>
+<p>名为<code>postName.md</code>的文件会建在目录<code>/blog/source/_posts</code>下，<code>postName</code>是文件名，为方便链接不建议掺杂汉字。你当然可以用vim来编辑文章。我在用Mou编辑器，支持预览，虽然其预览主题并非我喜欢，如果你有好用的markdown编辑器请推荐给我，感激不尽！</p>
+<p>文章编辑完成后，终端cd到<code>blog</code>文件夹下，执行如下命令来发布：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo generate			//生成静态页面</span><br><span class="line"></span><br><span class="line">hexo deploy			//将文章部署到Github</span><br></pre></td></tr></table></figure>
+<p><strong>至此，Mac上搭建基于Github的Hexo博客就完成了。下面的内容是介绍安装theme和绑定个人域名，如果有兴趣且还有耐心的话，请继续吧。</strong></p>
+<h1 id="Mac搭建Hexo博客：进阶篇"><a href="#Mac搭建Hexo博客：进阶篇" class="headerlink" title="Mac搭建Hexo博客：进阶篇"></a>Mac搭建Hexo博客：进阶篇</h1><h1 id="一、安装主题"><a href="#一、安装主题" class="headerlink" title="一、安装主题"></a>一、安装主题</h1><p>你可以到<a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo官网主题页</a>去搜寻自己喜欢的theme。最常用最多人用的是<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">hexo-theme-next</a>，以此为例。</p>
+<h3 id="Step1"><a href="#Step1" class="headerlink" title="Step1"></a>Step1</h3><p>终端cd到 <code>blog</code> 目录下执行如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<h3 id="Step2"><a href="#Step2" class="headerlink" title="Step2"></a>Step2</h3><p>将<code>blog</code>目录下<code>_config.yml</code>里<code>theme</code>的名称<code>landscape</code>修改为<code>next</code></p>
+<h3 id="Step3"><a href="#Step3" class="headerlink" title="Step3"></a>Step3</h3><p>终端cd到<code>blog</code>目录下执行如下命令(每次部署文章的步骤)：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">hexo clean //删除网站，即删除public文件夹</span><br><span class="line">hexo g //生成网站，即生成public文件夹</span><br><span class="line">hexo d //部署到github，要先站点配置添加github地址</span><br><span class="line"></span><br><span class="line">hexo s //运行hexo，打开网址http://localhost:4000/查看博客</span><br><span class="line">ctrl+c //停止hexo s</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>至于更改theme内容比如名称、描述、头像等去修改<code>blog/_config.yml</code>文件和<code>blog/themes/next/_config.yml</code>文件中对应的属性名称即可， 不要忘记冒号<code>:</code>后加空格。 <a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT 使用文档</a>里有极详细的介绍。</p>
+</blockquote>
+<h2 id="【bug】、解决-deploy-后博客空白问题"><a href="#【bug】、解决-deploy-后博客空白问题" class="headerlink" title="【bug】、解决 deploy 后博客空白问题"></a>【bug】、解决 deploy 后博客空白问题</h2><p>昨晚更新了一下 blog 做了个部署，结果blog就挂了，打开 <code>gonghonglou.com</code> 页面显示一片空白。然而 <code>hexo s</code>开启本地服务器 <code>localhost:4000</code> 访问是没问题的。<br>上网查了一下，原来是 GitHub Pages 禁止了 <code>source/vendors</code> 目录的访问。Github 在 11 月 3 日更新了版本。其中包括升级了 Jekyll 到 3.3。Jekyll 为了加快构建速度，忽略 <code>vendor</code> 和 <code>node_modules</code> 文件夹。所以部署到 GitHub 后，识别不到本地下的的这个文件夹 <code>blog/themes/next/source/vendor</code>，你只需要给这个文件夹换个名字再重新部署一次就 OK 了。<code>nexT</code> 在 GitHub 上的 isusses 已经给出了解决方案：<a href="https://github.com/iissnan/hexo-theme-next/issues/1214" target="_blank" rel="noopener">#1214</a></p>
+<p><a href="http://image.gonghonglou.com/firstblog/update-hexo-folder.png" target="_blank" rel="noopener"><img src="http://image.gonghonglou.com/firstblog/update-hexo-folder.png" alt="#1214"></a></p>
+<p>还有另一种解决方案就是升级 <code>nexT</code> 主题，cd 到 <code>blog/themes/next/</code> 下执行命令 <code>git pull</code> 更新。<br>然而，有可能升级后多说评论等第三方工具会失效，慎用。</p>
+<h1 id="进阶前、需要知道的命令："><a href="#进阶前、需要知道的命令：" class="headerlink" title="进阶前、需要知道的命令："></a>进阶前、需要知道的命令：</h1><h3 id="①、修改本地配置后要ctrl-c关闭hexo-s的窗口，再重新hexo-s才会在localhost-4000-上生效。"><a href="#①、修改本地配置后要ctrl-c关闭hexo-s的窗口，再重新hexo-s才会在localhost-4000-上生效。" class="headerlink" title="①、修改本地配置后要ctrl+c关闭hexo s的窗口，再重新hexo s才会在localhost:4000/上生效。"></a>①、修改本地配置后要ctrl+c关闭hexo s的窗口，再重新hexo s才会在localhost:4000/上生效。</h3><h3 id="②、如果是继续上传更多文件，把文件放入专案-source-posts文件夹中，然后hexo-g，重新hexo-s在localhost-4000上可以查看本地效果。最后hexo-d-上传到github。"><a href="#②、如果是继续上传更多文件，把文件放入专案-source-posts文件夹中，然后hexo-g，重新hexo-s在localhost-4000上可以查看本地效果。最后hexo-d-上传到github。" class="headerlink" title="②、如果是继续上传更多文件，把文件放入专案/source/_posts文件夹中，然后hexo g，重新hexo s在localhost:4000上可以查看本地效果。最后hexo d 上传到github。"></a>②、如果是继续上传更多文件，把文件放入<code>专案/source/_posts文件夹</code>中，然后hexo g，重新hexo s在localhost:4000上可以查看本地效果。最后hexo d 上传到github。</h3><h3 id="③、如果想清空文章重新上传，先hexo-clean，把文件放入专案-source-posts文件夹中，然后hexo-g，重新hexo-s在localhost-4000上可以查看本地效果。最后hexo-d-上传到github。"><a href="#③、如果想清空文章重新上传，先hexo-clean，把文件放入专案-source-posts文件夹中，然后hexo-g，重新hexo-s在localhost-4000上可以查看本地效果。最后hexo-d-上传到github。" class="headerlink" title="③、如果想清空文章重新上传，先hexo clean，把文件放入专案/source/_posts文件夹中，然后hexo g，重新hexo s在localhost:4000上可以查看本地效果。最后hexo d 上传到github。"></a>③、如果想清空文章重新上传，先hexo clean，把文件放入<code>专案/source/_posts文件夹</code>中，然后hexo g，重新hexo s在localhost:4000上可以查看本地效果。最后hexo d 上传到github。</h3><h1 id="进阶一、绑定个人域名"><a href="#进阶一、绑定个人域名" class="headerlink" title="进阶一、绑定个人域名"></a>进阶一、绑定个人域名</h1><p>现在使用的域名是Github提供的二级域名，也可以绑定为自己的个性域名。购买域名，可以到<a href="https://sg.godaddy.com/zh/" target="_blank" rel="noopener">GoDaddy官网</a>，网友亲切称呼为：狗爹，也可以到<a href="http://wanwang.aliyun.com/" target="_blank" rel="noopener">阿里万网</a>购买。我是在万网买的，可直接在其网站做域名解析。</p>
+<h2 id="1-Github端"><a href="#1-Github端" class="headerlink" title="1.Github端"></a>1.Github端</h2><h3 id="Step1-新建CNAME"><a href="#Step1-新建CNAME" class="headerlink" title="Step1 新建CNAME"></a>Step1 新建CNAME</h3><p>1）<code>touch source/CNAME</code>，最好用touch新建，试过在atom用右键新建文件类型不一样。</p>
+<p>2）CNAME写入你的域名，如<code>jiujiubad.top</code>。</p>
+<p>3）重新部署。注意三个命令都要执行，否则CNAME不会部署到github。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意坑四：网上许多都是说在Github上直接新建<code>CNAME</code>文件，如果这样的话，在你下一次执行<code>hexo d</code>部署命令后<code>CNAME</code>文件就消失了，因为本地没有此文件嘛。</p>
+</blockquote>
+<h2 id="2-域名解析"><a href="#2-域名解析" class="headerlink" title="2.域名解析"></a>2.域名解析</h2><p>如果将域名指向一个域名，实现与被指向域名相同的访问效果，需要增加CNAME记录。登录万网，在你购买的域名后边点击：解析 –&gt; 添加解析</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fncpwtssw7j30jk0ajmxb.jpg" width="500"></p>
+<p>记录类型：CNAME</p>
+<p>主机记录：将域名解析为<a href="http://example.com/" target="_blank" rel="noopener">example.com</a>（不带www），填写@或者不填写</p>
+<p>记录值：gonghonglou.github.io. (不要忘记最后的<code>.</code>，<code>gonghonglou</code>改为你自己的用户名)，点击保存即可，如下图：</p>
+<p><a href="http://image.gonghonglou.com/firstblog/yumingjiexi.png" target="_blank" rel="noopener"><img src="http://image.gonghonglou.com/firstblog/yumingjiexi.png" alt="域名解析](http://localhost:4000"></a></p>
+<p>此时，点击访问<a href="http://gonghonglou.com/" target="_blank" rel="noopener">http://gonghonglou.com</a>和访问<a href="http://gonghonglou.github.io/" target="_blank" rel="noopener">http://gonghonglou.github.io</a>效果一致。</p>
+<p>大功告成！</p>
+<h2 id="进阶二、将个人博客同时部署到-GitHub-和-Coding"><a href="#进阶二、将个人博客同时部署到-GitHub-和-Coding" class="headerlink" title="进阶二、将个人博客同时部署到 GitHub 和 Coding"></a>进阶二、将个人博客同时部署到 GitHub 和 Coding</h2><h2 id="！！！不要折腾了，Coding有广告不好用"><a href="#！！！不要折腾了，Coding有广告不好用" class="headerlink" title="！！！不要折腾了，Coding有广告不好用"></a>！！！不要折腾了，Coding有广告不好用</h2><p>1、首先到 <a href="https://coding.net/" target="_blank" rel="noopener">Coding</a> 上注册并开一个项目，项目名称和用户个性后缀相同（方便二级域名访问博客），拿到项目的 https 地址</p>
+<p>2、打开本地 <code>blog</code> 目录下的 <code>_config.yml</code> 文件，修改如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: </span><br><span class="line">            github: https://github.com/gonghonglou/gonghonglou.github.io.git</span><br><span class="line">            coding: https://git.coding.net/gonghonglou/gonghonglou.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>3、cd 到本地 <code>blog/source</code> 目录下执行如下命令新建 <code>Staticfile</code> 文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ touch Staticfile  #名字必须是Staticfile</span><br></pre></td></tr></table></figure>
+<p>原因是 coding.net 需要以这个文件来作为静态文件部署的标志，就是说看到这个 Staticfile 就知道按照静态文件来发布。</p>
+<p>4、执行发布命令 <code>hexo g</code> 、 <code>hexo d</code></p>
+<p>5、个人域名添加两条 <code>CNAME</code> 解析。将 <code>gonghonglou.github.io.</code> 解析为 [海外] ，将 <code>gonghonglou.coding.me.</code> 解析为 [默认]<br><a href="http://image.gonghonglou.com/firstblog/two-cname.png" target="_blank" rel="noopener"><img src="http://image.gonghonglou.com/firstblog/two-cname.png" alt="img"></a></p>
+<p>这样就是为了从国内访问 <code>gonghonglou.com</code> 就是访问 Coding 上的博客项目，从国外访问 <code>gonghonglou.com</code>就是访问 GitHub 上的博客项目。</p>
+<p>6、到 Coding 上的博客项目主页，点击 <code>Pages服务</code> 输入部署分支 <code>master</code> 立即开启</p>
+<p><a href="http://image.gonghonglou.com/firstblog/coding-pages.png" target="_blank" rel="noopener"><img src="http://image.gonghonglou.com/firstblog/coding-pages.png" alt="img"></a></p>
+<p>这样就可以访问自己在 Coding 上的个人博客了 <a href="http://gonghonglou.coding.me/gonghonglou" target="_blank" rel="noopener">gonghonglou.coding.me/gonghonglou</a> 如果像这样你的用户后缀名与博客项目名称相同你还可以省略项目名称直接访问 <a href="http://gonghonglou.coding.me/" target="_blank" rel="noopener">gonghonglou.coding.me</a></p>
+<ul>
+<li><p>【bug】显示仓库尚未初始化，不能选择部署分支？</p>
+</li>
+<li><p>解决办法：原因是代码还没上传，回到终端或item看看，发现没有登录。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fm9ebys8yxj318w0r0aef.jpg" alt=""></p>
+</li>
+</ul>
+<p>7、添加域名绑定，输入个人域名就 OK 了，可能需要耐心等待几分钟，这样在国内访问自己的博客就快得多了。</p>
+<p>试了一下在国内访问 <a href="http://gonghonglou.com/" target="_blank" rel="noopener">gonghonglou.com</a> 拦不住 要飞起来了😂</p>
+<ul>
+<li><p>【bug】这一步没做，直接输入网址出现404</p>
+</li>
+<li><p>解决办法：升级银牌会员（补充个人资料即可）注意别漏填了最上方的手机号，然后绑定域名。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fm9eoy727gj31am0gc77a.jpg" alt=""></p>
+</li>
+</ul>
+<p>8、可以为coding.net上的设置，也添加SSH公钥，方法跟上面github的操作一样，因为一台电脑用一个公钥所以不用重复生成，直接复制代码即可。</p>
+<h1 id="搭建后的美化（只选参考链接中自己需要的功能）"><a href="#搭建后的美化（只选参考链接中自己需要的功能）" class="headerlink" title="搭建后的美化（只选参考链接中自己需要的功能）"></a>搭建后的美化（只选参考链接中自己需要的功能）</h1><h2 id="参考链接：-1"><a href="#参考链接：-1" class="headerlink" title="参考链接："></a>参考链接：</h2><p><a href="http://blog.csdn.net/com_ma/article/details/76039859" target="_blank" rel="noopener">hexo博客的背景设置</a></p>
+<h2 id="5-修改文章内链接文本样式"><a href="#5-修改文章内链接文本样式" class="headerlink" title="5. 修改文章内链接文本样式"></a>5. 修改文章内链接文本样式</h2><h3 id="实现效果图"><a href="#实现效果图" class="headerlink" title="实现效果图"></a><strong>实现效果图</strong></h3><p><img src="http://upload-images.jianshu.io/upload_images/5308475-8cc4fc18c399af7e.gif?imageMogr2/auto-orient/strip" alt="img"></p>
+<h3 id="具体实现方法"><a href="#具体实现方法" class="headerlink" title="具体实现方法"></a><strong>具体实现方法</strong></h3><p>修改文件 <code>themes\next\source\css\_common\components\post\post.styl</code>，在末尾添加如下css样式，：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 文章内链接文本样式</span><br><span class="line">.post-body p a&#123;</span><br><span class="line">  color: #0593d3;</span><br><span class="line">  border-bottom: none;</span><br><span class="line">  &amp;:hover &#123;</span><br><span class="line">    color: #fc6423;</span><br><span class="line">    border-bottom: none;</span><br><span class="line">    border-bottom: 1px solid #fc6423;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其中选择<code>.post-body</code> 是为了不影响标题，选择 <code>p</code> 是为了不影响首页“阅读全文”的显示样式,颜色可以自己定义。</p>
+<p><code>border-bottom: 1px solid #fc6423;</code>这一行是下划线。</p>
+<p>注意：这样设置后是不能在链接前加<em> 的，加</em>后颜色不能改变。</p>
+<h1 id="9-博文压缩"><a href="#9-博文压缩" class="headerlink" title="9. 博文压缩"></a>9. 博文压缩</h1><h2 id="！！不要折腾了，没卵用感觉更慢"><a href="#！！不要折腾了，没卵用感觉更慢" class="headerlink" title="！！不要折腾了，没卵用感觉更慢"></a>！！不要折腾了，没卵用感觉更慢</h2><p>作用是去掉多余代码，加速网站。在站点的根目录下执行以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install gulp -g</span><br><span class="line">$ npm install gulp-minify-css gulp-uglify gulp-htmlmin gulp-htmlclean gulp --save</span><br></pre></td></tr></table></figure>
+<p>在如下图所示，新建 <code>gulpfile.js</code> ，并填入以下内容：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/5308475-bb959c3fb610e69c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&apos;gulp&apos;);</span><br><span class="line">var minifycss = require(&apos;gulp-minify-css&apos;);</span><br><span class="line">var uglify = require(&apos;gulp-uglify&apos;);</span><br><span class="line">var htmlmin = require(&apos;gulp-htmlmin&apos;);</span><br><span class="line">var htmlclean = require(&apos;gulp-htmlclean&apos;);</span><br><span class="line">// 压缩 public 目录 css</span><br><span class="line">gulp.task(&apos;minify-css&apos;, function() &#123;</span><br><span class="line">    return gulp.src(&apos;./public/**/*.css&apos;)</span><br><span class="line">        .pipe(minifycss())</span><br><span class="line">        .pipe(gulp.dest(&apos;./public&apos;));</span><br><span class="line">&#125;);</span><br><span class="line">// 压缩 public 目录 html</span><br><span class="line">gulp.task(&apos;minify-html&apos;, function() &#123;</span><br><span class="line">  return gulp.src(&apos;./public/**/*.html&apos;)</span><br><span class="line">    .pipe(htmlclean())</span><br><span class="line">    .pipe(htmlmin(&#123;</span><br><span class="line">         removeComments: true,</span><br><span class="line">         minifyJS: true,</span><br><span class="line">         minifyCSS: true,</span><br><span class="line">         minifyURLs: true,</span><br><span class="line">    &#125;))</span><br><span class="line">    .pipe(gulp.dest(&apos;./public&apos;))</span><br><span class="line">&#125;);</span><br><span class="line">// 压缩 public/js 目录 js</span><br><span class="line">gulp.task(&apos;minify-js&apos;, function() &#123;</span><br><span class="line">    return gulp.src(&apos;./public/**/*.js&apos;)</span><br><span class="line">        .pipe(uglify())</span><br><span class="line">        .pipe(gulp.dest(&apos;./public&apos;));</span><br><span class="line">&#125;);</span><br><span class="line">// 执行 gulp 命令时执行的任务</span><br><span class="line">gulp.task(&apos;default&apos;, [</span><br><span class="line">    &apos;minify-html&apos;,&apos;minify-css&apos;,&apos;minify-js&apos;</span><br><span class="line">]);</span><br></pre></td></tr></table></figure>
+<p>生成博文是执行 <code>hexo g &amp;&amp; gulp</code> 就会根据 <code>gulpfile.js</code> 中的配置，对 public 目录中的静态资源文件进行压缩（以后使用hexo g可以看到每个文件在压缩的进度百分之多少）。</p>
+<h1 id="10-修改“代码块自定义样式"><a href="#10-修改“代码块自定义样式" class="headerlink" title="10. 修改“代码块自定义样式"></a>10. 修改“代码块自定义样式</h1><p><strong>实现效果图</strong></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/5308475-e83a6ac00d4d1db3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<p><strong>具体实现方法</strong></p>
+<p>打开<code>\themes\next\source\css\_custom\custom.styl</code>,向里面加入：(颜色可以自己定义)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// 小代码块的样式</span><br><span class="line">code &#123;</span><br><span class="line">    color: #ff7600;</span><br><span class="line">    background-color: rgba(255,255,255,0.1);</span><br><span class="line">    font-size: 16px;</span><br><span class="line">&#125;</span><br><span class="line">// 大代码块的自定义样式</span><br><span class="line">.highlight, pre &#123;</span><br><span class="line">    margin: 5px 0;</span><br><span class="line">    padding: 5px;</span><br><span class="line">    border-radius: 3px;</span><br><span class="line">&#125;</span><br><span class="line">.highlight, code, pre &#123;</span><br><span class="line">    border: 1px solid #d6d6d6;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="16-添加-README-md-文件"><a href="#16-添加-README-md-文件" class="headerlink" title="16. 添加 README.md 文件"></a>16. 添加 README.md 文件</h1><p>每个项目下一般都有一个 <code>README.md</code> 文件，但是使用 hexo 部署到仓库后，项目下是没有 <code>README.md</code>文件的。</p>
+<p>在 Hexo 目录下的 <code>source</code> 根目录下添加一个 <code>README.md</code> 文件，修改站点配置文件 _<code>config.yml</code>，将<code>skip_render</code> 参数的值设置为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">skip_render: README.md</span><br></pre></td></tr></table></figure>
+<p>保存退出即可。再次使用 <code>hexo d</code> 命令部署博客的时候就不会在渲染 README.md 这个文件了。</p>
+<h1 id="18-实现统计功能"><a href="#18-实现统计功能" class="headerlink" title="18. 实现统计功能"></a>18. 实现统计功能</h1><p><strong>实现效果图</strong><br><img src="http://upload-images.jianshu.io/upload_images/5308475-11cf11fe888748a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<p><strong>具体实现方法</strong></p>
+<p>在根目录下安装 <code>hexo-wordcount</code>,运行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-wordcount --save</span><br></pre></td></tr></table></figure>
+<p>然后在主题的配置文件中，配置如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Post wordcount display settings</span><br><span class="line"># Dependencies: https://github.com/willin/hexo-wordcount</span><br><span class="line">post_wordcount:</span><br><span class="line">  item_text: true</span><br><span class="line">  wordcount: true</span><br><span class="line">  min2read: true</span><br></pre></td></tr></table></figure>
+<h1 id="20-在文章底部增加版权信息"><a href="#20-在文章底部增加版权信息" class="headerlink" title="20. 在文章底部增加版权信息"></a>20. 在文章底部增加版权信息</h1><p><img src="http://upload-images.jianshu.io/upload_images/5635196-dbef3367dcfacf67.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt="img"></p>
+<p>1、主题默认的版权声明配置在<code>themes\next\_config.yml</code>文件中，设置如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Declare license on posts</span><br><span class="line">post_copyright:</span><br><span class="line">  enable: false</span><br><span class="line">  license: CC BY-NC-SA 3.0</span><br><span class="line">  license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/</span><br></pre></td></tr></table></figure>
+<p>2、打开<code>next\layout/_macro/</code>，新建<code>my-copyright.swig</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if page.copyright %&#125;</span><br><span class="line">&lt;div class=&quot;my_post_copyright&quot;&gt;</span><br><span class="line">  &lt;script src=&quot;//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">  &lt;!-- JS库 sweetalert 可修改路径 --&gt;</span><br><span class="line">  &lt;script type=&quot;text/javascript&quot; src=&quot;http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &lt;script src=&quot;http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css&quot;&gt;</span><br><span class="line">  &lt;p&gt;&lt;span&gt;文章作者:&lt;/span&gt;&lt;a href=&quot;/&quot; title=&quot;访问 &#123;&#123; theme.author &#125;&#125; 的个人博客&quot;&gt;&#123;&#123; theme.author &#125;&#125;&lt;/a&gt;&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;&lt;span&gt;最后更新:&lt;/span&gt;&#123;&#123; page.updated.format(&quot;YYYY年MM月DD日 HH:MM:ss&quot;) &#125;&#125;&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;&lt;span&gt;原始链接:&lt;/span&gt;&lt;a href=&quot;&#123;&#123; url_for(page.path) &#125;&#125;&quot; title=&quot;&#123;&#123; page.title &#125;&#125;&quot;&gt;&#123;&#123; page.permalink &#125;&#125;&lt;/a&gt;&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;&lt;span&gt;版权声明:&lt;/span&gt;本博客所有文章除特别声明外，均采用 &lt;i class=&quot;fa fa-creative-commons&quot;&gt;&lt;/i&gt; &lt;a rel=&quot;license&quot; href=&quot;https://creativecommons.org/licenses/by-nc-sa/3.0/&quot; target=&quot;_blank&quot; title=&quot;Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)&quot;&gt; BY-NC-SA 3.0 许可协议&lt;/a&gt;，转载请注明出处！&lt;/p&gt;  </span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<p>3、打开<code>/next/source/css/_common/components/post/</code>， 添加<code>my-post-copyright.styl</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">.my_post_copyright &#123;</span><br><span class="line">  width: 96%;</span><br><span class="line">  max-width: 65em;</span><br><span class="line">  margin: 2.8em auto 0;</span><br><span class="line">  padding: 0.5em 1.0em;</span><br><span class="line">  border-left: 3px solid #FF0000;</span><br><span class="line">  font-size: 0.85rem;</span><br><span class="line">  line-height: 1.6em;</span><br><span class="line">  word-break: break-all;</span><br><span class="line">  background: rgba(255,255,255,0.4);</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright p&#123;margin:0;&#125;</span><br><span class="line">.my_post_copyright span &#123;</span><br><span class="line">  display: inline-block;</span><br><span class="line">  width: 5.2em;</span><br><span class="line">  color: #000000;</span><br><span class="line">  font-weight: normal;</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright .raw &#123;</span><br><span class="line">  margin-left: 1em;</span><br><span class="line">  width: 5em;</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright a &#123;</span><br><span class="line">  color: #808080;</span><br><span class="line">  border-bottom:0;</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright a:hover &#123;</span><br><span class="line">  color: #a3d2a3;</span><br><span class="line">  text-decoration: underline;</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright:hover .fa-clipboard &#123;</span><br><span class="line">  color: #000;</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright .post-url:hover &#123;</span><br><span class="line">  font-weight: normal;</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright .copy-path &#123;</span><br><span class="line">  margin-left: 1em;</span><br><span class="line">  width: 1em;</span><br><span class="line">  +mobile()&#123;display:none;&#125;</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright .copy-path:hover &#123;</span><br><span class="line">  color: #808080;</span><br><span class="line">  cursor: pointer;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果想要更改版权模块的红条颜色、背景颜色、透明度等，可以在<code>.my_post_copyright</code>标签里更改。</p>
+<p>4、修改<code>next/layout/_macro/post.swig</code>，在代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if theme.wechat_subscriber.enabled and not is_index %&#125;</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &#123;% include &apos;wechat-subscriber.swig&apos; %&#125;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<p>之前添加增加如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">      &#123;% if not is_index %&#125;</span><br><span class="line">        &#123;% include &apos;my-copyright.swig&apos; %&#125;</span><br><span class="line">      &#123;% endif %&#125;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>5、修改  <code>next/source/css/_common/components/post/post.styl</code>文件，在最后一行增加代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@import &quot;my-post-copyright&quot;</span><br></pre></td></tr></table></figure>
+<p>6、PS：如果要在该博文下面增加版权信息的显示，需要在文章头部中增加<code>copyright: true</code>的设置，类似：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: </span><br><span class="line">date: </span><br><span class="line">tags: </span><br><span class="line">categories: </span><br><span class="line">copyright: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>如果你感觉每次新建文章都要添加比较麻烦，可以直接更改文章的模板文件，这样新建文章时就会自动添加<code>copyright: true</code>。 打开<code>根目录/scaffolds/post.md</code>， 做类似设置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">categories:</span><br><span class="line">comments: </span><br><span class="line">password: </span><br><span class="line">copyright: true</span><br></pre></td></tr></table></figure>
+<h1 id="22-隐藏网页底部powered-By-Hexo-强力驱动"><a href="#22-隐藏网页底部powered-By-Hexo-强力驱动" class="headerlink" title="22. 隐藏网页底部powered By Hexo / 强力驱动"></a>22. 隐藏网页底部powered By Hexo / 强力驱动</h1><p>打开<code>themes/next/layout/_partials/footer.swig</code>,使用””隐藏之间的代码即可，或者直接删除。位置如图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/5308475-8e8340c7a0489bce.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<p>用谷歌检查和command+shift+f全局搜索，替换成自己喜欢的文字。</p>
+<h1 id="24-文章加密访问"><a href="#24-文章加密访问" class="headerlink" title="24. 文章加密访问"></a>24. 文章加密访问</h1><p><strong>实现效果图</strong></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/5308475-0c7e5e61b78dc937.gif?imageMogr2/auto-orient/strip" alt="img"></p>
+<p><strong>具体实现方法</strong></p>
+<p>打开<code>themes-&gt;next-&gt;layout-&gt;_partials-&gt;head.swig</code>文件,在以下位置插入这样一段代码：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/5308475-446793cd6d740b19.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<p>代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    (function()&#123;</span><br><span class="line">        if(&apos;&#123;&#123; page.password &#125;&#125;&apos;)&#123;</span><br><span class="line">            if (prompt(&apos;请输入文章密码&apos;) !== &apos;&#123;&#123; page.password &#125;&#125;&apos;)&#123;</span><br><span class="line">                alert(&apos;密码错误！&apos;);</span><br><span class="line">                history.back();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)();</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>然后在文章上写成类似这样：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/5308475-e6c726a0152cb8ee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<h1 id="25-添加jiathis分享"><a href="#25-添加jiathis分享" class="headerlink" title="25. 添加jiathis分享"></a>25. 添加jiathis分享</h1><p>在<strong>主题配置文件</strong>中，jiathis为true，就行了，如下图</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/5308475-f381bc9e7c73b1e6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<p>默认是这样子的：<br><img src="http://upload-images.jianshu.io/upload_images/5308475-a88228b9ea43ab2d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"><br>如果你想自定义话，打开<code>themes/next/layout/_partials/share/jiathis.swig</code>修改画红线部分就可以了<br><img src="http://upload-images.jianshu.io/upload_images/5308475-68c51498744e1636.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<h1 id="26-博文置顶"><a href="#26-博文置顶" class="headerlink" title="26. 博文置顶"></a>26. 博文置顶</h1><p>修改 <code>hero-generator-index</code> 插件，把文件：<code>node_modules/hexo-generator-index/lib/generator.js</code> 内的代码替换为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&apos;use strict&apos;;</span><br><span class="line">var pagination = require(&apos;hexo-pagination&apos;);</span><br><span class="line">module.exports = function(locals)&#123;</span><br><span class="line">  var config = this.config;</span><br><span class="line">  var posts = locals.posts;</span><br><span class="line">    posts.data = posts.data.sort(function(a, b) &#123;</span><br><span class="line">        if(a.top &amp;&amp; b.top) &#123; // 两篇文章top都有定义</span><br><span class="line">            if(a.top == b.top) return b.date - a.date; // 若top值一样则按照文章日期降序排</span><br><span class="line">            else return b.top - a.top; // 否则按照top值降序排</span><br><span class="line">        &#125;</span><br><span class="line">        else if(a.top &amp;&amp; !b.top) &#123; // 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）</span><br><span class="line">            return -1;</span><br><span class="line">        &#125;</span><br><span class="line">        else if(!a.top &amp;&amp; b.top) &#123;</span><br><span class="line">            return 1;</span><br><span class="line">        &#125;</span><br><span class="line">        else return b.date - a.date; // 都没定义按照文章日期降序排</span><br><span class="line">    &#125;);</span><br><span class="line">  var paginationDir = config.pagination_dir || &apos;page&apos;;</span><br><span class="line">  return pagination(&apos;&apos;, posts, &#123;</span><br><span class="line">    perPage: config.index_generator.per_page,</span><br><span class="line">    layout: [&apos;index&apos;, &apos;archive&apos;],</span><br><span class="line">    format: paginationDir + &apos;/%d/&apos;,</span><br><span class="line">    data: &#123;</span><br><span class="line">      __index: true</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>在文章中添加 <code>top</code> 值，数值越大文章越靠前，如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 解决Charles乱码问题</span><br><span class="line">date: 2017-05-22 22:45:48</span><br><span class="line">tags: 技巧</span><br><span class="line">categories: 技巧</span><br><span class="line">copyright: true</span><br><span class="line">top: 100</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h1 id="Hexo-NexT-Disqus-评论插件"><a href="#Hexo-NexT-Disqus-评论插件" class="headerlink" title="Hexo NexT Disqus 评论插件"></a>Hexo NexT Disqus 评论插件</h1><h1 id="注册Disqus账号"><a href="#注册Disqus账号" class="headerlink" title="注册Disqus账号"></a>注册Disqus账号</h1><p>  登陆<code>disqus.com</code>注册账号。注册过程，不多做说明。</p>
+<h1 id="进行邮箱确认"><a href="#进行邮箱确认" class="headerlink" title="进行邮箱确认"></a>进行邮箱确认</h1><p>  注册了disqus账号之后，一定要去邮箱点击一下确认。我当时就是没有点击确认，好像就没有进行下去，还是区点击一下确认吧。</p>
+<h1 id="进入-Disqus-Home-页"><a href="#进入-Disqus-Home-页" class="headerlink" title="进入 Disqus Home 页"></a>进入 Disqus Home 页</h1><h3 id="应该在disqus-com-home"><a href="#应该在disqus-com-home" class="headerlink" title="应该在disqus.com/home"></a>应该在<code>disqus.com/home</code></h3><p><a href="http://www.lmnsyunhao.cn/images/hexo-disqus-comments/disqusHome.png" target="_blank" rel="noopener"><img src="http://www.lmnsyunhao.cn/images/hexo-disqus-comments/disqusHome.png" alt="Disqus home 页"></a></p>
+<h3 id="之后点击右上角的齿轮，再点击-Add-Disqus-To-Site。找到页面最下边的-Get-Started-按钮。"><a href="#之后点击右上角的齿轮，再点击-Add-Disqus-To-Site。找到页面最下边的-Get-Started-按钮。" class="headerlink" title="之后点击右上角的齿轮，再点击 Add Disqus To Site。找到页面最下边的 Get Started 按钮。"></a>之后点击右上角的齿轮，再点击 Add Disqus To Site。找到页面最下边的 Get Started 按钮。</h3><p><a href="http://www.lmnsyunhao.cn/images/hexo-disqus-comments/getStarted.png" target="_blank" rel="noopener"><img src="http://www.lmnsyunhao.cn/images/hexo-disqus-comments/getStarted.png" alt="GET STARTED"></a></p>
+<h3 id="之后点击下面的install-Disqus。"><a href="#之后点击下面的install-Disqus。" class="headerlink" title="之后点击下面的install Disqus。"></a>之后点击下面的install Disqus。</h3><p><a href="http://www.lmnsyunhao.cn/images/hexo-disqus-comments/disqusHome.png" target="_blank" rel="noopener"><img src="http://www.lmnsyunhao.cn/images/hexo-disqus-comments/disqusHome.png" alt="I want to install Disqus on my site"></a></p>
+<h3 id="注意WebsiteName，这个名字要用到配置文件中的。起一个你喜欢的。"><a href="#注意WebsiteName，这个名字要用到配置文件中的。起一个你喜欢的。" class="headerlink" title="注意WebsiteName，这个名字要用到配置文件中的。起一个你喜欢的。"></a>注意WebsiteName，这个名字要用到配置文件中的。起一个你喜欢的。</h3><p><a href="http://www.lmnsyunhao.cn/images/hexo-disqus-comments/websiteName.png" target="_blank" rel="noopener"><img src="http://www.lmnsyunhao.cn/images/hexo-disqus-comments/websiteName.png" alt="Website Name"></a></p>
+<h1 id="设置主题配置文件"><a href="#设置主题配置文件" class="headerlink" title="设置主题配置文件"></a>设置主题配置文件</h1><p>  打开主题配置文件。找到如下的位置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Disqus</span><br><span class="line">disqus:</span><br><span class="line">  enable: true</span><br><span class="line">  shortname: ******</span><br><span class="line">  count: true</span><br></pre></td></tr></table></figure>
+<p>  shortname的位置就填写刚刚的 WebSite Name 的名字。这样就配置好了。</p>
+<h1 id="重新部署"><a href="#重新部署" class="headerlink" title="重新部署"></a>重新部署</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h1 id="PS"><a href="#PS" class="headerlink" title="PS"></a>PS</h1><p>  不过，Disqus墙没墙掉我也不太清楚，让我很是无奈。</p>
+<h1 id="【】参考链接"><a href="#【】参考链接" class="headerlink" title="【】参考链接"></a>【】参考链接</h1><p><a href="http://www.cnblogs.com/MuYunyun/p/6919600.html#_label1" target="_blank" rel="noopener">http://www.cnblogs.com/MuYunyun/p/6919600.html#_label1</a></p>
+<h1 id="1）文章链接唯一化"><a href="#1）文章链接唯一化" class="headerlink" title="1）文章链接唯一化"></a>1）文章链接唯一化</h1><p>也许你会数次更改文章题目或者变更文章发布时间，在默认设置下，文章链接都会改变，不利于搜索引擎收录，也不利于分享。唯一永久链接才是更好的选择。</p>
+<p>安装</p>
+<p><code>npm install hexo-abbrlink --save</code></p>
+<p>在<code>站点配置文件</code>中查找代码<code>permalink</code>，将其更改为:</p>
+<p><code>permalink: posts/:abbrlink/  # “posts/” 可自行更换</code></p>
+<p>这里有个知识点：</p>
+<blockquote>
+<p>百度蜘蛛抓取网页的规则: 对于蜘蛛说网页权重越高、信用度越高抓取越频繁，例如网站的首页和内页。蜘蛛先抓取网站的首页，因为首页权重更高，并且大部分的链接都是指向首页。然后通过首页抓取网站的内页，并不是所有内页蜘蛛都会去抓取。</p>
+</blockquote>
+<p>搜索引擎认为对于一般的中小型站点，3层足够承受所有的内容了，所以蜘蛛经常抓取的内容是前三层，而超过三层的内容蜘蛛认为那些内容并不重要，所以不经常爬取。出于这个原因所以permalink后面跟着的最好不要超过2个斜杠。</p>
+<p>然后在<code>站点配置文件</code>中添加如下代码:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># abbrlink config</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc32  # 算法：crc16(default) and crc32</span><br><span class="line">  rep: hex    # 进制：dec(default) and hex</span><br></pre></td></tr></table></figure>
+<p>可选择模式：</p>
+<ul>
+<li>crc16 &amp; hex</li>
+<li>crc16 &amp; dec</li>
+<li>crc32 &amp; hex</li>
+<li>crc32 &amp; dec</li>
+</ul>
+<h1 id="2）新建文件时，怎么在md即markdown文件的开头加入标题等信息"><a href="#2）新建文件时，怎么在md即markdown文件的开头加入标题等信息" class="headerlink" title="2）新建文件时，怎么在md即markdown文件的开头加入标题等信息"></a>2）新建文件时，怎么在md即markdown文件的开头加入标题等信息</h1><p>打开<code>scaffolds/post.md</code>，修改如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">categories: 未分类 #分类，设为未分类，以后找到统一更改</span><br><span class="line">tags:             #标签</span><br><span class="line">copyright: true   #版权信息，转发的文章再手动去掉true</span><br><span class="line">password:         #密码，需要就加数字</span><br><span class="line">top:              #置顶，需要就加数字，越大越靠前</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h1 id="3）添加酷炫的打赏二维码"><a href="#3）添加酷炫的打赏二维码" class="headerlink" title="3）添加酷炫的打赏二维码"></a>3）添加酷炫的打赏二维码</h1><p>看了好些博客，支付宝的收款码和微信的收款码都是分开的，且是没有美化过的二维码，让人打赏的欲望自然就下降了。来看一下我的赞赏二维码(支持微信和支付宝支付哟)</p>
+<p>实现这个酷炫二维码的流程如下：</p>
+<ul>
+<li>首先，分别获得支付宝和微信的收款码</li>
+<li>接着到<a href="https://www.hotapp.cn/shouqian" target="_blank" rel="noopener">芝麻二维码</a>里将两张二维码合并</li>
+<li>最后到<a href="http://www.9thws.com/" target="_blank" rel="noopener">第九工场</a>生成自己喜欢的造型</li>
+</ul>
+<p>讲生成的图片pay.png放到根目录的source文件中，并在主题配置文件中加上</p>
+<p><code>alipay: /pay.png</code></p>
+<h5 id="打赏字体不闪动"><a href="#打赏字体不闪动" class="headerlink" title="打赏字体不闪动"></a>打赏字体不闪动</h5><p>修改文件<code>next/source/css/_common/components/post/post-reward.styl</code>，然后注释其中的函数<code>wechat:hover</code>和<code>alipay:hover</code>，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">/* 注释文字闪动函数</span><br><span class="line"> #wechat:hover p&#123;</span><br><span class="line">    animation: roll 0.1s infinite linear;</span><br><span class="line">    -webkit-animation: roll 0.1s infinite linear;</span><br><span class="line">    -moz-animation: roll 0.1s infinite linear;</span><br><span class="line">&#125;</span><br><span class="line"> #alipay:hover p&#123;</span><br><span class="line">   animation: roll 0.1s infinite linear;</span><br><span class="line">    -webkit-animation: roll 0.1s infinite linear;</span><br><span class="line">    -moz-animation: roll 0.1s infinite linear;</span><br><span class="line">&#125;</span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
+<p><a href="https://leroyli.github.io/2016/11/07/hexo-more-PC/" target="_blank" rel="noopener">在不同电脑上进行Hexo写作与同步</a></p>
+<h2 id="【问题4】hexo-next怎么做文章管理，如果电脑坏掉的话？私人文章会不会泄露"><a href="#【问题4】hexo-next怎么做文章管理，如果电脑坏掉的话？私人文章会不会泄露" class="headerlink" title="【问题4】hexo next怎么做文章管理，如果电脑坏掉的话？私人文章会不会泄露?"></a>【问题4】hexo next怎么做文章管理，如果电脑坏掉的话？私人文章会不会泄露?</h2><ul>
+<li><p>①、本地<strong>文件夹做分类</strong>，一是断网的时候可以查找。</p>
+</li>
+<li><p>②、保证电脑坏了posts也不会丢失，<strong>定期打包放到google</strong>。如果google也坏了，那就没有源文件了，但起码hexo上还有文章可以慢慢复制。</p>
+</li>
+<li><p>③、1）github干脆不要放posts了，有些私人文章。2）或是把所有私人文章都加一个统一前缀和密码，在push到github前把它们从post文件夹移到其他位置，push后再移动回post文件夹执行hexo g和hexo d。3）私人文章加统一前缀，自己在电脑和google放着，不发布。——偏向第2种，因为公开的文章在github和hexo都能被复制走，隐藏的文章加密码在手机或其他设备还能查看，又不会在github上直接泄露密码。但是，<strong>如果频繁更改hexo配置，就先用第3种，等到配置完成了再用回第2种方法</strong>。</p>
+</li>
+<li><p>②、github备份专案，方便换电脑写文章。把post文件夹里的私人文件移开（留几篇公开文章）、然后git push到github（最好先检查_config.yml里有没有密钥，有就先移开），push后再把私人文件移回去执行hexo g和hexo d。如果没有更改配置，就不要随便git push了，每次都要移动私人文件太麻烦。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.gitignore</span><br><span class="line"></span><br><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy*/</span><br><span class="line">_config.yml</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="【问题1】图片二维码插入？"><a href="#【问题1】图片二维码插入？" class="headerlink" title="【问题1】图片二维码插入？"></a>【问题1】图片二维码插入？</h2><h2 id="【问题4】背景白色改成用图片？"><a href="#【问题4】背景白色改成用图片？" class="headerlink" title="【问题4】背景白色改成用图片？"></a>【问题4】背景白色改成用图片？</h2><ol>
+<li>首先找到一个背景图片放到 hexo（hexo工程文件）-&gt; themes -&gt; next -&gt; source -&gt; images 的路径下；</li>
+<li>hexo（hexo工程文件）-&gt; themes -&gt; next -&gt; source -&gt; css -&gt; _custom ，打开<code>\themes\next\source\css\_custom\custom.styl</code>，加上一代码 <code>body { background:url(/images/backGround.jpg（背景图片的名字）);}</code> </li>
+</ol>
+<p>效果图：<br><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fmapcueipuj31i80tydon.jpg" alt=""></p>
+<h2 id="【问题3】背景色修改"><a href="#【问题3】背景色修改" class="headerlink" title="【问题3】背景色修改"></a>【问题3】背景色修改</h2><p>在 <code>source/css/_variables/base.styl</code> 中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// Background color for &lt;body&gt;</span><br><span class="line">$body-bg-color                = white</span><br></pre></td></tr></table></figure>
+<p>修改themes/next/source/css/_schemes/Mist/_header.styl文件中头部的背景色为base.styl定义的背景色</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.header &#123; background: $whitesmoke; &#125; #在这里改颜色</span><br><span class="line">.header-inner &#123;</span><br><span class="line">  padding: 40px 0 40px; #这里改header的大小</span><br><span class="line">  clearfix();</span><br><span class="line"></span><br><span class="line">  +mobile() &#123;</span><br><span class="line">    width: auto;</span><br><span class="line">    margin-bottom: 50px;</span><br><span class="line">    padding: 10px;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>修改themes/next/source/css/_schemes/Mist/index.styl中footer相关定义，可以修改footer颜色值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">.footer &#123;</span><br><span class="line">  margin-top: 80px;</span><br><span class="line">  padding: 10px 0;</span><br><span class="line">  background: $whitesmoke; #这里改颜色</span><br><span class="line">  color: $grey-dim;</span><br><span class="line">&#125;</span><br><span class="line">.footer-inner &#123;</span><br><span class="line">  margin: 0 auto;</span><br><span class="line">  text-align: left;</span><br><span class="line"></span><br><span class="line">  +mobile() &#123;</span><br><span class="line">    width: auto;</span><br><span class="line">    text-align: center;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="【问题5】header里的文字改成英文？"><a href="#【问题5】header里的文字改成英文？" class="headerlink" title="【问题5】header里的文字改成英文？"></a>【问题5】header里的文字改成英文？</h2><p>修改<code>themes/next/languages/zh-Hans.yml</code>，把对应的首页、标签、关于、分类等改成英文。</p>
+<h1 id="27-修改文章正文字体大小"><a href="#27-修改文章正文字体大小" class="headerlink" title="27. 修改文章正文字体大小"></a>27. 修改文章正文字体大小</h1><p>打开<code>\themes\next\source\css\ _variables\base.styl</code>文件，将<code>$font-size-base</code>改成<code>16px</code>，如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$font-size-base            =16px</span><br></pre></td></tr></table></figure>
+<h2 id="【问题8】文章题目、标题h1-h2-h3加横线-色块-大小-颜色-字体等？"><a href="#【问题8】文章题目、标题h1-h2-h3加横线-色块-大小-颜色-字体等？" class="headerlink" title="【问题8】文章题目、标题h1/h2/h3加横线/色块/大小/颜色/字体等？"></a>【问题8】文章题目、标题h1/h2/h3加横线/色块/大小/颜色/字体等？</h2><h3 id="1-1、改标题h1-h2-h3字体"><a href="#1-1、改标题h1-h2-h3字体" class="headerlink" title="1.1、改标题h1/h2/h3字体"></a>1.1、改标题h1/h2/h3字体</h3><p>打开<code>themes/next/source/css/_schemes/Mist/_base.styl</code>，原来的样式是<code>h1, h2, h3, h4, h5, h6 { margin: 20px 0 10px; }</code>，修改样式为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">h4, h5, h6 &#123; margin: 10px 0 0; &#125;</span><br><span class="line"></span><br><span class="line">h1 &#123; margin: 60px 0 10px; font-size: 2em; background-color: rgba(211,211,211,0.2); &#125;</span><br><span class="line"></span><br><span class="line">h2 &#123; margin: 20px 0 10px; font-size: 1.8em; border-bottom: 1px #d8d8d8 solid; &#125;</span><br><span class="line"></span><br><span class="line">h3 &#123; margin: 20px 0 0; font-size: 1.4em; box-shadow: -20px 0px 0px -10px red;&#125;</span><br><span class="line"></span><br><span class="line">h4 &#123; margin: 10px 0 0; font-size: 1.1em;&#125;</span><br><span class="line"></span><br><span class="line">p &#123; margin: 0; padding: 17px 0 1px; letter-spacing: 0.08em;&#125;</span><br><span class="line"></span><br><span class="line">ul li &#123; letter-spacing: 0.08em;&#125;</span><br><span class="line"></span><br><span class="line">a &#123; border-bottom-color: $grey-light; &#125;</span><br><span class="line"></span><br><span class="line">hr &#123;</span><br><span class="line">  margin: 20px 0;</span><br><span class="line">  height: 2px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>小技巧：不知道文件位置，可以用chrome的查找，用css代码在atom里全文搜索shift+command+f</p>
+</blockquote>
+<h3 id="1-2、改文章题目字体"><a href="#1-2、改文章题目字体" class="headerlink" title="1.2、改文章题目字体"></a>1.2、改文章题目字体</h3><p>还是在<code>themes/next/source/css/_schemes/Mist/_base.styl</code>加入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//文章题目/大标题样式</span><br><span class="line">.posts-expand .post-title &#123;</span><br><span class="line">    position: relative;</span><br><span class="line">    font-size: 36px;</span><br><span class="line">    font-weight: 400;</span><br><span class="line">    background-color: rgba(255,255,255,0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="【问题10】字体font-family怎么改？——只能改标题"><a href="#【问题10】字体font-family怎么改？——只能改标题" class="headerlink" title="【问题10】字体font-family怎么改？——只能改标题"></a>【问题10】字体font-family怎么改？——只能改标题</h2><p>打开<code>themes/next/source/css/_variables/custom.styl</code>，输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$font-family-headings = KaiTi,&quot;Microsoft YaHei&quot;,Georgia, sans // 标题，修改成你期望的字体族</span><br><span class="line">$font-family-base = KaiTi // 修改成你期望的字体族</span><br></pre></td></tr></table></figure>
+<p>但是，只有标题字体改变了，正文的字体还是不变。。。</p>
+<p>Lato,”PingFang SC”,”Microsoft YaHei”,sans-serif</p>
+<p>font-sans = “Helvetica Neue”, “Helvetica”, “Hiragino Sans GB”, “Microsoft YaHei”, “Source Han Sans CN”, “WenQuanYi Micro Hei”, Arial, sans-serif</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a href="https://maoao530.github.io/2017/01/25/hexo-blog-seo/" target="_blank" rel="noopener">https://maoao530.github.io/2017/01/25/hexo-blog-seo/</a></p>
+<h2 id="1、内容宽度"><a href="#1、内容宽度" class="headerlink" title="1、内容宽度"></a>1、内容宽度</h2><p>themes/next/source/css/_variables/custom.styl</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 修改成你期望的宽度</span><br><span class="line">$content-desktop = 900px</span><br><span class="line">// 当视窗超过 1600px 后的宽度</span><br><span class="line">$content-desktop-large = 1100px</span><br></pre></td></tr></table></figure>
+<h2 id="2、无序列表ul显示为实心，li显示为空心"><a href="#2、无序列表ul显示为实心，li显示为空心" class="headerlink" title="2、无序列表ul显示为实心，li显示为空心"></a>2、无序列表ul显示为实心，li显示为空心</h2><p>打开<code>themes/next/source/css/_common/components/post/post-expand.styl</code>，删除<code>ul li { list-style: circle; }</code>。</p>
+<p>如果想要ul、li全都改为实心，用<code>ul li { list-style: disc; }</code></p>
+<h2 id="【问题7】打赏直接在固定位置插入图片，怎么做？——先不搞"><a href="#【问题7】打赏直接在固定位置插入图片，怎么做？——先不搞" class="headerlink" title="【问题7】打赏直接在固定位置插入图片，怎么做？——先不搞"></a>【问题7】打赏直接在固定位置插入图片，怎么做？——先不搞</h2><h2 id="【问题9】侧边栏文章目录栏大字体左对齐？"><a href="#【问题9】侧边栏文章目录栏大字体左对齐？" class="headerlink" title="【问题9】侧边栏文章目录栏大字体左对齐？"></a>【问题9】侧边栏文章目录栏大字体左对齐？</h2><h3 id="左对齐"><a href="#左对齐" class="headerlink" title="左对齐"></a>左对齐</h3><p>打开<code>themes/next/source/css/_common/components/sidebar/sidebar.styl</code>，搜索<code>.sidebar-inner</code>，删除<code>text-align: center;</code></p>
+<h3 id="去掉自动序列号数字"><a href="#去掉自动序列号数字" class="headerlink" title="去掉自动序列号数字"></a>去掉自动序列号数字</h3><p>编辑主题下的 <code>_config.yml</code> 文件，把 <code>number</code> 的 <code>true</code> 改成 <code>false</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># TOC in the Sidebar</span><br><span class="line">toc:</span><br><span class="line">  enable: true</span><br><span class="line"></span><br><span class="line">  # Automatically add list number to toc.</span><br><span class="line">  number: true</span><br></pre></td></tr></table></figure>
+<h2 id="【问题11】大代码块样式？"><a href="#【问题11】大代码块样式？" class="headerlink" title="【问题11】大代码块样式？"></a>【问题11】大代码块样式？</h2><p>hugo 好用多了！</p>
+<h2 id="【问题12】国内访问速度优化？"><a href="#【问题12】国内访问速度优化？" class="headerlink" title="【问题12】国内访问速度优化？"></a>【问题12】国内访问速度优化？</h2><p>转 GitHub Pages 吧，非裸域 CNAME 的话有 Fastly CDN 加成，速度也不差，无数的开源项目都在用，可用性高。</p>
+<h2 id="【问题13】seo搜索引擎访问优化？"><a href="#【问题13】seo搜索引擎访问优化？" class="headerlink" title="【问题13】seo搜索引擎访问优化？"></a>【问题13】seo搜索引擎访问优化？</h2><p>【问题14】数据统计？</p>
+<p>【问题15】图标优化成网站风格的？</p>
+<p>【问题16】首页显示的文章数量，首页显示的文章字数？</p>
+<p>1）修改站点配置文件的<code>per_page: 10</code>，数字就是文章数量。</p>
+<p>2）修改主题配置文件<code>auto_excerpt</code>下的<code>length: 250</code>，数字就是文章字数。</p>
+<h2 id="【问题17】什么时候hexo-clean、hexo-g、hexo-s、hexo-d的？"><a href="#【问题17】什么时候hexo-clean、hexo-g、hexo-s、hexo-d的？" class="headerlink" title="【问题17】什么时候hexo clean、hexo g、hexo s、hexo d的？"></a>【问题17】什么时候hexo clean、hexo g、hexo s、hexo d的？</h2><p>1）更改目录层文件，如站点配置文件_config.yml时，需要用<code>ctrl+c</code>关闭<code>hexo s</code>再重启；</p>
+<p>2）更改themes/next里的文件，如主题配置文件、html、css等，直接刷新页面就能看到结果；</p>
+<p>3）继续发布新文章、或更改旧文章（先放到source/_posts文件夹里），直接<code>hexo g</code>可以在<code>http://localhost:4000/</code>看到结果；</p>
+<p>4）删除博客上的文章，用<code>hexo clean</code></p>
+<p>5）在本地调试好后，上传到github用<code>hexo d</code></p>
+<p>【问题18】如何注解代码？</p>
+<p>1）styl文件用<code>//</code></p>
+<p>2）yml文件用<code>#</code></p>
+<h2 id="参考李安、anndo、巧玉、韵儿爸爸的博客，修改后可以上传一次分支"><a href="#参考李安、anndo、巧玉、韵儿爸爸的博客，修改后可以上传一次分支" class="headerlink" title="参考李安、anndo、巧玉、韵儿爸爸的博客，修改后可以上传一次分支"></a>参考李安、anndo、巧玉、韵儿爸爸的博客，修改后可以上传一次分支</h2><h1 id="【bug】站内搜索第二次失效！！"><a href="#【bug】站内搜索第二次失效！！" class="headerlink" title="【bug】站内搜索第二次失效！！"></a>【bug】站内搜索第二次失效！！</h1><p>pubilc是有生成search.xml文件，也有写入文章内容，但是在网页上一直显示加载中，吐血！！！！！</p>
+<p>方法一：搜索引导到site:jiujiubad.top</p>
+<p>方法二：站内地图sitemap</p>
+<p>方法三：重新做一个hexo——草草草！！！这个折腾根本就不想去搞什么备份，如果电脑坏了不如直接重新搭一个，太多东西搞来搞去会搞坏，相当不自由。很有用vps自己搭一个的想法。</p>
+<p>ps：按照anndo的博客，看下有哪些还要测试的比如font-family、js载入优化的帖子，然后重新搭一个。</p>
+<h1 id="【bug】站内搜索第三次失败！！"><a href="#【bug】站内搜索第三次失败！！" class="headerlink" title="【bug】站内搜索第三次失败！！"></a>【bug】站内搜索第三次失败！！</h1><p>从头开始重新做了一个专案，简单3个post文件测试成功后。</p>
+<p>1）又加入10个平时写的md文件，<code>hexo g</code>上传后搜索又炸了。。。。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fmexum6kaej31eo0yct9x.jpg" alt=""></p>
+<p>2）把新加入的全部文档移走，搜索又能正常使用。确定是文章的问题。</p>
+<p>3）问题出在多行代码块中的html代码上，多出了一个会隐藏的点<code>*</code>。很有可能是typora编辑器对代码的处理问题。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fmeyqaxrv9j319q0aot9u.jpg" alt=""></p>
+
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/posts/8d89ee75/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
+
+
+    <div id="comments">
+        
+   <p>评论系统未开启，无法评论！</p>
+
+    </div>
+
+
+            </main>
+            
+    <aside class="col-md-3 sidebar">
+        
+        
+    <div class="widget">    
+        <h3 class="title">搜索</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
+                    <button type="button" class="search-form-submit" id="search-local">站内搜索</button>
+                
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget notification">
+        <h3 class="title">网站公告</h3>
+        <div>
+            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
+主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+<hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
+</p>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget">
+      <h3 class="title">社交</h3> 
+        <div class="content social">
+            
+	            <a href="//github.com/shenliyang" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="git fa fa-git"></i>
+			    </a>
+            
+	            <a href="mailto:snippet@91h5.cc" rel="external nofollow" title="邮箱" target="_blank">
+			    	<i class="envelope-o fa fa-envelope-o"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="联系QQ" target="_blank">
+			    	<i class="qq fa fa-qq"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="微博" target="_blank">
+			    	<i class="weibo fa fa-weibo"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="QQ群" target="_blank">
+			    	<i class="users fa fa-users"></i>
+			    </a>
+            
+	            <a href="/atom.xml" rel="external nofollow" title="RSS" target="_blank">
+			    	<i class="feed fa fa-feed"></i>
+			    </a>
+            
+        </div>
+    </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">分类</h3>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ror功能/"><i class="fa" aria-hidden="true">ror功能</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror知识点/"><i class="fa" aria-hidden="true">ror知识点</i></a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror系统/"><i class="fa" aria-hidden="true">ror系统</i></a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web页面/"><i class="fa" aria-hidden="true">web页面</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link current" href="/categories/工具/"><i class="fa" aria-hidden="true">工具</i></a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/微信小程序/"><i class="fa" aria-hidden="true">微信小程序</i></a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/心得/"><i class="fa" aria-hidden="true">心得</i></a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/投资/"><i class="fa" aria-hidden="true">投资</i></a><span class="category-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+    <div class="widget">
+      <h3 class="title">归档</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/"><i class="fa" aria-hidden="true">November 2018</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/"><i class="fa" aria-hidden="true">January 2018</i></a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/"><i class="fa" aria-hidden="true">December 2017</i></a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/"><i class="fa" aria-hidden="true">November 2017</i></a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/"><i class="fa" aria-hidden="true">October 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/"><i class="fa" aria-hidden="true">September 2017</i></a><span class="archive-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+  <div class="widget">
+    <h3 class="title">标签云</h3>
+    <div class="content tag-cloud">
+        <a href="/tags/atom/" style="font-size: 14px;">atom</a> <a href="/tags/bug/" style="font-size: 18px;">bug</a> <a href="/tags/heroku/" style="font-size: 10px;">heroku</a> <a href="/tags/hexo/" style="font-size: 12px;">hexo</a> <a href="/tags/interview/" style="font-size: 11px;">interview</a> <a href="/tags/mac/" style="font-size: 12px;">mac</a> <a href="/tags/orid-day/" style="font-size: 10px;">orid-day</a> <a href="/tags/orid-month/" style="font-size: 10px;">orid-month</a> <a href="/tags/ror功能/" style="font-size: 12px;">ror功能</a> <a href="/tags/ror知识点/" style="font-size: 17px;">ror知识点</a> <a href="/tags/ror系统/" style="font-size: 19px;">ror系统</a> <a href="/tags/typora/" style="font-size: 10px;">typora</a> <a href="/tags/vps/" style="font-size: 16px;">vps</a> <a href="/tags/web页面/" style="font-size: 12px;">web页面</a> <a href="/tags/下载/" style="font-size: 10px;">下载</a> <a href="/tags/工具/" style="font-size: 20px;">工具</a> <a href="/tags/常用/" style="font-size: 12px;">常用</a> <a href="/tags/微信功能/" style="font-size: 13px;">微信功能</a> <a href="/tags/微信系统/" style="font-size: 15px;">微信系统</a> <a href="/tags/微信页面/" style="font-size: 11px;">微信页面</a> <a href="/tags/心得/" style="font-size: 13px;">心得</a> <a href="/tags/手机/" style="font-size: 10px;">手机</a> <a href="/tags/投资/" style="font-size: 10px;">投资</a> <a href="/tags/搬砖/" style="font-size: 10px;">搬砖</a> <a href="/tags/科学上网/" style="font-size: 14px;">科学上网</a> <a href="/tags/部署/" style="font-size: 13px;">部署</a>
+    </div>
+  </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">友链</h3>
+        <div class="content friends-link">
+        
+            <a href="http://www.shenliyang.com" class="fa" target="_blank">个人博客</a>
+        
+        </div>
+    </div>
+
+
+        
+    </aside>
+
+
+        </div>
+      </section>
+    </div>
+  </div>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2017
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>

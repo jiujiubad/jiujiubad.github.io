@@ -1,0 +1,528 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>ror-system-rails101 | Hexo</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+    <div class="hide">
+    	<script src="https://s4.cnzz.com/z_stat.php?id=1263868967&web_id=1263868967" language="JavaScript"></script>
+    </div>
+
+
+
+
+
+
+    
+</head>
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner2.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="">
+            <img src="/img/avatar.jpg" alt="logo头像">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题">  
+             
+    	</div>
+    </div>
+</header>
+      <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation"><a href="/"><i class="fa fa-fw "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/前端/"><i class="fa fa-fw "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/后端/"><i class="fa fa-fw "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/工具/"><i class="fa fa-fw "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/资源/"><i class="fa fa-fw "></i>资源</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+      <section class="content-wra aa99">
+        <div class="row">
+            <main class="col-md-9 main-content m-post">
+                <p id="process"></p>
+<article class="post pp99">
+    <div class="post-head">
+        <h1 id="ror-system-rails101">
+            
+	            ror-system-rails101
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span>ror系统</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            ror系统
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/12/13</span>
+    </span>
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="2、基础建设"><a href="#2、基础建设" class="headerlink" title="2、基础建设"></a>2、基础建设</h2><p>rails new、git init，或者是git clone、cp config/database.yml.example config/database.yml、bundle install</p>
+<p>①、gem ‘bootstrap-sass’，css、html、flashes</p>
+<p>②、gem ‘devise’，做navbar的login、logout、signup</p>
+<p>③、gem ‘simple_form’</p>
+<p>④、gem ‘font-awesome-rails’，加入登录和退出小图标</p>
+<h2 id="3、讨论群架构"><a href="#3、讨论群架构" class="headerlink" title="3、讨论群架构"></a>3、讨论群架构</h2><ul>
+<li>讨论群要有“标题”与“叙述”<ul>
+<li>group的CRUD</li>
+</ul>
+</li>
+<li>使用者要可以看到“讨论群一览表”</li>
+<li>把new和edit换成partial表单</li>
+</ul>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1flv9a9md7pj30rk0dmwfo.jpg" alt=""></p>
+<h2 id="5-4、权限设置"><a href="#5-4、权限设置" class="headerlink" title="5-4、权限设置"></a>5-4、权限设置</h2><ul>
+<li><p>只有登录了的使用者，才可以建立群组</p>
+<ul>
+<li>设置关系，&lt;%= group.user.email %&gt;</li>
+</ul>
+</li>
+<li><p>只有群组的建立者，才可以 编辑 / 删除群组</p>
+<ul>
+<li><code>&lt;% if current_user &amp;&amp; current_user == group.user %&gt;</code></li>
+</ul>
+</li>
+<li><p>没登录的路人，不能通过网址进入后台</p>
+<ul>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">before_action :authenticate_user! , only: [:new, :create, :edit, :update, :destroy]</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>已登录的用户，不能通过网址进入后台</p>
+<ul>
+<li><p>定义find_group_and_check_permission方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">def find_group_and_check_permission</span><br><span class="line">  @group = Group.find(params[:id])</span><br><span class="line"></span><br><span class="line">  if current_user != @group.user</span><br><span class="line">    redirect_to root_path, alert: &quot;You have no permission.&quot;</span><br><span class="line">  end</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="6、posts的CRUD"><a href="#6、posts的CRUD" class="headerlink" title="6、posts的CRUD"></a>6、posts的CRUD</h2><ul>
+<li>可以在群组里面新增 / 编辑 / 删除文章<ul>
+<li>新建model前注意看model文件夹，要加入哪些外键，并设置好关系</li>
+<li>posts的CRUD，注意create的action较难</li>
+</ul>
+</li>
+<li>文章必须要有“内容”，否则不允许被发表<ul>
+<li>validates限制content内容不能空、order排序用到scope、分页gem ‘will_paginate’</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1flvattp5v8j30rq0a5jsh.jpg" alt=""></p>
+<h3 id="6-2、我发现："><a href="#6-2、我发现：" class="headerlink" title="6-2、我发现："></a>6-2、我发现：</h3><p>1、current_user是devise这个gem的方法，代表是已登录的用户。所以可以用<code>&lt;% if current_user %&gt;</code>来判断用户是否登录。</p>
+<p>2、每次新建model时，看下model文件夹下已有的跟它有没有关系，如果有就把相应的外键xx_id栏位加上。保存后设置相互关系。</p>
+<h3 id="6-2、posts的CRUD思路（特别是create这个action里指定外键）："><a href="#6-2、posts的CRUD思路（特别是create这个action里指定外键）：" class="headerlink" title="6-2、posts的CRUD思路（特别是create这个action里指定外键）："></a>6-2、posts的CRUD思路（特别是create这个action里指定外键）：</h3><p>①、定义post的new的action，按照网址<code>http://localhost:3000/groups/9/posts/new</code>需要知道@group的id</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def new</span><br><span class="line">  @group = Group.find(params[:group_id])</span><br><span class="line">  @post  = Post.new</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<p>②、首先要在view的new表格里填写content并保存，这里用到simple_form_for和[@group, @post]</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;%= simple_form_for [@group, @post] do |f| %&gt;</span><br><span class="line">  &lt;%= f.input :content %&gt;</span><br><span class="line">  &lt;%= f.submit &quot;保存&quot;, data:&#123;disable_with:&quot;正在保存..&quot;&#125; %&gt;</span><br><span class="line">&lt;% end %&gt;</span><br></pre></td></tr></table></figure>
+<p>③、系统提示缺少create的action。因为post有两个外键，这里需要指明它们具体是什么，即@post.group = @group、@post.user  = current_user两个表达式的左边。因为第一个表达式的@group未知，所以补充了<code>@group = Group.find(params[:group_id])</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">def create</span><br><span class="line">  @post = Post.new(post_params)</span><br><span class="line">  @group = Group.find(params[:group_id])</span><br><span class="line">  @post.group = @group</span><br><span class="line">  @post.user  = current_user</span><br><span class="line">  if @post.save</span><br><span class="line">    redirect_to group_path(@group)</span><br><span class="line">  else</span><br><span class="line">    render :new</span><br><span class="line">  end</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<p>④、另外，因为要在<code>http://localhost:3000/groups/9</code>页面显示post，即需要用到<code>@posts.each do |post|</code>，所以要在grroup的show的action里加入<code>@posts = @group.posts</code></p>
+<h3 id="6-2、问题："><a href="#6-2、问题：" class="headerlink" title="6-2、问题："></a>6-2、问题：</h3><h4 id="1、跟招聘网中的一样，create的action中，因为group有外键user-id要注明-group-user-current-user，感觉应该只在creat这个action加入就可以而edit不用因为数据库在create时已经记录。"><a href="#1、跟招聘网中的一样，create的action中，因为group有外键user-id要注明-group-user-current-user，感觉应该只在creat这个action加入就可以而edit不用因为数据库在create时已经记录。" class="headerlink" title="1、跟招聘网中的一样，create的action中，因为group有外键user_id要注明@group.user = current_user，感觉应该只在creat这个action加入就可以而edit不用因为数据库在create时已经记录。"></a>1、跟招聘网中的一样，create的action中，因为group有外键user_id要注明@group.user = current_user，感觉应该只在creat这个action加入就可以而edit不用因为数据库在create时已经记录。</h4><p>①、在create的action中为什么要加@group.user = current_user ？</p>
+<p>【待完善的解释】：</p>
+<p>因为user用户有很多个，用@group.user = current_user 来指明这个群组具体是谁创建的。测试发现，当user和group的model没有建立关系时，没有<code>@group.user = current_user</code>也能创建group；但是当group的model加入<code>belongs_to :user</code>后不能创建。而且原来的数据库要删除，因为user_id为nil会报错。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1flu94poavsj30s50cymzk.jpg" alt=""></p>
+<p>②、如果model中没有写group和user的关系，会发生什么报错 ？</p>
+<p>undefined method，跟上面①的报错类似。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">undefined method `user&apos; for #&lt;Group:0x007fc0c0f48728&gt;</span><br><span class="line">Did you mean?  user_id</span><br></pre></td></tr></table></figure>
+<h2 id="7、退出-加入群组（非常陌生）"><a href="#7、退出-加入群组（非常陌生）" class="headerlink" title="7、退出/加入群组（非常陌生）"></a>7、退出/加入群组（非常陌生）</h2><ul>
+<li>一个使用者可以选择“加入”、“退出”讨论群<ul>
+<li>建立群成员的关系表</li>
+<li>会员要可以在社团里面看到自己“是否群组成员”，即views层面</li>
+<li>实作 model 层 “加入群组”、“退出群组”</li>
+<li>实作controller里的 “加入群组”、“退出群组”</li>
+</ul>
+</li>
+<li>群的创始者，创群一开始就应该加在群组里<ul>
+<li>新建group后自动成为group的一员，在create中操作</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1flvav0tsp7j30qx0f9q4s.jpg" alt=""></p>
+<h3 id="难点解答："><a href="#难点解答：" class="headerlink" title="难点解答："></a>难点解答：</h3><h4 id="1、用类似招聘网的is-hidden和is-admin即数据库的方式，可以判断做出views层面的join-quit（加入-退出群组），但是所有用户登录进去都显示是群组成员。。"><a href="#1、用类似招聘网的is-hidden和is-admin即数据库的方式，可以判断做出views层面的join-quit（加入-退出群组），但是所有用户登录进去都显示是群组成员。。" class="headerlink" title="1、用类似招聘网的is_hidden和is_admin即数据库的方式，可以判断做出views层面的join/quit（加入/退出群组），但是所有用户登录进去都显示是群组成员。。"></a>1、用类似招聘网的<strong>is_hidden和is_admin</strong>即数据库的方式，可以判断做出<strong>views层面</strong>的join/quit（加入/退出群组），但是所有用户登录进去都显示是群组成员。。</h4><p>【问题1】在于，不知道哪个用户是哪个群组的成员？用is_member一个栏位，要不add_to_user要不add_to_group，不管加入哪一边，另一个变量就不知道具体是指哪一个个体，所以就会出现上面描述的现象：所有用户登录进去都是显示群组成员。</p>
+<p>【小结】目前学会的两种判断对错的方法，①、用布林值boolean，是涉及一个model对象判断对与错（比如is_admin只判断user是不是admin，比如is_hidden只判断job是否隐藏）在数据库层面通过update_columns判断。注意：这种方法可能不适用与多对多（需进一步验证）。②、多对多关系（比如这里判断user是不是属于group，涉及两个model，所以用boolean来判断会说不清楚）。设置关系后，通过.includes？、&lt;&lt;、.delete(group)等方式来判断和操作。</p>
+<h4 id="2、关键是，这里还想捞出-“群组的所有用户”-和-“用户参与的所有群组”-，所以必须讲清楚关系。"><a href="#2、关键是，这里还想捞出-“群组的所有用户”-和-“用户参与的所有群组”-，所以必须讲清楚关系。" class="headerlink" title="2、关键是，这里还想捞出 “群组的所有用户” 和 “用户参与的所有群组” ，所以必须讲清楚关系。"></a>2、关键是，这里还想捞出 “群组的所有用户” 和 “用户参与的所有群组” ，所以必须讲清楚关系。</h4><p>【问题2】has_many :participated_groups和has_many :members，这里的participated和member是不是rails内建的词语，换成其他词语行不行？</p>
+<p>【解答】测试发现，participated和member是自定义的，改成par和mem也可以。</p>
+<h4 id="3、【问题3】下面这段rails-c里的代码怎么解读"><a href="#3、【问题3】下面这段rails-c里的代码怎么解读" class="headerlink" title="3、【问题3】下面这段rails c里的代码怎么解读"></a>3、【问题3】下面这段rails c里的代码怎么解读</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">u = User.first  </span><br><span class="line">g = Group.first</span><br><span class="line">g.members &lt;&lt; u</span><br><span class="line">g.members</span><br><span class="line">u.participated_groups</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>定义单数的u</p>
+<p>定义单数的g</p>
+<p><strong>g群组包含成员u</strong></p>
+<p>显示g群组的成员——可以看到成员u在群组g里面</p>
+<p>显示成员u所参加的群组——可以看到成员u所参加的群组里有g</p>
+</li>
+</ul>
+<h4 id="4、【问题4】解读代码"><a href="#4、【问题4】解读代码" class="headerlink" title="4、【问题4】解读代码"></a>4、【问题4】解读代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app/models/user.rb</span><br><span class="line">+    def is_member_of?(group)</span><br><span class="line">+      participated_groups.include?(group)</span><br><span class="line">+    end</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>这个用户参与的所有群组participated_groups中，包含了group这个群组即include?(group)</p>
+</li>
+<li><p>因为用的是判断式include?，所以返回的值是true或false。</p>
+<ul>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">u = User.first</span><br><span class="line">g = Group.first</span><br><span class="line">u.is_member_of?(g)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p>【问题5】include？与&lt;&lt;有什么区别？</p>
+<p>解答：<strong>include？是一种状态的判断</strong>，如<code>participated_groups.include?(group)</code>是说参与的群是不是<strong>包含了</strong>group。<strong>&lt;&lt;是一个动作</strong>，如<code>g.members &lt;&lt; u</code>是说让g的所有用户<strong>包含</strong>用户u。</p>
+<h4 id="5、views层面的加入-退出群组：user的model加入is-member-of-group-来判断"><a href="#5、views层面的加入-退出群组：user的model加入is-member-of-group-来判断" class="headerlink" title="5、views层面的加入/退出群组：user的model加入is_member_of?(group)来判断"></a>5、views层面的加入/退出群组：user的model加入<code>is_member_of?(group)</code>来判断</h4><h4 id="6、model层面的加入-退出群组。"><a href="#6、model层面的加入-退出群组。" class="headerlink" title="6、model层面的加入/退出群组。"></a>6、model层面的加入/退出群组。</h4><p>​      因为是用户在执行join和quit，所以在user的model里定义。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">app/models/user.rb</span><br><span class="line"></span><br><span class="line">def join!(group)</span><br><span class="line">  participated_groups &lt;&lt; group  #该用户参与的所有群组包含group这个群组</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">def quit!(group)</span><br><span class="line">  participated_groups.delete(group) #[问题]如果这里用destroy行不行？</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<p>rail c里的测试解读：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">u = User.first</span><br><span class="line">g = Group.first</span><br><span class="line">u.join!(g)</span><br><span class="line">u.is_member_of?(g)</span><br><span class="line">u.quit!(g)</span><br><span class="line">u.is_member_of?(g)</span><br><span class="line">exit</span><br></pre></td></tr></table></figure>
+<h4 id="7、controller里的join和quit"><a href="#7、controller里的join和quit" class="headerlink" title="7、controller里的join和quit"></a>7、controller里的join和quit</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">+  def join</span><br><span class="line">+   @group = Group.find(params[:id])</span><br><span class="line">+  </span><br><span class="line">+    if !current_user.is_member_of?(@group)</span><br><span class="line">+      current_user.join!(@group)</span><br><span class="line">+      flash[:notice] = &quot;加入本讨论版成功！&quot;</span><br><span class="line">+    end</span><br><span class="line">+  </span><br><span class="line">+    redirect_to group_path(@group)</span><br><span class="line">+  end</span><br></pre></td></tr></table></figure>
+<h4 id="8、创办群组的时候自动加入群组，又是在creat的action中加入。注意这里是用model里的join-方法，而不是同个文件controller里的join方法。"><a href="#8、创办群组的时候自动加入群组，又是在creat的action中加入。注意这里是用model里的join-方法，而不是同个文件controller里的join方法。" class="headerlink" title="8、创办群组的时候自动加入群组，又是在creat的action中加入。注意这里是用model里的join!方法，而不是同个文件controller里的join方法。"></a>8、创办群组的时候自动加入群组，又是在creat的action中加入。注意这里是用model里的join!方法，而不是同个文件controller里的join方法。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">  def create</span><br><span class="line">    @group = Group.new(group_params)</span><br><span class="line">    @group.user = current_user</span><br><span class="line">    if @group.save</span><br><span class="line">+     current_user.join!(@group)</span><br><span class="line">      redirect_to groups_path</span><br><span class="line">    else</span><br><span class="line">      render :new</span><br><span class="line">    end</span><br><span class="line">  end</span><br></pre></td></tr></table></figure>
+<h2 id="8、"><a href="#8、" class="headerlink" title="8、"></a>8、</h2><ul>
+<li>新增一个下拉选单</li>
+</ul>
+<ul>
+<li>可以看到自己过去曾经发表的文章</li>
+<li>可以看到自己过去曾经参与的社团</li>
+</ul>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1flvalg3hmqj30m80a6my4.jpg" alt=""></p>
+<h2 id="9、"><a href="#9、" class="headerlink" title="9、"></a>9、</h2><ul>
+<li><p>了解 Helper 是什么，怎么使用</p>
+<ul>
+<li>换行显示simple_format(group.description)</li>
+<li>自定义helper，&lt;%= render_group_description(group) %&gt;</li>
+</ul>
+</li>
+<li><p>了解 Partial 是什么，怎么使用</p>
+<ul>
+<li><p>共用表单的作用，并且可以设置参数来替代&lt;% @groups.each do |group| %&gt;</p>
+<p><code>&lt;%= render :partial =&gt; &quot;group_item&quot;, :collection =&gt; @groups, :as =&gt; :group %&gt;</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="10、上传"><a href="#10、上传" class="headerlink" title="10、上传"></a>10、上传</h2><p>1、上传github</p>
+<p><code>git remote add origin git@github.com:你的github名字/rails101-1.git</code><br><code>git push -u origin master</code></p>
+<p><code>git push --all origin</code></p>
+<ul>
+<li>github报错强推<code>git push origin master —force</code></li>
+</ul>
+<p>2、上传heroku</p>
+<ul>
+<li><p>修改 Gemfile 文件，把 sqlite3 从第7行搬到约第30到40行的group :development, :test do</p>
+</li>
+<li><p>在末尾新增一个 production group，加上 pg 这个 gem。然后<code>bundle install</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">group :production do </span><br><span class="line">  gem &apos;pg&apos;</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>heroku login</p>
+<p>heroku create</p>
+<p>git push heroku ch08:master</p>
+<p>heroku run rake db:migrate</p>
+<ul>
+<li>新建<code>heroku create app名字</code></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>改名<code>heroku apps:rename 新app名字</code></p>
+<ul>
+<li><p>删除<code>heroku apps:destroy app名字</code></p>
+</li>
+<li><p>报错强推<code>git push -f heroku master</code></p>
+</li>
+<li><p>报错debug，<code>heroku logs | grep -i error</code></p>
+</li>
+<li><p>清空数据</p>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">heroku pg:reset DATABASE（清空heroku数据库，比如旧的seed档）</span><br><span class="line">heroku run rake db:migrate</span><br><span class="line">heroku run rake db:seed</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/posts/dc81847/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/posts/f7a3e9a4/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
+
+
+    <div id="comments">
+        
+   <p>评论系统未开启，无法评论！</p>
+
+    </div>
+
+
+            </main>
+            
+    <aside class="col-md-3 sidebar">
+        
+        
+    <div class="widget">    
+        <h3 class="title">搜索</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
+                    <button type="button" class="search-form-submit" id="search-local">站内搜索</button>
+                
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget notification">
+        <h3 class="title">网站公告</h3>
+        <div>
+            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
+主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+<hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
+</p>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget">
+      <h3 class="title">社交</h3> 
+        <div class="content social">
+            
+	            <a href="//github.com/shenliyang" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="git fa fa-git"></i>
+			    </a>
+            
+	            <a href="mailto:snippet@91h5.cc" rel="external nofollow" title="邮箱" target="_blank">
+			    	<i class="envelope-o fa fa-envelope-o"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="联系QQ" target="_blank">
+			    	<i class="qq fa fa-qq"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="微博" target="_blank">
+			    	<i class="weibo fa fa-weibo"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="QQ群" target="_blank">
+			    	<i class="users fa fa-users"></i>
+			    </a>
+            
+	            <a href="/atom.xml" rel="external nofollow" title="RSS" target="_blank">
+			    	<i class="feed fa fa-feed"></i>
+			    </a>
+            
+        </div>
+    </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">分类</h3>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ror功能/"><i class="fa" aria-hidden="true">ror功能</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror知识点/"><i class="fa" aria-hidden="true">ror知识点</i></a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror系统/"><i class="fa" aria-hidden="true">ror系统</i></a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web页面/"><i class="fa" aria-hidden="true">web页面</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link current" href="/categories/工具/"><i class="fa" aria-hidden="true">工具</i></a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/微信小程序/"><i class="fa" aria-hidden="true">微信小程序</i></a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/心得/"><i class="fa" aria-hidden="true">心得</i></a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/投资/"><i class="fa" aria-hidden="true">投资</i></a><span class="category-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+    <div class="widget">
+      <h3 class="title">归档</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/"><i class="fa" aria-hidden="true">November 2018</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/"><i class="fa" aria-hidden="true">January 2018</i></a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/"><i class="fa" aria-hidden="true">December 2017</i></a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/"><i class="fa" aria-hidden="true">November 2017</i></a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/"><i class="fa" aria-hidden="true">October 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/"><i class="fa" aria-hidden="true">September 2017</i></a><span class="archive-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+  <div class="widget">
+    <h3 class="title">标签云</h3>
+    <div class="content tag-cloud">
+        <a href="/tags/atom/" style="font-size: 14px;">atom</a> <a href="/tags/bug/" style="font-size: 18px;">bug</a> <a href="/tags/heroku/" style="font-size: 10px;">heroku</a> <a href="/tags/hexo/" style="font-size: 12px;">hexo</a> <a href="/tags/interview/" style="font-size: 11px;">interview</a> <a href="/tags/mac/" style="font-size: 12px;">mac</a> <a href="/tags/orid-day/" style="font-size: 10px;">orid-day</a> <a href="/tags/orid-month/" style="font-size: 10px;">orid-month</a> <a href="/tags/ror功能/" style="font-size: 12px;">ror功能</a> <a href="/tags/ror知识点/" style="font-size: 17px;">ror知识点</a> <a href="/tags/ror系统/" style="font-size: 19px;">ror系统</a> <a href="/tags/typora/" style="font-size: 10px;">typora</a> <a href="/tags/vps/" style="font-size: 16px;">vps</a> <a href="/tags/web页面/" style="font-size: 12px;">web页面</a> <a href="/tags/下载/" style="font-size: 10px;">下载</a> <a href="/tags/工具/" style="font-size: 20px;">工具</a> <a href="/tags/常用/" style="font-size: 12px;">常用</a> <a href="/tags/微信功能/" style="font-size: 13px;">微信功能</a> <a href="/tags/微信系统/" style="font-size: 15px;">微信系统</a> <a href="/tags/微信页面/" style="font-size: 11px;">微信页面</a> <a href="/tags/心得/" style="font-size: 13px;">心得</a> <a href="/tags/手机/" style="font-size: 10px;">手机</a> <a href="/tags/投资/" style="font-size: 10px;">投资</a> <a href="/tags/搬砖/" style="font-size: 10px;">搬砖</a> <a href="/tags/科学上网/" style="font-size: 14px;">科学上网</a> <a href="/tags/部署/" style="font-size: 13px;">部署</a>
+    </div>
+  </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">友链</h3>
+        <div class="content friends-link">
+        
+            <a href="http://www.shenliyang.com" class="fa" target="_blank">个人博客</a>
+        
+        </div>
+    </div>
+
+
+        
+    </aside>
+
+
+        </div>
+      </section>
+    </div>
+  </div>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2017
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>

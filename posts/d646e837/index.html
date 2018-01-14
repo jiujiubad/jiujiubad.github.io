@@ -1,0 +1,425 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>tool-vps-部署-linux云服务器部署运维 | Hexo</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+    <div class="hide">
+    	<script src="https://s4.cnzz.com/z_stat.php?id=1263868967&web_id=1263868967" language="JavaScript"></script>
+    </div>
+
+
+
+
+
+
+    
+</head>
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner2.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="">
+            <img src="/img/avatar.jpg" alt="logo头像">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题">  
+             
+    	</div>
+    </div>
+</header>
+      <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation"><a href="/"><i class="fa fa-fw "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/前端/"><i class="fa fa-fw "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/后端/"><i class="fa fa-fw "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/工具/"><i class="fa fa-fw "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/资源/"><i class="fa fa-fw "></i>资源</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+      <section class="content-wra aa99">
+        <div class="row">
+            <main class="col-md-9 main-content m-post">
+                <p id="process"></p>
+<article class="post pp99">
+    <div class="post-head">
+        <h1 id="tool-vps-部署-linux云服务器部署运维">
+            
+	            tool-vps-部署-linux云服务器部署运维
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span>工具</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            工具
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/12/14</span>
+    </span>
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fm757uv3vaj31kw2wsti0.jpg" alt=""></p>
+<h1 id="一、前半部分介绍云服务器类型IaaS、PaaS、SaaS，和常用linux指令"><a href="#一、前半部分介绍云服务器类型IaaS、PaaS、SaaS，和常用linux指令" class="headerlink" title="一、前半部分介绍云服务器类型IaaS、PaaS、SaaS，和常用linux指令"></a>一、前半部分介绍云服务器类型IaaS、PaaS、SaaS，和常用linux指令</h1><h1 id="二、后半部分以IaaS的阿里云或linode为例，示范ruby-on-rails在vps上的安装、部署、运维、第三方服务、域名设定"><a href="#二、后半部分以IaaS的阿里云或linode为例，示范ruby-on-rails在vps上的安装、部署、运维、第三方服务、域名设定" class="headerlink" title="二、后半部分以IaaS的阿里云或linode为例，示范ruby on rails在vps上的安装、部署、运维、第三方服务、域名设定"></a>二、后半部分以IaaS的阿里云或linode为例，示范ruby on rails在vps上的安装、部署、运维、第三方服务、域名设定</h1><h3 id="1、云服务类型和厂商"><a href="#1、云服务类型和厂商" class="headerlink" title="1、云服务类型和厂商"></a>1、云服务类型和厂商</h3><ul>
+<li>IaaS：基础设施服务，Infrastructure-as-a-Service（相当于是买的房子，可以任意拆掉东西装修）<ul>
+<li>vps虚拟机，如vultr、linode</li>
+<li>云计算平台，亚马逊、微软、谷歌、阿里云、腾讯云</li>
+</ul>
+</li>
+<li>PaaS：平台服务，Platform-as-a-Service（相当于是租的房子，只能把东西做好摆进去）<ul>
+<li>虚拟主机，如heroku、openshift</li>
+<li>价格比IaaS贵，大多只有美国机房，有能力运维linux服务器的都很少选用</li>
+</ul>
+</li>
+<li>SaaS：软件服务，Software-as-a-Service（只能执行特定软件）<ul>
+<li>如github、金数据、tower、office365</li>
+</ul>
+</li>
+</ul>
+<h3 id="2、租用云服务器（vultr、阿里云）"><a href="#2、租用云服务器（vultr、阿里云）" class="headerlink" title="2、租用云服务器（vultr、阿里云）"></a>2、租用云服务器（vultr、阿里云）</h3><ul>
+<li>Linux 时，通常是讲 Linux Kernel (内核)。给一般用户安装的又分为不同的发行版本(Linux distribution)，例如 Ubuntu、Linux Mint、Debian、CentOS、Redhat 等</li>
+</ul>
+<h3 id="3、CLI命令"><a href="#3、CLI命令" class="headerlink" title="3、CLI命令"></a>3、CLI命令</h3><ul>
+<li><p>CLI，指用文字输入的方式来操作电脑。——高效、占用资源少</p>
+<ul>
+<li>Mac 和 Linux 都是 <a href="https://zh.wikipedia.org/wiki/%E7%B1%BBUnix%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener">UNIX-like</a> 操作系统。爱用 Mac 的原因，因为接近 Linux 服务器的环境<ul>
+<li>Shell 是指和电脑沟通的指令</li>
+<li>Terminal 是指 CLI 输入输出的介面程序</li>
+<li>Console 指某特定的指令语言环境</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>GLI，指用图形用户界面输入的方式来操作电脑</li>
+</ul>
+<h3 id="4、常用命令"><a href="#4、常用命令" class="headerlink" title="4、常用命令"></a>4、常用命令</h3><blockquote>
+<p><code>/</code> 根目录</p>
+<p><code>~</code> 家目录</p>
+<p><code>cd</code></p>
+<p><code>pwd</code></p>
+<p><code>ls</code></p>
+<p><code>mkdir</code></p>
+<p><code>touch</code></p>
+<p><code>cp</code></p>
+<p><code>mv</code> 移动档案，或重命名</p>
+<p><code>rm</code> 删除档案</p>
+<p><code>rm -r</code> 删除整个目录及以下的档案</p>
+<p><code>sudo apt-get update</code></p>
+</blockquote>
+<p>CLI中内建的是nano、或vi（vi和vim功能更强但较难上手），而atom是GUI</p>
+<blockquote>
+<ul>
+<li><code>gzip</code> 压缩档案</li>
+<li><code>gzip -d</code> 解压缩档案</li>
+<li><code>tar zcvf xxx.tar.gz xxx</code> 将 xxx 目录打包并压缩成 <code>xxx.tar.gz</code> 档案</li>
+<li><code>tar zxcf xxx.tar.gz</code>。将 <code>xxx.tar.gz</code> 解压缩</li>
+</ul>
+</blockquote>
+<h3 id="5、权限管理"><a href="#5、权限管理" class="headerlink" title="5、权限管理"></a>5、权限管理</h3><p><code>su</code> 指令可以切换身份，例如切换成 root 帐号，但是每次都要输入；</p>
+<p><code>sudo</code>权限，可以暂时提升权限。</p>
+<h3 id="6、安装Linux、ruby-on-rails所需套件、ruby、MySQL或PostgreSQL、-Nginx-Passenger-网站服务器"><a href="#6、安装Linux、ruby-on-rails所需套件、ruby、MySQL或PostgreSQL、-Nginx-Passenger-网站服务器" class="headerlink" title="6、安装Linux、ruby on rails所需套件、ruby、MySQL或PostgreSQL、 Nginx + Passenger 网站服务器"></a>6、安装Linux、ruby on rails所需套件、ruby、MySQL或PostgreSQL、 Nginx + Passenger 网站服务器</h3><ul>
+<li>在本机开发的时候，我们使用 <a href="https://github.com/puma/puma" target="_blank" rel="noopener">puma</a> 这一套由 Ruby 写的网站服务器，无论是静态档案(图片/CSS/JS)或是会进到 Rails 处理的动态网页，一律都是由 puma 来处理。</li>
+<li><a href="http://nginx.org/" target="_blank" rel="noopener">Nginx</a> 是目前最流行的网站服务器(用C语言开发的)，可以非常高效能地提供静态档案，效能是纯 Ruby 网站服务器的数十倍以上。因此像图档/CSS/JS等等静态资源，都会由 Nginx 处理</li>
+<li>passenger是支持ruby的web服务器。Rails 动态网页的部分，我们会安装 <a href="https://www.phusionpassenger.com/" target="_blank" rel="noopener">Passenger</a> 这个 Nginx 的扩充模组来执行 Ruby 程序。</li>
+</ul>
+<h3 id="7、新增deploy账号"><a href="#7、新增deploy账号" class="headerlink" title="7、新增deploy账号"></a>7、新增deploy账号</h3><ul>
+<li>root账号权限太大，新增deploy账号，用来放<em>Rails</em>代码。</li>
+</ul>
+<h3 id="8、安装Capistrano"><a href="#8、安装Capistrano" class="headerlink" title="8、安装Capistrano"></a>8、安装Capistrano</h3><ul>
+<li><a href="http://capistranorb.com" target="_blank" rel="noopener">Capistrano</a> 是 Rails 社区中最常使用的布署工具</li>
+<li><code>ap production deploy</code>，这个指令会登入远端服务器，把 Github 上的代码抓下来，然后自动执行 bundle 安装套件、跑数据库 migration 和编译 assets 编译等等步骤：</li>
+<li>要部署新代码上服务器，记得需要先 <code>git push</code> 到 Github 上，再执行 <code>cap production deploy</code></li>
+</ul>
+
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/posts/30d3b38f/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/posts/19619b26/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
+
+
+    <div id="comments">
+        
+   <p>评论系统未开启，无法评论！</p>
+
+    </div>
+
+
+            </main>
+            
+    <aside class="col-md-3 sidebar">
+        
+        
+    <div class="widget">    
+        <h3 class="title">搜索</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
+                    <button type="button" class="search-form-submit" id="search-local">站内搜索</button>
+                
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget notification">
+        <h3 class="title">网站公告</h3>
+        <div>
+            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
+主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+<hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
+</p>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget">
+      <h3 class="title">社交</h3> 
+        <div class="content social">
+            
+	            <a href="//github.com/shenliyang" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="git fa fa-git"></i>
+			    </a>
+            
+	            <a href="mailto:snippet@91h5.cc" rel="external nofollow" title="邮箱" target="_blank">
+			    	<i class="envelope-o fa fa-envelope-o"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="联系QQ" target="_blank">
+			    	<i class="qq fa fa-qq"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="微博" target="_blank">
+			    	<i class="weibo fa fa-weibo"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="QQ群" target="_blank">
+			    	<i class="users fa fa-users"></i>
+			    </a>
+            
+	            <a href="/atom.xml" rel="external nofollow" title="RSS" target="_blank">
+			    	<i class="feed fa fa-feed"></i>
+			    </a>
+            
+        </div>
+    </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">分类</h3>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ror功能/"><i class="fa" aria-hidden="true">ror功能</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror知识点/"><i class="fa" aria-hidden="true">ror知识点</i></a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror系统/"><i class="fa" aria-hidden="true">ror系统</i></a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web页面/"><i class="fa" aria-hidden="true">web页面</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link current" href="/categories/工具/"><i class="fa" aria-hidden="true">工具</i></a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/微信小程序/"><i class="fa" aria-hidden="true">微信小程序</i></a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/心得/"><i class="fa" aria-hidden="true">心得</i></a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/投资/"><i class="fa" aria-hidden="true">投资</i></a><span class="category-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+    <div class="widget">
+      <h3 class="title">归档</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/"><i class="fa" aria-hidden="true">November 2018</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/"><i class="fa" aria-hidden="true">January 2018</i></a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/"><i class="fa" aria-hidden="true">December 2017</i></a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/"><i class="fa" aria-hidden="true">November 2017</i></a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/"><i class="fa" aria-hidden="true">October 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/"><i class="fa" aria-hidden="true">September 2017</i></a><span class="archive-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+  <div class="widget">
+    <h3 class="title">标签云</h3>
+    <div class="content tag-cloud">
+        <a href="/tags/atom/" style="font-size: 14px;">atom</a> <a href="/tags/bug/" style="font-size: 18px;">bug</a> <a href="/tags/heroku/" style="font-size: 10px;">heroku</a> <a href="/tags/hexo/" style="font-size: 12px;">hexo</a> <a href="/tags/interview/" style="font-size: 11px;">interview</a> <a href="/tags/mac/" style="font-size: 12px;">mac</a> <a href="/tags/orid-day/" style="font-size: 10px;">orid-day</a> <a href="/tags/orid-month/" style="font-size: 10px;">orid-month</a> <a href="/tags/ror功能/" style="font-size: 12px;">ror功能</a> <a href="/tags/ror知识点/" style="font-size: 17px;">ror知识点</a> <a href="/tags/ror系统/" style="font-size: 19px;">ror系统</a> <a href="/tags/typora/" style="font-size: 10px;">typora</a> <a href="/tags/vps/" style="font-size: 16px;">vps</a> <a href="/tags/web页面/" style="font-size: 12px;">web页面</a> <a href="/tags/下载/" style="font-size: 10px;">下载</a> <a href="/tags/工具/" style="font-size: 20px;">工具</a> <a href="/tags/常用/" style="font-size: 12px;">常用</a> <a href="/tags/微信功能/" style="font-size: 13px;">微信功能</a> <a href="/tags/微信系统/" style="font-size: 15px;">微信系统</a> <a href="/tags/微信页面/" style="font-size: 11px;">微信页面</a> <a href="/tags/心得/" style="font-size: 13px;">心得</a> <a href="/tags/手机/" style="font-size: 10px;">手机</a> <a href="/tags/投资/" style="font-size: 10px;">投资</a> <a href="/tags/搬砖/" style="font-size: 10px;">搬砖</a> <a href="/tags/科学上网/" style="font-size: 14px;">科学上网</a> <a href="/tags/部署/" style="font-size: 13px;">部署</a>
+    </div>
+  </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">友链</h3>
+        <div class="content friends-link">
+        
+            <a href="http://www.shenliyang.com" class="fa" target="_blank">个人博客</a>
+        
+        </div>
+    </div>
+
+
+        
+    </aside>
+
+
+        </div>
+      </section>
+    </div>
+  </div>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2017
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>

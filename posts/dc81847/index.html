@@ -1,0 +1,503 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>ror-system-编程基础练习本 | Hexo</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+    <div class="hide">
+    	<script src="https://s4.cnzz.com/z_stat.php?id=1263868967&web_id=1263868967" language="JavaScript"></script>
+    </div>
+
+
+
+
+
+
+    
+</head>
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner2.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="">
+            <img src="/img/avatar.jpg" alt="logo头像">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题">  
+             
+    	</div>
+    </div>
+</header>
+      <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation"><a href="/"><i class="fa fa-fw "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/前端/"><i class="fa fa-fw "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/后端/"><i class="fa fa-fw "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/工具/"><i class="fa fa-fw "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/资源/"><i class="fa fa-fw "></i>资源</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+      <section class="content-wra aa99">
+        <div class="row">
+            <main class="col-md-9 main-content m-post">
+                <p id="process"></p>
+<article class="post pp99">
+    <div class="post-head">
+        <h1 id="ror-system-编程基础练习本">
+            
+	            ror-system-编程基础练习本
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span>ror系统</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            ror系统
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/12/13</span>
+    </span>
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h1 id="注意：tiems、while、each可以解决大部分问题。"><a href="#注意：tiems、while、each可以解决大部分问题。" class="headerlink" title="注意：tiems、while、each可以解决大部分问题。"></a>注意：tiems、while、each可以解决大部分问题。</h1><h3 id=""><a href="#" class="headerlink" title=" "></a> </h3><h1 id="1、前言准备"><a href="#1、前言准备" class="headerlink" title="1、前言准备"></a>1、前言准备</h1><h1 id="2、输入、处理、输出"><a href="#2、输入、处理、输出" class="headerlink" title="2、输入、处理、输出"></a>2、输入、处理、输出</h1><ul>
+<li>Puts，输出变量，并换行</li>
+<li>print，输出变量</li>
+<li>gets，从键盘拿到输入的值</li>
+<li>=，赋值，指派右边的值给左边的变量</li>
+<li>字符串”xx”或’xx’</li>
+<li><code>#{}</code>，将变量内嵌在字符中</li>
+<li>ruby中，变量用小写字母，并且用_分开</li>
+</ul>
+<h1 id="3、基本算术"><a href="#3、基本算术" class="headerlink" title="3、基本算术"></a>3、基本算术</h1><ul>
+<li>数据类型：string、integer、float、array、hash</li>
+<li>算术：+、-、*、/、%</li>
+<li>转换：to_i、to_f、to_s</li>
+<li>浮点数常用方法：<ul>
+<li>.round四舍五入，即大更大小更小</li>
+<li>.ceil无条件进制，即只会更大</li>
+<li>.floor无条件舍去，即只会更小</li>
+</ul>
+</li>
+</ul>
+<h1 id="4、控制流程"><a href="#4、控制流程" class="headerlink" title="4、控制流程"></a>4、控制流程</h1><ul>
+<li><p>关系运算，回传boolean即true或false</p>
+<ul>
+<li><code>==</code></li>
+<li><code>!=</code></li>
+<li><code>&lt;</code></li>
+<li><code>&gt;</code></li>
+<li><code>&lt;=</code></li>
+<li><code>&gt;=</code></li>
+</ul>
+</li>
+<li><p>逻辑运算：&amp;&amp;且、||或、！反</p>
+</li>
+<li><p>boolean转型：在 Ruby 之中只要不是 <code>false</code> 或 <code>nil</code>，都会自动判断成 <code>true</code>。</p>
+<ul>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if &quot;&quot;</span><br><span class="line">  # 会执行</span><br><span class="line">end*</span><br></pre></td></tr></table></figure>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if nil</span><br><span class="line">  # 不会执行</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="5、方法-Method"><a href="#5、方法-Method" class="headerlink" title="5、方法 Method"></a>5、方法 Method</h1><ul>
+<li><p>调用已定义的方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def hello(name)</span><br><span class="line">  puts &quot;Hello, #&#123;name&#125;&quot;</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">hello(&quot;ihower&quot;)   # 这样会调用 hello 方法</span><br><span class="line">hello &quot;ihower&quot;    # 在 Ruby 语言中 () 可以省略</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用return回传一个值，然后可以存进变量str</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def get_hello(name)</span><br><span class="line">  return &quot;Hello, #&#123;name&#125;&quot;</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">str = get_hello(&quot;ihower&quot;)</span><br><span class="line">puts str</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果没有写 <code>return</code>，该方法的最后一行的值会自动被返回。例如上述程式的 <code>return</code> 可以省略：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def get_hello(name)</span><br><span class="line">  &quot;Hello, #&#123;name&#125;&quot;</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>！！！！99问题：puts和return的区别？？</p>
+<h1 id="6、循环-Loop"><a href="#6、循环-Loop" class="headerlink" title="6、循环 Loop"></a>6、循环 Loop</h1><ul>
+<li><p>循环，就是可以重复执行某段程式码，直到满足某个条件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x = 10</span><br><span class="line">while x &lt;= 10</span><br><span class="line">  puts x</span><br><span class="line">  x = x + 1</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在 <code>while</code> 循环中，用 <code>break</code> 关键字，会提前中断循环</p>
+</li>
+</ul>
+<h1 id="7、数组-Array"><a href="#7、数组-Array" class="headerlink" title="7、数组 Array"></a>7、数组 Array</h1><ul>
+<li><p>数组是一个有顺序的容器，用数字当作索引。索引从0开始</p>
+<ul>
+<li>原则上里面的元素，数据类型最好都是一样的，例如都存整数，或是都存字符串。</li>
+<li>数组里面还可以放数组，这样会变成二维数组：</li>
+</ul>
+</li>
+<li><p>用for走访数组，ruby中常用each</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">array.each do |i|</span><br><span class="line">  puts i</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<ul>
+<li>如果走访时，需要索引值，可以改用 <code>each_with_index</code> 方法：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">array.each_with_index do |i, j|</span><br><span class="line">  puts i</span><br><span class="line">  puts j   # j 从 0 开始数</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数组的操作：</p>
+<ul>
+<li><p><code>array.size</code> 会回传数组长度</p>
+<p><code>array[1]</code> 会读取第二个元素</p>
+<p><code>array[1] = 999</code> 会更改第二的元素的值</p>
+<p><code>array[99999]</code> 读取一个不存在的值，会回传 <code>nil</code></p>
+<p><code>array[0]</code> 或 <code>array.first</code> 是数组的第一个元素</p>
+<p><code>array[-1]</code> 或 <code>array.last</code> 是数组的最后一个元素</p>
+<p><code>array.push(999)</code> 或 <code>array &lt;&lt; 999</code> 会新增一个元素 999 到数组的最后面</p>
+<p><code>array.unshift(999)</code> 会新增一个元素 999 到数组的最前面</p>
+<p><code>array.delete_at(i)</code> 会删除索引值在 i 的元素</p>
+</li>
+</ul>
+</li>
+<li><p>Splite字符串转化成数组，join把数组转化成字符串</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">str = &quot;ABCDEFG&quot;</span><br><span class="line"></span><br><span class="line">str[0]  # 得到 &quot;A&quot;</span><br><span class="line"></span><br><span class="line">str[1] = &quot;x&quot;</span><br><span class="line">str   # 变成 &quot;AxCDEFG&quot;</span><br><span class="line"></span><br><span class="line">str.split(&quot;&quot;) # 用 &quot;&quot; 拆开字符串，得到数组 [&quot;A&quot;, &quot;x&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot;, &quot;F&quot;, &quot;G&quot;]</span><br><span class="line"></span><br><span class="line">[&quot;x&quot;, &quot;y&quot;, &quot;z&quot;].join(&quot; &quot;) # 用 &quot; &quot; 串接成字符串，得到 &quot;x y z&quot;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="8、散列-Hash"><a href="#8、散列-Hash" class="headerlink" title="8、散列 Hash"></a>8、散列 Hash</h1><ul>
+<li><p>散列Hash，就是用键(key)当作索引的容器，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">h = &#123; &quot;a&quot; =&gt; 123, &quot;b&quot; =&gt; 456 &#125;</span><br><span class="line"></span><br><span class="line">h[&quot;a&quot;] 就是 123</span><br><span class="line"></span><br><span class="line">h[&quot;b&quot;] 就是 456</span><br><span class="line"></span><br><span class="line">h[&quot;qweqkleklwqen&quot;] 如果读取一个不存在的key，结果会是 nil</span><br><span class="line"></span><br><span class="line">h[&quot;new_key&quot;] = 123 如果本来没有这个 key，就会直接新增一组 key-value</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如何走访散列：</p>
+</li>
+</ul>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">h.each do |key, value|</span><br><span class="line">  puts key</span><br><span class="line">  puts value</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><code>h.keys</code> 会回传一个数组包括所有 keys</p>
+<p><code>h.values</code> 会回传一个数组包括所有 values</p>
+<p><code>h.merge(h2)</code> 会合并散列 h2 到散列 h</p>
+</li>
+</ul>
+<h1 id="9、对象-Object"><a href="#9、对象-Object" class="headerlink" title="9、对象 Object"></a>9、对象 Object</h1><ul>
+<li><p>对象(Object)，也是一种数据类型，这种数据除了拥有属性，也有方法可以调用。</p>
+</li>
+<li><p>在 Ruby 之中，其实每种数据类型，例如 String、Integer、Float、Array、Hash 等等，也都是对象(Object)。例如字符串的 <code>size</code> 方法和 <code>split</code> 方法：</p>
+<ul>
+<li><code>&quot;abc&quot;.size</code> 会回传 3</li>
+<li><code>&quot;a,b,c,d&quot;.split(&quot;,&quot;)</code> 会回传数组 <code>[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]</code></li>
+</ul>
+</li>
+<li><p>其中 <code>.</code> 就是调用方法的意思。</p>
+</li>
+<li><p>需要透过类 Class 自订义 Object。Class 就像一种样板，定义出同一种类型的对象有哪些共同的属性和方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class Car</span><br><span class="line"></span><br><span class="line">  attr_accessor :color  # 这会定义属性 @color</span><br><span class="line"></span><br><span class="line">  def run</span><br><span class="line">    puts &quot;This #&#123;@color&#125; car is running&quot;</span><br><span class="line">  end</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>有了类，就可以用 <code>new</code> 来产生出对象：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">car1 = Car.new</span><br><span class="line">car1.color = &quot;red&quot;</span><br><span class="line">car1.run</span><br><span class="line"></span><br><span class="line">car2 = Car.new</span><br><span class="line">car2.color = &quot;blue&quot;</span><br><span class="line">car2.run</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>内建的类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&quot;foobar&quot;.class 会回传 String 是个类</span><br><span class="line"></span><br><span class="line">String.new(&quot;foobar&quot;) 等同于 &quot;foobar&quot;</span><br><span class="line"></span><br><span class="line">[1,2,3].class 会回传 Array 是个类</span><br><span class="line"></span><br><span class="line">Array.new([1,2,3]) 等同于 [1,2,3]</span><br><span class="line"></span><br><span class="line">不过因为这些数据类型太常用了，所以就不需要写 .new 来产生，直接用符号表示就可以了。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>常数，大写开头的变量<code>Pi = 3.1415926</code>。所有的类Class都是常数。</p>
+</li>
+</ul>
+<h1 id="10、档案处理"><a href="#10、档案处理" class="headerlink" title="10、档案处理"></a>10、档案处理</h1><ul>
+<li><p>读取档案就是将数据从硬盘放进内存里面，让程序可以操作。</p>
+<p>写入档案则是将内存的数据写入硬盘进行保存。</p>
+</li>
+<li><p>开档读取和写入，用Ruby 的 <a href="https://ruby-doc.org/core-2.4.1/File.html" target="_blank" rel="noopener">File API</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">读取：</span><br><span class="line">file = File.open(&quot;foo.txt&quot;)</span><br><span class="line">doc = file.read(&quot;foo.txt&quot;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">写入</span><br><span class="line">File.open(&quot;bar.txt&quot;, &quot;w+&quot;) do |f|</span><br><span class="line">  f &lt;&lt; &quot;aaa&quot;</span><br><span class="line">  f &lt;&lt; &quot;\n&quot;</span><br><span class="line">  f &lt;&lt; &quot;bbb&quot;</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="11、推荐资源"><a href="#11、推荐资源" class="headerlink" title="11、推荐资源"></a>11、推荐资源</h1><p><a href="http://www.ptpress.cn/book.aspx?id=39228" target="_blank" rel="noopener">Ruby 基础教程, 人民邮电</a>，如果你要找工作面试，请尽量念完这一本。</p>
+<p>如果想继续练习基础编程，或是面试的公司有考算法，请练习以下的题库网站(请练习 Easy 程度程度即可，更高难度需要学完数据结构课程)</p>
+<ul>
+<li><a href="https://coderbyte.com/challenges" target="_blank" rel="noopener">Coderbyte</a></li>
+<li><a href="https://leetcode.com/problemset/algorithms/" target="_blank" rel="noopener">LeetCode Online Judge</a> 硅谷、BAT 大公司面试必备刷题题库网站</li>
+<li><a href="https://codility.com/programmers/lessons/1-iterations/" target="_blank" rel="noopener">Codility</a> 模拟线上算法测试，很刺激</li>
+</ul>
+<p>如果这教程对你来说还是偏难太过抽象，建议你可以找啊哈磊的<a href="http://www.ahalei.com" target="_blank" rel="noopener">小学生坐在马桶上都能看懂的编程入门书</a>，会用更浅显的对话和例子，用一整本书的长度来讲这教程的内容。</p>
+<h1 id="课后练习"><a href="#课后练习" class="headerlink" title="课后练习"></a>课后练习</h1><h3 id="21、选择排序法"><a href="#21、选择排序法" class="headerlink" title="21、选择排序法"></a>21、选择排序法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"># 给定一数组内含数字，请实作选择排序法进行排序。</span><br><span class="line"># https://zh.wikipedia.org/wiki/选择排序</span><br><span class="line"># 解释：</span><br><span class="line"># 1、当i=0时，</span><br><span class="line"># 2、用j做循环，判断if arr[j] &lt; arr[i]即前后两个数哪个小（当j做完循环，相当于从头到尾比较了数组里每个数字的大小，即找到最小值。并记录最小值min的下标min_index）</span><br><span class="line"># 3、arr[i], arr[min_index] = arr[min_index], arr[i] 用于把第i个索引对应的数组值，和整个数组的最小值进行交换。</span><br><span class="line"></span><br><span class="line">def insertion_sort(arr)</span><br><span class="line">  for i in 0..(arr.size-2)</span><br><span class="line">    min_index = i</span><br><span class="line">    for j in (i+1)..(arr.size-1)</span><br><span class="line">      if arr[j] &lt; arr[i]</span><br><span class="line">        min_index = j</span><br><span class="line">      end</span><br><span class="line">    end</span><br><span class="line">    a = arr[i]</span><br><span class="line">    arr[i] = arr[min_index]</span><br><span class="line">    arr[min_index] = a</span><br><span class="line">  end</span><br><span class="line">  return arr</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]</span><br><span class="line"></span><br><span class="line">answer = insertion_sort(arr)</span><br><span class="line"></span><br><span class="line">puts answer.to_s # 应该是 [1, 7, 9, 42, 46, 46, 68, 77, 86, 91]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># 方法二：找到最小值，交换最小值</span><br><span class="line">def insertion_sort(arr)</span><br><span class="line">  for i in 0..(arr.size-2)</span><br><span class="line">    for j in (i+1)..(arr.size-1)</span><br><span class="line">      if arr[j] &lt; arr[i]</span><br><span class="line">        min = arr[j]</span><br><span class="line">        arr[j] = arr[i]</span><br><span class="line">        arr[i] = min</span><br><span class="line">      end</span><br><span class="line">    end</span><br><span class="line">  end</span><br><span class="line">  return arr</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]</span><br><span class="line"></span><br><span class="line">answer = insertion_sort(arr)</span><br><span class="line"></span><br><span class="line">puts answer.to_s # 应该是 [1, 7, 9, 42, 46, 46, 68, 77, 86, 91]</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/posts/3ee41ba2/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/posts/e434021/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
+
+
+    <div id="comments">
+        
+   <p>评论系统未开启，无法评论！</p>
+
+    </div>
+
+
+            </main>
+            
+    <aside class="col-md-3 sidebar">
+        
+        
+    <div class="widget">    
+        <h3 class="title">搜索</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
+                    <button type="button" class="search-form-submit" id="search-local">站内搜索</button>
+                
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget notification">
+        <h3 class="title">网站公告</h3>
+        <div>
+            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
+主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+<hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
+</p>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget">
+      <h3 class="title">社交</h3> 
+        <div class="content social">
+            
+	            <a href="//github.com/shenliyang" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="git fa fa-git"></i>
+			    </a>
+            
+	            <a href="mailto:snippet@91h5.cc" rel="external nofollow" title="邮箱" target="_blank">
+			    	<i class="envelope-o fa fa-envelope-o"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="联系QQ" target="_blank">
+			    	<i class="qq fa fa-qq"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="微博" target="_blank">
+			    	<i class="weibo fa fa-weibo"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="QQ群" target="_blank">
+			    	<i class="users fa fa-users"></i>
+			    </a>
+            
+	            <a href="/atom.xml" rel="external nofollow" title="RSS" target="_blank">
+			    	<i class="feed fa fa-feed"></i>
+			    </a>
+            
+        </div>
+    </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">分类</h3>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ror功能/"><i class="fa" aria-hidden="true">ror功能</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror知识点/"><i class="fa" aria-hidden="true">ror知识点</i></a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror系统/"><i class="fa" aria-hidden="true">ror系统</i></a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web页面/"><i class="fa" aria-hidden="true">web页面</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link current" href="/categories/工具/"><i class="fa" aria-hidden="true">工具</i></a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/微信小程序/"><i class="fa" aria-hidden="true">微信小程序</i></a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/心得/"><i class="fa" aria-hidden="true">心得</i></a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/投资/"><i class="fa" aria-hidden="true">投资</i></a><span class="category-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+    <div class="widget">
+      <h3 class="title">归档</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/"><i class="fa" aria-hidden="true">November 2018</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/"><i class="fa" aria-hidden="true">January 2018</i></a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/"><i class="fa" aria-hidden="true">December 2017</i></a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/"><i class="fa" aria-hidden="true">November 2017</i></a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/"><i class="fa" aria-hidden="true">October 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/"><i class="fa" aria-hidden="true">September 2017</i></a><span class="archive-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+  <div class="widget">
+    <h3 class="title">标签云</h3>
+    <div class="content tag-cloud">
+        <a href="/tags/atom/" style="font-size: 14px;">atom</a> <a href="/tags/bug/" style="font-size: 18px;">bug</a> <a href="/tags/heroku/" style="font-size: 10px;">heroku</a> <a href="/tags/hexo/" style="font-size: 12px;">hexo</a> <a href="/tags/interview/" style="font-size: 11px;">interview</a> <a href="/tags/mac/" style="font-size: 12px;">mac</a> <a href="/tags/orid-day/" style="font-size: 10px;">orid-day</a> <a href="/tags/orid-month/" style="font-size: 10px;">orid-month</a> <a href="/tags/ror功能/" style="font-size: 12px;">ror功能</a> <a href="/tags/ror知识点/" style="font-size: 17px;">ror知识点</a> <a href="/tags/ror系统/" style="font-size: 19px;">ror系统</a> <a href="/tags/typora/" style="font-size: 10px;">typora</a> <a href="/tags/vps/" style="font-size: 16px;">vps</a> <a href="/tags/web页面/" style="font-size: 12px;">web页面</a> <a href="/tags/下载/" style="font-size: 10px;">下载</a> <a href="/tags/工具/" style="font-size: 20px;">工具</a> <a href="/tags/常用/" style="font-size: 12px;">常用</a> <a href="/tags/微信功能/" style="font-size: 13px;">微信功能</a> <a href="/tags/微信系统/" style="font-size: 15px;">微信系统</a> <a href="/tags/微信页面/" style="font-size: 11px;">微信页面</a> <a href="/tags/心得/" style="font-size: 13px;">心得</a> <a href="/tags/手机/" style="font-size: 10px;">手机</a> <a href="/tags/投资/" style="font-size: 10px;">投资</a> <a href="/tags/搬砖/" style="font-size: 10px;">搬砖</a> <a href="/tags/科学上网/" style="font-size: 14px;">科学上网</a> <a href="/tags/部署/" style="font-size: 13px;">部署</a>
+    </div>
+  </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">友链</h3>
+        <div class="content friends-link">
+        
+            <a href="http://www.shenliyang.com" class="fa" target="_blank">个人博客</a>
+        
+        </div>
+    </div>
+
+
+        
+    </aside>
+
+
+        </div>
+      </section>
+    </div>
+  </div>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2017
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>

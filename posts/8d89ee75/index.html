@@ -1,0 +1,421 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>tool-hexo-hexo主题篇之Asnippet | Hexo</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+    <div class="hide">
+    	<script src="https://s4.cnzz.com/z_stat.php?id=1263868967&web_id=1263868967" language="JavaScript"></script>
+    </div>
+
+
+
+
+
+
+    
+</head>
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner2.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="">
+            <img src="/img/avatar.jpg" alt="logo头像">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题">  
+             
+    	</div>
+    </div>
+</header>
+      <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation"><a href="/"><i class="fa fa-fw "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/前端/"><i class="fa fa-fw "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/后端/"><i class="fa fa-fw "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/工具/"><i class="fa fa-fw "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/资源/"><i class="fa fa-fw "></i>资源</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+      <section class="content-wra aa99">
+        <div class="row">
+            <main class="col-md-9 main-content m-post">
+                <p id="process"></p>
+<article class="post pp99">
+    <div class="post-head">
+        <h1 id="tool-hexo-hexo主题篇之Asnippet">
+            
+	            tool-hexo-hexo主题篇之Asnippet
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span>工具</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            工具
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2018/01/13</span>
+    </span>
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h1 id="！！不要想着用git，项目直接错乱掉"><a href="#！！不要想着用git，项目直接错乱掉" class="headerlink" title="！！不要想着用git，项目直接错乱掉"></a>！！不要想着用git，项目直接错乱掉</h1><h1 id="！！不要想着拷贝别人的项目，重定向问题"><a href="#！！不要想着拷贝别人的项目，重定向问题" class="headerlink" title="！！不要想着拷贝别人的项目，重定向问题"></a>！！不要想着拷贝别人的项目，重定向问题</h1><h1 id="！！不要想着从github上面clone下来，包括自己的博客，clone下来不能用的"><a href="#！！不要想着从github上面clone下来，包括自己的博客，clone下来不能用的" class="headerlink" title="！！不要想着从github上面clone下来，包括自己的博客，clone下来不能用的"></a>！！不要想着从github上面clone下来，包括自己的博客，clone下来不能用的</h1><h1 id="！！以上每一个问题，都足够折腾一天而没有结果，心中早已千万只草泥马奔腾。hexo的路上，最讨厌的就是有时同样的操作，现在能生效，等下又不能生效，非常反人类。"><a href="#！！以上每一个问题，都足够折腾一天而没有结果，心中早已千万只草泥马奔腾。hexo的路上，最讨厌的就是有时同样的操作，现在能生效，等下又不能生效，非常反人类。" class="headerlink" title="！！以上每一个问题，都足够折腾一天而没有结果，心中早已千万只草泥马奔腾。hexo的路上，最讨厌的就是有时同样的操作，现在能生效，等下又不能生效，非常反人类。"></a>！！以上每一个问题，都足够折腾一天而没有结果，心中早已千万只草泥马奔腾。hexo的路上，最讨厌的就是有时同样的操作，现在能生效，等下又不能生效，非常反人类。</h1><h2 id="遇到的bug"><a href="#遇到的bug" class="headerlink" title="遇到的bug"></a>遇到的bug</h2><p>1）hexo g时报错，因为md文章内出现不支持的字符，比如大小括号最好放在多行代码内，放在文字中可能会报错。</p>
+<h1 id="关于备份"><a href="#关于备份" class="headerlink" title="关于备份"></a>关于备份</h1><p>1）github的test分支只是用来预防万一文章丢失，不要考虑把它克隆下来，试过克隆不能运行。而且私人文章不便在上边发布。</p>
+<p>2）所以，主要备份在谷歌硬盘、百度云盘。这样就有了两手准备。</p>
+<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>1、hexo三篇教程怎么用？</p>
+<ul>
+<li>先快速过一遍视频篇，然后按Snippet篇做，遇到问题在Next篇查。</li>
+</ul>
+<p>2、主题怎么选？</p>
+<ul>
+<li>选手机电脑自适应的，因为手机绝逼主流。</li>
+<li>Next是最多人用的，但99坚决不选Next，在Next篇踩了无数坑，最终还做不出来什么效果。受够了这个主题。</li>
+<li>进去github看看，选那些一年内还有在更新的。选这类主题更有可能挑到配置简单粗暴的，而且坑会少因为有些插件已经被淘汰。</li>
+</ul>
+<h1 id="一、从头开始用Asnippet主题"><a href="#一、从头开始用Asnippet主题" class="headerlink" title="一、从头开始用Asnippet主题"></a>一、从头开始用Asnippet主题</h1><h2 id="1、安装hexo及主题"><a href="#1、安装hexo及主题" class="headerlink" title="1、安装hexo及主题"></a>1、安装hexo及主题</h2><p>1）按hexo视频篇安装hexo及主题</p>
+<p>2）<strong>『Asnippet主题』</strong>必须安装的组件，也可详见<a href="https://github.com/shenliyang/hexo-theme-snippet" target="_blank" rel="noopener">https://github.com/shenliyang/hexo-theme-snippet</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-ejs --save</span><br><span class="line">npm install hexo-renderer-less --save</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<h2 id="2、绑定github，改站点配置，然后hexo三兄弟"><a href="#2、绑定github，改站点配置，然后hexo三兄弟" class="headerlink" title="2、绑定github，改站点配置，然后hexo三兄弟"></a>2、绑定github，改站点配置，然后hexo三兄弟</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h2 id="3、绑定域名"><a href="#3、绑定域名" class="headerlink" title="3、绑定域名"></a>3、绑定域名</h2><p><code>touch source/CNAME</code>，填上域名<code>jiujiubad.top</code>。然后hexo三兄弟。</p>
+<h2 id="4、安装git"><a href="#4、安装git" class="headerlink" title="4、安装git"></a>4、安装git</h2><h2 id="！！测试发现只会追踪配置文件，所以没卵用，还不如用md文档记录"><a href="#！！测试发现只会追踪配置文件，所以没卵用，还不如用md文档记录" class="headerlink" title="！！测试发现只会追踪配置文件，所以没卵用，还不如用md文档记录"></a>！！测试发现只会追踪配置文件，所以没卵用，还不如用md文档记录</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git remote add origin https://github.com/jiujiubad/jiujiubad.github.io</span><br><span class="line">git checkout -b test //因为master要用来放静态网站，新建分支来放站点配置和主题配置文件。</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;git init&quot;</span><br><span class="line">git push origin test //部署到github。</span><br></pre></td></tr></table></figure>
+<h1 id="二、主题功能（主）"><a href="#二、主题功能（主）" class="headerlink" title="二、主题功能（主）"></a>二、主题功能（主）</h1><p>开始前，一定要想清楚（前端套路深，不要瞎折腾）：</p>
+<p>1、搭博客的目的是什么？<strong>『集合文档，写过的东西在博客里都能搜索到。极少机会可能分享一两篇给小伙伴』</strong>。</p>
+<p>2、目的主要是让自己放文章、能搜索。那么最最必要的功能是：<strong>『搜索、代码高亮、置顶、文章链接唯一化』</strong>。</p>
+<p>3、其他功能特别是只关乎前端显示的，不要碰！！等到把文章整理完成，有时间再做。</p>
+<h2 id="1、本地站内搜索"><a href="#1、本地站内搜索" class="headerlink" title="1、本地站内搜索"></a>1、本地站内搜索</h2><p>1）安装插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-generator-json-content@2.2.0 -S</span><br></pre></td></tr></table></figure>
+<p>2）<strong>『主题配置』</strong>，把jsonContent下<code>searchLocal: true</code></p>
+<h2 id="2、文章链接唯一化"><a href="#2、文章链接唯一化" class="headerlink" title="2、文章链接唯一化"></a>2、文章链接唯一化</h2><p>默认用时间/标题来做链接，如果时间/标题修改了，分享出去的链接就失效。</p>
+<blockquote>
+<p>启用插件要求文章必须写开头标签title等，否则会因为abbrlink:0而导入失败。</p>
+</blockquote>
+<p>1）安装插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
+<p>2）站点配置，修改permalink并增加abbrlink。配置完记得重启<code>hexo s</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">permalink: posts/:abbrlink/  #原设置 :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line"># abbrlink config</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc32  # 算法：crc16(default) and crc32</span><br><span class="line">  rep: hex    # 进制：dec(default) and hex</span><br></pre></td></tr></table></figure>
+<p>查看sources/_posts文件夹内文章开头标签里，会多一个abbrlink: xxxxxxx。</p>
+<h2 id="3、代码高亮"><a href="#3、代码高亮" class="headerlink" title="3、代码高亮"></a>3、代码高亮</h2><p>1）该主题已自带，在markdown文件里的代码加在codeblock中间</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock lang:objc %&#125;</span><br><span class="line">lang是指要代码的种类，比如htom、css、jd。</span><br><span class="line">这里写想要高亮的代码</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+<p>2）字的样式太暗，用google检查找到样式。</p>
+<p>atom搜索比如.post-content pre，把color改为#eee</p>
+<h2 id="4、置顶文章"><a href="#4、置顶文章" class="headerlink" title="4、置顶文章"></a>4、置顶文章</h2><p>style=”background-color:#eee;margin-left:20px;margin-right:20px;”</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;body class=&quot;container-fluid&quot;&gt;</span><br><span class="line">    &lt;%- partial(&apos;_partial/header&apos;) %&gt;</span><br><span class="line">    &lt;%- partial(&apos;_partial/nav&apos;) %&gt;</span><br><span class="line">    &lt;section class=&quot;content-wrap&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;container&quot;&gt;</span><br><span class="line">            &lt;div class=&quot;row&quot;&gt;</span><br><span class="line">                &lt;main class=&quot;col-md-9 main-content &lt;%if(is_post())&#123;%&gt;m-post&lt;%&#125;%&gt;&quot;&gt;</span><br><span class="line">                    &lt;%- body %&gt;</span><br><span class="line">                &lt;/main&gt;</span><br><span class="line">                &lt;%- partial(&apos;_partial/sidebar&apos;, null, &#123;cache: !config.relative_link&#125;) %&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/section&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="三、重要css"><a href="#三、重要css" class="headerlink" title="三、重要css"></a>三、重要css</h1><p>修改后注意对比手机自适应</p>
+<p>1）</p>
+<p>2）主页左右空白间距。themes/snippet/layout/layout.ejs</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div class=&quot;container-fluid&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;row&quot;&gt;</span><br><span class="line">      &lt;%- partial(&apos;_partial/header&apos;) %&gt;</span><br><span class="line">      &lt;%- partial(&apos;_partial/nav&apos;) %&gt;</span><br><span class="line">      &lt;section class=&quot;content-wra aa99&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;row&quot;&gt;</span><br><span class="line">            &lt;main class=&quot;col-md-9 main-content &lt;%if(is_post())&#123;%&gt;m-post&lt;%&#125;%&gt;&quot;&gt;</span><br><span class="line">                &lt;%- body %&gt;</span><br><span class="line">            &lt;/main&gt;</span><br><span class="line">            &lt;%- partial(&apos;_partial/sidebar&apos;, null, &#123;cache: !config.relative_link&#125;) %&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/section&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>用媒体监听控制大小屏幕两边距。themes/snippet/source/css/style.css</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@media (min-width: 600px) &#123;</span><br><span class="line">  .aa99 &#123;</span><br><span class="line">    padding: 0 30px;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>3）文章左右空白间距。themes/snippet/layout/post.ejs的<code>&lt;article class=&quot;post&quot;&gt;</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;article class=&quot;post pp99&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>用媒体监听控制大小屏幕左边距。themes/snippet/source/css/style.css</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@media (min-width: 600px) &#123;</span><br><span class="line">  .pp99 &#123;</span><br><span class="line">    padding-left: 35px;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>3）裁剪x方向多出的页面。themes/snippet/source/css/style.css</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">  overflow-x: hidden; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>4）改首页文章图片大小。themes/snippet/source/css/style.css</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="四、主题功能（次）"><a href="#四、主题功能（次）" class="headerlink" title="四、主题功能（次）"></a>四、主题功能（次）</h1><p>不蒜子 比如，统计字数和阅读量</p>
+<p>来必力评论</p>
+<p>标签云</p>
+<p>google分析或百度统计</p>
+<p>导航</p>
+<p>readme</p>
+<p>设计文章命名规则：英文开头+xxx+要不要加时间</p>
+<p>打赏二维码</p>
+<p>修改完成后，打包到google硬盘</p>
+<h2 id="2、评论来必力"><a href="#2、评论来必力" class="headerlink" title="2、评论来必力"></a>2、评论来必力</h2><h2 id="！！失败了登录显示成功实际却没有登录"><a href="#！！失败了登录显示成功实际却没有登录" class="headerlink" title="！！失败了登录显示成功实际却没有登录"></a>！！失败了登录显示成功实际却没有登录</h2><p>1）官网注册<a href="https://livere.com/" target="_blank" rel="noopener">https://livere.com/</a></p>
+<p>2）头像-管理页面-City版安装-填写网站链接、名称、类型-在一般代码一栏找到<code>data-uid=&quot;*********&quot;</code></p>
+<p>3）<strong>『主题配置』</strong>，<code>livere_uid: **********</code></p>
+
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/posts/3b27e0ef/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/posts/eea95795/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
+
+
+    <div id="comments">
+        
+   <p>评论系统未开启，无法评论！</p>
+
+    </div>
+
+
+            </main>
+            
+    <aside class="col-md-3 sidebar">
+        
+        
+    <div class="widget">    
+        <h3 class="title">搜索</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
+                    <button type="button" class="search-form-submit" id="search-local">站内搜索</button>
+                
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget notification">
+        <h3 class="title">网站公告</h3>
+        <div>
+            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
+主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+<hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
+</p>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget">
+      <h3 class="title">社交</h3> 
+        <div class="content social">
+            
+	            <a href="//github.com/shenliyang" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="git fa fa-git"></i>
+			    </a>
+            
+	            <a href="mailto:snippet@91h5.cc" rel="external nofollow" title="邮箱" target="_blank">
+			    	<i class="envelope-o fa fa-envelope-o"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="联系QQ" target="_blank">
+			    	<i class="qq fa fa-qq"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="微博" target="_blank">
+			    	<i class="weibo fa fa-weibo"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="QQ群" target="_blank">
+			    	<i class="users fa fa-users"></i>
+			    </a>
+            
+	            <a href="/atom.xml" rel="external nofollow" title="RSS" target="_blank">
+			    	<i class="feed fa fa-feed"></i>
+			    </a>
+            
+        </div>
+    </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">分类</h3>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ror功能/"><i class="fa" aria-hidden="true">ror功能</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror知识点/"><i class="fa" aria-hidden="true">ror知识点</i></a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror系统/"><i class="fa" aria-hidden="true">ror系统</i></a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web页面/"><i class="fa" aria-hidden="true">web页面</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link current" href="/categories/工具/"><i class="fa" aria-hidden="true">工具</i></a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/微信小程序/"><i class="fa" aria-hidden="true">微信小程序</i></a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/心得/"><i class="fa" aria-hidden="true">心得</i></a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/投资/"><i class="fa" aria-hidden="true">投资</i></a><span class="category-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+    <div class="widget">
+      <h3 class="title">归档</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/"><i class="fa" aria-hidden="true">November 2018</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/"><i class="fa" aria-hidden="true">January 2018</i></a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/"><i class="fa" aria-hidden="true">December 2017</i></a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/"><i class="fa" aria-hidden="true">November 2017</i></a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/"><i class="fa" aria-hidden="true">October 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/"><i class="fa" aria-hidden="true">September 2017</i></a><span class="archive-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+  <div class="widget">
+    <h3 class="title">标签云</h3>
+    <div class="content tag-cloud">
+        <a href="/tags/atom/" style="font-size: 14px;">atom</a> <a href="/tags/bug/" style="font-size: 18px;">bug</a> <a href="/tags/heroku/" style="font-size: 10px;">heroku</a> <a href="/tags/hexo/" style="font-size: 12px;">hexo</a> <a href="/tags/interview/" style="font-size: 11px;">interview</a> <a href="/tags/mac/" style="font-size: 12px;">mac</a> <a href="/tags/orid-day/" style="font-size: 10px;">orid-day</a> <a href="/tags/orid-month/" style="font-size: 10px;">orid-month</a> <a href="/tags/ror功能/" style="font-size: 12px;">ror功能</a> <a href="/tags/ror知识点/" style="font-size: 17px;">ror知识点</a> <a href="/tags/ror系统/" style="font-size: 19px;">ror系统</a> <a href="/tags/typora/" style="font-size: 10px;">typora</a> <a href="/tags/vps/" style="font-size: 16px;">vps</a> <a href="/tags/web页面/" style="font-size: 12px;">web页面</a> <a href="/tags/下载/" style="font-size: 10px;">下载</a> <a href="/tags/工具/" style="font-size: 20px;">工具</a> <a href="/tags/常用/" style="font-size: 12px;">常用</a> <a href="/tags/微信功能/" style="font-size: 13px;">微信功能</a> <a href="/tags/微信系统/" style="font-size: 15px;">微信系统</a> <a href="/tags/微信页面/" style="font-size: 11px;">微信页面</a> <a href="/tags/心得/" style="font-size: 13px;">心得</a> <a href="/tags/手机/" style="font-size: 10px;">手机</a> <a href="/tags/投资/" style="font-size: 10px;">投资</a> <a href="/tags/搬砖/" style="font-size: 10px;">搬砖</a> <a href="/tags/科学上网/" style="font-size: 14px;">科学上网</a> <a href="/tags/部署/" style="font-size: 13px;">部署</a>
+    </div>
+  </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">友链</h3>
+        <div class="content friends-link">
+        
+            <a href="http://www.shenliyang.com" class="fa" target="_blank">个人博客</a>
+        
+        </div>
+    </div>
+
+
+        
+    </aside>
+
+
+        </div>
+      </section>
+    </div>
+  </div>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2017
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>
