@@ -24,7 +24,7 @@
     <!--Title-->
 
 
-<title>wx-system-99小程序项目后端api开发进度 | Hexo</title>
+<title>wx-system-99小程序项目开发进度 | Hexo</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -120,9 +120,9 @@
                 <p id="process"></p>
 <article class="post pp99">
     <div class="post-head">
-        <h1 id="wx-system-99小程序项目后端api开发进度">
+        <h1 id="wx-system-99小程序项目开发进度">
             
-	            wx-system-99小程序项目后端api开发进度
+	            wx-system-99小程序项目开发进度
             
         </h1>
         <div class="post-meta">
@@ -155,14 +155,310 @@
     </div>
     
     <div class="post-body post-content">
-        <h2 id="92、can-search-category-on-product-index-many-to-many"><a href="#92、can-search-category-on-product-index-many-to-many" class="headerlink" title="92、can search category on product#index (many to many)"></a>92、can search category on product#index (many to many)</h2><p>1）在product#inde可以筛选分类category。product和category是多对多关系。</p>
-<p>2）参考教程<a href="http://superlei-blog.logdown.com/posts/1744668-a-many-to-many-classification-lines" target="_blank" rel="noopener">http://superlei-blog.logdown.com/posts/1744668-a-many-to-many-classification-lines</a></p>
-<h2 id="93、api-can-search-category-on-product-index-many-to-many"><a href="#93、api-can-search-category-on-product-index-many-to-many" class="headerlink" title="93、api can search category on product#index (many to many)"></a>93、api can search category on product#index (many to many)</h2><p>1）api也可以在product筛选分类。</p>
-<h2 id="94、api-category-show"><a href="#94、api-category-show" class="headerlink" title="94、api category#show"></a>94、api category#show</h2><p>1）api category#show。</p>
-<p>2)发现在小程序拿分类下的产品，除了在product上筛选外，直接拿分类的show更简洁。</p>
-<h2 id="95、add-READLOG-md"><a href="#95、add-READLOG-md" class="headerlink" title="95、add READLOG.md"></a>95、add READLOG.md</h2><p>1）增加更新日志READLOG</p>
-<h2 id="96、random-product-8"><a href="#96、random-product-8" class="headerlink" title="96、random product 8"></a>96、random product 8</h2><p>1）随机商品random8</p>
-<h2 id="97、api-random-product-8"><a href="#97、api-random-product-8" class="headerlink" title="97、api random product 8"></a>97、api random product 8</h2><p>1）api，随机商品random8</p>
+        <p>保证搜索css命名的唯一性，只要确保外层不同，外层一用product-Box，外层二用p_show-head，外层三用p_show-head-input。里层一般不加class，直接用image、button、icon等。——搜索的时候直接搜索外层，再稍微找找就能找到具体的css。</p>
+<p>css的class命名：！！目的是好搜、好找</p>
+<p>1）web端，box表示所有product页面都可以共用。最外层”product-Box”共用，其他页面如show写”product-Box product-show-Box”。每个页面的大模块用”buy-box”、”detail-box”或”product-image”、”product-detail”。</p>
+<p>2）小程序端，不能跟web一样把每个模块css全部包裹在最外层css里面。</p>
+<p>方案一：app.wxss里”product-Box”、”welcome-Box”共用，其他页面如show写”product-Box p_show-Box”。每个页面的大模块用”p_index-image”、”p_show-detail”、”p_search-input”。</p>
+<p>方案二：app.wxss设置共用基础内容”container{}”、”container .input{}”、”container text{}”。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">/**app.wxss**/</span><br><span class="line">.container &#123;</span><br><span class="line">  box-sizing: border-box;</span><br><span class="line">  background-color: #f4f4f4;</span><br><span class="line">  font-family: PingFangSC-Light,helvetica,&apos;Heiti SC&apos;;</span><br><span class="line">&#125; </span><br><span class="line">view,image,text,navigator&#123;</span><br><span class="line">  box-sizing: border-box;</span><br><span class="line">  padding:0;</span><br><span class="line">  margin:0;</span><br><span class="line">&#125;</span><br><span class="line">view,text&#123;</span><br><span class="line">  font-family: PingFangSC-Light,helvetica,&apos;Heiti SC&apos;;</span><br><span class="line">  font-size: 29rpx;</span><br><span class="line">  color: #333;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>方案三：新建common文件夹，放product.wxss、welcome.wxss、category.wxss共用。app.wxss清空，改用对common的引用。或直接在每个页面用page。</p>
+<blockquote>
+<p>最好的方式是先把页面做出来，然后再去重构，然后再总结套路，而不是一开始就在纠结wxss。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">var API_URL = &apos;https://luccake.top/api/v1/products/search&apos;</span><br><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    cakes: []</span><br><span class="line">  &#125;,</span><br><span class="line">  search: function (e) &#123;</span><br><span class="line">    var aaa = API_URL + &quot;?utf8=✓&amp;q=&quot; + e.detail.value</span><br><span class="line">    console.log(aaa)</span><br><span class="line">    if (!e.detail.value) &#123;</span><br><span class="line">      return;</span><br><span class="line">    &#125;</span><br><span class="line">    wx.showToast(&#123; //加载中的动画效果</span><br><span class="line">      title: &quot;加载中..&quot;,</span><br><span class="line">      icon: &quot;loading&quot;,</span><br><span class="line">      duration: 10000</span><br><span class="line">    &#125;);</span><br><span class="line">    var that = this; //保存this的数据</span><br><span class="line">    wx.request(&#123;</span><br><span class="line">      url: API_URL + &quot;?utf8=✓&amp;q=&quot; + e.detail.value,</span><br><span class="line">      header: &#123;</span><br><span class="line">        &apos;content-type&apos;: &apos;json&apos; // 默认值</span><br><span class="line">      &#125;,</span><br><span class="line">      success: function (res) &#123;</span><br><span class="line">        console.log(res.data)</span><br><span class="line">        wx.hideToast();</span><br><span class="line">        that.setData(&#123;</span><br><span class="line">          cakes: res.data.data</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h1 id="一、【问题】"><a href="#一、【问题】" class="headerlink" title="一、【问题】"></a>一、【问题】</h1><h2 id="1、未解决"><a href="#1、未解决" class="headerlink" title="1、未解决"></a>1、未解决</h2><p>5）小程序的https怎么弄？</p>
+<p>7）小程序怎么打包发布？</p>
+<p>8）部署在阿里云？https证书购买服务器可免费一年？</p>
+<h2 id="2、已解决"><a href="#2、已解决" class="headerlink" title="2、已解决"></a>2、已解决</h2><h3 id="1）api接口的图片、api网址都是本地地址？"><a href="#1）api接口的图片、api网址都是本地地址？" class="headerlink" title="1）api接口的图片、api网址都是本地地址？"></a>1）api接口的图片、api网址都是本地地址？</h3><p>已经接好七牛云。</p>
+<p>先部署到heroku，明天早上10点强阿里云。</p>
+<h3 id="2）是要拿jdstroe直接来改？还是应该重新建一个项目来做？"><a href="#2）是要拿jdstroe直接来改？还是应该重新建一个项目来做？" class="headerlink" title="2）是要拿jdstroe直接来改？还是应该重新建一个项目来做？"></a>2）是要拿jdstroe直接来改？还是应该重新建一个项目来做？</h3><p>直接拿jdstore，因为api和web端不冲突。</p>
+<h3 id="3）api怎么生成一个网址？"><a href="#3）api怎么生成一个网址？" class="headerlink" title="3）api怎么生成一个网址？"></a>3）api怎么生成一个网址？</h3><p>一样是在config/routes定义</p>
+<h3 id="4）api的代码要怎么写比较简洁？"><a href="#4）api的代码要怎么写比较简洁？" class="headerlink" title="4）api的代码要怎么写比较简洁？"></a>4）api的代码要怎么写比较简洁？</h3><p>用自带的<code>gem &#39;jbuilder&#39;</code></p>
+<h3 id="5）每个action对应一个api接口，即一个网址，是不是要在写程序里引入这么多个API的URL？"><a href="#5）每个action对应一个api接口，即一个网址，是不是要在写程序里引入这么多个API的URL？" class="headerlink" title="5）每个action对应一个api接口，即一个网址，是不是要在写程序里引入这么多个API的URL？"></a>5）每个action对应一个api接口，即一个网址，是不是要在写程序里引入这么多个API的URL？</h3><p>不是的。可以用index的api，就会包含更多的信息，供小程序调用。</p>
+<h3 id="6）查看schema-rb，总共有carts-cart-items-orders-product-lists-users-products六个表单。哪些需要生成api-controller？"><a href="#6）查看schema-rb，总共有carts-cart-items-orders-product-lists-users-products六个表单。哪些需要生成api-controller？" class="headerlink" title="6）查看schema.rb，总共有carts/cart_items/orders/product_lists/users/products六个表单。哪些需要生成api controller？"></a>6）查看schema.rb，总共有carts/cart_items/orders/product_lists/users/products六个表单。哪些需要生成api controller？</h3><p>商品展示用途，应该只要products就可以。</p>
+<h3 id="7）product-index的api本地测试成功"><a href="#7）product-index的api本地测试成功" class="headerlink" title="7）product#index的api本地测试成功"></a>7）product#index的api本地测试成功</h3><h3 id="8）product-index的api部署成功。此时api网址、image网址都由本地路径变成正常网址。"><a href="#8）product-index的api部署成功。此时api网址、image网址都由本地路径变成正常网址。" class="headerlink" title="8）product#index的api部署成功。此时api网址、image网址都由本地路径变成正常网址。"></a>8）product#index的api部署成功。此时api网址、image网址都由本地路径变成正常网址。</h3><h3 id="9）api接口放在小程序上测试，看能否调用？（找资料折腾了3小时）"><a href="#9）api接口放在小程序上测试，看能否调用？（找资料折腾了3小时）" class="headerlink" title="9）api接口放在小程序上测试，看能否调用？（找资料折腾了3小时）"></a>9）api接口放在小程序上测试，看能否调用？（找资料折腾了3小时）</h3><p>①、测试成功的代码。</p>
+<blockquote>
+<p>注意，以下代码只能在没有appID的项目用，如果是有appID的项目会提示https或ssl验证的问题，因为这里用的api网址不支持ssl。</p>
+</blockquote>
+<p>index.js文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">var app = getApp();</span><br><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">  &#125;,</span><br><span class="line">  onLoad: function () &#123;</span><br><span class="line">    var that = this;</span><br><span class="line">    wx.request(&#123;</span><br><span class="line">      url: &apos;https://wx-luccake.herokuapp.com/api/v1/products&apos;,</span><br><span class="line">      header: &#123;</span><br><span class="line">        &apos;content-type&apos;: &apos;application/json&apos;</span><br><span class="line">      &#125;,</span><br><span class="line">      success: function (res) &#123;</span><br><span class="line">        console.log(res.data)</span><br><span class="line">        that.setData(&#123;</span><br><span class="line">          newsdata: res.data.data</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>index.wxml文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;view class=&quot;Box-welcome&quot;&gt;</span><br><span class="line">  &lt;view wx:for=&quot;&#123;&#123;newsdata&#125;&#125;&quot; wx:key=&quot;&quot;&gt;</span><br><span class="line">    &lt;image src=&apos;&#123;&#123;item.image.url&#125;&#125;&apos;&gt;&lt;/image&gt;</span><br><span class="line">    &lt;view class=&apos;&apos;&gt;&#123;&#123;item.title&#125;&#125;&lt;/view&gt;</span><br><span class="line">    &lt;view class=&apos;&apos;&gt;&#123;&#123;item.description&#125;&#125;&lt;/view&gt;</span><br><span class="line">  &lt;/view&gt;</span><br><span class="line">&lt;/view&gt;</span><br></pre></td></tr></table></figure>
+<p>②、遇到的问题：在success: function里用<code>res.data</code>调用数据，没有报错，但也没有显示内容？？</p>
+<p>解决办法：参考网站<a href="http://www.henkuai.com/thread-18784-2-1.html。" target="_blank" rel="noopener">http://www.henkuai.com/thread-18784-2-1.html。</a></p>
+<p>改用<code>res.data.最外层栏位名称</code>调用数据。因为<a href="https://wx-luccake.herokuapp.com/api/v1/products" target="_blank" rel="noopener">我的api最外边</a>是”data”:，所以这里写成<code>res.data.data</code>。</p>
+<p>③、什么时候用<code>res.data</code>？什么时候用<code>res.data.data</code>？</p>
+<p>简单的说，api文件打开有以下两种情况：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[&#123;&quot;Id&quot;: xxx&#125;, &#123;&quot;Id&quot;: xxxx&#125;, &#123;&quot;Id&quot;: xxx&#125;]</span><br><span class="line">&#123;&quot;data&quot;: [&#123;xxxxx&#125;, &#123;xxxxx&#125;, &#123;xxxxx&#125;]&#125;</span><br></pre></td></tr></table></figure>
+<p>继续往下看。。</p>
+<p><a href="http://newsapi.gugujiankong.com/Handler.ashx?action=getnews&amp;type=top&amp;count=10" target="_blank" rel="noopener">如果打开的api文件如下</a>，这种比较少见，最外层是<code>[]</code>，就用<code>res.data</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">&#123;</span><br><span class="line">&quot;title&quot;: &quot;赵丽颖现身机场，疲惫过度助理忙搀扶，仍不忘为粉丝签名后离开&quot;,</span><br><span class="line">&quot;author_name&quot;: &quot;海哥聊娱乐&quot;,</span><br><span class="line">&quot;thumbnail_pic_s&quot;: &quot;http://00.imgmini.eastday.com/mobile/20161028/20161028202106_9f5968897abf2882af89f1193529bdfb_1_mwpm_03200403.jpeg&quot;</span><br><span class="line">&#125;,</span><br><span class="line">&#123;</span><br><span class="line">&quot;title&quot;: &quot;赵丽颖现身机场，疲惫过度助理忙搀扶，仍不忘为粉丝签名后离开&quot;,</span><br><span class="line">&quot;author_name&quot;: &quot;海哥聊娱乐&quot;,</span><br><span class="line">&quot;thumbnail_pic_s&quot;: &quot;http://00.imgmini.eastday.com/mobile/20161028/20161028202106_9f5968897abf2882af89f1193529bdfb_1_mwpm_03200403.jpeg&quot;</span><br><span class="line">&#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p><a href="https://wx-luccake.herokuapp.com/api/v1/products" target="_blank" rel="noopener">如果打开的api文件如下</a>，常见的是这种，最外层是<code>{}</code>，就用<code>res.data.employees</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;employees&quot;: [</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;firstName&quot;: &quot;Bill&quot;,</span><br><span class="line">            &quot;lastName&quot;: &quot;Gates&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;firstName&quot;: &quot;George&quot;,</span><br><span class="line">            &quot;lastName&quot;: &quot;Bush&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>④、其他注意事项。</p>
+<p>json格式只允许双引号，所以api的栏位和值都要有双引号。</p>
+<p>微信小程序的res已经是个json形式，data里面直接放键和值。（看的晕晕的，不太理解）</p>
+<h3 id="10）小程序的AppID是什么？是要从新建项目的时候就开始弄吗，还是可以等项目测试完成后再加入？"><a href="#10）小程序的AppID是什么？是要从新建项目的时候就开始弄吗，还是可以等项目测试完成后再加入？" class="headerlink" title="10）小程序的AppID是什么？是要从新建项目的时候就开始弄吗，还是可以等项目测试完成后再加入？"></a>10）小程序的AppID是什么？是要从新建项目的时候就开始弄吗，还是可以等项目测试完成后再加入？</h3><p>①、都可以，如果在新建时没有添加AppID，可以在开发完成后，</p>
+<p>新建一个项目，appid 项目目录选择之前的项目路径即可（在开发者工具里，删除项目这个行为不会删除代码）。</p>
+<p>②、git大法好。</p>
+<h3 id="11）微信小程序一个AppId能同时绑定多个小程序吗？"><a href="#11）微信小程序一个AppId能同时绑定多个小程序吗？" class="headerlink" title="11）微信小程序一个AppId能同时绑定多个小程序吗？"></a>11）微信小程序一个AppId能同时绑定多个小程序吗？</h3><p>一个AppID只能绑定一个微信小程序。</p>
+<h3 id="12）补充小程序的名称、图标（头像）、小程序介绍和服务类目。"><a href="#12）补充小程序的名称、图标（头像）、小程序介绍和服务类目。" class="headerlink" title="12）补充小程序的名称、图标（头像）、小程序介绍和服务类目。"></a>12）补充小程序的名称、图标（头像）、小程序介绍和服务类目。</h3><p>需要注意的是，在发布前，你有 3 次确定小程序名称的机会（包括首次填写）；发布之后，小程序暂不支持改名。</p>
+<h3 id="13）atom打开wxml文件代码高亮显示？"><a href="#13）atom打开wxml文件代码高亮显示？" class="headerlink" title="13）atom打开wxml文件代码高亮显示？"></a>13）atom打开wxml文件代码高亮显示？</h3><p>atom-wxml插件，让wxml文件、wxss文件代码高亮。</p>
+<h3 id="14）小程序的布局，大概要做多少页面，涉及到多少功能？（用ps排一整版，照做）"><a href="#14）小程序的布局，大概要做多少页面，涉及到多少功能？（用ps排一整版，照做）" class="headerlink" title="14）小程序的布局，大概要做多少页面，涉及到多少功能？（用ps排一整版，照做）"></a>14）小程序的布局，大概要做多少页面，涉及到多少功能？（用ps排一整版，照做）</h3><p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fmlb3glgauj31kw0iz7wi.jpg" alt=""></p>
+<p>[1]、首页</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">微信授权，获取公开信息（头像、昵称等）</span><br><span class="line">获取地理位置</span><br><span class="line">下拉刷新</span><br><span class="line">上拉加载更多产品</span><br><span class="line"></span><br><span class="line">大图轮播</span><br><span class="line">搜索框</span><br><span class="line">logo、位置(可不要)</span><br><span class="line">推荐类别(可不要)</span><br><span class="line">产品展示（小图片、名称、价格）</span><br><span class="line">tabbar</span><br></pre></td></tr></table></figure>
+<p>[2]、详情页</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">大图片</span><br><span class="line">名称</span><br><span class="line">价格</span><br><span class="line">磅数选择(直接放到介绍里)</span><br><span class="line">评价(可不要)</span><br><span class="line">介绍</span><br><span class="line">详情图片</span><br></pre></td></tr></table></figure>
+<p>[3]、分类页</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">搜索框</span><br><span class="line">左边或上边导航栏</span><br><span class="line">图片</span><br><span class="line">名称</span><br><span class="line">价格</span><br></pre></td></tr></table></figure>
+<p>[4]、搜索页</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">搜索框</span><br><span class="line">按综合、销量、价格、筛选排序</span><br></pre></td></tr></table></figure>
+<p>[5]、购物车</p>
+<p>[6]、订单页</p>
+<p>[7]、我的后台页</p>
+<h3 id="15）微信文档简读，了解全貌。"><a href="#15）微信文档简读，了解全貌。" class="headerlink" title="15）微信文档简读，了解全貌。"></a>15）<a href="https://v.qq.com/x/page/b0395dq6vr6.html" target="_blank" rel="noopener">微信文档简读，了解全貌</a>。</h3><p>打开<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/quickstart/basic/getting-started.html" target="_blank" rel="noopener">微信小程序官方文档-开发模块</a></p>
+<p><strong>任务：框架、组件、API、工具、Q&amp;A全部看一遍，把每一行文字，不管你懂不懂，先把它过一遍。然后再看相关教程去编码，就能很快上手。</strong></p>
+<p>①、简易教程</p>
+<blockquote>
+<p>基础。怎么创建项目？</p>
+<p>体验小程序。可以把代码下载后，加载到官方工具里，可以查看所有组件的效果。</p>
+<p>更新日志。</p>
+</blockquote>
+<p>②、框架</p>
+<blockquote>
+<p>一、目录结果。</p>
+<p>主体部分有三个文件app.js（逻辑）、app.json（配置）、app.wxss（公共样式），小程序主要做前端MVC中的V和C，MVC中的M给后端做。</p>
+<p>二、配置。</p>
+<p>页面开发时配置。</p>
+<p>三、逻辑层。MVC中的C。</p>
+<p>1、注册程序，主要做一些onLaunch初始化；2、注册页面，接受onLaunch的参数渲染一个页面；3、模块化，公共代码抽离成单独的js文件被引用，涉及“文件作用域”的概念；4、API，很丰富常用的都有。</p>
+<p>四、视图层。MVC中的V。</p>
+<p>WXML：</p>
+<p>1、数据绑定，js定义的变量复制到wxml页面调用；2、条件渲染，用条件if判断显示不显示、什么时候显示；3、列表渲染，新闻、文章等循环列表；4、模板，重复调用的东西封装到模板；5、事件，比如页面点击一个东西如bindtap怎么传给后端，js怎么处理；6、引用，把文件引用进来；</p>
+<p>WXSS：相当于css的东西。</p>
+<p>自定义组件。</p>
+<p>基础库。</p>
+<p>兼容。</p>
+<p>运行机制。</p>
+<p>性能。</p>
+</blockquote>
+<p>③、组件</p>
+<p>微信小程序已经做好的一些东西，可以直接引用。所有功能可以在简易教程里的体验小程序上体验。</p>
+<p>④、API</p>
+<p>很丰富常用的都有。</p>
+<p>⑤、工具</p>
+<p>下载最新工具。</p>
+<p>⑥、Q&amp;A</p>
+<h3 id="16）官方体验demo有哪些可用模块？"><a href="#16）官方体验demo有哪些可用模块？" class="headerlink" title="16）官方体验demo有哪些可用模块？"></a>16）官方体验demo有哪些可用模块？</h3><p>①、组件。</p>
+<p>视图容器，页面排版应该会用；</p>
+<p>导航；</p>
+<p>媒体image；</p>
+<p>地图；</p>
+<p>②、接口。</p>
+<p>开放接口：微信登录、获取用户信息、分享；</p>
+<p>界面：界面标题、标题栏加载动画、下拉刷新、上拉加载更多、模态弹窗（本店只提供演示，购买请微信资讯）；</p>
+<p>设备：打电话；</p>
+<p>媒体：图片；</p>
+<p>位置：获取当前位置、使用原生地图查看位置；</p>
+<h3 id="17）准备工作做好了，怎么开始？"><a href="#17）准备工作做好了，怎么开始？" class="headerlink" title="17）准备工作做好了，怎么开始？"></a>17）准备工作做好了，怎么开始？</h3><p>用AppID开始项目，加入git</p>
+<p>找商城demo测试</p>
+<h2 id="最大的问题：发呆半天，还是不知道怎么开始做。。"><a href="#最大的问题：发呆半天，还是不知道怎么开始做。。" class="headerlink" title="最大的问题：发呆半天，还是不知道怎么开始做。。"></a>最大的问题：发呆半天，还是不知道怎么开始做。。</h2><p>18）</p>
+<p><a href="http://www.wxappclub.com/topic/734" target="_blank" rel="noopener">从0到1：初学者入门Demo欢迎页</a></p>
+<p>使用到 view、image、text、button 组件</p>
+<p>请记得两句话：<strong>先骨架（wxml），再穿衣服（wxss），最后搞个小动作（js）</strong>；<strong>布局时，先整体，再局部</strong>。</p>
+<p>数据绑定</p>
+<p>按钮模板示范</p>
+<p><a href="http://www.wxappclub.com/topic/931" target="_blank" rel="noopener">从1到2：初学者入门Demo内容列表页-文与字简介内容列表的实现</a></p>
+<p>什么时候用view？什么时候用scroll-view？</p>
+<p>模板调用时，template中的data参数一定要写吗？如果有多个参数要怎么写？——data=”aaa, bbb, ccc”</p>
+<p>19）还是很慌，先从最基本的首页开始做原则如下：</p>
+<h3 id="先骨架（wxml），再穿衣服（wxss），最后搞个小动作（js）；布局时，先整体，再局部。"><a href="#先骨架（wxml），再穿衣服（wxss），最后搞个小动作（js）；布局时，先整体，再局部。" class="headerlink" title="先骨架（wxml），再穿衣服（wxss），最后搞个小动作（js）；布局时，先整体，再局部。"></a>先骨架（wxml），再穿衣服（wxss），最后搞个小动作（js）<strong>；</strong>布局时，先整体，再局部。</h3><blockquote>
+<p>如果过程中遇到什么问题，再逐一找解决办法。否则，一天过去了还什么都没做，到底还是前端的东西不怕该来该去的。</p>
+</blockquote>
+<p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fmiooxci1lj30x40ip40a.jpg" width="350" ;=""></p>
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fmioovxej6j30q40kawhf.jpg" width="350" ;=""></p>
+<p>20）首页想做的功能是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">微信授权，获取公开信息（头像、昵称等）</span><br><span class="line">获取地理位置</span><br><span class="line">下拉刷新</span><br><span class="line">上拉加载更多产品</span><br><span class="line"></span><br><span class="line">大图轮播</span><br><span class="line">搜索框</span><br><span class="line">logo、位置(可不要)</span><br><span class="line">推荐类别(可不要)</span><br><span class="line">产品展示（小图片、名称、价格）</span><br><span class="line">tabbar</span><br></pre></td></tr></table></figure>
+<p>按照19）的原则，先不管js部分，即微信授权、获取地理位置、上拉加载更多、下拉更新。</p>
+<p>现在做骨架wxml，先做整体，再做局部</p>
+<p>21）！！！问题！！！用appID的项目，测试发现api接口不能用，需要ssl验证才可以，延伸出来的问题一是需要购买证书？二是需要在ubuntu或centos上重新部署服务端项目，heroku应该是用不了的？</p>
+<p>22）虚拟主机支持SSL部署吗？vps支持SSL部署吗？paas平台如heroku支持SSL部署吗？</p>
+<p>SSL证书支持独享型云虚拟主机和云服务器等，IP为独立IP。不支持共享型云虚拟主机，所以heroku也不行。</p>
+<p>23）SSL动不动几千块/年，免费1年的用完怎么办？</p>
+<p>淘宝</p>
+<p>24）vps上的项目如何debug？</p>
+<p>25）云部署项目（用时12h各种bug）</p>
+<p>26）现在最大的问题：</p>
+<p>①、SSL证书申请要多久？安装难不难？——用来绑定域名，用小程序appID做项目</p>
+<p>②、vps上的项目还不能上传图片，怎么传递七牛云的key？——用来做接口</p>
+<p>参考鸿亮项目；</p>
+<p>不能自动就先用手动的方法一个个密钥导入；</p>
+<p>27）如何备份vultr主机？</p>
+<h3 id="28）16号通宵17号到两点，分别云部署成功、SSL证书安装失败（官网Certbot工具）"><a href="#28）16号通宵17号到两点，分别云部署成功、SSL证书安装失败（官网Certbot工具）" class="headerlink" title="28）16号通宵17号到两点，分别云部署成功、SSL证书安装失败（官网Certbot工具）"></a>28）16号通宵17号到两点，分别云部署成功、SSL证书安装失败（官网Certbot工具）</h3><p>29）18号重新部署项目，SSL证书安装成功（用acme.sh脚本），购买阿里云199套餐，阿里云提交ICP备案，阿里云部署项目</p>
+<p>30）19号阿里云安装SSL证书。</p>
+<p>31）19好分类页。</p>
+<p>category的model，api接的是categories，栏位name、good_count、current_name</p>
+<p>定义currentcategory，栏位name、front_name</p>
+<p>参考思路：category、count、current_category，每一个做一个接口网址。需要改路径、controller文件。</p>
+<p>32）api里怎么加入if判断，比如没有图片时显示自定义图片？</p>
+<p>33）20号无从下手的时候，看不懂代码的时候，找实战案例、或看视频是最好的解决办法。</p>
+<p>问题1、api做出来都是最外层{}即哈希，怎么做成数组？</p>
+<p>问题2、api怎么把index和show写在一起？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def index</span><br><span class="line">  @products = Product.all</span><br><span class="line">  render :json =&gt; &#123;</span><br><span class="line">    :data =&gt; @products.map&#123; |product|</span><br><span class="line">      &#123; :id =&gt; product.id,</span><br><span class="line">        :title =&gt; product.title,</span><br><span class="line">        :imageeee =&gt; product.image,</span><br><span class="line">        :nodes =&gt; &#123;:id =&gt; product.id&#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<p><code>respond_to</code>可以用來回應不同的資料格式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">respond_to do |format|</span><br><span class="line">  format.html</span><br><span class="line">  format.xml &#123; render :xml =&gt; @event.to_xml &#125;</span><br><span class="line">  format.any &#123; render :text =&gt; &quot;WTF&quot; &#125;</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<p>34）20号api地址拼接写法？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url: app.globalData.domain + &apos;/products/&apos; + id + &apos;/add_product_image&apos;,</span><br></pre></td></tr></table></figure>
+<p>35）面试<br>36）22号，状态2。动态id设置和调用？wxml设置<code>data-categoryid=“”</code>，在js调用<br><code>e.target.dataset.categoryid</code><br>37）23号，游戏和手机要停，保护注意力！！！！<br>菜单左右联动视频（比较难，要多练）<br>38）Jbuilder重构api代码<br>39）菜单页面左右布局css问题？如图，左边的菜单明细怎么才能显示成一列？<br><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fmqrwh6t1tj31kw0sn0wg.jpg" width="“250”"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.box &#123;</span><br><span class="line">  display:flex;</span><br><span class="line">  flex-flow:row wrap;</span><br><span class="line">  justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line">.category&#123;</span><br><span class="line">  width: 400rpx;</span><br><span class="line">  background: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>40）24号，左右联动花了整整一天时间。api用jbuilder重构花了6h。</p>
+<p>状态大减，重新缕一缕思路。</p>
+<p>现在最重要的事情：</p>
+<p>①、分类页搭建，在左右联动部分计算高度、部分跳转仍有问题。要找个正确的demo看看</p>
+<p>②、产品页搭建</p>
+<p>③、搜索页搭建</p>
+<p>④、搜索功能</p>
+<p>⑤、微信登录、获取地址、加载中等js。</p>
+<p>41)<a href="http://www.cnblogs.com/youli222/p/6068947.html" target="_blank" rel="noopener">请问微信小程序let和var以及const有什么区别</a></p>
+<p>var：声明全局变量，换句话理解就是，声明在for循环中的变量，跳出for循环同样可以使用。 let：声明块级变量，即局部变量。注意：必须声明’use strict’后才能使用let声明变量否则浏览并不能显示结果 。const：用于声明常量，也具有块级作用域 const PI=3.14。</p>
+<p>42）已解决的问题：</p>
+<p>①、产生假资料</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">10.times&#123; |i| Category.create!( :name =&gt; &quot;#&#123;i&#125; Category&quot; ) &#125;</span><br><span class="line">100.times&#123; |i| Group.create!( :name =&gt; &quot;No.1 #&#123;i&#125; Group&quot;) &#125;</span><br></pre></td></tr></table></figure>
+<p>②、分类功能改进</p>
+<p>new</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%= select_tag(:category_id, options_for_select(@categories), :prompt =&gt; &quot;Category&quot;) %&gt;</span><br></pre></td></tr></table></figure>
+<p>edit</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;%= f.select :category_id, @categories %&gt;</span><br><span class="line">或者</span><br><span class="line">&lt;%= f.association :category %&gt;</span><br></pre></td></tr></table></figure>
+<p>结论：戴建林的分类教程可以改进<a href="https://forum.qzy.camp/t/topic/720。controller里只要设置白名单就好，new和edit表单如果有simple_form，就用多选盒子`" target="_blank" rel="noopener">https://forum.qzy.camp/t/topic/720。controller里只要设置白名单就好，new和edit表单如果有simple_form，就用多选盒子`</a>&lt;%= f.association :groups, :as =&gt; :check_boxes %&gt;<code>，也可以用下拉单选</code>&lt;%= f.association :category %&gt;`。</p>
+<p>③、check_box不能保存数据的问题？——可以整合到分类功能中</p>
+<p>原因：因为只设置了一对多has_many、belongs_to，即分类有很多商品、商品属于分类，所有没有办法给一个商品设置多个分类。</p>
+<p>解决办法：改成多对多的关系。</p>
+<p>[1]新建model如categoryship，加入两个category_id、product_id，设置多对多关系；</p>
+<p>[2]如果要给商品设置多个分类，就在product的controller白名单设置<code>:category_ids =&gt; []</code>。</p>
+<blockquote>
+<p>注意：这里的id一定要用复数加s。</p>
+</blockquote>
+<p>[3]edit.html.erb里，加入check_box多选框的代码<code>&lt;%= f.association :categories, :as =&gt; :check_boxes %&gt;</code></p>
+<blockquote>
+<p>注意：这段代码要改的只有中间的categories，一定要用复数s。</p>
+</blockquote>
+<p>④、服务器报错？新增的栏位，在服务器里报错，除了在改用try(:栏位)，还能怎么处理？</p>
+<p>cd到current目录，<code>cd /home/deploy/rails-recipes/current</code>；</p>
+<p>查看log，<code>tail -f log/production.log</code>；</p>
+<p>查看nginx的log（有时会是nginx的错），<code>vi /var/log/nginx/error.log</code>。</p>
+<p>办法一：停止nginx，删掉之前那些nil的栏位</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Order.where(token: nil).destroy_all</span><br></pre></td></tr></table></figure>
+<p>办法二：停止nginx，修改之前那些nil的栏位</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">product = Product.find(3)</span><br><span class="line">product.category_id = 2</span><br><span class="line">product.save</span><br></pre></td></tr></table></figure>
+<p>办法三：停止nginx，清空数据库</p>
+<p>办法四：尝试清空本地数据库再试，因为一般本地也会报错，不报错是因为你本地有数据存在。所以最好清空掉再试。</p>
+<p>⑤、linux/ubuntu服务器，怎么reset database清空数据库、导入seed？</p>
+<p>先把nginx停掉，<code>sudo service nginx stop</code>；</p>
+<p>cd到current目录，<code>cd /home/deploy/rails-recipes/current</code>；</p>
+<p>执行reset，<code>RAILS_ENV=production DISABLE_DATABASE_ENVIRONMENT_CHECK=1 bin/rails db:reset</code>；</p>
+<p>(因为reset所有省略)执行保存migrate，<code>RAILS_ENV=production bundle exec rake db:migrate</code>；</p>
+<p>(因为reset所有省略)导入seed，<code>RAILS_ENV=production bundle exec rake db:seed</code>；</p>
+<p>重开nginx，<code>sudo service nginx start</code>。OK了！</p>
+<blockquote>
+<p>进入rails c的命令<code>bundle exec rails c production</code></p>
+<p>删除指定model用<code>Product.destroy_all</code>（Product替换类）</p>
+<p>single seed用<code>RAILS_ENV=production bundle exec rake db:seed:single SEED=product_seed</code>（product_seed替换具体的single seed名称）</p>
+</blockquote>
+<p>问题：</p>
+<p>mysql怎么drop清空数据库，试过用drop整个数据库被删掉，重新新建数据还在。</p>
+<p>Product.destroy_all——测试发现在mysql删除后再用seed数据还在。。</p>
+<p>解决办法：</p>
+<p>专案拆分seed到seeds文件夹里，原seed档清空。服务器停止nginx，再执行db:reset（清空并执行seed档即相当于清空），然后执行每个single seed，最后重启nginx。</p>
+<p>⑥、accepts_nested_attributes_for是什么？</p>
+<p>参考资料<a href="http://blog.csdn.net/kunshan_shenbin/article/details/7249713。" target="_blank" rel="noopener">http://blog.csdn.net/kunshan_shenbin/article/details/7249713。</a></p>
+<p>在一对多的模型关系中通过 accepts_nested_attributes_for来简化关联对象的创建。</p>
+<p>⑦、多图上传功能（用在商品详情页）</p>
+<p>!!!自己的改进方法，photo仅用来放详情页小图、image用来放大图和index等页面展示，uploader用两种。这样改可以确保分类api把index和show写在一起，同时调用产品和图片。</p>
+<p>参考资料</p>
+<p><a href="http://nn70-blog.logdown.com/posts/1843556-multi-pics" target="_blank" rel="noopener">http://nn70-blog.logdown.com/posts/1843556-multi-pics</a></p>
+<p><a href="http://yy4ever.logdown.com/posts/1069287" target="_blank" rel="noopener">http://yy4ever.logdown.com/posts/1069287</a></p>
+<blockquote>
+<p>注意：如果图片不是正方形，要先在uploader里设置不同比例的，然后再上传资料。</p>
+</blockquote>
+<p>遗留问题：小图并排显示的样式，动态hover效果，第一张小图片不是大图，好像不能用col-md-3如果上传图片有时多有时少怎么保证图片大小，小图片在小屏幕怎么自适应</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">.list-image-active &#123;</span><br><span class="line">  box-shadow: 1.5px 1.5px 1.5px #666;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">img &#123;</span><br><span class="line">  max-width: 100%; &#125;</span><br><span class="line"></span><br><span class="line">  .square &#123;</span><br><span class="line">  // margin-bottom: 2em;</span><br><span class="line">  padding-top: 2em;</span><br><span class="line">  padding-bottom: 1.3em;</span><br><span class="line">  padding-left: 0.05em;</span><br><span class="line">  padding-right: 0.05em;</span><br><span class="line"></span><br><span class="line">  img &#123;</span><br><span class="line">    color: #fff;</span><br><span class="line">    opacity: 0.87;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>43）要解决的功能：</p>
+<p>【分类页】</p>
+<p>OK。加入分类图片intro_image、及描述intro_description，</p>
+<p>OK。一个商品可以属于多个分类（百宝箱第8章），见上边②</p>
+<p>OK。check_boxes能更新不报错但是没有更新不生效？（见上边③）</p>
+<p>OK。check_boxes的UI优化，用 Select multiple 加上 Select2 Plugin</p>
+<p>OK。N+1 query修改index代码</p>
+<p>OK。tim产品详情页多图上传功能（见上边⑦）</p>
+<p>OK。tim的seed写入详情页图片教程，看github代码<a href="http://nn70-blog.logdown.com/posts/1843706-seeds-pics" target="_blank" rel="noopener">http://nn70-blog.logdown.com/posts/1843706-seeds-pics</a></p>
+<p>OK。anndo的seed拆分教程<a href="http://anndo-blog.logdown.com/posts/1930065配合rails" target="_blank" rel="noopener">http://anndo-blog.logdown.com/posts/1930065配合rails</a> c的<code>Product.destroy_all</code>，先清空某个类的所有数据，然后重新导入这个类的seed。_</p>
+<p>微信登录接入网站</p>
+<p>微信二维码分享</p>
+<p>用小标题只限5个字wx_title以及各种validate和权限设置，  validates :title, length: {minimum:1, maximum:10, message:”中文字最多填5个，英文最多填10个”}</p>
+<p>库存量没有设置会报错，</p>
+<p>按吉米的文章整理md文档</p>
+<p>手机验证码</p>
+<p>搜索功能</p>
+<p>国内客服</p>
+<p>网址token</p>
+<p>选择数量自动更新</p>
+<p>省市县级联</p>
+<p>改用admin controller优化代码</p>
+<p>参考吉米优化代码</p>
+<p>多图上传预览</p>
+<p>多出来的废弃栏位要怎么删除</p>
+<p>详情页小图位置可以上传视频</p>
+<p>carrierwave上传图片的时候能出现预览<a href="https://ruby-china.org/topics/25542" target="_blank" rel="noopener">https://ruby-china.org/topics/25542</a></p>
+<p>小程序产品详情页</p>
+<p>小程序搜索功能</p>
+<p>随机商品功能及做成api</p>
+<p>小程序随机商品</p>
+<p>详情页排版怎么做？包括商品图、详情图、详情图动画、评论<a href="http://xbearx1987-blog.logdown.com/posts/1880307" target="_blank" rel="noopener">http://xbearx1987-blog.logdown.com/posts/1880307</a></p>
+<p>43）26号，想在过年前，把所有收藏整理、所有md文档整理发布。加<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">44）完整的带图片的seed档搞定。</span><br><span class="line"></span><br><span class="line">45）域名审核通过，小程序服务器配置。</span><br><span class="line"></span><br><span class="line">46）</span><br></pre></td></tr></table></figure></p>
+<p>  getGoodsInfo: function () {<br>    let that = this;<br>    util.request(api.GoodsRelated, { id: that.data.id }).then(function (res) {<br>      if (res.errno === 0) {<br>        that.setData({<br>          gallery: res.data.gallery,<br>        });<br>      }<br>    });<br>  },<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">①、用bindtap点击事件，点击后跳转。</span><br><span class="line"></span><br><span class="line">wx.navigateTo，保留当前页并跳转到非Tabbar页面。可以返回到原页面。用?传值，&amp;传多个值。</span><br><span class="line"></span><br><span class="line">wx.redirectTo，关闭当前页并跳转到非Tabbar页面。用?传值，&amp;传多个值。</span><br><span class="line"></span><br><span class="line">wx.switchTab，关闭所有非Tabbar页面并跳转到Tabbar页面。不能带参数。</span><br><span class="line"></span><br><span class="line">wx.navigateBack，关闭当前页并后退x个页面。</span><br><span class="line"></span><br><span class="line">②、用navigator标签，属性open-type，相当于链接跳转。</span><br><span class="line"></span><br><span class="line">open-type指定navigate对应于wx.navigateTo、redirect对应于wx.redirectTo、switchTab对应于wx.switchTab</span><br><span class="line"></span><br><span class="line">`&lt;navigator url=&quot;../cart/cart&quot; open-type=&quot;switchTab&quot;&gt;跳转到购物车页面&lt;/navigator&gt;`，</span><br><span class="line"></span><br><span class="line">或`&lt;navigator url=&quot;../goods/goods?id=&#123;&#123;item.id&#125;&#125;&quot; wx:for=&quot;&#123;&#123;xx&#125;&#125;&quot;&gt;&lt;/navigator&gt;`不写好像相当于navigateTo。</span><br><span class="line"></span><br><span class="line">&gt; 注意：这里的`item.id`的item是wx:for调用的数组</span><br><span class="line"></span><br><span class="line">47）27号遇到很多坑：半天测试跳转navigaTo、半天在api写数组还是散列和wx:for列表调用时各种写错。</span><br><span class="line"></span><br><span class="line">&gt; 特别注意，wx:for=&quot;&#123;&#123;xxx&#125;&#125;&quot;里的数据必须是数组。</span><br><span class="line">&gt;</span><br><span class="line">&gt; 散列无法做wx:for循环，但是可以单个调用，调用方法是先在js的setData里用一个变量如`tt: res.data`，然后在wxml里用如`&lt;view&gt;&#123;&#123;tt.title&#125;&#125;&lt;/view&gt;`调用。</span><br><span class="line"></span><br><span class="line">①、Api部分，show在jbuilder写出来都是散列，不知道怎么写成数组。——暂时先放在controller</span><br><span class="line"></span><br><span class="line">②、wx:for=&quot;&#123;&#123;xxx&#125;&#125;&quot;，两个括号经常忘记</span><br><span class="line"></span><br><span class="line">③、js里的api request，经常漏了写setData(&#123;xxx&#125;)</span><br><span class="line"></span><br><span class="line">wxml</span><br></pre></td></tr></table></figure></p>
+<view wx:for="" wx:key=""><br>  <view></view><br>  <image src=""></image><br></view>
+
+<view></view>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">js</span><br></pre></td></tr></table></figure>
+<p>// pages/goods/goods.js<br>Page({</p>
+<p>  data: {</p>
+<p>  },</p>
+<p>  onLoad: function (options) {<br>    console.log(options.id)<br>    var p_id = options.id<br>    var that = this<br>    wx.request({<br>      url: ‘<a href="https://luccake.top/api/v1/products/&#39;+p_id" target="_blank" rel="noopener">https://luccake.top/api/v1/products/&#39;+p_id</a>,<br>      header: {<br>        ‘content-type’: ‘application/json’ // 默认值<br>      },<br>      success: function (res) {<br>        console.log(res.data)<br>        that.setData({<br>          newsdata: res.data.photo,<br>          tt: res.data<br>        })<br>      }<br>    })<br>  },</p>
+<p>})<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">48）28号，重要的事：</span><br><span class="line"></span><br><span class="line">* OK。考虑是用单图、多图还是Rich Editor之ckeditor图文编辑器（优先测试能不能多图）</span><br><span class="line">  * 比韵儿爸爸的好用，借用耙耙的css。https://forum.qzy.camp/t/css/1753</span><br><span class="line">  * 电脑端很好用，但是小程序端调用带图片的text数据会怎样？</span><br><span class="line">* OK。测试详情页大图用photo[0]调用</span><br><span class="line">* OK。看百宝箱有什么可用</span><br><span class="line">* OK。8点搬砖直播</span><br><span class="line"></span><br><span class="line"># 49）Jbuilder写api的几种写法</span><br><span class="line"></span><br><span class="line">结论1：对于嵌套数组，index页面最外层可用[]可用&#123;&#125;，而show页面实测要用&#123;&#125;。因为如果用[]，比如调用分类id=1的所有照片photos，要写res.data[index].photos但在小程序里这样写会报错。</span><br><span class="line"></span><br><span class="line">/*结论2：show页面干脆别重构partial了容易引发问题。用`_item.json.jbuilder`写partial表示同model调用，用`_share.json.jbuilder`写partial表示跨model调用。*/</span><br><span class="line"></span><br><span class="line">结论3：干脆所有的页面都不要写partial了，在几个文件之间写多重嵌套写出来很也乱。</span><br><span class="line"></span><br><span class="line">app/views/api/v1/categories/index.json.jbuilder</span><br></pre></td></tr></table></figure></p>
+<p>json.data @categories do |c|<br>  json.id c.id<br>  json.name c.name<br>  json.category_title c.category_title<br>  json.category_image c.category_image<br>  json.products c.products do |p|<br>    json.title p.title<br>    json.photos p.photos<br>  end<br>end<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">上面index已包含所有信息，show不写也可以了，想写的话如下</span><br><span class="line"></span><br><span class="line">app/views/api/v1/categories/show.json.jbuilder</span><br></pre></td></tr></table></figure></p>
+<p>json.id @category.id<br>json.name @category.name<br>json.title @category.category_title<br>json.image @category.category_image<br>json.photos @products do |p|<br>  json.photos p.photos<br>end<br>json.products @products<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">结论4：一般写一个index足够写全信息。因为信息量会越来越多，所以里边的数组比如上边的photos、products写完要在api网页上搜索名字，确保容易定位到。</span><br><span class="line"></span><br><span class="line">## 1、api输出[]</span><br><span class="line"></span><br><span class="line">`json.array!`，相当于map循环，输出散列；[&#123;id:1, title:1&#125;, &#123;id:2, title:2&#125;]</span><br><span class="line"></span><br><span class="line">&gt; 用于partial跨model调用，见下面代码。</span><br><span class="line"></span><br><span class="line">## 2、api输出&#123;&#125;</span><br><span class="line"></span><br><span class="line">1）`json.arr!`，输出&#123;arr!:[&#123;id:1, title:1&#125;, &#123;id:2, title:2s&#125;]&#125;</span><br><span class="line"></span><br><span class="line">2）`json.data @products do |product|`，输出&#123;data:[&#123;id:1, title:1&#125;, &#123;id:2, title:2&#125;]&#125;</span><br><span class="line"></span><br><span class="line">如下，app/views/api/v1/categories/show.json.jbuilder，其中photo是一个model，与product是多对一关系，已设置@prodcuts=@category.products</span><br></pre></td></tr></table></figure></p>
+<p>json.photo @products do |product|<br>  json.number product.title<br>  json.photos product.photos<br>end<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3）`json.data @products.each&#123;&#125;`可缩写为`json.data @products`，输出&#123;data:[&#123;id:1, title:1&#125;, &#123;id:2, title:2&#125;]&#125;</span><br><span class="line"></span><br><span class="line">&gt; 用于index.json.jbuilder页面，用在show会报错。</span><br><span class="line"></span><br><span class="line">4）`json.title @product.title`，输出&#123;title:1&#125;</span><br><span class="line"></span><br><span class="line">&gt; 用语show.json.jbuilder页面。</span><br><span class="line"></span><br><span class="line">## 3、partial用法（不好用）</span><br><span class="line"></span><br><span class="line">### 3.1 结论：</span><br><span class="line"></span><br><span class="line">实测发现partial只会让嵌套数组看起来更复杂，不如不写partial。不同model的数据也可以在同个文件里调用，如下。</span><br></pre></td></tr></table></figure></p>
+<p>json.data @categories do |category|<br>  json.number category.name<br>  json.products category.products do |product|<br>    json.photos product.photos<br>  end<br>end<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 3.2 以下不想用，供参考</span><br><span class="line"></span><br><span class="line">1）用于同个model</span><br><span class="line"></span><br><span class="line">`json.partial! &apos;item&apos;, product: @products`，常用于同个model。</span><br><span class="line"></span><br><span class="line">2）跨model调用</span><br><span class="line"></span><br><span class="line">app/views/api/v1/categories/index.json.jbuilder</span><br></pre></td></tr></table></figure></p>
+<p>json.data do<br>  json.array! @categories, :partial =&gt; “item”, :as =&gt; “category”<br>end<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">app/views/api/v1/categories/_item.json.jbuilder</span><br></pre></td></tr></table></figure></p>
+<p>json.id category.id<br>json.name category.name<br>json.partial! ‘api/v1/products/share’, product: category.products</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">50）小程序调用api，经常写错</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;navigator wx:for=&quot;{{navRightList[curIndex].products}}&quot; wx:key=&quot;&quot;&gt;
+  &lt;image src=&quot;{{item.photos[0].avatar.url}}&quot;&gt;&lt;/image&gt;
+  &lt;text&gt;{{item.title}}&lt;/text&gt;
+&lt;/navigator&gt;
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">以上代码解读：拿数组navRightList的当前下标curIdex下的产品数组products做循环。</span><br><span class="line"></span><br><span class="line">①、每次循环取数组products里的第一张photo即photos[0].avatar.url。</span><br><span class="line"></span><br><span class="line">②、每次循环取数组products里的标题title。api网址是https://luccake.top/api/v1/categories</span><br><span class="line"></span><br><span class="line">51）29号要做的事</span><br><span class="line"></span><br><span class="line">* 百宝箱13Rich Editor之ckeditor，10嵌套表单+19多图(还是yy助教的教程好，百宝箱的需结合百宝箱10否则报错)</span><br><span class="line">* OK。整理api去掉partial，相应的小程序api修改，</span><br><span class="line">* OK。把image改名category_id删掉，修改seed。image改成wx详情图detail_image。</span><br><span class="line">* OK。创客贴做一版详情图。</span><br><span class="line">* OK。做一个完整wx详情页</span><br><span class="line">* wx搜索功能</span><br><span class="line"></span><br><span class="line">52）carrierwave怎么裁剪让宽度固定高度按比例？</span><br><span class="line"></span><br><span class="line">不设置resize_to_fit或设置后按@product.image.url调用的是原图，高度用css定义也可以。</span><br><span class="line"></span><br><span class="line">&gt; 上传图片选定区域裁剪JCrop。</span><br><span class="line"></span><br><span class="line">53）[微信小程序 Image 图片实现宽度100%，高度自适应](http://www.cnblogs.com/luleixia/p/6935301.html)</span><br><span class="line"></span><br><span class="line">在image标签里加上`mode=&quot;widthFix&quot;`。</span><br><span class="line"></span><br><span class="line">54）【29号迷失】做上拉加载更多、下拉刷新功能失败，做搜索功能失败只写了一篇简单的原理。还有很多功能不会做，还有各种页面需要做，凌乱了，为什么别人学新东西都那么强？我怎么goole、淘宝就是找不到路子？是不是因为没有去过一遍官方文档？</span><br><span class="line"></span><br><span class="line">55）新大陆[ITDragon龙](http://my.csdn.net/qq_19558705)的[微信小程序入门系列课](http://blog.csdn.net/qq_19558705/article/category/6768711)，[ITDragongithtb](https://github.com/ITDragonBlog/wxapp)。</span><br><span class="line"></span><br><span class="line">第二课提到，用[weui-wxss套模板](https://github.com/Tencent/weui-wxss)，用微信demo套模板。一开始有想过，但是烦于不知道如何找到文件位置。现在才发现可以在console里看到。</span><br><span class="line"></span><br><span class="line">结论：可能要结合官方文档、特别结合官方demo、官方推荐的weui-wxss组件，结合有做的页面和功能过一遍会用到哪些，以及相应功能的逻辑，有一个全盘总体的认识。然后再具体到每一个功能去做。否则做完一个功能，又失去目的性，或折腾些不重要的功能，或折腾些太难实现的功能。</span><br><span class="line"></span><br><span class="line">&gt; 另外，还有一个小程序api高级教程，可能有用</span><br><span class="line"></span><br><span class="line">56）30蓝鸥视频</span><br><span class="line"></span><br><span class="line">57）31蓝鸥视频，跨年创业谷聚会</span><br><span class="line"></span><br><span class="line">58）1号，蓝鸥视频，ransack搜索功能</span><br><span class="line"></span><br><span class="line">59）搜索api</span><br><span class="line"></span><br><span class="line">`https://luccake.top/products/search?utf8=%E2%9C%93&amp;q=%E7%BF%BB%E7%B3%96`</span><br><span class="line"></span><br><span class="line">60）box-sizing: border-box;</span><br><span class="line"></span><br><span class="line">border-box,含义是将盒子的border和padding计算到设置的width中，而不是实际宽度中。所以，如果你设置width为100px，而border为1px的时候，盒子的实际大小仍旧是100px而不是102px。用这个属性，我们就可以完美地解决上面遇到的难题了：只需要在给两个div的css上写下box-sizing:border-box就可以了，保证两个div等宽，拥有1px长度，至于它们的框度是不是50%，你可以喊设计师自己量。除了以上两个值外，box-sizing还有一个padding-box值，顾名思义，就是把内边距计算在设置的框度内，而border是不计算的。</span><br><span class="line"></span><br><span class="line">## 61）【bug】手机测试搜索，出现invalid URL，不能拿到数据（开发工具测试却是正常）</span><br><span class="line"></span><br><span class="line">&lt;img src=&quot;https://ws1.sinaimg.cn/large/006tNc79gy1fn2m2j5l0xj30w80g1ac8.jpg&quot; width=&quot;4000&quot;&gt;</span><br><span class="line"></span><br><span class="line">## 1、问题描述：</span><br><span class="line"></span><br><span class="line">1）已配置：域名已备案、服务器已安装SSL证书即https认证。在小程序开发工具里测试，首页、分类页在开发工具、手机端测试均正常。</span><br><span class="line"></span><br><span class="line">2）测试搜索功能：开发工具里测试正常，可以拿数据、显示画面。但是在手机端不能拿到数据，刚刚开始请求api_url就报错&quot;invalid url&quot;。</span><br><span class="line"></span><br><span class="line">## 2、解决办法：</span><br><span class="line"></span><br><span class="line">问题出在api的url上，要把`&quot;?utf8=✓&amp;q=&quot; + e.detail.value`  ，</span><br><span class="line"></span><br><span class="line">改成``&quot;?utf8=%E2%9C%93&amp;q=&quot; + encodeURI(e.detail.value)``，如下。</span><br></pre></td></tr></table></figure>
+<p>var API_URL = ‘<a href="https://luccake.top/v2/products/search" target="_blank" rel="noopener">https://luccake.top/v2/products/search</a>‘</p>
+<p>wx.request({<br>  url: API_URL + “?utf8=%E2%9C%93&amp;q=” + encodeURI(e.detail.value), </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&gt; 解说：</span><br><span class="line">&gt;</span><br><span class="line">&gt; %E2%9C%93，这种九位数编码是url的utf-8编码，每一个中文字都会转化成一个九位数的编码。可以用[URL编码/解码工具转换](http://tool.chinaz.com/tools/urlencode.aspx)。</span><br><span class="line">&gt;</span><br><span class="line">&gt; 在小程序里，要用javascript的[encodeURI(URLstring)语法，详见w3school](http://www.w3school.com.cn/jsref/jsref_encodeuri.asp)</span><br><span class="line"></span><br><span class="line">* 拓展，[javascript/微信小程序中将String进行Base64编码并UTF-8格式输出](http://blog.csdn.net/huangmeimao/article/details/74905749)，测试成功，不过转化出来的编码是八位数如&quot;6YeR6Imy&quot;。</span><br><span class="line"></span><br><span class="line">62）排序</span><br></pre></td></tr></table></figure>
+<p>  def index<br>    @products = case params[:order]<br>    when ‘by_price’<br>      Product.order(‘price DESC’)<br>    when ‘by_created_at’<br>      Product.order(‘created_at DESC’)<br>    else<br>      Product.all<br>    end<br>  end</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+  <ul class="dropdown-menu"><br>    <li><br>      &lt;%= link_to(“所有商品”, products_path) %&gt;<br>    </li><br>    <li><br>      &lt;%= link_to(“按价格排序”, products_path(:order =&gt; “by_price”)) %&gt;<br>    </li><br>    <li><br>      &lt;%= link_to(“按时间排序”, products_path(:order =&gt; “by_created_at”)) %&gt;<br>    </li><br>  </ul>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">http://localhost:3000/products?utf8=%E2%9C%93&amp;q%5Btitle_cont%5D=%E7%BF%BB%E7%B3%96&amp;commit=Search</span><br><span class="line"></span><br><span class="line">http://localhost:3000/products?commit=Search&amp;q%5Bs%5D=price+asc&amp;q%5Btitle_cont%5D=%E7%BF%BB%E7%B3%96&amp;utf8=%E2%9C%93</span><br><span class="line"></span><br><span class="line">localhost:3000/products?utf8=✓&amp;q%5Btitle_cont%5D=翻糖&amp;commit=Search</span><br><span class="line"></span><br><span class="line">localhost:3000/products?commit=Search&amp;q%5Bs%5D=price+sac&amp;q%5Btitle_cont%5D=翻糖&amp;utf8=✓</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">https://luccake.top/api/v1/products?utf8=%E2%9C%93&amp;q%5Btitle_or_description_cont%5D=%E7%BF%BB%E7%B3%96&amp;commit=Search</span><br><span class="line"></span><br><span class="line">https://luccake.top/products?commit=Search&amp;q%5Bs%5D=price+asc&amp;q%5Btitle_or_description_cont%5D=%E7%BF%BB%E7%B3%96&amp;utf8=%E2%9C%93</span><br><span class="line"></span><br><span class="line">63）搜索功能一、在navbar，参考戴建林教程，复杂。二、在index，参考毛尧吉及ransack官方，简单。</span><br><span class="line"></span><br><span class="line">64）回头再改：search页面的代码像是高级搜索功能，可以拿掉或保留。api的product#search的paginate要拿掉。</span><br><span class="line"></span><br><span class="line">65）</span><br></pre></td></tr></table></figure>
+<p>var searchData = wx.getStorageSync(‘searchData’) || []<br>searchData.push(this.data.inputValue)<br>wx.setStorageSync(‘searchData’, searchData)<br>console.log(“fff”, searchData)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>onShow:function(){<br>  var getSearch = wx.getStorageSync(‘searchData’);<br>  this.setData({<br>    getSearch:getSearch,<br>    inputValue:’’<br>  })<br>  console.log(‘search is onshow’)<br>  console.log(this.data.getSearch)<br>},</p>
+<p>```</p>
+<p>66）细度文档类的视频虽然很详细，也好像了解了全盘，但是真正要做什么功能的时候，一点卵用都没有，还是要一点点去搜索摸索，做的出来一回事，很多时候做不出来，比如今天折腾的存取缓存。恐慌、焦虑。——还是实战管用。</p>
+<p>var API_URL = ‘<a href="https://luccake.top/api/v1/products?utf8=%E2%9C%93&amp;q%5Btitle_or_description_cont%5D=" target="_blank" rel="noopener">https://luccake.top/api/v1/products?utf8=%E2%9C%93&amp;q%5Btitle_or_description_cont%5D=</a>‘</p>
+<p>url: API_URL + utf + “&amp;commit=Search”</p>
+<p><a href="https://luccake.top/products?utf8=%E2%9C%93&amp;q%5Btitle_or_description_cont%5D=%E9%87%91%E8%89%B2&amp;commit=Search" target="_blank" rel="noopener">https://luccake.top/products?utf8=%E2%9C%93&amp;q%5Btitle_or_description_cont%5D=%E9%87%91%E8%89%B2&amp;commit=Search</a></p>
+<p><a href="https://luccake.top/products?commit=Search&amp;q%5Bs%5D=price+asc&amp;q%5Btitle_or_description_cont%5D=%E9%87%91%E8%89%B2&amp;utf8=%E2%9C%93" target="_blank" rel="noopener">https://luccake.top/products?commit=Search&amp;q%5Bs%5D=price+asc&amp;q%5Btitle_or_description_cont%5D=%E9%87%91%E8%89%B2&amp;utf8=%E2%9C%93</a></p>
+<p><a href="https://luccake.top/products?commit=Search&amp;q%5Bs%5D=created_at+asc&amp;q%5Btitle_or_description_cont%5D=%E9%87%91%E8%89%B2&amp;utf8=%E2%9C%93" target="_blank" rel="noopener">https://luccake.top/products?commit=Search&amp;q%5Bs%5D=created_at+asc&amp;q%5Btitle_or_description_cont%5D=%E9%87%91%E8%89%B2&amp;utf8=%E2%9C%93</a></p>
+<p><a href="https://luccake.top/api/v1/products?commit=Search&amp;q%5Bs%5D=price+asc&amp;q%5Btitle_or_description_cont%5D=%E5%85%AC%E4%B8%BB&amp;utf8=%E2%9C%93" target="_blank" rel="noopener">https://luccake.top/api/v1/products?commit=Search&amp;q%5Bs%5D=price+asc&amp;q%5Btitle_or_description_cont%5D=%E5%85%AC%E4%B8%BB&amp;utf8=%E2%9C%93</a></p>
+<p><a href="https://luccake.top/api/v1/products?commit=Search&amp;q%5Bs%5D=price+desc&amp;q%5Btitle_or_description_cont%5D=%E5%85%AC%E4%B8%BB&amp;utf8=%E2%9C%93" target="_blank" rel="noopener">https://luccake.top/api/v1/products?commit=Search&amp;q%5Bs%5D=price+desc&amp;q%5Btitle_or_description_cont%5D=%E5%85%AC%E4%B8%BB&amp;utf8=%E2%9C%93</a></p>
 
     </div>
 
@@ -180,10 +476,10 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/posts/74f9c533/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+        <a href="/posts/6926316/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
     
     
-        <a href="/posts/ce9bbb1c/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+        <a href="/posts/17e87488/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
     
 </div>
 
