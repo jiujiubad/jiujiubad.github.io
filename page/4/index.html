@@ -73,14 +73,15 @@
         <a class="header-avatar" href="/" title="">
             <img src="/img/avatar.jpg" alt="logo头像">
         </a>
-        <div class="branding">
+        <div class="branding1">
         	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
             
-                 <img src="/img/branding.png" alt="Snippet 博客主题">  
-             
+                <h2 style="color:#ddd;letter-spacing:1.5px;"> 不忘积累，记录点滴 by 99 </h2>
+            
     	</div>
     </div>
 </header>
+
       <nav class="main-navigation">
     <div class="container">
         <div class="row">
@@ -116,6 +117,36 @@
 </nav>
       <section class="content-wra aa99">
         <div class="row">
+          
+    <div class="widget" style="padding:0 15px;">
+        <div id="search-form" >
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?" style="width:100%;border-radius:0;">
+
+                
+                
+            </div>
+            <div id="result-wrap" class="hide" style="padding:0 20px;">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+
+        </div>
+        <div class="row">
             <main class="col-md-9 main-content ">
                 <div class="carousel">
     <img src="/img/head-img.jpg">
@@ -125,17 +156,21 @@
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
-            <a href="/posts/57f3edf/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fnfwxbwogcj30dy0ccwer.jpg"   alt="wx-function-商城(实例)分类菜单动态绑定id、动态api">
+        <div class="post-media" style="">
+            <a href="/posts/314d2142/">
+                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfdhnbgrrj308506bmx2.jpg"   alt="tool-vps-部署域名及解析、SSL证书、https配置、ICP备案">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
-                <a href="/posts/57f3edf/">wx-function-商城(实例)分类菜单动态绑定id、动态api</a>
+                <a href="/posts/314d2142/">tool-vps-部署域名及解析、SSL证书、https配置、ICP备案</a>
             </h1>
             <div class="post-meta">  &bull;
                 <time class="post-date" datetime="" title="">
@@ -144,13 +179,16 @@
             </div>
         </div>
         <p class="brief">
-            
-参考demo2，下载地址微信小程序商城项目之侧栏分类效果(1)
-api地址http://huanqiuxiaozhen.com/wemall/goodstype/typebrandList
-一、初稿wxml页面
-1234567891...
+            1）mac显示隐藏文件夹和文件
+1defaults write com.apple.finder AppleShowAllFiles -boolean true ; killall Finder
+2）再次隐藏输入
+1defaults write com.apple.finder AppleShowAllFiles -boolean false ; killall Finder
+一、域名解析1...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -158,7 +196,7 @@ api地址http://huanqiuxiaozhen.com/wemall/goodstype/typebrandList
     
     <span class="categories-meta fa-wrap">
         <i class="fa fa-folder-open-o"></i>
-        <span>微信小程序</span>
+        <span>工具</span>
     </span>
     
     
@@ -166,7 +204,7 @@ api地址http://huanqiuxiaozhen.com/wemall/goodstype/typebrandList
         <i class="fa fa-tags"></i>
         <span class="tags-meta">
             
-            微信功能
+            工具
             
         </span>
     </span>
@@ -181,21 +219,26 @@ api地址http://huanqiuxiaozhen.com/wemall/goodstype/typebrandList
         </div>
 
         <div class="post-permalink">
-            <a href="/posts/57f3edf/" class="btn btn-default">阅读全文</a>
+            <a href="/posts/314d2142/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/36d18d51/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfdhnbgrrj308506bmx2.jpg"   alt="tool-vps-部署vps云服务器">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/36d18d51/">tool-vps-部署vps云服务器</a>
@@ -208,9 +251,13 @@ api地址http://huanqiuxiaozhen.com/wemall/goodstype/typebrandList
         </div>
         <p class="brief">
             【问题】云服务器项目备份？梯子项目备份？vultr镜像？linux也可以用git？一、常用命令1）ssh root@45.32.42.11，使用root权限登录
-2）部署更新：本地git commit 保存，重新上传到github，然...
+2）部署更新：本地git commit 保存，重新上传到github，然后再执行cap production deploy
+3）heroku部署会用figaro提交配置：heroku config 、figaro heroku:se...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -244,18 +291,23 @@ api地址http://huanqiuxiaozhen.com/wemall/goodstype/typebrandList
             <a href="/posts/36d18d51/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/69bbe6ac/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfdhnbgrrj308506bmx2.jpg"   alt="tool-vps-部署-heroku之figaro七牛云sendcloud">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/69bbe6ac/">tool-vps-部署-heroku之figaro七牛云sendcloud</a>
@@ -272,9 +324,15 @@ api地址http://huanqiuxiaozhen.com/wemall/goodstype/typebrandList
 
 2、存储区域1）七牛云存储区域
 2）准备工作
-1...
+12gem &apos;carrierwave-qiniu&apos;gem &apos;qiniu-rs&apos;
+bundle
+bundle update
+...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -308,18 +366,23 @@ api地址http://huanqiuxiaozhen.com/wemall/goodstype/typebrandList
             <a href="/posts/69bbe6ac/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/1ff9fef/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fng5pmwdonj30cd08u0sx.jpg"   alt="wx-system-商城兜兜汇（比较老仅供参考）">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/1ff9fef/">wx-system-商城兜兜汇（比较老仅供参考）</a>
@@ -332,9 +395,13 @@ api地址http://huanqiuxiaozhen.com/wemall/goodstype/typebrandList
         </div>
         <p class="brief">
             一、通用设置page、container常用自定义参数：height: 100%;、min-height: 100%;、background: #fff;、width: 100%;。    
-有时会用overflow: hidden;...
+有时会用overflow: hidden;。
+12345678910111213141516/**app.wxss**/.container &#123;  height: 100%;  display...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -368,18 +435,23 @@ api地址http://huanqiuxiaozhen.com/wemall/goodstype/typebrandList
             <a href="/posts/1ff9fef/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/5756f3fc/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws2.sinaimg.cn/large/006tKfTcgy1fnfcwsitmgj30da08pjrg.jpg"   alt="tool-mac-mac搜索工具">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/5756f3fc/">tool-mac-mac搜索工具</a>
@@ -391,13 +463,17 @@ api地址http://huanqiuxiaozhen.com/wemall/goodstype/typebrandList
             </div>
         </div>
         <p class="brief">
-            tool-mac-mac搜索工具
-一、总结：本文只有这一段有用，其他测试过没效果1）spotlight搜索很烂
+            一、总结：本文只有这一段有用，其他测试过没效果1）spotlight搜索很烂
 2）两个搜文件名比spotlight好用的工具：『easyfind』、『find any file』
 
-注意：在知乎搜了一...
+注意：在知乎搜了一天，发现mac上的各种搜索工具，只支持搜索文件名，不支持搜索文件内的内容。想要搜索内容，自己搭博客、或是用别人的博客、或是利用google或百度的搜索方法site:网址 关键词。
+
+======...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -431,18 +507,23 @@ api地址http://huanqiuxiaozhen.com/wemall/goodstype/typebrandList
             <a href="/posts/5756f3fc/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/24cbb5e/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fnfwh0s580j305k050a9w.jpg"   alt="ror-tips-为什么文件gitignore后还会被上传到github？gitignore文件被上传到github怎么办？">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/24cbb5e/">ror-tips-为什么文件gitignore后还会被上传到github？gitignore文件被上传到github怎么办？</a>
@@ -456,9 +537,14 @@ api地址http://huanqiuxiaozhen.com/wemall/goodstype/typebrandList
         <p class="brief">
             方法一：暂时最好的解法1）git rm --cached config/database.yml和git rm --cached config/application.yml
 效果：不会删除文件，会删除git追踪记录。
-但是，在git...
+但是，在github点commit进去看，仍然可以看到刚刚删除的内容即我们的密钥。
+方法二：测试失败！！git rm -r --cached .，然后保存。
+效果：appli...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -492,18 +578,23 @@ api地址http://huanqiuxiaozhen.com/wemall/goodstype/typebrandList
             <a href="/posts/24cbb5e/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/ef9bbe6f/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws2.sinaimg.cn/large/006tNc79gy1fnfvej9iydj30ci08z3yo.jpg"   alt="web-page-css/html语法笔记">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/ef9bbe6f/">web-page-css/html语法笔记</a>
@@ -517,9 +608,12 @@ api地址http://huanqiuxiaozhen.com/wemall/goodstype/typebrandList
         <p class="brief">
             background-color: rgba(255,255,255,0.5)clearfix是什么？
 用法注意：外层div加上clearfix，内层div加上pull-right属性，如下：
-123456789&lt;div cla...
+123456789&lt;div class=&quot;clearfix&quot;&gt;  &lt;h4 class=&quot;pull-right&quot;&gt;    合计 &lt;%...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -553,21 +647,26 @@ api地址http://huanqiuxiaozhen.com/wemall/goodstype/typebrandList
             <a href="/posts/ef9bbe6f/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
-            <a href="/posts/867a72a6/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"   alt="ror-system-api最小可行代码">
+        <div class="post-media" style="">
+            <a href="/posts/d646e837/">
+                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfdhnbgrrj308506bmx2.jpg"   alt="tool-vps-部署-linux云服务器部署运维">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
-                <a href="/posts/867a72a6/">ror-system-api最小可行代码</a>
+                <a href="/posts/d646e837/">tool-vps-部署-linux云服务器部署运维</a>
             </h1>
             <div class="post-meta">  &bull;
                 <time class="post-date" datetime="" title="">
@@ -576,10 +675,15 @@ api地址http://huanqiuxiaozhen.com/wemall/goodstype/typebrandList
             </div>
         </div>
         <p class="brief">
-            API最小可行代码1、index为例最小可行代码1）    config/routes
-12345namespace :api, :defaults =&gt; &#123; :format =&gt; :json &#125; do...
+            
+一、前半部分介绍云服务器类型IaaS、PaaS、SaaS，和常用linux指令二、后半部分以IaaS的阿里云或linode为例，示范ruby on rails在vps上的安装、部署、运维、第三方服务、域名设定1、云服务类型和厂商
+IaaS：基础设施服务，Infrastructure-as-a-Service（相当于是买的房子，可以任意拆掉东西装修）
+vps虚拟机，如vultr、linode...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -587,7 +691,7 @@ api地址http://huanqiuxiaozhen.com/wemall/goodstype/typebrandList
     
     <span class="categories-meta fa-wrap">
         <i class="fa fa-folder-open-o"></i>
-        <span>ror系统</span>
+        <span>工具</span>
     </span>
     
     
@@ -595,7 +699,7 @@ api地址http://huanqiuxiaozhen.com/wemall/goodstype/typebrandList
         <i class="fa fa-tags"></i>
         <span class="tags-meta">
             
-            ror系统
+            工具
             
         </span>
     </span>
@@ -610,84 +714,26 @@ api地址http://huanqiuxiaozhen.com/wemall/goodstype/typebrandList
         </div>
 
         <div class="post-permalink">
-            <a href="/posts/867a72a6/" class="btn btn-default">阅读全文</a>
+            <a href="/posts/d646e837/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
-            <a href="/posts/70576f9e/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"   alt="ror-system-rails guides 6-10">
-            </a>
-        </div>
-    
-    <div class="post-content">
-        <div class="post-head home-post-head">
-            <h1 class="post-title">
-                <a href="/posts/70576f9e/">ror-system-rails guides 6-10</a>
-            </h1>
-            <div class="post-meta">  &bull;
-                <time class="post-date" datetime="" title="">
-                    2017年12月14日
-                </time>
-            </div>
-        </div>
-        <p class="brief">
-            六、Active Record 查询接口
-七、Action View 概览
-八、Rails 布局和视图渲染 
-render 告诉 Rails 构建响应时使用哪个视图（或其他静态资源），即渲染哪个视图。
-redirect_to ，它告诉...
-        </p>
-    </div>
-    <footer class="post-footer clearfix">
-        <div class="pull-left tag-list">
-            <div class="post-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-        <i class="fa fa-folder-open-o"></i>
-        <span>ror系统</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            ror系统
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta">2017/12/14</span>
-    </span>
-</div>
-
-        </div>
-
-        <div class="post-permalink">
-            <a href="/posts/70576f9e/" class="btn btn-default">阅读全文</a>
-        </div>
-    </footer>
-</article>
-
-
-<article class="post">
-    
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/d7c2c06c/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"   alt="ror-system-编程语言第一集">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/d7c2c06c/">ror-system-编程语言第一集</a>
@@ -706,9 +752,16 @@ Ruby 编程语言和其他程式语言有什么不同?
 操作系统是干嘛的?
 各种数据型态的差异
 为什么有乱码? 什么是 Unicode 万国码?
-什么...
+什么是正规表示法 Regular Expression，这可以干嘛？
+什么是算法、数据结构？
+如何用 BigO 评估算法效能，了解不同数据结构的效能差异
+
+2、什么...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -742,6 +795,85 @@ Ruby 编程语言和其他程式语言有什么不同?
             <a href="/posts/d7c2c06c/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
+</article>
+
+
+<article class="post">
+  <div class="row">
+    <div class="col-md-3">
+    
+        <div class="post-media" style="">
+            <a href="/posts/7286171a/">
+                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"   alt="ror-system-网站安全">
+            </a>
+        </div>
+    
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
+        <div class="post-head home-post-head">
+            <h1 class="post-title">
+                <a href="/posts/7286171a/">ror-system-网站安全</a>
+            </h1>
+            <div class="post-meta">  &bull;
+                <time class="post-date" datetime="" title="">
+                    2017年12月14日
+                </time>
+            </div>
+        </div>
+        <p class="brief">
+            第二章
+XSS跨站脚本攻击是什么？
+是恶意用户，把代码注入网页的，安全漏洞攻击。
+
+
+
+
+①、sanitize 白名单**过滤**
+只允许部分的 HTML 标籤：&lt;%= sanitize comment.content %&gt;
+
+
+②、由于 Rails 默认会脱逸 HTML 的关系，所以 Rails 对 XSS 是有了基本的防御。需用.html_safe小心处理那些是安全的字符串、...
+        </p>
+    </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
+    <footer class="post-footer clearfix">
+        <div class="pull-left tag-list">
+            <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span>ror系统</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            ror系统
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/12/14</span>
+    </span>
+</div>
+
+        </div>
+
+        <div class="post-permalink">
+            <a href="/posts/7286171a/" class="btn btn-default">阅读全文</a>
+        </div>
+    </footer>
+  </div>
 </article>
 
 
@@ -761,14 +893,14 @@ Ruby 编程语言和其他程式语言有什么不同?
     <aside class="col-md-3 sidebar">
         
         
-    <div class="widget">    
+    <div class="widget">
         <h3 class="title">Search</h3>
         <div id="search-form">
             <div id="result-mask" class="hide"></div>
             <div class="search-area">
                 
                     <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
-                    <button type="button" class="search-form-submit" id="search-local">localSearch</button>
+                    <button type="button" class="search-form-submit" id="search-local">搜索</button>
                 
                 
             </div>
@@ -788,13 +920,14 @@ Ruby 编程语言和其他程式语言有什么不同?
         </div>
     </div>
 
+
         
         
     <div class="widget notification">
         <h3 class="title">网站公告</h3>
         <div>
-            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
-主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+            <p>你好，我是99。<br/>欢迎来到我的博客。<br/>
+<br/>
 <hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
 </p>
         </div>
@@ -897,12 +1030,12 @@ Ruby 编程语言和其他程式语言有什么不同?
     <div class="copyright">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12"> 
-                <span>Copyright &copy; 2017
-                </span> | 
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2018
+                </span> |
                 <span>
                     Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
-                </span> | 
+                </span> |
                 <span>
                     Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
                 </span>

@@ -73,14 +73,15 @@
         <a class="header-avatar" href="/" title="">
             <img src="/img/avatar.jpg" alt="logo头像">
         </a>
-        <div class="branding">
+        <div class="branding1">
         	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
             
-                 <img src="/img/branding.png" alt="Snippet 博客主题">  
-             
+                <h2 style="color:#ddd;letter-spacing:1.5px;"> 不忘积累，记录点滴 by 99 </h2>
+            
     	</div>
     </div>
 </header>
+
       <nav class="main-navigation">
     <div class="container">
         <div class="row">
@@ -116,6 +117,36 @@
 </nav>
       <section class="content-wra aa99">
         <div class="row">
+          
+    <div class="widget" style="padding:0 15px;">
+        <div id="search-form" >
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?" style="width:100%;border-radius:0;">
+
+                
+                
+            </div>
+            <div id="result-wrap" class="hide" style="padding:0 20px;">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+
+        </div>
+        <div class="row">
             <main class="col-md-9 main-content ">
                 <h3>
     
@@ -144,7 +175,7 @@
                 </div>
             </div>
             <p class="brief">
-                为什么选择hexo而不用vps搭建博客？比起wp来说，hexo轻量级的多，而且易部署（指速度优化方面），也不需要一个专门的服务器来放置（这个其实是我选择hexo的最终原因。手里虽然有vps，但是因为跑着ss加上国内ping值太高，最终...
+                为什么选择hexo而不用vps搭建博客？比起wp来说，hexo轻量级的多，而且易部署（指速度优化方面），也不需要一个专门的服务器来放置（这个其实是我选择hexo的最终原因。手里虽然有vps，但是因为跑着ss加上国内ping值太高，最终肯定影响国内速度，所以就一直没用来放blog）当然没有后台也就意味着不能随时随地写了就发，这个相对WP来说是弱势，但我感觉还好，毕竟不会常常在外面跑，而且写博客...
             </p>
         </div>
     </article>
@@ -169,7 +200,7 @@
                 </div>
             </div>
             <p class="brief">
-                ！！不要想着用git，项目直接错乱掉！！不要想着拷贝别人的项目，重定向问题！！不要想着从github上面clone下来，包括自己的博客，clone下来不能用的！！以上每一个问题，都足够折腾一天而没有结果，心中早已千万只草泥马奔腾。he...
+                ！！不要想着用git，项目直接错乱掉！！不要想着拷贝别人的项目，重定向问题！！不要想着从github上面clone下来，包括自己的博客，clone下来不能用的！！以上每一个问题，都足够折腾一天而没有结果，心中早已千万只草泥马奔腾。hexo的路上，最讨厌的就是有时同样的操作，现在能生效，等下又不能生效，非常反人类。遇到的bug1）hexo g时报错，因为md文章内出现不支持的字符，比如大小括号...
             </p>
         </div>
     </article>
@@ -200,7 +231,9 @@ Hexo官网中文站点
 序开始之前，先强调几点：
 
 hexo博客搭建到能用的程度，非常简单。但是主题等细节配置会有各种坑，如果纠结其中，可能三五天才能配置完。
-最好的...
+最好的方式，是拷贝别人博客，直接使用。
+
+一、Hexo 框架介绍二、框架的本地安装与运行1、安装命令12345npm install hexo-cli -g  //安...
             </p>
         </div>
     </article>
@@ -216,14 +249,14 @@ hexo博客搭建到能用的程度，非常简单。但是主题等细节配置�
     <aside class="col-md-3 sidebar">
         
         
-    <div class="widget">    
+    <div class="widget">
         <h3 class="title">Search</h3>
         <div id="search-form">
             <div id="result-mask" class="hide"></div>
             <div class="search-area">
                 
                     <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
-                    <button type="button" class="search-form-submit" id="search-local">localSearch</button>
+                    <button type="button" class="search-form-submit" id="search-local">搜索</button>
                 
                 
             </div>
@@ -243,13 +276,14 @@ hexo博客搭建到能用的程度，非常简单。但是主题等细节配置�
         </div>
     </div>
 
+
         
         
     <div class="widget notification">
         <h3 class="title">网站公告</h3>
         <div>
-            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
-主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+            <p>你好，我是99。<br/>欢迎来到我的博客。<br/>
+<br/>
 <hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
 </p>
         </div>
@@ -352,12 +386,12 @@ hexo博客搭建到能用的程度，非常简单。但是主题等细节配置�
     <div class="copyright">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12"> 
-                <span>Copyright &copy; 2017
-                </span> | 
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2018
+                </span> |
                 <span>
                     Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
-                </span> | 
+                </span> |
                 <span>
                     Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
                 </span>

@@ -73,14 +73,15 @@
         <a class="header-avatar" href="/" title="">
             <img src="/img/avatar.jpg" alt="logo头像">
         </a>
-        <div class="branding">
+        <div class="branding1">
         	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
             
-                 <img src="/img/branding.png" alt="Snippet 博客主题">  
-             
+                <h2 style="color:#ddd;letter-spacing:1.5px;"> 不忘积累，记录点滴 by 99 </h2>
+            
     	</div>
     </div>
 </header>
+
       <nav class="main-navigation">
     <div class="container">
         <div class="row">
@@ -115,6 +116,36 @@
     </div>
 </nav>
       <section class="content-wra aa99">
+        <div class="row">
+          
+    <div class="widget" style="padding:0 15px;">
+        <div id="search-form" >
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?" style="width:100%;border-radius:0;">
+
+                
+                
+            </div>
+            <div id="result-wrap" class="hide" style="padding:0 20px;">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+
+        </div>
         <div class="row">
             <main class="col-md-9 main-content ">
                 <h3>
@@ -155,7 +186,13 @@
 
 三、创建菜单联动
 
-3、再做菜单/分...
+3、再做菜单/分类明细
+4、两个模块关联到一起
+
+四、最终的完整代码（理清思路）
+
+一、菜单联动实际用途，分析二、创建基本框架
+1、基本元素1）写入基本左右栏元素，左右按列排放...
             </p>
         </div>
     </article>
@@ -180,12 +217,15 @@
                 </div>
             </div>
             <p class="brief">
-                wx-function-搜索的原理(实例)
-参考资料 微信小程序实战（二）—实现搜索页面 by杨小事er
+                参考资料 微信小程序实战（二）—实现搜索页面 by杨小事er
 本案例github源码
 一、搜索原理
 1、数据的获取和页面跳转
- 需要元素：input页面、resul页面、官方文档api的数据...
+ 需要元素：input页面、resul页面、官方文档api的数据缓存部分如wx.setStorageSync、wx.clearStorageSync()
+
+
+input绑定bindInput函数，将输入的值存在inputValue中
+button 用bindtap绑定...
             </p>
         </div>
     </article>
@@ -214,7 +254,7 @@
 参考demo2，下载地址微信小程序商城项目之侧栏分类效果(1)
 api地址http://huanqiuxiaozhen.com/wemall/goodstype/typebrandList
 一、初稿wxml页面
-1234567891...
+1234567891011&lt;!--index.wxml--&gt;&lt;view class=&quot;container&quot; wx:key=&quot;inde...
             </p>
         </div>
     </article>
@@ -241,7 +281,7 @@ api地址http://huanqiuxiaozhen.com/wemall/goodstype/typebrandList
             <p class="brief">
                 一、案例1
 wxml文件
-1234567891011121314151617&lt;view class=&quot;swiper-tab&quot;&gt;    &lt;view data-current=&quot;0&quot...
+1234567891011121314151617&lt;view class=&quot;swiper-tab&quot;&gt;    &lt;view data-current=&quot;0&quot; bindtap=&quot;swichNav&quot;&gt;哈哈&lt;/view&gt;    &lt;view data-current=&quot...
             </p>
         </div>
     </article>
@@ -257,14 +297,14 @@ wxml文件
     <aside class="col-md-3 sidebar">
         
         
-    <div class="widget">    
+    <div class="widget">
         <h3 class="title">Search</h3>
         <div id="search-form">
             <div id="result-mask" class="hide"></div>
             <div class="search-area">
                 
                     <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
-                    <button type="button" class="search-form-submit" id="search-local">localSearch</button>
+                    <button type="button" class="search-form-submit" id="search-local">搜索</button>
                 
                 
             </div>
@@ -284,13 +324,14 @@ wxml文件
         </div>
     </div>
 
+
         
         
     <div class="widget notification">
         <h3 class="title">网站公告</h3>
         <div>
-            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
-主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+            <p>你好，我是99。<br/>欢迎来到我的博客。<br/>
+<br/>
 <hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
 </p>
         </div>
@@ -393,12 +434,12 @@ wxml文件
     <div class="copyright">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12"> 
-                <span>Copyright &copy; 2017
-                </span> | 
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2018
+                </span> |
                 <span>
                     Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
-                </span> | 
+                </span> |
                 <span>
                     Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
                 </span>

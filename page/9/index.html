@@ -73,14 +73,15 @@
         <a class="header-avatar" href="/" title="">
             <img src="/img/avatar.jpg" alt="logo头像">
         </a>
-        <div class="branding">
+        <div class="branding1">
         	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
             
-                 <img src="/img/branding.png" alt="Snippet 博客主题">  
-             
+                <h2 style="color:#ddd;letter-spacing:1.5px;"> 不忘积累，记录点滴 by 99 </h2>
+            
     	</div>
     </div>
 </header>
+
       <nav class="main-navigation">
     <div class="container">
         <div class="row">
@@ -116,6 +117,36 @@
 </nav>
       <section class="content-wra aa99">
         <div class="row">
+          
+    <div class="widget" style="padding:0 15px;">
+        <div id="search-form" >
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?" style="width:100%;border-radius:0;">
+
+                
+                
+            </div>
+            <div id="result-wrap" class="hide" style="padding:0 20px;">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+
+        </div>
+        <div class="row">
             <main class="col-md-9 main-content ">
                 <div class="carousel">
     <img src="/img/head-img.jpg">
@@ -125,14 +156,86 @@
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
+        <div class="post-media" style="">
+            <a href="/posts/5974411c/">
+                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tKfTcgy1fnfd8csp18j308506wdfq.jpg"   alt="tool-atom-【转发】打code时如何减少手动挪光标的次数">
+            </a>
+        </div>
+    
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
+        <div class="post-head home-post-head">
+            <h1 class="post-title">
+                <a href="/posts/5974411c/">tool-atom-【转发】打code时如何减少手动挪光标的次数</a>
+            </h1>
+            <div class="post-meta">  &bull;
+                <time class="post-date" datetime="" title="">
+                    2017年11月15日
+                </time>
+            </div>
+        </div>
+        <p class="brief">
+            原文by黄鸿亮：http://hongliang.site/2017/03/10/2017-03-10-how-to-add-your-own-custom-code-snippets-to-emmet-snippets/
+几个工具by黄鸿亮：http://activeliang-blog.logdown.com/posts/1433420-guangzhou-2017-2-19-offli...
+        </p>
+    </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
+    <footer class="post-footer clearfix">
+        <div class="pull-left tag-list">
+            <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span>工具</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            工具
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/11/15</span>
+    </span>
+</div>
+
+        </div>
+
+        <div class="post-permalink">
+            <a href="/posts/5974411c/" class="btn btn-default">阅读全文</a>
+        </div>
+    </footer>
+  </div>
+</article>
+
+
+<article class="post">
+  <div class="row">
+    <div class="col-md-3">
+    
+        <div class="post-media" style="">
             <a href="/posts/8e9b1ad8/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"   alt="ror-system-常用gem">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/8e9b1ad8/">ror-system-常用gem</a>
@@ -151,9 +254,15 @@ Rails c 的代码很乱，可以重新排版
 2、gem ‘annotate’
 会在每个模型文件的顶部自动添加和更新注释，这些注释是对当前数据库模式的概述。
 
-3、网站安全 ...
+3、网站安全 gem ‘rack-attack’
+可以设定当特定 IP 位址就某一段时间内存取太多次的话，自动进行封锁。
+
+12config/application.rb+ ...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -187,78 +296,23 @@ Rails c 的代码很乱，可以重新排版
             <a href="/posts/8e9b1ad8/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
-            <a href="/posts/30a08ba7/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tKfTcgy1fnfd8csp18j308506wdfq.jpg"   alt="tool-atom-【转发】如何修改Atom自带的快捷键&&使用⌘+E快速打开新文件~">
-            </a>
-        </div>
-    
-    <div class="post-content">
-        <div class="post-head home-post-head">
-            <h1 class="post-title">
-                <a href="/posts/30a08ba7/">tool-atom-【转发】如何修改Atom自带的快捷键&&使用⌘+E快速打开新文件~</a>
-            </h1>
-            <div class="post-meta">  &bull;
-                <time class="post-date" datetime="" title="">
-                    2017年11月15日
-                </time>
-            </div>
-        </div>
-        <p class="brief">
-            原文by黄鸿亮：http://hongliang.site/2017/03/21/2017-03-21-asdf/#comments
-如何修改Atom自带的快捷键&amp;&amp;使用⌘+E快速打开新文件~ 发表于 2017-03-...
-        </p>
-    </div>
-    <footer class="post-footer clearfix">
-        <div class="pull-left tag-list">
-            <div class="post-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-        <i class="fa fa-folder-open-o"></i>
-        <span>工具</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            工具
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta">2017/11/15</span>
-    </span>
-</div>
-
-        </div>
-
-        <div class="post-permalink">
-            <a href="/posts/30a08ba7/" class="btn btn-default">阅读全文</a>
-        </div>
-    </footer>
-</article>
-
-
-<article class="post">
-    
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/723a2ffb/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fnfw7fgtkoj30dv0dh0sq.jpg"   alt="bug-亚马逊awe_ec2 Swap file "/etc/shadowsocks/.config.json.swp" already exists! [O]pen Read-Only, (E)dit anyway, (R)ecover, (D)elete it, (Q">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/723a2ffb/">bug-亚马逊awe_ec2 Swap file "/etc/shadowsocks/.config.json.swp" already exists! [O]pen Read-Only, (E)dit anyway, (R)ecover, (D)elete it, (Q</a>
@@ -271,9 +325,12 @@ Rails c 的代码很乱，可以重新排版
         </div>
         <p class="brief">
             亚马逊的AWS不能SSH登录了怎么办？
-【bug】Swap file “/etc/shadowsocks/.config.json.swp” already exists! [O]pen Read-Only, (E)dit anywa...
+【bug】Swap file “/etc/shadowsocks/.config.json.swp” already exists! [O]pen Read-Only, (E)dit anyway, (R)ecover, (D)elete it, (QLinux下编程难免会开启多次vim编辑， 同一个文件如果在上一次编辑时未进行保存，则在下一次想要进行...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -307,18 +364,23 @@ Rails c 的代码很乱，可以重新排版
             <a href="/posts/723a2ffb/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/4f7cb584/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fnfwh0s580j305k050a9w.jpg"   alt="ror-tips-rails g controller xx --no-assets与rails g controller xx有什么区别？">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/4f7cb584/">ror-tips-rails g controller xx --no-assets与rails g controller xx有什么区别？</a>
@@ -332,9 +394,12 @@ Rails c 的代码很乱，可以重新排版
         <p class="brief">
             1）rails g controller xx --no-assets与平时的rails g controller xx有什么区别？
 从执行结果可以看出，区别在于前者不会产生asset文件，即相关的css和js文件。
-12345inv...
+12345invoke  assetsinvoke    coffeecreate      app/assets/javascripts/XXX.coffeeinvoke  ...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -368,138 +433,23 @@ Rails c 的代码很乱，可以重新排版
             <a href="/posts/4f7cb584/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
-            <a href="/posts/e5ed4b1c/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fnfwh0s580j305k050a9w.jpg"   alt="ror-tips-DOM是什么？">
-            </a>
-        </div>
-    
-    <div class="post-content">
-        <div class="post-head home-post-head">
-            <h1 class="post-title">
-                <a href="/posts/e5ed4b1c/">ror-tips-DOM是什么？</a>
-            </h1>
-            <div class="post-meta">  &bull;
-                <time class="post-date" datetime="" title="">
-                    2017年11月12日
-                </time>
-            </div>
-        </div>
-        <p class="brief">
-            DOM全称是document object model(文档对象模型)，DOM是用来干什么的呢？假设把你的文档看成一个单独的对象，DOM就是如何用HTML或者XML对这个对象进行操作和控制的标准。
-
-        </p>
-    </div>
-    <footer class="post-footer clearfix">
-        <div class="pull-left tag-list">
-            <div class="post-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-        <i class="fa fa-folder-open-o"></i>
-        <span>ror知识点</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            ror知识点
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta">2017/11/12</span>
-    </span>
-</div>
-
-        </div>
-
-        <div class="post-permalink">
-            <a href="/posts/e5ed4b1c/" class="btn btn-default">阅读全文</a>
-        </div>
-    </footer>
-</article>
-
-
-<article class="post">
-    
-        <div class="post-media">
-            <a href="/posts/e2bb6abf/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fnfwh0s580j305k050a9w.jpg"   alt="ror-tips-git init要怎么删除？">
-            </a>
-        </div>
-    
-    <div class="post-content">
-        <div class="post-head home-post-head">
-            <h1 class="post-title">
-                <a href="/posts/e2bb6abf/">ror-tips-git init要怎么删除？</a>
-            </h1>
-            <div class="post-meta">  &bull;
-                <time class="post-date" datetime="" title="">
-                    2017年11月12日
-                </time>
-            </div>
-        </div>
-        <p class="brief">
-            12-rf .git #添加r参数，指定删除目录
-
-        </p>
-    </div>
-    <footer class="post-footer clearfix">
-        <div class="pull-left tag-list">
-            <div class="post-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-        <i class="fa fa-folder-open-o"></i>
-        <span>ror知识点</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            ror知识点
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta">2017/11/12</span>
-    </span>
-</div>
-
-        </div>
-
-        <div class="post-permalink">
-            <a href="/posts/e2bb6abf/" class="btn btn-default">阅读全文</a>
-        </div>
-    </footer>
-</article>
-
-
-<article class="post">
-    
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/e58e8282/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fnfwh0s580j305k050a9w.jpg"   alt="ror-tips-哈希算法是什么？">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/e58e8282/">ror-tips-哈希算法是什么？</a>
@@ -516,6 +466,9 @@ Rails c 的代码很乱，可以重新排版
 
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -549,12 +502,159 @@ Rails c 的代码很乱，可以重新排版
             <a href="/posts/e58e8282/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-    <div class="post-content">
+        <div class="post-media" style="">
+            <a href="/posts/e2bb6abf/">
+                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fnfwh0s580j305k050a9w.jpg"   alt="ror-tips-git init要怎么删除？">
+            </a>
+        </div>
+    
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
+        <div class="post-head home-post-head">
+            <h1 class="post-title">
+                <a href="/posts/e2bb6abf/">ror-tips-git init要怎么删除？</a>
+            </h1>
+            <div class="post-meta">  &bull;
+                <time class="post-date" datetime="" title="">
+                    2017年11月12日
+                </time>
+            </div>
+        </div>
+        <p class="brief">
+            12-rf .git #添加r参数，指定删除目录
+
+        </p>
+    </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
+    <footer class="post-footer clearfix">
+        <div class="pull-left tag-list">
+            <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span>ror知识点</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            ror知识点
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/11/12</span>
+    </span>
+</div>
+
+        </div>
+
+        <div class="post-permalink">
+            <a href="/posts/e2bb6abf/" class="btn btn-default">阅读全文</a>
+        </div>
+    </footer>
+  </div>
+</article>
+
+
+<article class="post">
+  <div class="row">
+    <div class="col-md-3">
+    
+        <div class="post-media" style="">
+            <a href="/posts/e5ed4b1c/">
+                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fnfwh0s580j305k050a9w.jpg"   alt="ror-tips-DOM是什么？">
+            </a>
+        </div>
+    
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
+        <div class="post-head home-post-head">
+            <h1 class="post-title">
+                <a href="/posts/e5ed4b1c/">ror-tips-DOM是什么？</a>
+            </h1>
+            <div class="post-meta">  &bull;
+                <time class="post-date" datetime="" title="">
+                    2017年11月12日
+                </time>
+            </div>
+        </div>
+        <p class="brief">
+            DOM全称是document object model(文档对象模型)，DOM是用来干什么的呢？假设把你的文档看成一个单独的对象，DOM就是如何用HTML或者XML对这个对象进行操作和控制的标准。
+
+        </p>
+    </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
+    <footer class="post-footer clearfix">
+        <div class="pull-left tag-list">
+            <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span>ror知识点</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            ror知识点
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/11/12</span>
+    </span>
+</div>
+
+        </div>
+
+        <div class="post-permalink">
+            <a href="/posts/e5ed4b1c/" class="btn btn-default">阅读全文</a>
+        </div>
+    </footer>
+  </div>
+</article>
+
+
+<article class="post">
+  <div class="row">
+    <div class="col-md-3">
+    
+        <div class="post-media" style="">
+            <a href="/posts/0/">
+                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws2.sinaimg.cn/large/006tNc79gy1fngcf6d37bj30dg0ajdg8.jpg"   alt="">
+            </a>
+        </div>
+    
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/0/"></a>
@@ -566,9 +666,13 @@ Rails c 的代码很乱，可以重新排版
             </div>
         </div>
         <p class="brief">
-            1234567title: ror-tips-正则表达式是什么？date: &apos;2017-11-12 00:10&apos;categories:- ror知识点tags:- ror知识点img: &apos;https://...
+            1234567title: ror-tips-正则表达式是什么？date: &apos;2017-11-12 00:10&apos;categories:- ror知识点tags:- ror知识点img: &apos;https://ws1.sinaimg.cn/large/006tNc79gy1fnfwh0s580j305k050a9w.jpg&apos;
+正则表达式 - 语法http:/...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -602,18 +706,23 @@ Rails c 的代码很乱，可以重新排版
             <a href="/posts/0/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/9178391d/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fnfw7fgtkoj30dv0dh0sq.jpg"   alt="bug-自动化测试1-3  gem_rspec-rails报错nomethoderror/ undefined method 'this' for">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/9178391d/">bug-自动化测试1-3  gem_rspec-rails报错nomethoderror/ undefined method 'this' for</a>
@@ -627,9 +736,13 @@ Rails c 的代码很乱，可以重新排版
         <p class="brief">
             1、执行rspec leap_year_spec.rb报错如下：
 
-2、google搜索gem rspec找到两个github，一个是rspec/rspec（这个跟教材一样），一个是rspec/rspec-rails。用第二个，找到g...
+2、google搜索gem rspec找到两个github，一个是rspec/rspec（这个跟教材一样），一个是rspec/rspec-rails。用第二个，找到gem &#39;rspec-rails&#39;，在gemfile文件中安装，然后bundle。
+3、再测试rspec leap_year_spec.rb，搞定...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -663,18 +776,23 @@ Rails c 的代码很乱，可以重新排版
             <a href="/posts/9178391d/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/852d9f92/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fnfw7fgtkoj30dv0dh0sq.jpg"   alt="bug-seed档测试 ActiveRecord--StatementInvalid in Devise--SessionsController#create">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/852d9f92/">bug-seed档测试 ActiveRecord--StatementInvalid in Devise--SessionsController#create</a>
@@ -686,9 +804,12 @@ Rails c 的代码很乱，可以重新排版
             </div>
         </div>
         <p class="brief">
-            jdstore4-3，做seed档后，测试报错ActiveRecord::StatementInvalid in Devise::SessionsController#createSQLite3::ReadOnlyException:...
+            jdstore4-3，做seed档后，测试报错ActiveRecord::StatementInvalid in Devise::SessionsController#createSQLite3::ReadOnlyException: attempt to write a readonly database: UPDATE “users” SET “current_sign_in_at” =...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -722,6 +843,7 @@ Rails c 的代码很乱，可以重新排版
             <a href="/posts/852d9f92/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
@@ -741,14 +863,14 @@ Rails c 的代码很乱，可以重新排版
     <aside class="col-md-3 sidebar">
         
         
-    <div class="widget">    
+    <div class="widget">
         <h3 class="title">Search</h3>
         <div id="search-form">
             <div id="result-mask" class="hide"></div>
             <div class="search-area">
                 
                     <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
-                    <button type="button" class="search-form-submit" id="search-local">localSearch</button>
+                    <button type="button" class="search-form-submit" id="search-local">搜索</button>
                 
                 
             </div>
@@ -768,13 +890,14 @@ Rails c 的代码很乱，可以重新排版
         </div>
     </div>
 
+
         
         
     <div class="widget notification">
         <h3 class="title">网站公告</h3>
         <div>
-            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
-主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+            <p>你好，我是99。<br/>欢迎来到我的博客。<br/>
+<br/>
 <hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
 </p>
         </div>
@@ -877,12 +1000,12 @@ Rails c 的代码很乱，可以重新排版
     <div class="copyright">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12"> 
-                <span>Copyright &copy; 2017
-                </span> | 
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2018
+                </span> |
                 <span>
                     Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
-                </span> | 
+                </span> |
                 <span>
                     Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
                 </span>

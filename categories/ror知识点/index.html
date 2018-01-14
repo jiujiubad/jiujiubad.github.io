@@ -73,14 +73,15 @@
         <a class="header-avatar" href="/" title="">
             <img src="/img/avatar.jpg" alt="logo头像">
         </a>
-        <div class="branding">
+        <div class="branding1">
         	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
             
-                 <img src="/img/branding.png" alt="Snippet 博客主题">  
-             
+                <h2 style="color:#ddd;letter-spacing:1.5px;"> 不忘积累，记录点滴 by 99 </h2>
+            
     	</div>
     </div>
 </header>
+
       <nav class="main-navigation">
     <div class="container">
         <div class="row">
@@ -116,6 +117,36 @@
 </nav>
       <section class="content-wra aa99">
         <div class="row">
+          
+    <div class="widget" style="padding:0 15px;">
+        <div id="search-form" >
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?" style="width:100%;border-radius:0;">
+
+                
+                
+            </div>
+            <div id="result-wrap" class="hide" style="padding:0 20px;">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+
+        </div>
+        <div class="row">
             <main class="col-md-9 main-content ">
                 <h3>
     
@@ -145,7 +176,9 @@
             <p class="brief">
                 方法一：暂时最好的解法1）git rm --cached config/database.yml和git rm --cached config/application.yml
 效果：不会删除文件，会删除git追踪记录。
-但是，在git...
+但是，在github点commit进去看，仍然可以看到刚刚删除的内容即我们的密钥。
+方法二：测试失败！！git rm -r --cached .，然后保存。
+效果：appli...
             </p>
         </div>
     </article>
@@ -170,7 +203,7 @@
                 </div>
             </div>
             <p class="brief">
-                第一种：No route matches {:action=&gt;”show”, :controller=&gt;”orders”, :id=&gt;nil} missing required keys: [:id]12345678...
+                第一种：No route matches {:action=&gt;”show”, :controller=&gt;”orders”, :id=&gt;nil} missing required keys: [:id]123456789101112131415161718ActionController::UrlGenerationError in Account::Orders#index...
             </p>
         </div>
     </article>
@@ -196,7 +229,7 @@
             </div>
             <p class="brief">
                 
-12345678910NoMethodError in CartItemsController#updateundefined method `update&apos; for nil:NilClassExtracted sourc...
+12345678910NoMethodError in CartItemsController#updateundefined method `update&apos; for nil:NilClassExtracted source (around line #6):            @cart = current_cart    @cart_item = @cart.cart_i...
             </p>
         </div>
     </article>
@@ -221,7 +254,7 @@
                 </div>
             </div>
             <p class="brief">
-                NameError: uninitialized constant Product::ImageUploader错误：执行rails c，输入Product.last报错1234567891011121314151617181920 ...
+                NameError: uninitialized constant Product::ImageUploader错误：执行rails c，输入Product.last报错1234567891011121314151617181920 apple@apple ⮀ ~/rails/jdstore1130 ⮀ ⭠ test± ⮀ rails cRunning via Spring preloade...
             </p>
         </div>
     </article>
@@ -247,7 +280,7 @@
             </div>
             <p class="brief">
                 
-原因：12345&lt;% if @product.image.present? %&gt;     &lt;%= image_tag(@product.image.thumb.url, class:&quot;thumbnail&...
+原因：12345&lt;% if @product.image.present? %&gt;     &lt;%= image_tag(@product.image.thumb.url, class:&quot;thumbnail&quot;) %&gt;   &lt;% else %&gt;     &lt;%= image_tag(&quot;http://placehold.it/2...
             </p>
         </div>
     </article>
@@ -272,7 +305,8 @@
                 </div>
             </div>
             <p class="brief">
-                ActionController::UrlGenerationError in Admin::Jobs#indexShowing /Users/apple/rails/job-listing1129/app/views/admin/j...
+                ActionController::UrlGenerationError in Admin::Jobs#indexShowing /Users/apple/rails/job-listing1129/app/views/admin/jobs/index.html.erb where line #22 raised:
+No route matches {:action=&gt;”index”,...
             </p>
         </div>
     </article>
@@ -323,7 +357,8 @@
                 </div>
             </div>
             <p class="brief">
-                delete_all和destroy_all的区别1、delete 是 sql 操作，直接在数据库执行 sql，不触发回调，直接删除不管其他。delete_all删除大量数据时速度更快些，但是危险的。所以，限制 delete 的方法是...
+                delete_all和destroy_all的区别1、delete 是 sql 操作，直接在数据库执行 sql，不触发回调，直接删除不管其他。delete_all删除大量数据时速度更快些，但是危险的。所以，限制 delete 的方法是在 db 层面增加校验，而在 Rails（或 ActiveRecord） 里增加回调和 validates 保护数据。
+2、destroy 是 model 操作...
             </p>
         </div>
     </article>
@@ -350,7 +385,7 @@
             <p class="brief">
                 
 解法：不按教材的代码走，薪资上限wage_upper_bound栏位按降序排列即DESC，薪资下限wage_lower_bound ASC按升序排列即ASC。搞定！
-12345678910def index  @jobs = cas...
+12345678910def index  @jobs = case params[:order]  when &apos;by_lower_bound&apos;    Job.where(is_hidden: false)...
             </p>
         </div>
     </article>
@@ -401,14 +436,14 @@
     <aside class="col-md-3 sidebar">
         
         
-    <div class="widget">    
+    <div class="widget">
         <h3 class="title">Search</h3>
         <div id="search-form">
             <div id="result-mask" class="hide"></div>
             <div class="search-area">
                 
                     <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
-                    <button type="button" class="search-form-submit" id="search-local">localSearch</button>
+                    <button type="button" class="search-form-submit" id="search-local">搜索</button>
                 
                 
             </div>
@@ -428,13 +463,14 @@
         </div>
     </div>
 
+
         
         
     <div class="widget notification">
         <h3 class="title">网站公告</h3>
         <div>
-            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
-主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+            <p>你好，我是99。<br/>欢迎来到我的博客。<br/>
+<br/>
 <hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
 </p>
         </div>
@@ -537,12 +573,12 @@
     <div class="copyright">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12"> 
-                <span>Copyright &copy; 2017
-                </span> | 
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2018
+                </span> |
                 <span>
                     Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
-                </span> | 
+                </span> |
                 <span>
                     Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
                 </span>

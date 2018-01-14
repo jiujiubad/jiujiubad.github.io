@@ -73,14 +73,15 @@
         <a class="header-avatar" href="/" title="">
             <img src="/img/avatar.jpg" alt="logo头像">
         </a>
-        <div class="branding">
+        <div class="branding1">
         	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
             
-                 <img src="/img/branding.png" alt="Snippet 博客主题">  
-             
+                <h2 style="color:#ddd;letter-spacing:1.5px;"> 不忘积累，记录点滴 by 99 </h2>
+            
     	</div>
     </div>
 </header>
+
       <nav class="main-navigation">
     <div class="container">
         <div class="row">
@@ -116,6 +117,36 @@
 </nav>
       <section class="content-wra aa99">
         <div class="row">
+          
+    <div class="widget" style="padding:0 15px;">
+        <div id="search-form" >
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?" style="width:100%;border-radius:0;">
+
+                
+                
+            </div>
+            <div id="result-wrap" class="hide" style="padding:0 20px;">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+
+        </div>
+        <div class="row">
             <main class="col-md-9 main-content ">
                 <h3>
     
@@ -144,8 +175,10 @@
                 </div>
             </div>
             <p class="brief">
-                ror-function-搜索(大数据量)如elastic：gem searchkick
-一、参考资料1、用gem elasticsearch-rails还是searchkick？1）searchkick有更多的基于个人用户的定制，g...
+                一、参考资料1、用gem elasticsearch-rails还是searchkick？1）searchkick有更多的基于个人用户的定制，gem elasticsearch-rails只是ElasticSearch团队的一个语言库。参考资料点击。
+2、Ruby on rails 实战圣经ActiveReord: 加强搜寻
+
+Ransack可以很快的针对ActiveRecord做出排序和复...
             </p>
         </div>
     </article>
@@ -170,8 +203,7 @@
                 </div>
             </div>
             <p class="brief">
-                ror-function-搜索gem ransack
-忘了记录：1、ransack搜索两种做法，一种是放在navbar搜索时在新的search页显示，一种是放在index搜索的时候不跳转新页面。第一种做排序报错，没解决，第二种可以排序...
+                忘了记录：1、ransack搜索两种做法，一种是放在navbar搜索时在新的search页显示，一种是放在index搜索的时候不跳转新页面。第一种做排序报错，没解决，第二种可以排序，但是模糊搜索的对象设置是放在view页面的感觉很奇怪。2、分类功能两种做法，一种是一对多对产品添加栏位，一种是多对多，多对多的好处是在后台两边都可以编辑和查看产品。第一种直接在ransack的模糊搜索设置中加入分...
             </p>
         </div>
     </article>
@@ -198,7 +230,8 @@
             <p class="brief">
                 一种多对多的分类写法——99测试在job-listing上直接粘贴代码可行。
 https://forum.qzy.camp/t/topic/1381
-作品网站https://explorer-xiaofei.herokuapp.com...
+作品网站https://explorer-xiaofei.herokuapp.com/firsttool
+Githubhttps://github.com/kristennn/Explorer/blob/master/app/views/job...
             </p>
         </div>
     </article>
@@ -214,14 +247,14 @@ https://forum.qzy.camp/t/topic/1381
     <aside class="col-md-3 sidebar">
         
         
-    <div class="widget">    
+    <div class="widget">
         <h3 class="title">Search</h3>
         <div id="search-form">
             <div id="result-mask" class="hide"></div>
             <div class="search-area">
                 
                     <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
-                    <button type="button" class="search-form-submit" id="search-local">localSearch</button>
+                    <button type="button" class="search-form-submit" id="search-local">搜索</button>
                 
                 
             </div>
@@ -241,13 +274,14 @@ https://forum.qzy.camp/t/topic/1381
         </div>
     </div>
 
+
         
         
     <div class="widget notification">
         <h3 class="title">网站公告</h3>
         <div>
-            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
-主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+            <p>你好，我是99。<br/>欢迎来到我的博客。<br/>
+<br/>
 <hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
 </p>
         </div>
@@ -350,12 +384,12 @@ https://forum.qzy.camp/t/topic/1381
     <div class="copyright">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12"> 
-                <span>Copyright &copy; 2017
-                </span> | 
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2018
+                </span> |
                 <span>
                     Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
-                </span> | 
+                </span> |
                 <span>
                     Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
                 </span>

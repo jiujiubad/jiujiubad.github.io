@@ -73,14 +73,15 @@
         <a class="header-avatar" href="/" title="">
             <img src="/img/avatar.jpg" alt="logo头像">
         </a>
-        <div class="branding">
+        <div class="branding1">
         	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
             
-                 <img src="/img/branding.png" alt="Snippet 博客主题">  
-             
+                <h2 style="color:#ddd;letter-spacing:1.5px;"> 不忘积累，记录点滴 by 99 </h2>
+            
     	</div>
     </div>
 </header>
+
       <nav class="main-navigation">
     <div class="container">
         <div class="row">
@@ -116,6 +117,36 @@
 </nav>
       <section class="content-wra aa99">
         <div class="row">
+          
+    <div class="widget" style="padding:0 15px;">
+        <div id="search-form" >
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?" style="width:100%;border-radius:0;">
+
+                
+                
+            </div>
+            <div id="result-wrap" class="hide" style="padding:0 20px;">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+
+        </div>
+        <div class="row">
             <main class="col-md-9 main-content ">
                 <h3>
     
@@ -149,7 +180,10 @@
 
 2、存储区域1）七牛云存储区域
 2）准备工作
-1...
+12gem &apos;carrierwave-qiniu&apos;gem &apos;qiniu-rs&apos;
+bundle
+bundle update
+...
             </p>
         </div>
     </article>
@@ -175,7 +209,8 @@
             </div>
             <p class="brief">
                 【问题】云服务器项目备份？梯子项目备份？vultr镜像？linux也可以用git？一、常用命令1）ssh root@45.32.42.11，使用root权限登录
-2）部署更新：本地git commit 保存，重新上传到github，然...
+2）部署更新：本地git commit 保存，重新上传到github，然后再执行cap production deploy
+3）heroku部署会用figaro提交配置：heroku config 、figaro heroku:se...
             </p>
         </div>
     </article>
@@ -203,7 +238,8 @@
                 1）mac显示隐藏文件夹和文件
 1defaults write com.apple.finder AppleShowAllFiles -boolean true ; killall Finder
 2）再次隐藏输入
-1defaults ...
+1defaults write com.apple.finder AppleShowAllFiles -boolean false ; killall Finder
+一、域名解析1...
             </p>
         </div>
     </article>
@@ -230,7 +266,8 @@
             <p class="brief">
                 
 一、前半部分介绍云服务器类型IaaS、PaaS、SaaS，和常用linux指令二、后半部分以IaaS的阿里云或linode为例，示范ruby on rails在vps上的安装、部署、运维、第三方服务、域名设定1、云服务类型和厂商
-I...
+IaaS：基础设施服务，Infrastructure-as-a-Service（相当于是买的房子，可以任意拆掉东西装修）
+vps虚拟机，如vultr、linode...
             </p>
         </div>
     </article>
@@ -246,14 +283,14 @@ I...
     <aside class="col-md-3 sidebar">
         
         
-    <div class="widget">    
+    <div class="widget">
         <h3 class="title">Search</h3>
         <div id="search-form">
             <div id="result-mask" class="hide"></div>
             <div class="search-area">
                 
                     <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
-                    <button type="button" class="search-form-submit" id="search-local">localSearch</button>
+                    <button type="button" class="search-form-submit" id="search-local">搜索</button>
                 
                 
             </div>
@@ -273,13 +310,14 @@ I...
         </div>
     </div>
 
+
         
         
     <div class="widget notification">
         <h3 class="title">网站公告</h3>
         <div>
-            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
-主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+            <p>你好，我是99。<br/>欢迎来到我的博客。<br/>
+<br/>
 <hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
 </p>
         </div>
@@ -382,12 +420,12 @@ I...
     <div class="copyright">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12"> 
-                <span>Copyright &copy; 2017
-                </span> | 
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2018
+                </span> |
                 <span>
                     Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
-                </span> | 
+                </span> |
                 <span>
                     Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
                 </span>

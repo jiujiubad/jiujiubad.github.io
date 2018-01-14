@@ -73,14 +73,15 @@
         <a class="header-avatar" href="/" title="">
             <img src="/img/avatar.jpg" alt="logo头像">
         </a>
-        <div class="branding">
+        <div class="branding1">
         	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
             
-                 <img src="/img/branding.png" alt="Snippet 博客主题">  
-             
+                <h2 style="color:#ddd;letter-spacing:1.5px;"> 不忘积累，记录点滴 by 99 </h2>
+            
     	</div>
     </div>
 </header>
+
       <nav class="main-navigation">
     <div class="container">
         <div class="row">
@@ -116,6 +117,36 @@
 </nav>
       <section class="content-wra aa99">
         <div class="row">
+          
+    <div class="widget" style="padding:0 15px;">
+        <div id="search-form" >
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?" style="width:100%;border-radius:0;">
+
+                
+                
+            </div>
+            <div id="result-wrap" class="hide" style="padding:0 20px;">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+
+        </div>
+        <div class="row">
             <main class="col-md-9 main-content ">
                 <h3>
     
@@ -146,7 +177,9 @@
             <p class="brief">
                 方法一：暂时最好的解法1）git rm --cached config/database.yml和git rm --cached config/application.yml
 效果：不会删除文件，会删除git追踪记录。
-但是，在git...
+但是，在github点commit进去看，仍然可以看到刚刚删除的内容即我们的密钥。
+方法二：测试失败！！git rm -r --cached .，然后保存。
+效果：appli...
             </p>
         </div>
     </article>
@@ -197,7 +230,8 @@
                 </div>
             </div>
             <p class="brief">
-                delete_all和destroy_all的区别1、delete 是 sql 操作，直接在数据库执行 sql，不触发回调，直接删除不管其他。delete_all删除大量数据时速度更快些，但是危险的。所以，限制 delete 的方法是...
+                delete_all和destroy_all的区别1、delete 是 sql 操作，直接在数据库执行 sql，不触发回调，直接删除不管其他。delete_all删除大量数据时速度更快些，但是危险的。所以，限制 delete 的方法是在 db 层面增加校验，而在 Rails（或 ActiveRecord） 里增加回调和 validates 保护数据。
+2、destroy 是 model 操作...
             </p>
         </div>
     </article>
@@ -224,7 +258,8 @@
             <p class="brief">
                 config/database.yml文件今天在练习job-listing时，从github上fork专案后，直接运行rails s，在localhost:3000上发生报错：
 
-图中信息提示，没有文件config/database....
+图中信息提示，没有文件config/database.yml文件
+这是因为我们一般要保护config/database.yml文件，因此在上传到github之前会创建一个config/database.yml.ex...
             </p>
         </div>
     </article>
@@ -249,7 +284,8 @@
                 </div>
             </div>
             <p class="brief">
-                12345argc：命令行总的参数的个数，即argv中元素的格式。*argv[ ]：字符串数组，用来存放指向你的字符串参数的指针数组,每一个元素指向一个参数。argv[0]：指向程序的全路径名。argv[1]：指向在DOS命令行中执行...
+                12345argc：命令行总的参数的个数，即argv中元素的格式。*argv[ ]：字符串数组，用来存放指向你的字符串参数的指针数组,每一个元素指向一个参数。argv[0]：指向程序的全路径名。argv[1]：指向在DOS命令行中执行程序名后的第一个字符串。argv[2]：指向第二个字符串。
+12345argc是参数个数,定义为intargv是字符串数组,存的是参数,定义为char**或者c...
             </p>
         </div>
     </article>
@@ -275,7 +311,8 @@
             </div>
             <p class="brief">
                 ruby中clone和dup都是对一个对象的浅拷贝，其区别如下：1.clone会拷贝单例方法，而dup不会。
-1234567a = Object.newdef a.hello    &quot;hello&quot;enda.dup....
+1234567a = Object.newdef a.hello    &quot;hello&quot;enda.dup.hello   # raises NoMethodErrora.clone.hello # return &quot;hello&quot;
+2.dup不能对f...
             </p>
         </div>
     </article>
@@ -302,7 +339,11 @@
             <p class="brief">
                 原文地址：https://cnbin.github.io/blog/2015/08/19/sql-zhu-jian-yu-wai-jian/
 SQL 主键与外键AUG 19TH, 2015 1:34 PM
-主键与外键关系型数据库中的一...
+主键与外键关系型数据库中的一条记录中有若干个属性，若其中某一个属性组(注意是组)能唯一标识一条记录，该属性组就可以成为一个主键
+比如
+
+学生表(学号，姓名，性别，班级)
+其中每个学生的学号...
             </p>
         </div>
     </article>
@@ -329,33 +370,7 @@ SQL 主键与外键AUG 19TH, 2015 1:34 PM
             <p class="brief">
                 1）rails g controller xx --no-assets与平时的rails g controller xx有什么区别？
 从执行结果可以看出，区别在于前者不会产生asset文件，即相关的css和js文件。
-12345inv...
-            </p>
-        </div>
-    </article>
- 
-    <article class="post">
-        
-            <div class="post-media">
-                <a href="/posts/e5ed4b1c/">
-                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fnfwh0s580j305k050a9w.jpg"  alt="ror-tips-DOM是什么？">
-                </a>
-            </div>
-        
-        <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title">
-                    <a href="/posts/e5ed4b1c/">ror-tips-DOM是什么？</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2017年11月12日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                DOM全称是document object model(文档对象模型)，DOM是用来干什么的呢？假设把你的文档看成一个单独的对象，DOM就是如何用HTML或者XML对这个对象进行操作和控制的标准。
-
+12345invoke  assetsinvoke    coffeecreate      app/assets/javascripts/XXX.coffeeinvoke  ...
             </p>
         </div>
     </article>
@@ -386,6 +401,32 @@ SQL 主键与外键AUG 19TH, 2015 1:34 PM
         </div>
     </article>
  
+    <article class="post">
+        
+            <div class="post-media">
+                <a href="/posts/e5ed4b1c/">
+                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fnfwh0s580j305k050a9w.jpg"  alt="ror-tips-DOM是什么？">
+                </a>
+            </div>
+        
+        <div class="post-content">
+            <div class="post-head home-post-head">
+                <h1 class="post-title">
+                    <a href="/posts/e5ed4b1c/">ror-tips-DOM是什么？</a>
+                </h1>
+                <div class="post-meta">  &bull;
+                    <time class="post-date" datetime="" title="">
+                        2017年11月12日
+                    </time>
+                </div>
+            </div>
+            <p class="brief">
+                DOM全称是document object model(文档对象模型)，DOM是用来干什么的呢？假设把你的文档看成一个单独的对象，DOM就是如何用HTML或者XML对这个对象进行操作和控制的标准。
+
+            </p>
+        </div>
+    </article>
+ 
 
 
     <nav class="pagination" role="navigation">
@@ -403,14 +444,14 @@ SQL 主键与外键AUG 19TH, 2015 1:34 PM
     <aside class="col-md-3 sidebar">
         
         
-    <div class="widget">    
+    <div class="widget">
         <h3 class="title">Search</h3>
         <div id="search-form">
             <div id="result-mask" class="hide"></div>
             <div class="search-area">
                 
                     <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
-                    <button type="button" class="search-form-submit" id="search-local">localSearch</button>
+                    <button type="button" class="search-form-submit" id="search-local">搜索</button>
                 
                 
             </div>
@@ -430,13 +471,14 @@ SQL 主键与外键AUG 19TH, 2015 1:34 PM
         </div>
     </div>
 
+
         
         
     <div class="widget notification">
         <h3 class="title">网站公告</h3>
         <div>
-            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
-主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+            <p>你好，我是99。<br/>欢迎来到我的博客。<br/>
+<br/>
 <hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
 </p>
         </div>
@@ -539,12 +581,12 @@ SQL 主键与外键AUG 19TH, 2015 1:34 PM
     <div class="copyright">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12"> 
-                <span>Copyright &copy; 2017
-                </span> | 
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2018
+                </span> |
                 <span>
                     Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
-                </span> | 
+                </span> |
                 <span>
                     Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
                 </span>

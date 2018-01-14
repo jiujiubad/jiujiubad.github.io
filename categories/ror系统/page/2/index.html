@@ -73,14 +73,15 @@
         <a class="header-avatar" href="/" title="">
             <img src="/img/avatar.jpg" alt="logo头像">
         </a>
-        <div class="branding">
+        <div class="branding1">
         	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
             
-                 <img src="/img/branding.png" alt="Snippet 博客主题">  
-             
+                <h2 style="color:#ddd;letter-spacing:1.5px;"> 不忘积累，记录点滴 by 99 </h2>
+            
     	</div>
     </div>
 </header>
+
       <nav class="main-navigation">
     <div class="container">
         <div class="row">
@@ -116,6 +117,36 @@
 </nav>
       <section class="content-wra aa99">
         <div class="row">
+          
+    <div class="widget" style="padding:0 15px;">
+        <div id="search-form" >
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?" style="width:100%;border-radius:0;">
+
+                
+                
+            </div>
+            <div id="result-wrap" class="hide" style="padding:0 20px;">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+
+        </div>
+        <div class="row">
             <main class="col-md-9 main-content ">
                 <h3>
     
@@ -123,33 +154,6 @@
     
 </h3>
 
-    <article class="post">
-        
-            <div class="post-media">
-                <a href="/posts/c0ce8aa/">
-                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"  alt="ror-system-Api">
-                </a>
-            </div>
-        
-        <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title">
-                    <a href="/posts/c0ce8aa/">ror-system-Api</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2017年12月14日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                看第四遍，又看懂了一些东西
-1、爬虫的关键安装 rest-client 这个 gem，可以让我们用 Ruby 发送 HTTP 请求：
-透过 Nokogiri 这个库可以帮助我们解析 HTML，透过 CSS selector 从文件中比...
-            </p>
-        </div>
-    </article>
- 
     <article class="post">
         
             <div class="post-media">
@@ -174,7 +178,35 @@
 1、不知道如何勾起别人的兴趣
 2、在技术细节答不上来
 
-1、当初为什么想要接触rails的（公司关心的只是你是不是一个值得挖掘的人）？2、你之前是念土木工程的，现在想要转开发，为什么会有这...
+1、当初为什么想要接触rails的（公司关心的只是你是不是一个值得挖掘的人）？2、你之前是念土木工程的，现在想要转开发，为什么会有这么大的跨度？3、你是怎样学习ruby on rails 的？点评1：恭喜你今天3个问题，让你阵亡了。。
+你必须在前两个问题就让面试官知道，你是很有热情学技术的人...
+            </p>
+        </div>
+    </article>
+ 
+    <article class="post">
+        
+            <div class="post-media">
+                <a href="/posts/765fb13d/">
+                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"  alt="ror-system-Ajax交互式网页应用">
+                </a>
+            </div>
+        
+        <div class="post-content">
+            <div class="post-head home-post-head">
+                <h1 class="post-title">
+                    <a href="/posts/765fb13d/">ror-system-Ajax交互式网页应用</a>
+                </h1>
+                <div class="post-meta">  &bull;
+                    <time class="post-date" datetime="" title="">
+                        2017年12月14日
+                    </time>
+                </div>
+            </div>
+            <p class="brief">
+                1.1、Jquery1jquery 就对javascript的一个扩展，封装，就是让javascript更好用，更简单。人家怎么说的来着，jquery就是要用更少的代码，漂亮的完成更多的功能。
+jQuery是一套最多人使用的 JavaScript 函式库，可以撰写各种网页效果，有丰富的社区和各种 Plugins 外挂。
+它的主要作用是操纵网页的 DOM(Document Object Mod...
             </p>
         </div>
     </article>
@@ -206,7 +238,11 @@ Ruby 编程语言和其他程式语言有什么不同?
 操作系统是干嘛的?
 各种数据型态的差异
 为什么有乱码? 什么是 Unicode 万国码?
-什么...
+什么是正规表示法 Regular Expression，这可以干嘛？
+什么是算法、数据结构？
+如何用 BigO 评估算法效能，了解不同数据结构的效能差异
+
+2、什么...
             </p>
         </div>
     </article>
@@ -232,7 +268,9 @@ Ruby 编程语言和其他程式语言有什么不同?
             </div>
             <p class="brief">
                 01
-12345678# 题目: 输入名字，输出 &quot;Hello, 名字&quot;print &quot;请输入你的名字，然后按 Enter: &quot;your_name = gets# ...puts &quot;He...
+12345678# 题目: 输入名字，输出 &quot;Hello, 名字&quot;print &quot;请输入你的名字，然后按 Enter: &quot;your_name = gets# ...puts &quot;Hello, #&#123;your_name&#125;&quot;
+02
+1234567891011121314# 题目: 交换 a, b 变数的值a = 10...
             </p>
         </div>
     </article>
@@ -262,7 +300,12 @@ Puts，输出变量，并换行
 print，输出变量
 gets，从键盘拿到输入的值
 =，赋值，指派右边的值给左边的变量
-字符串”xx”或’xx’...
+字符串”xx”或’xx’
+#{}，将变量内嵌在字符中
+ruby中，变量用小写字母，并且用_分开
+
+3、基本算术
+数据类型：string、integer、float、array、hash...
             </p>
         </div>
     </article>
@@ -294,7 +337,9 @@ gets，从键盘拿到输入的值
 
 身为管理者，我可以编辑、删除、隐藏职缺需求 （在后台）；
 身为使用者，我必须「登入」才能发表职缺；
-身为使用者，我必须要有「ad...
+身为使用者，我必须要有「admin 身份注记」才能进入后台。
+
+5、基础建设与前后台jobrails new，或者是git clone、cp config/database.yml.exa...
             </p>
         </div>
     </article>
@@ -320,7 +365,9 @@ gets，从键盘拿到输入的值
             </div>
             <p class="brief">
                 2、基础建设rails new、git init，或者是git clone、cp config/database.yml.example config/database.yml、bundle install
-①、gem ‘bootst...
+①、gem ‘bootstrap-sass’，css、html、flashes
+②、gem ‘devise’，做navbar的login、logout、signup
+③、gem ‘sim...
             </p>
         </div>
     </article>
@@ -345,7 +392,9 @@ gets，从键盘拿到输入的值
                 </div>
             </div>
             <p class="brief">
-                atom设置快捷键lt、ltp、ltd表示，&lt;%= link_to(“XXXX”, XXXX_path, class:”btn btn-danger btn-lg pull-right”, method: :post) %&gt...
+                atom设置快捷键lt、ltp、ltd表示，&lt;%= link_to(“XXXX”, XXXX_path, class:”btn btn-danger btn-lg pull-right”, method: :post) %&gt;
+tb表示，table.table.table-bordered&gt;(thead&gt;tr&gt;th3)+(tbody&gt;tr&gt;td3)
+s...
             </p>
         </div>
     </article>
@@ -377,7 +426,10 @@ Rails c 的代码很乱，可以重新排版
 2、gem ‘annotate’
 会在每个模型文件的顶部自动添加和更新注释，这些注释是对当前数据库模式的概述。
 
-3、网站安全 ...
+3、网站安全 gem ‘rack-attack’
+可以设定当特定 IP 位址就某一段时间内存取太多次的话，自动进行封锁。
+
+12config/application.rb+ ...
             </p>
         </div>
     </article>
@@ -401,14 +453,14 @@ Rails c 的代码很乱，可以重新排版
     <aside class="col-md-3 sidebar">
         
         
-    <div class="widget">    
+    <div class="widget">
         <h3 class="title">Search</h3>
         <div id="search-form">
             <div id="result-mask" class="hide"></div>
             <div class="search-area">
                 
                     <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
-                    <button type="button" class="search-form-submit" id="search-local">localSearch</button>
+                    <button type="button" class="search-form-submit" id="search-local">搜索</button>
                 
                 
             </div>
@@ -428,13 +480,14 @@ Rails c 的代码很乱，可以重新排版
         </div>
     </div>
 
+
         
         
     <div class="widget notification">
         <h3 class="title">网站公告</h3>
         <div>
-            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
-主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+            <p>你好，我是99。<br/>欢迎来到我的博客。<br/>
+<br/>
 <hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
 </p>
         </div>
@@ -537,12 +590,12 @@ Rails c 的代码很乱，可以重新排版
     <div class="copyright">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12"> 
-                <span>Copyright &copy; 2017
-                </span> | 
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2018
+                </span> |
                 <span>
                     Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
-                </span> | 
+                </span> |
                 <span>
                     Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
                 </span>

@@ -73,14 +73,15 @@
         <a class="header-avatar" href="/" title="">
             <img src="/img/avatar.jpg" alt="logo头像">
         </a>
-        <div class="branding">
+        <div class="branding1">
         	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
             
-                 <img src="/img/branding.png" alt="Snippet 博客主题">  
-             
+                <h2 style="color:#ddd;letter-spacing:1.5px;"> 不忘积累，记录点滴 by 99 </h2>
+            
     	</div>
     </div>
 </header>
+
       <nav class="main-navigation">
     <div class="container">
         <div class="row">
@@ -116,6 +117,36 @@
 </nav>
       <section class="content-wra aa99">
         <div class="row">
+          
+    <div class="widget" style="padding:0 15px;">
+        <div id="search-form" >
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?" style="width:100%;border-radius:0;">
+
+                
+                
+            </div>
+            <div id="result-wrap" class="hide" style="padding:0 20px;">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+
+        </div>
+        <div class="row">
             <main class="col-md-9 main-content ">
                 <div class="carousel">
     <img src="/img/head-img.jpg">
@@ -125,14 +156,18 @@
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/3b27e0ef/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws3.sinaimg.cn/large/006tNc79gy1fng9zj56ukj30d909st8n.jpg"   alt="tool-hexo-hexo主题篇之Next">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/3b27e0ef/">tool-hexo-hexo主题篇之Next</a>
@@ -144,9 +179,12 @@
             </div>
         </div>
         <p class="brief">
-            为什么选择hexo而不用vps搭建博客？比起wp来说，hexo轻量级的多，而且易部署（指速度优化方面），也不需要一个专门的服务器来放置（这个其实是我选择hexo的最终原因。手里虽然有vps，但是因为跑着ss加上国内ping值太高，最终...
+            为什么选择hexo而不用vps搭建博客？比起wp来说，hexo轻量级的多，而且易部署（指速度优化方面），也不需要一个专门的服务器来放置（这个其实是我选择hexo的最终原因。手里虽然有vps，但是因为跑着ss加上国内ping值太高，最终肯定影响国内速度，所以就一直没用来放blog）当然没有后台也就意味着不能随时随地写了就发，这个相对WP来说是弱势，但我感觉还好，毕竟不会常常在外面跑，而且写博客...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -180,18 +218,23 @@
             <a href="/posts/3b27e0ef/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/8d89ee75/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws3.sinaimg.cn/large/006tNc79gy1fng9zj56ukj30d909st8n.jpg"   alt="tool-hexo-hexo主题篇之Asnippet">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/8d89ee75/">tool-hexo-hexo主题篇之Asnippet</a>
@@ -203,9 +246,12 @@
             </div>
         </div>
         <p class="brief">
-            ！！不要想着用git，项目直接错乱掉！！不要想着拷贝别人的项目，重定向问题！！不要想着从github上面clone下来，包括自己的博客，clone下来不能用的！！以上每一个问题，都足够折腾一天而没有结果，心中早已千万只草泥马奔腾。he...
+            ！！不要想着用git，项目直接错乱掉！！不要想着拷贝别人的项目，重定向问题！！不要想着从github上面clone下来，包括自己的博客，clone下来不能用的！！以上每一个问题，都足够折腾一天而没有结果，心中早已千万只草泥马奔腾。hexo的路上，最讨厌的就是有时同样的操作，现在能生效，等下又不能生效，非常反人类。遇到的bug1）hexo g时报错，因为md文章内出现不支持的字符，比如大小括号...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -239,18 +285,23 @@
             <a href="/posts/8d89ee75/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/eea95795/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws3.sinaimg.cn/large/006tNc79gy1fng9zj56ukj30d909st8n.jpg"   alt="tool-hexo-(视频)hexo视频篇之快速使用hexo搭建个人博客">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/eea95795/">tool-hexo-(视频)hexo视频篇之快速使用hexo搭建个人博客</a>
@@ -268,9 +319,14 @@ Hexo官网中文站点
 序开始之前，先强调几点：
 
 hexo博客搭建到能用的程度，非常简单。但是主题等细节配置会有各种坑，如果纠结其中，可能三五天才能配置完。
-最好的...
+最好的方式，是拷贝别人博客，直接使用。
+
+一、Hexo 框架介绍二、框架的本地安装与运行1、安装命令12345npm install hexo-cli -g  //安...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -304,18 +360,23 @@ hexo博客搭建到能用的程度，非常简单。但是主题等细节配置�
             <a href="/posts/eea95795/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/c8b6f8d4/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws3.sinaimg.cn/large/006tNc79gy1fnfvqdlgzej30d608s74i.jpg"   alt="ror-function-搜索(大数据量)如elastic：gem searchkick">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/c8b6f8d4/">ror-function-搜索(大数据量)如elastic：gem searchkick</a>
@@ -327,10 +388,15 @@ hexo博客搭建到能用的程度，非常简单。但是主题等细节配置�
             </div>
         </div>
         <p class="brief">
-            ror-function-搜索(大数据量)如elastic：gem searchkick
-一、参考资料1、用gem elasticsearch-rails还是searchkick？1）searchkick有更多的基于个人用户的定制，g...
+            一、参考资料1、用gem elasticsearch-rails还是searchkick？1）searchkick有更多的基于个人用户的定制，gem elasticsearch-rails只是ElasticSearch团队的一个语言库。参考资料点击。
+2、Ruby on rails 实战圣经ActiveReord: 加强搜寻
+
+Ransack可以很快的针对ActiveRecord做出排序和复...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -364,77 +430,23 @@ hexo博客搭建到能用的程度，非常简单。但是主题等细节配置�
             <a href="/posts/c8b6f8d4/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
-            <a href="/posts/d16694c4/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fng9wx1j6vj309l08wweg.jpg"   alt="www-orid-month-常用blog分类格式、标签格式、文件名格式">
-            </a>
-        </div>
-    
-    <div class="post-content">
-        <div class="post-head home-post-head">
-            <h1 class="post-title">
-                <a href="/posts/d16694c4/">www-orid-month-常用blog分类格式、标签格式、文件名格式</a>
-            </h1>
-            <div class="post-meta">  &bull;
-                <time class="post-date" datetime="" title="">
-                    2018年01月10日
-                </time>
-            </div>
-        </div>
-        <p class="brief">
-            一、文件名+标签+文件夹标签『转发』『常用』，标签根据自己需要继续添加。1、ror-system——ror系统 ==ror系统https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30j...
-        </p>
-    </div>
-    <footer class="post-footer clearfix">
-        <div class="pull-left tag-list">
-            <div class="post-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-        <i class="fa fa-folder-open-o"></i>
-        <span>心得</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            常用
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta">2018/01/10</span>
-    </span>
-</div>
-
-        </div>
-
-        <div class="post-permalink">
-            <a href="/posts/d16694c4/" class="btn btn-default">阅读全文</a>
-        </div>
-    </footer>
-</article>
-
-
-<article class="post">
-    
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/da6a027e/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fngaqi0x3qj30cb09p0sm.jpg"   alt="www-orid-month-常用blog文章格式">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/da6a027e/">www-orid-month-常用blog文章格式</a>
@@ -448,9 +460,18 @@ hexo博客搭建到能用的程度，非常简单。但是主题等细节配置�
         <p class="brief">
             一、逻辑清晰（目的是让目录更清晰）用上Step，注意序号1、2、3，无序*，步骤Step的不同使用逻辑要很清晰。
 序号1、2、3、，1）2）3）用于罗列第一种第二种第三种，配合『总结』
-无序*，用于小号标题1）2）3）下罗列第一种第二...
+无序*，用于小号标题1）2）3）下罗列第一种第二种第三种
+Step1Step2，用于步骤，一般用三号字一定要加粗
+二、补充说明
+引用用于补充说明
+
+包含元素：
+1、标题。按本文格式写，用typora，或hex...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -484,18 +505,91 @@ hexo博客搭建到能用的程度，非常简单。但是主题等细节配置�
             <a href="/posts/da6a027e/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
+        <div class="post-media" style="">
+            <a href="/posts/d16694c4/">
+                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fng9wx1j6vj309l08wweg.jpg"   alt="www-orid-month-常用blog分类格式、标签格式、文件名格式">
+            </a>
+        </div>
+    
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
+        <div class="post-head home-post-head">
+            <h1 class="post-title">
+                <a href="/posts/d16694c4/">www-orid-month-常用blog分类格式、标签格式、文件名格式</a>
+            </h1>
+            <div class="post-meta">  &bull;
+                <time class="post-date" datetime="" title="">
+                    2018年01月10日
+                </time>
+            </div>
+        </div>
+        <p class="brief">
+            一、文件名+标签+文件夹标签『转发』『常用』，标签根据自己需要继续添加。1、ror-system——ror系统 ==ror系统https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg
+1234567title: date: &apos;2018-01- 00:10&apos;categories:- ror系统tags...
+        </p>
+    </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
+    <footer class="post-footer clearfix">
+        <div class="pull-left tag-list">
+            <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span>心得</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            常用
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2018/01/10</span>
+    </span>
+</div>
+
+        </div>
+
+        <div class="post-permalink">
+            <a href="/posts/d16694c4/" class="btn btn-default">阅读全文</a>
+        </div>
+    </footer>
+  </div>
+</article>
+
+
+<article class="post">
+  <div class="row">
+    <div class="col-md-3">
+    
+        <div class="post-media" style="">
             <a href="/posts/8f82da10/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws2.sinaimg.cn/large/006tKfTcgy1fnfcwsitmgj30da08pjrg.jpg"   alt="tool-mac-下载网站工具offline pages pro使用方法">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/8f82da10/">tool-mac-下载网站工具offline pages pro使用方法</a>
@@ -509,9 +603,18 @@ hexo博客搭建到能用的程度，非常简单。但是主题等细节配置�
         <p class="brief">
             5000页约1.1G，不够放，重新下载
 二、99总结-建议自定义1、配置详解1）默认5个选项跟自定义5个选项，看起来像是一一对应的（实测结果也类似），除了第一项下载媒体文件没测试过。
-2）下载页数，测试过可以一次性写多点如20000页...
+2）下载页数，测试过可以一次性写多点如20000页。
+
+以前担心写多了会帮我们乱下载，实测不会。
+
+3）level只有website这个设置不限级，其他几个默认level1。
+
+测试学习中心（正常有一两千页），...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -545,18 +648,23 @@ hexo博客搭建到能用的程度，非常简单。但是主题等细节配置�
             <a href="/posts/8f82da10/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/5ee8c435/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"   alt="ror-system-百宝箱所有功能一览">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/5ee8c435/">ror-system-百宝箱所有功能一览</a>
@@ -571,9 +679,15 @@ hexo博客搭建到能用的程度，非常简单。但是主题等细节配置�
             luccake最必要：13. Rich Editor，10嵌套表单+19多图
 小鑫数据项目：
 2. 自定义 Model 网址1）数字加文字ID、乱数token ID、用户自定义ID
-3. 多语言设置4. 时区设置5. 格式化日期时间、...
+3. 多语言设置4. 时区设置5. 格式化日期时间、时区6. 表单单选 UI
+7. 表单单选 UI 和 Select2 Plugin
+8. 表单多选 UI 和 Select2 Plugin
+9. 嵌套表单(1-t...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -607,18 +721,23 @@ hexo博客搭建到能用的程度，非常简单。但是主题等细节配置�
             <a href="/posts/5ee8c435/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/2baabef/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfdhnbgrrj308506bmx2.jpg"   alt="vps-科学上网ss接入指南">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/2baabef/">vps-科学上网ss接入指南</a>
@@ -634,9 +753,18 @@ hexo博客搭建到能用的程度，非常简单。但是主题等细节配置�
 2）苹果：Potatso Lite
 
 先登陆一个非大陆apple ID
-提供一个：m2c9642s@...
+提供一个：m2c9642s@icloud.com / Xiaoming88
+如果失效了，上淘宝搜索香港apple id 租用，大概 ￥2。
+
+
+搞定ID后，点击下载
+
+2、SS电脑端：1）...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -670,18 +798,23 @@ hexo博客搭建到能用的程度，非常简单。但是主题等细节配置�
             <a href="/posts/2baabef/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/abf78efa/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfdhnbgrrj308506bmx2.jpg"   alt="vps-科学上网vps服务端（比如vultr）">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/abf78efa/">vps-科学上网vps服务端（比如vultr）</a>
@@ -694,9 +827,15 @@ hexo博客搭建到能用的程度，非常简单。但是主题等细节配置�
         </div>
         <p class="brief">
             购买vultr直接看“Vultr搭建vpn教程”部分配置科学上网直接看“方法三”配置加速及vultr备份看“进阶一/二/三”在linux里，移动光标可以边按住左或右键，边按ctrl或shift，实现光标快速移动。
-关键词：“ vps搭...
+关键词：“ vps搭建vpn被墙 ”
+pinginfoview for mac
+superping pro mac
+单位换算：1Gbps=1000Mbps，1000Mbps/8=宽...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -730,6 +869,7 @@ hexo博客搭建到能用的程度，非常简单。但是主题等细节配置�
             <a href="/posts/abf78efa/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
@@ -749,14 +889,14 @@ hexo博客搭建到能用的程度，非常简单。但是主题等细节配置�
     <aside class="col-md-3 sidebar">
         
         
-    <div class="widget">    
+    <div class="widget">
         <h3 class="title">Search</h3>
         <div id="search-form">
             <div id="result-mask" class="hide"></div>
             <div class="search-area">
                 
                     <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
-                    <button type="button" class="search-form-submit" id="search-local">localSearch</button>
+                    <button type="button" class="search-form-submit" id="search-local">搜索</button>
                 
                 
             </div>
@@ -776,13 +916,14 @@ hexo博客搭建到能用的程度，非常简单。但是主题等细节配置�
         </div>
     </div>
 
+
         
         
     <div class="widget notification">
         <h3 class="title">网站公告</h3>
         <div>
-            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
-主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+            <p>你好，我是99。<br/>欢迎来到我的博客。<br/>
+<br/>
 <hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
 </p>
         </div>
@@ -885,12 +1026,12 @@ hexo博客搭建到能用的程度，非常简单。但是主题等细节配置�
     <div class="copyright">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12"> 
-                <span>Copyright &copy; 2017
-                </span> | 
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2018
+                </span> |
                 <span>
                     Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
-                </span> | 
+                </span> |
                 <span>
                     Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
                 </span>

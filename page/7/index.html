@@ -73,14 +73,15 @@
         <a class="header-avatar" href="/" title="">
             <img src="/img/avatar.jpg" alt="logo头像">
         </a>
-        <div class="branding">
+        <div class="branding1">
         	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
             
-                 <img src="/img/branding.png" alt="Snippet 博客主题">  
-             
+                <h2 style="color:#ddd;letter-spacing:1.5px;"> 不忘积累，记录点滴 by 99 </h2>
+            
     	</div>
     </div>
 </header>
+
       <nav class="main-navigation">
     <div class="container">
         <div class="row">
@@ -116,6 +117,36 @@
 </nav>
       <section class="content-wra aa99">
         <div class="row">
+          
+    <div class="widget" style="padding:0 15px;">
+        <div id="search-form" >
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?" style="width:100%;border-radius:0;">
+
+                
+                
+            </div>
+            <div id="result-wrap" class="hide" style="padding:0 20px;">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+
+        </div>
+        <div class="row">
             <main class="col-md-9 main-content ">
                 <div class="carousel">
     <img src="/img/head-img.jpg">
@@ -125,14 +156,18 @@
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/99eb1fd3/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fnfwh0s580j305k050a9w.jpg"   alt="ror-tips-=~是什么？">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/99eb1fd3/">ror-tips-=~是什么？</a>
@@ -148,6 +183,9 @@
 
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -181,18 +219,23 @@
             <a href="/posts/99eb1fd3/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/e4cee3cd/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fnfwh0s580j305k050a9w.jpg"   alt="ror-tips-delete_all和destroy_all的区别">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/e4cee3cd/">ror-tips-delete_all和destroy_all的区别</a>
@@ -204,9 +247,13 @@
             </div>
         </div>
         <p class="brief">
-            delete_all和destroy_all的区别1、delete 是 sql 操作，直接在数据库执行 sql，不触发回调，直接删除不管其他。delete_all删除大量数据时速度更快些，但是危险的。所以，限制 delete 的方法是...
+            delete_all和destroy_all的区别1、delete 是 sql 操作，直接在数据库执行 sql，不触发回调，直接删除不管其他。delete_all删除大量数据时速度更快些，但是危险的。所以，限制 delete 的方法是在 db 层面增加校验，而在 Rails（或 ActiveRecord） 里增加回调和 validates 保护数据。
+2、destroy 是 model 操作...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -240,18 +287,23 @@
             <a href="/posts/e4cee3cd/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/d7488f13/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fnfw7fgtkoj30dv0dh0sq.jpg"   alt="bug-招聘网10-3 按薪资下限排序不生效">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/d7488f13/">bug-招聘网10-3 按薪资下限排序不生效</a>
@@ -265,9 +317,12 @@
         <p class="brief">
             
 解法：不按教材的代码走，薪资上限wage_upper_bound栏位按降序排列即DESC，薪资下限wage_lower_bound ASC按升序排列即ASC。搞定！
-12345678910def index  @jobs = cas...
+12345678910def index  @jobs = case params[:order]  when &apos;by_lower_bound&apos;    Job.where(is_hidden: false)...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -301,18 +356,23 @@
             <a href="/posts/d7488f13/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/ef2eddfe/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fnfw7fgtkoj30dv0dh0sq.jpg"   alt="bug-购物网8-1 按生成订单按钮网址转到orders但页面不跳转（代码跟课程的一样）">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/ef2eddfe/">bug-购物网8-1 按生成订单按钮网址转到orders但页面不跳转（代码跟课程的一样）</a>
@@ -329,6 +389,9 @@
 
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -362,18 +425,23 @@
             <a href="/posts/ef2eddfe/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/d0137a83/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfdhnbgrrj308506bmx2.jpg"   alt="vps-科学上网-参考资料-搬瓦工Ubuntu16.04安装魔改版BBR">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/d0137a83/">vps-科学上网-参考资料-搬瓦工Ubuntu16.04安装魔改版BBR</a>
@@ -387,9 +455,15 @@
         <p class="brief">
             搬瓦工Ubuntu16.04安装魔改版BBR点击主控制面板，先关机：
 
-如果只是用来做梯子用，只推荐重装成Ubuntu 16.04 x86_64系统，不要问我为什么，CentOS对脚手架的速度优化并不友好（不能替换内核，不能一键BBR...
+如果只是用来做梯子用，只推荐重装成Ubuntu 16.04 x86_64系统，不要问我为什么，CentOS对脚手架的速度优化并不友好（不能替换内核，不能一键BBR）~~
+
+重装完系统，记得把搬瓦工告诉你的新的SSH登录密码给记好，记事本存在本地就好，别忘了~~
+下面步骤请严格按照执行，对你肯定是有好处的，不要侥幸偷懒~~...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -423,18 +497,23 @@
             <a href="/posts/d0137a83/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/7d9ea51f/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfdhnbgrrj308506bmx2.jpg"   alt="vps-科学上网-参考资料-搬瓦工vps">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/7d9ea51f/">vps-科学上网-参考资料-搬瓦工vps</a>
@@ -455,9 +534,15 @@ ip111用于测试vpn状态
 Test your IP
 
 1. 明确需求，做出选择
-VPS 服务商选搬瓦工、Vult...
+VPS 服务商选搬瓦工、Vultr 还是 Linode？
+服务器地址选香港、日本、美国还是韩国、俄罗斯等国家？
+VPS 的框架选 Openvz、KVM 还是 XEN 框架？
+服务器系统选 Ce...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -491,18 +576,23 @@ VPS 服务商选搬瓦工、Vult...
             <a href="/posts/7d9ea51f/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/3d6294/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fnfw7fgtkoj30dv0dh0sq.jpg"   alt="bug-购物车8-1 checkout页面一刷新，就出了报错，显示：“The Action 'show' could not be found for CartsController"">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/3d6294/">bug-购物车8-1 checkout页面一刷新，就出了报错，显示：“The Action 'show' could not be found for CartsController"</a>
@@ -514,9 +604,12 @@ VPS 服务商选搬瓦工、Vult...
             </div>
         </div>
         <p class="brief">
-            问题：checkout页面一刷新就出了报错，显示：“The Action ‘show’ could not be found for CartsController”。且只在chrome存在，在safari试验时正常，会跳出一个弹窗询...
+            问题：checkout页面一刷新就出了报错，显示：“The Action ‘show’ could not be found for CartsController”。且只在chrome存在，在safari试验时正常，会跳出一个弹窗询问“是否要重新发送表单”。助教的解答：助教有这么几种看法：1. checkout定义的是post的路径，所以第一次进去的时候是可以的。第二次刷新过后，浏览器变成...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -550,18 +643,23 @@ VPS 服务商选搬瓦工、Vult...
             <a href="/posts/3d6294/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/936990c3/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fnfw7fgtkoj30dv0dh0sq.jpg"   alt="bug-购物网4-3 localhost 将您重定向的次数过多">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/936990c3/">bug-购物网4-3 localhost 将您重定向的次数过多</a>
@@ -574,9 +672,13 @@ VPS 服务商选搬瓦工、Vult...
         </div>
         <p class="brief">
             
-删除cookie没用，删除redirect_to root_path有效123456def admin_required  if !current_user.admin?    redirect_to root_path    fl...
+删除cookie没用，删除redirect_to root_path有效123456def admin_required  if !current_user.admin?    redirect_to root_path    flash[:alert] = &quot;请用管理员账号登录&quot;  endend
+代码里的redirect_to root_path，和路由里的root ...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -610,18 +712,23 @@ VPS 服务商选搬瓦工、Vult...
             <a href="/posts/936990c3/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/5082df0b/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fnfw7fgtkoj30dv0dh0sq.jpg"   alt="bug-购物网4-4 carrierwave上传图片translation missing- en.errors.messages.mini_magick_processing_error">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/5082df0b/">bug-购物网4-4 carrierwave上传图片translation missing- en.errors.messages.mini_magick_processing_error</a>
@@ -635,9 +742,13 @@ VPS 服务商选搬瓦工、Vult...
         <p class="brief">
             JDSTORE4-3，carrierwave和minimagic设置后，上传图片报错
 translation missing: en.errors.messages.mini_magick_processing_error
-一、新的解...
+一、新的解法输入brew install imagemagick，会提示gem已安装是否要更新。
+输入brew upgrade imagemagick，更新完成，然后bu...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -671,18 +782,23 @@ translation missing: en.errors.messages.mini_magick_processing_error
             <a href="/posts/5082df0b/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
 <article class="post">
+  <div class="row">
+    <div class="col-md-3">
     
-        <div class="post-media">
+        <div class="post-media" style="">
             <a href="/posts/a72a0756/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fnfwh0s580j305k050a9w.jpg"   alt="ror-tips-cp config/database.yml.example config/database 是什么？">
             </a>
         </div>
     
-    <div class="post-content">
+    </div>
+    <div class="col-md-9" style="padding-left:50px;">
+    <div class="post-content" style="">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/a72a0756/">ror-tips-cp config/database.yml.example config/database 是什么？</a>
@@ -696,9 +812,13 @@ translation missing: en.errors.messages.mini_magick_processing_error
         <p class="brief">
             config/database.yml文件今天在练习job-listing时，从github上fork专案后，直接运行rails s，在localhost:3000上发生报错：
 
-图中信息提示，没有文件config/database....
+图中信息提示，没有文件config/database.yml文件
+这是因为我们一般要保护config/database.yml文件，因此在上传到github之前会创建一个config/database.yml.ex...
         </p>
     </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <div class="post-meta">
@@ -732,6 +852,7 @@ translation missing: en.errors.messages.mini_magick_processing_error
             <a href="/posts/a72a0756/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
+  </div>
 </article>
 
 
@@ -751,14 +872,14 @@ translation missing: en.errors.messages.mini_magick_processing_error
     <aside class="col-md-3 sidebar">
         
         
-    <div class="widget">    
+    <div class="widget">
         <h3 class="title">Search</h3>
         <div id="search-form">
             <div id="result-mask" class="hide"></div>
             <div class="search-area">
                 
                     <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
-                    <button type="button" class="search-form-submit" id="search-local">localSearch</button>
+                    <button type="button" class="search-form-submit" id="search-local">搜索</button>
                 
                 
             </div>
@@ -778,13 +899,14 @@ translation missing: en.errors.messages.mini_magick_processing_error
         </div>
     </div>
 
+
         
         
     <div class="widget notification">
         <h3 class="title">网站公告</h3>
         <div>
-            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
-主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+            <p>你好，我是99。<br/>欢迎来到我的博客。<br/>
+<br/>
 <hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
 </p>
         </div>
@@ -887,12 +1009,12 @@ translation missing: en.errors.messages.mini_magick_processing_error
     <div class="copyright">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12"> 
-                <span>Copyright &copy; 2017
-                </span> | 
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2018
+                </span> |
                 <span>
                     Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
-                </span> | 
+                </span> |
                 <span>
                     Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
                 </span>

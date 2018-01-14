@@ -73,14 +73,15 @@
         <a class="header-avatar" href="/" title="">
             <img src="/img/avatar.jpg" alt="logo头像">
         </a>
-        <div class="branding">
+        <div class="branding1">
         	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
             
-                 <img src="/img/branding.png" alt="Snippet 博客主题">  
-             
+                <h2 style="color:#ddd;letter-spacing:1.5px;"> 不忘积累，记录点滴 by 99 </h2>
+            
     	</div>
     </div>
 </header>
+
       <nav class="main-navigation">
     <div class="container">
         <div class="row">
@@ -116,6 +117,36 @@
 </nav>
       <section class="content-wra aa99">
         <div class="row">
+          
+    <div class="widget" style="padding:0 15px;">
+        <div id="search-form" >
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?" style="width:100%;border-radius:0;">
+
+                
+                
+            </div>
+            <div id="result-wrap" class="hide" style="padding:0 20px;">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+
+        </div>
+        <div class="row">
             <main class="col-md-9 main-content ">
                 <h3>
     
@@ -144,7 +175,7 @@
                 </div>
             </div>
             <p class="brief">
-                为什么选择hexo而不用vps搭建博客？比起wp来说，hexo轻量级的多，而且易部署（指速度优化方面），也不需要一个专门的服务器来放置（这个其实是我选择hexo的最终原因。手里虽然有vps，但是因为跑着ss加上国内ping值太高，最终...
+                为什么选择hexo而不用vps搭建博客？比起wp来说，hexo轻量级的多，而且易部署（指速度优化方面），也不需要一个专门的服务器来放置（这个其实是我选择hexo的最终原因。手里虽然有vps，但是因为跑着ss加上国内ping值太高，最终肯定影响国内速度，所以就一直没用来放blog）当然没有后台也就意味着不能随时随地写了就发，这个相对WP来说是弱势，但我感觉还好，毕竟不会常常在外面跑，而且写博客...
             </p>
         </div>
     </article>
@@ -169,7 +200,7 @@
                 </div>
             </div>
             <p class="brief">
-                ！！不要想着用git，项目直接错乱掉！！不要想着拷贝别人的项目，重定向问题！！不要想着从github上面clone下来，包括自己的博客，clone下来不能用的！！以上每一个问题，都足够折腾一天而没有结果，心中早已千万只草泥马奔腾。he...
+                ！！不要想着用git，项目直接错乱掉！！不要想着拷贝别人的项目，重定向问题！！不要想着从github上面clone下来，包括自己的博客，clone下来不能用的！！以上每一个问题，都足够折腾一天而没有结果，心中早已千万只草泥马奔腾。hexo的路上，最讨厌的就是有时同样的操作，现在能生效，等下又不能生效，非常反人类。遇到的bug1）hexo g时报错，因为md文章内出现不支持的字符，比如大小括号...
             </p>
         </div>
     </article>
@@ -200,7 +231,9 @@ Hexo官网中文站点
 序开始之前，先强调几点：
 
 hexo博客搭建到能用的程度，非常简单。但是主题等细节配置会有各种坑，如果纠结其中，可能三五天才能配置完。
-最好的...
+最好的方式，是拷贝别人博客，直接使用。
+
+一、Hexo 框架介绍二、框架的本地安装与运行1、安装命令12345npm install hexo-cli -g  //安...
             </p>
         </div>
     </article>
@@ -227,7 +260,13 @@ hexo博客搭建到能用的程度，非常简单。但是主题等细节配置�
             <p class="brief">
                 5000页约1.1G，不够放，重新下载
 二、99总结-建议自定义1、配置详解1）默认5个选项跟自定义5个选项，看起来像是一一对应的（实测结果也类似），除了第一项下载媒体文件没测试过。
-2）下载页数，测试过可以一次性写多点如20000页...
+2）下载页数，测试过可以一次性写多点如20000页。
+
+以前担心写多了会帮我们乱下载，实测不会。
+
+3）level只有website这个设置不限级，其他几个默认level1。
+
+测试学习中心（正常有一两千页），...
             </p>
         </div>
     </article>
@@ -256,7 +295,13 @@ hexo博客搭建到能用的程度，非常简单。但是主题等细节配置�
 2）苹果：Potatso Lite
 
 先登陆一个非大陆apple ID
-提供一个：m2c9642s@...
+提供一个：m2c9642s@icloud.com / Xiaoming88
+如果失效了，上淘宝搜索香港apple id 租用，大概 ￥2。
+
+
+搞定ID后，点击下载
+
+2、SS电脑端：1）...
             </p>
         </div>
     </article>
@@ -282,7 +327,10 @@ hexo博客搭建到能用的程度，非常简单。但是主题等细节配置�
             </div>
             <p class="brief">
                 购买vultr直接看“Vultr搭建vpn教程”部分配置科学上网直接看“方法三”配置加速及vultr备份看“进阶一/二/三”在linux里，移动光标可以边按住左或右键，边按ctrl或shift，实现光标快速移动。
-关键词：“ vps搭...
+关键词：“ vps搭建vpn被墙 ”
+pinginfoview for mac
+superping pro mac
+单位换算：1Gbps=1000Mbps，1000Mbps/8=宽...
             </p>
         </div>
     </article>
@@ -310,7 +358,9 @@ hexo博客搭建到能用的程度，非常简单。但是主题等细节配置�
                 ##1、通讯录、短信、通话记录
 备份在qq同步助手
 ##2、照片、视频（手机和微信）手机自带DCIM图片文件夹Tencent/MicroMsg/WeiXin是保存的微信图片和视频Tencent/MicroMsg/Download
-3、...
+3、微信聊天记录手机与mac连接同个wifi或热点，用mac端微信工具备份
+4、app备份在qq同步助手，就知道以前用过哪些app
+5、下载类UC浏览器、chrom...
             </p>
         </div>
     </article>
@@ -336,7 +386,7 @@ hexo博客搭建到能用的程度，非常简单。但是主题等细节配置�
             </div>
             <p class="brief">
                 atom在默认配置下， HTML, XML, HAML, CSS, SASS/SCSS, LESS, JavaScript, Python, Ruby 文件可以直接使用Tab键，而在其他类型文件中使用ctrl+e作为快捷键。
-新标签打...
+新标签打开未编辑的页面：双击一、atom的emmet输入怎么才能支持wxml文件？并设置快捷键。1、支持html以外的文件如wxml，设置如下：1）ctrl+,打开at...
             </p>
         </div>
     </article>
@@ -365,7 +415,9 @@ hexo博客搭建到能用的程度，非常简单。但是主题等细节配置�
 iPic + Typora，方便快捷地在 Markdown 中插图 | 一日一技
 Windows版本的Typora使用技巧
 使用 Typora 一次性搞定公众号写作与排版
-一、typora+ipic（9...
+一、typora+ipic（99方案）1）截图，或复制网站上的图片后，shift+command+u上传
+2）本地图片，点击后command+u上传
+3）typora设置粘贴图片自动上传（编...
             </p>
         </div>
     </article>
@@ -391,7 +443,8 @@ Windows版本的Typora使用技巧
             </div>
             <p class="brief">
                 mac剪贴板chrome夜景主题多桌面虚拟桌面，解放command+tab不同桌面的目的是为了形成「不同的氛围」：工作的时候不要想娱乐，娱乐的时候也不要想工作，一段时间做好一件事就可以了。
-一般正经事放第一屏，下一屏辅助，接着不大重要...
+一般正经事放第一屏，下一屏辅助，接着不大重要的往后扔，全部都是全屏最大化的，隐藏dock。没必要一个桌面堆好几个窗口，看得心烦，反正来回切换双指滑一下鼠标就行，还能安心做事。
+mac快捷键1、剪切首先选中...
             </p>
         </div>
     </article>
@@ -413,14 +466,14 @@ Windows版本的Typora使用技巧
     <aside class="col-md-3 sidebar">
         
         
-    <div class="widget">    
+    <div class="widget">
         <h3 class="title">Search</h3>
         <div id="search-form">
             <div id="result-mask" class="hide"></div>
             <div class="search-area">
                 
                     <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
-                    <button type="button" class="search-form-submit" id="search-local">localSearch</button>
+                    <button type="button" class="search-form-submit" id="search-local">搜索</button>
                 
                 
             </div>
@@ -440,13 +493,14 @@ Windows版本的Typora使用技巧
         </div>
     </div>
 
+
         
         
     <div class="widget notification">
         <h3 class="title">网站公告</h3>
         <div>
-            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
-主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+            <p>你好，我是99。<br/>欢迎来到我的博客。<br/>
+<br/>
 <hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
 </p>
         </div>
@@ -549,12 +603,12 @@ Windows版本的Typora使用技巧
     <div class="copyright">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12"> 
-                <span>Copyright &copy; 2017
-                </span> | 
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2018
+                </span> |
                 <span>
                     Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
-                </span> | 
+                </span> |
                 <span>
                     Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
                 </span>
