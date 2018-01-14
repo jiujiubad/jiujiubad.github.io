@@ -148,7 +148,12 @@
         </div>
         <div class="row">
             <main class="col-md-9 main-content ">
-                <div class="carousel">
+                <style>
+@media(min-width:200px) and (max-width:600px){
+
+}
+</style>
+<div class="carousel">
     <img src="/img/head-img.jpg">
 </div>
 
@@ -159,7 +164,7 @@
   <div class="row">
     <div class="col-md-4">
     
-        <div class="post-media" style="">
+        <div class="post-media">
             <a href="/posts/32fec826/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fnfwxbwogcj30dy0ccwer.jpg"   alt="wx-function-顶部标签栏/导航栏tab菜单切换">
             </a>
@@ -167,7 +172,7 @@
     
     </div>
     <div class="col-md-8">
-    <div class="post-content" style="">
+    <div class="post-content">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/32fec826/">wx-function-顶部标签栏/导航栏tab菜单切换</a>
@@ -228,18 +233,18 @@ wxml文件
   <div class="row">
     <div class="col-md-4">
     
-        <div class="post-media" style="">
-            <a href="/posts/69bbe6ac/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfdhnbgrrj308506bmx2.jpg"   alt="tool-vps-部署-heroku之figaro七牛云sendcloud">
+        <div class="post-media">
+            <a href="/posts/314d2142/">
+                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfdhnbgrrj308506bmx2.jpg"   alt="tool-vps-部署域名及解析、SSL证书、https配置、ICP备案">
             </a>
         </div>
     
     </div>
     <div class="col-md-8">
-    <div class="post-content" style="">
+    <div class="post-content">
         <div class="post-head home-post-head">
             <h1 class="post-title">
-                <a href="/posts/69bbe6ac/">tool-vps-部署-heroku之figaro七牛云sendcloud</a>
+                <a href="/posts/314d2142/">tool-vps-部署域名及解析、SSL证书、https配置、ICP备案</a>
             </h1>
             <div class="post-meta">  &bull;
                 <time class="post-date" datetime="" title="">
@@ -248,15 +253,11 @@ wxml文件
             </div>
         </div>
         <p class="brief">
-            部署@七牛云-Figaro-Sendcloud-heroku一、七牛云注意事项1、免费流量https://www.qiniu.com/
-后台-财务统计，可以看到每月10G，足够用了。
-
-2、存储区域1）七牛云存储区域
-2）准备工作
-12gem &apos;carrierwave-qiniu&apos;gem &apos;qiniu-rs&apos;
-bundle
-bundle update
-...
+            1）mac显示隐藏文件夹和文件
+1defaults write com.apple.finder AppleShowAllFiles -boolean true ; killall Finder
+2）再次隐藏输入
+1defaults write com.apple.finder AppleShowAllFiles -boolean false ; killall Finder
+一、域名解析1...
         </p>
     </div>
     </div>
@@ -292,7 +293,7 @@ bundle update
         </div>
 
         <div class="post-permalink">
-            <a href="/posts/69bbe6ac/" class="btn btn-default">阅读全文</a>
+            <a href="/posts/314d2142/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
   </div>
@@ -303,18 +304,18 @@ bundle update
   <div class="row">
     <div class="col-md-4">
     
-        <div class="post-media" style="">
-            <a href="/posts/36d18d51/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfdhnbgrrj308506bmx2.jpg"   alt="tool-vps-部署vps云服务器">
+        <div class="post-media">
+            <a href="/posts/57f3edf/">
+                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fnfwxbwogcj30dy0ccwer.jpg"   alt="wx-function-商城(实例)分类菜单动态绑定id、动态api">
             </a>
         </div>
     
     </div>
     <div class="col-md-8">
-    <div class="post-content" style="">
+    <div class="post-content">
         <div class="post-head home-post-head">
             <h1 class="post-title">
-                <a href="/posts/36d18d51/">tool-vps-部署vps云服务器</a>
+                <a href="/posts/57f3edf/">wx-function-商城(实例)分类菜单动态绑定id、动态api</a>
             </h1>
             <div class="post-meta">  &bull;
                 <time class="post-date" datetime="" title="">
@@ -323,9 +324,11 @@ bundle update
             </div>
         </div>
         <p class="brief">
-            【问题】云服务器项目备份？梯子项目备份？vultr镜像？linux也可以用git？一、常用命令1）ssh root@45.32.42.11，使用root权限登录
-2）部署更新：本地git commit 保存，重新上传到github，然后再执行cap production deploy
-3）heroku部署会用figaro提交配置：heroku config 、figaro heroku:se...
+            
+参考demo2，下载地址微信小程序商城项目之侧栏分类效果(1)
+api地址http://huanqiuxiaozhen.com/wemall/goodstype/typebrandList
+一、初稿wxml页面
+1234567891011&lt;!--index.wxml--&gt;&lt;view class=&quot;container&quot; wx:key=&quot;inde...
         </p>
     </div>
     </div>
@@ -338,7 +341,7 @@ bundle update
     
     <span class="categories-meta fa-wrap">
         <i class="fa fa-folder-open-o"></i>
-        <span>工具</span>
+        <span>微信小程序</span>
     </span>
     
     
@@ -346,7 +349,7 @@ bundle update
         <i class="fa fa-tags"></i>
         <span class="tags-meta">
             
-            工具
+            微信功能
             
         </span>
     </span>
@@ -361,7 +364,7 @@ bundle update
         </div>
 
         <div class="post-permalink">
-            <a href="/posts/36d18d51/" class="btn btn-default">阅读全文</a>
+            <a href="/posts/57f3edf/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
   </div>
@@ -372,7 +375,7 @@ bundle update
   <div class="row">
     <div class="col-md-4">
     
-        <div class="post-media" style="">
+        <div class="post-media">
             <a href="/posts/1ff9fef/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fng5pmwdonj30cd08u0sx.jpg"   alt="wx-system-商城兜兜汇（比较老仅供参考）">
             </a>
@@ -380,7 +383,7 @@ bundle update
     
     </div>
     <div class="col-md-8">
-    <div class="post-content" style="">
+    <div class="post-content">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/1ff9fef/">wx-system-商城兜兜汇（比较老仅供参考）</a>
@@ -441,7 +444,7 @@ bundle update
   <div class="row">
     <div class="col-md-4">
     
-        <div class="post-media" style="">
+        <div class="post-media">
             <a href="/posts/5756f3fc/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws2.sinaimg.cn/large/006tKfTcgy1fnfcwsitmgj30da08pjrg.jpg"   alt="tool-mac-mac搜索工具">
             </a>
@@ -449,7 +452,7 @@ bundle update
     
     </div>
     <div class="col-md-8">
-    <div class="post-content" style="">
+    <div class="post-content">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/5756f3fc/">tool-mac-mac搜索工具</a>
@@ -513,7 +516,7 @@ bundle update
   <div class="row">
     <div class="col-md-4">
     
-        <div class="post-media" style="">
+        <div class="post-media">
             <a href="/posts/24cbb5e/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/006tNc79gy1fnfwh0s580j305k050a9w.jpg"   alt="ror-tips-为什么文件gitignore后还会被上传到github？gitignore文件被上传到github怎么办？">
             </a>
@@ -521,7 +524,7 @@ bundle update
     
     </div>
     <div class="col-md-8">
-    <div class="post-content" style="">
+    <div class="post-content">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/24cbb5e/">ror-tips-为什么文件gitignore后还会被上传到github？gitignore文件被上传到github怎么办？</a>
@@ -584,7 +587,7 @@ bundle update
   <div class="row">
     <div class="col-md-4">
     
-        <div class="post-media" style="">
+        <div class="post-media">
             <a href="/posts/ef9bbe6f/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws2.sinaimg.cn/large/006tNc79gy1fnfvej9iydj30ci08z3yo.jpg"   alt="web-page-css/html语法笔记">
             </a>
@@ -592,7 +595,7 @@ bundle update
     
     </div>
     <div class="col-md-8">
-    <div class="post-content" style="">
+    <div class="post-content">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/ef9bbe6f/">web-page-css/html语法笔记</a>
@@ -653,18 +656,18 @@ bundle update
   <div class="row">
     <div class="col-md-4">
     
-        <div class="post-media" style="">
-            <a href="/posts/2682de6f/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"   alt="ror-system-模拟面试(视频)">
+        <div class="post-media">
+            <a href="/posts/30d3b38f/">
+                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"   alt="ror-system-rails guides 1-5">
             </a>
         </div>
     
     </div>
     <div class="col-md-8">
-    <div class="post-content" style="">
+    <div class="post-content">
         <div class="post-head home-post-head">
             <h1 class="post-title">
-                <a href="/posts/2682de6f/">ror-system-模拟面试(视频)</a>
+                <a href="/posts/30d3b38f/">ror-system-rails guides 1-5</a>
             </h1>
             <div class="post-meta">  &bull;
                 <time class="post-date" datetime="" title="">
@@ -673,12 +676,15 @@ bundle update
             </div>
         </div>
         <p class="brief">
-            一、人格挖掘的特质的题面试被屠杀挫败的原因：
-1、不知道如何勾起别人的兴趣
-2、在技术细节答不上来
+            一、Active Record 基础
+1 Active Record 是什么？
+Active Record 是 MVC 中的 M（模型），负责处理数据和业务逻辑，是一种对象关系映射系统。
 
-1、当初为什么想要接触rails的（公司关心的只是你是不是一个值得挖掘的人）？2、你之前是念土木工程的，现在想要转开发，为什么会有这么大的跨度？3、你是怎样学习ruby on rails 的？点评1：恭喜你今天3个问题，让你阵亡了。。
-你必须在前两个问题就让面试官知道，你是很有热情学技术的人...
+2 Active Record 中的“多约定少配置”原则2.1 命名约定
+数据库表名：复数，下划线分隔单词（例如 book_clubs）
+模型类名：单数，每个单词的首字母大写（例如 BookClub）
+
+...
         </p>
     </div>
     </div>
@@ -714,7 +720,7 @@ bundle update
         </div>
 
         <div class="post-permalink">
-            <a href="/posts/2682de6f/" class="btn btn-default">阅读全文</a>
+            <a href="/posts/30d3b38f/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
   </div>
@@ -725,7 +731,77 @@ bundle update
   <div class="row">
     <div class="col-md-4">
     
-        <div class="post-media" style="">
+        <div class="post-media">
+            <a href="/posts/7d273add/">
+                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"   alt="ror-system-MVC语法笔记">
+            </a>
+        </div>
+    
+    </div>
+    <div class="col-md-8">
+    <div class="post-content">
+        <div class="post-head home-post-head">
+            <h1 class="post-title">
+                <a href="/posts/7d273add/">ror-system-MVC语法笔记</a>
+            </h1>
+            <div class="post-meta">  &bull;
+                <time class="post-date" datetime="" title="">
+                    2017年12月14日
+                </time>
+            </div>
+        </div>
+        <p class="brief">
+            【小结】增加controller，就要想要加routes，然后在views里添加路径，然后在controller里把动作补全。
+【小结】增加栏位，修改views和controller，甚至model后，要记得加入params中。
+ruby Where is the method ‘self’ defined in my Rails app
+现在才懂的MVC：123456789def inde...
+        </p>
+    </div>
+    </div>
+  </div>
+  <div class="row" style="padding:0 12px;">
+    <footer class="post-footer clearfix">
+        <div class="pull-left tag-list">
+            <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span>ror系统</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            ror系统
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/12/14</span>
+    </span>
+</div>
+
+        </div>
+
+        <div class="post-permalink">
+            <a href="/posts/7d273add/" class="btn btn-default">阅读全文</a>
+        </div>
+    </footer>
+  </div>
+</article>
+
+
+<article class="post">
+  <div class="row">
+    <div class="col-md-4">
+    
+        <div class="post-media">
             <a href="/posts/867a72a6/">
                 <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"   alt="ror-system-api最小可行代码">
             </a>
@@ -733,7 +809,7 @@ bundle update
     
     </div>
     <div class="col-md-8">
-    <div class="post-content" style="">
+    <div class="post-content">
         <div class="post-head home-post-head">
             <h1 class="post-title">
                 <a href="/posts/867a72a6/">ror-system-api最小可行代码</a>
@@ -784,76 +860,6 @@ bundle update
 
         <div class="post-permalink">
             <a href="/posts/867a72a6/" class="btn btn-default">阅读全文</a>
-        </div>
-    </footer>
-  </div>
-</article>
-
-
-<article class="post">
-  <div class="row">
-    <div class="col-md-4">
-    
-        <div class="post-media" style="">
-            <a href="/posts/d646e837/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfdhnbgrrj308506bmx2.jpg"   alt="tool-vps-部署-linux云服务器部署运维">
-            </a>
-        </div>
-    
-    </div>
-    <div class="col-md-8">
-    <div class="post-content" style="">
-        <div class="post-head home-post-head">
-            <h1 class="post-title">
-                <a href="/posts/d646e837/">tool-vps-部署-linux云服务器部署运维</a>
-            </h1>
-            <div class="post-meta">  &bull;
-                <time class="post-date" datetime="" title="">
-                    2017年12月14日
-                </time>
-            </div>
-        </div>
-        <p class="brief">
-            
-一、前半部分介绍云服务器类型IaaS、PaaS、SaaS，和常用linux指令二、后半部分以IaaS的阿里云或linode为例，示范ruby on rails在vps上的安装、部署、运维、第三方服务、域名设定1、云服务类型和厂商
-IaaS：基础设施服务，Infrastructure-as-a-Service（相当于是买的房子，可以任意拆掉东西装修）
-vps虚拟机，如vultr、linode...
-        </p>
-    </div>
-    </div>
-  </div>
-  <div class="row" style="padding:0 12px;">
-    <footer class="post-footer clearfix">
-        <div class="pull-left tag-list">
-            <div class="post-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-        <i class="fa fa-folder-open-o"></i>
-        <span>工具</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            工具
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta">2017/12/14</span>
-    </span>
-</div>
-
-        </div>
-
-        <div class="post-permalink">
-            <a href="/posts/d646e837/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
   </div>
