@@ -24,7 +24,7 @@
     <!--Title-->
 
 
-<title>Archives | Hexo</title>
+<title>bug-购物网大类 No route matches {/action=&gt;&#34;index&#34;, /controller=&gt;&#34;admin/resumes&#34;} missing required keys/ [/job_id] | Hexo</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -116,42 +116,94 @@
 </nav>
       <section class="content-wra aa99">
         <div class="row">
-            <main class="col-md-9 main-content ">
-                <div id="main">
-  <div id="post-list">
-    <ul class="archives-post-list">
-    	<h1 class="info">年 月</h1>
-        
-          <li class="post-items" _href="/posts/723a2ffb/">
-            <h3 class="post-item-title">
-            	<a href="/posts/723a2ffb/"> bug-亚马逊awe_ec2 Swap file &#34;/etc/shadowsocks/.config.json.swp&#34; already exists! [O]pen Read-Only, (E)dit anyway, (R)ecover, (D)elete it, (Q </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/posts/9178391d/">
-            <h3 class="post-item-title">
-            	<a href="/posts/9178391d/"> bug-自动化测试1-3  gem_rspec-rails报错nomethoderror/ undefined method &#39;this&#39; for </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/posts/852d9f92/">
-            <h3 class="post-item-title">
-            	<a href="/posts/852d9f92/"> bug-seed档测试 ActiveRecord--StatementInvalid in Devise--SessionsController#create </a>
-            </h3>  
-          </li>
-        
-    </ul>
-  </div>
+            <main class="col-md-9 main-content m-post">
+                <p id="process"></p>
+<article class="post pp99">
+    <div class="post-head">
+        <h1 id="bug-购物网大类 No route matches {/action=&gt;&#34;index&#34;, /controller=&gt;&#34;admin/resumes&#34;} missing required keys/ [/job_id]">
+            
+	            bug-购物网大类 No route matches {/action=&gt;&#34;index&#34;, /controller=&gt;&#34;admin/resumes&#34;} missing required keys/ [/job_id]
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span>bug</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            bug
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/11/29</span>
+    </span>
 </div>
 
-    <nav class="pagination" role="navigation">
-        <div id="page-nav">
-            <a class="extend prev" rel="prev" href="/archives/"><i class='fa fa-angle-left'></i></a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h1 id="ActionController-UrlGenerationError-in-Admin-Jobs-index"><a href="#ActionController-UrlGenerationError-in-Admin-Jobs-index" class="headerlink" title="ActionController::UrlGenerationError in Admin::Jobs#index"></a>ActionController::UrlGenerationError in Admin::Jobs#index</h1><p>Showing <em>/Users/apple/rails/job-listing1129/app/views/admin/jobs/index.html.erb</em> where line <strong>#22</strong> raised:</p>
+<p>No route matches {:action=&gt;”index”, :controller=&gt;”admin/resumes”} missing required keys: [:job_id]</p>
+<p>Extracted source (around line <strong>#22</strong>):</p>
+<table>
+<thead>
+<tr>
+<th><code>202122232425</code></th>
+<th><code>&lt;%= link_to(job.title, admin_job_path(job)) %&gt;        &lt;/td&gt;        &lt;td&gt;&lt;%= link_to(job.resumes.count, admin_job_resumes_path) %&gt;&lt;/td&gt;        &lt;td&gt;&lt;%= job.wage_lower %&gt;&lt;/td&gt;        &lt;td&gt;&lt;%= job.wage_upper %&gt;&lt;/td&gt;        &lt;td&gt;&lt;%= job.contact %&gt;&lt;/td&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Rails.root: /Users/apple/rails/job-listing1129</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1flz0yphnt7j31fo0msn3t.jpg" alt=""></p>
+<h2 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h2><h3 id="1、model里没有做关联"><a href="#1、model里没有做关联" class="headerlink" title="1、model里没有做关联"></a>1、model里没有做关联</h3><h3 id="2、model关联后，所有外键（比如简历resume里有user-id、job-id）要在controlller的create的action里给一个表达式，指明这份简历具体属于哪一个用户、具体属于哪一个职位的。比如"><a href="#2、model关联后，所有外键（比如简历resume里有user-id、job-id）要在controlller的create的action里给一个表达式，指明这份简历具体属于哪一个用户、具体属于哪一个职位的。比如" class="headerlink" title="2、model关联后，所有外键（比如简历resume里有user_id、job_id）要在controlller的create的action里给一个表达式，指明这份简历具体属于哪一个用户、具体属于哪一个职位的。比如"></a>2、model关联后，所有外键（比如简历resume里有user_id、job_id）要在controlller的create的action里给一个表达式，指明这份简历具体属于哪一个用户、具体属于哪一个职位的。比如</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">def create</span><br><span class="line">  @job = Job.find(params[:job_id])</span><br><span class="line">  @resume.job = @job</span><br><span class="line">  @resume.user = current_user</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<h3 id="3、views的路径没有给参数，比如admin-job-resumes-path-job-里的-job"><a href="#3、views的路径没有给参数，比如admin-job-resumes-path-job-里的-job" class="headerlink" title="3、views的路径没有给参数，比如admin_job_resumes_path(@job)里的@job"></a>3、views的路径没有给参数，比如admin_job_resumes_path(@job)里的@job</h3>
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
         </div>
-    </nav>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/posts/de723084/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/posts/d7488f13/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
 
 
+    <div id="comments">
+        
+   <p>评论系统未开启，无法评论！</p>
 
+    </div>
 
 
             </main>

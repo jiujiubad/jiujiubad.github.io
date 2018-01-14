@@ -24,7 +24,7 @@
     <!--Title-->
 
 
-<title>Archives | Hexo</title>
+<title>bug-购物网5-3 NameError/ uninitialized constant Product//ImageUploader | Hexo</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -116,42 +116,77 @@
 </nav>
       <section class="content-wra aa99">
         <div class="row">
-            <main class="col-md-9 main-content ">
-                <div id="main">
-  <div id="post-list">
-    <ul class="archives-post-list">
-    	<h1 class="info">年 月</h1>
-        
-          <li class="post-items" _href="/posts/723a2ffb/">
-            <h3 class="post-item-title">
-            	<a href="/posts/723a2ffb/"> bug-亚马逊awe_ec2 Swap file &#34;/etc/shadowsocks/.config.json.swp&#34; already exists! [O]pen Read-Only, (E)dit anyway, (R)ecover, (D)elete it, (Q </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/posts/9178391d/">
-            <h3 class="post-item-title">
-            	<a href="/posts/9178391d/"> bug-自动化测试1-3  gem_rspec-rails报错nomethoderror/ undefined method &#39;this&#39; for </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/posts/852d9f92/">
-            <h3 class="post-item-title">
-            	<a href="/posts/852d9f92/"> bug-seed档测试 ActiveRecord--StatementInvalid in Devise--SessionsController#create </a>
-            </h3>  
-          </li>
-        
-    </ul>
-  </div>
+            <main class="col-md-9 main-content m-post">
+                <p id="process"></p>
+<article class="post pp99">
+    <div class="post-head">
+        <h1 id="bug-购物网5-3 NameError/ uninitialized constant Product//ImageUploader">
+            
+	            bug-购物网5-3 NameError/ uninitialized constant Product//ImageUploader
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span>bug</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            bug
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/11/30</span>
+    </span>
 </div>
 
-    <nav class="pagination" role="navigation">
-        <div id="page-nav">
-            <a class="extend prev" rel="prev" href="/archives/"><i class='fa fa-angle-left'></i></a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="NameError-uninitialized-constant-Product-ImageUploader"><a href="#NameError-uninitialized-constant-Product-ImageUploader" class="headerlink" title="NameError: uninitialized constant Product::ImageUploader"></a>NameError: uninitialized constant Product::ImageUploader</h2><h3 id="错误：执行rails-c，输入Product-last报错"><a href="#错误：执行rails-c，输入Product-last报错" class="headerlink" title="错误：执行rails c，输入Product.last报错"></a>错误：执行rails c，输入Product.last报错</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"> apple@apple ⮀ ~/rails/jdstore1130 ⮀ ⭠ test± ⮀ rails c</span><br><span class="line">Running via Spring preloader in process 6299</span><br><span class="line">Loading development environment (Rails 5.0.6)</span><br><span class="line">2.3.1 :001 &gt; Product.last</span><br><span class="line">NameError: uninitialized constant Product::ImageUploader</span><br><span class="line">	from /Users/apple/rails/jdstore1130/app/models/product.rb:4:in `&lt;class:Product&gt;&apos;</span><br><span class="line">	from /Users/apple/rails/jdstore1130/app/models/product.rb:1:in `&lt;top (required)&gt;&apos;</span><br><span class="line">	from /Users/apple/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.6/lib/active_support/dependencies/interlock.rb:12:in `block in loading&apos;</span><br><span class="line">	from /Users/apple/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.6/lib/active_support/concurrency/share_lock.rb:150:in `exclusive&apos;</span><br><span class="line">	from /Users/apple/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.6/lib/active_support/dependencies/interlock.rb:11:in `loading&apos;</span><br><span class="line">	from (irb):1</span><br><span class="line">	from /Users/apple/.rvm/gems/ruby-2.3.1/gems/railties-5.0.6/lib/rails/commands/console.rb:65:in `start&apos;</span><br><span class="line">	from /Users/apple/.rvm/gems/ruby-2.3.1/gems/railties-5.0.6/lib/rails/commands/console_helper.rb:9:in `start&apos;</span><br><span class="line">	from /Users/apple/.rvm/gems/ruby-2.3.1/gems/railties-5.0.6/lib/rails/commands/commands_tasks.rb:78:in `console&apos;</span><br><span class="line">	from /Users/apple/.rvm/gems/ruby-2.3.1/gems/railties-5.0.6/lib/rails/commands/commands_tasks.rb:49:in `run_command!&apos;</span><br><span class="line">	from /Users/apple/.rvm/gems/ruby-2.3.1/gems/railties-5.0.6/lib/rails/commands.rb:18:in `&lt;top (required)&gt;&apos;</span><br><span class="line">	from /Users/apple/rails/jdstore1130/bin/rails:9:in `&lt;top (required)&gt;&apos;</span><br><span class="line">	from /Users/apple/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require&apos;</span><br><span class="line">	from /Users/apple/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require&apos;</span><br><span class="line">	from -e:1:in `&lt;main&gt;&apos;</span><br></pre></td></tr></table></figure>
+<h3 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h3><p>因为CarrierWave在ORM (ActiveRecord)之前加载了，解决的方案是在environment.rb中加入<br><code>require &#39;carrierwave/orm/activerecord&#39;</code><br>重启下server后错误消失。</p>
+
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
         </div>
-    </nav>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/posts/b36ae94d/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/posts/de723084/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
 
 
+    <div id="comments">
+        
+   <p>评论系统未开启，无法评论！</p>
 
+    </div>
 
 
             </main>

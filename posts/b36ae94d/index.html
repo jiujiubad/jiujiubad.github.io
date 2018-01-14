@@ -24,7 +24,7 @@
     <!--Title-->
 
 
-<title>Archives | Hexo</title>
+<title>bug-购物网6-1第四题 undefined method `update&#39; for nil/NilClass | Hexo</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -116,42 +116,78 @@
 </nav>
       <section class="content-wra aa99">
         <div class="row">
-            <main class="col-md-9 main-content ">
-                <div id="main">
-  <div id="post-list">
-    <ul class="archives-post-list">
-    	<h1 class="info">年 月</h1>
-        
-          <li class="post-items" _href="/posts/723a2ffb/">
-            <h3 class="post-item-title">
-            	<a href="/posts/723a2ffb/"> bug-亚马逊awe_ec2 Swap file &#34;/etc/shadowsocks/.config.json.swp&#34; already exists! [O]pen Read-Only, (E)dit anyway, (R)ecover, (D)elete it, (Q </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/posts/9178391d/">
-            <h3 class="post-item-title">
-            	<a href="/posts/9178391d/"> bug-自动化测试1-3  gem_rspec-rails报错nomethoderror/ undefined method &#39;this&#39; for </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/posts/852d9f92/">
-            <h3 class="post-item-title">
-            	<a href="/posts/852d9f92/"> bug-seed档测试 ActiveRecord--StatementInvalid in Devise--SessionsController#create </a>
-            </h3>  
-          </li>
-        
-    </ul>
-  </div>
+            <main class="col-md-9 main-content m-post">
+                <p id="process"></p>
+<article class="post pp99">
+    <div class="post-head">
+        <h1 id="bug-购物网6-1第四题 undefined method `update&#39; for nil/NilClass">
+            
+	            bug-购物网6-1第四题 undefined method `update&#39; for nil/NilClass
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span>bug</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            bug
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/11/30</span>
+    </span>
 </div>
 
-    <nav class="pagination" role="navigation">
-        <div id="page-nav">
-            <a class="extend prev" rel="prev" href="/archives/"><i class='fa fa-angle-left'></i></a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1flr4mlny8nj30gi08tab4.jpg" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">NoMethodError in CartItemsController#update</span><br><span class="line">undefined method `update&apos; for nil:NilClass</span><br><span class="line"></span><br><span class="line">Extracted source (around line #6):</span><br><span class="line">        </span><br><span class="line">    @cart = current_cart</span><br><span class="line">    @cart_item = @cart.cart_items.find_by(product_id: params[:id])</span><br><span class="line">    @cart_item.update(cart_item_params)</span><br><span class="line">    redirect_to :back</span><br><span class="line">  end</span><br></pre></td></tr></table></figure>
+<h3 id="分析：因为这里不是show-new-edit页面，而是-carts页面，购物车里有很多个cart-item，所以系统不知道我们要删除哪一个。看变量名都知道，这里是cart-items而不是类变量单数-cart-item——因此，在simple-form-for里要加入url，指明要删除的cart-item，这个url是表单要提交到的url地址，可以用show的url。"><a href="#分析：因为这里不是show-new-edit页面，而是-carts页面，购物车里有很多个cart-item，所以系统不知道我们要删除哪一个。看变量名都知道，这里是cart-items而不是类变量单数-cart-item——因此，在simple-form-for里要加入url，指明要删除的cart-item，这个url是表单要提交到的url地址，可以用show的url。" class="headerlink" title="分析：因为这里不是show/new/edit页面，而是/carts页面，购物车里有很多个cart_item，所以系统不知道我们要删除哪一个。看变量名都知道，这里是cart_items而不是类变量单数@cart_item——因此，在simple_form_for里要加入url，指明要删除的cart_item，这个url是表单要提交到的url地址，可以用show的url。"></a>分析：因为这里不是show/new/edit页面，而是/carts页面，购物车里有很多个cart_item，所以系统不知道我们要删除哪一个。看变量名都知道，这里是cart_items而不是类变量单数@cart_item——因此，在simple_form_for里要加入url，指明要删除的cart_item，这个url是表单要提交到的url地址，可以用show的url。</h3><h3 id="解答：加入url-cart-item-path-cart-item-product-id"><a href="#解答：加入url-cart-item-path-cart-item-product-id" class="headerlink" title="解答：加入url: cart_item_path(cart_item.product_id)"></a>解答：加入<code>url: cart_item_path(cart_item.product_id)</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;%= simple_form_for cart_item, url: cart_item_path(cart_item.product_id) do |f| %&gt;</span><br><span class="line">            &lt;%= f.select :quantity, 1..cart_item.product.quantity %&gt;</span><br><span class="line">            &lt;%= f.submit &quot;更新&quot;, data:&#123;disable_with:&quot;正在更新..&quot;&#125; %&gt;</span><br><span class="line">          &lt;% end %&gt;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
         </div>
-    </nav>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/posts/523a3588/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/posts/3abd616e/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
 
 
+    <div id="comments">
+        
+   <p>评论系统未开启，无法评论！</p>
 
+    </div>
 
 
             </main>

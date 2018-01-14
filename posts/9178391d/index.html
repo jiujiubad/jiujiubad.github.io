@@ -24,7 +24,7 @@
     <!--Title-->
 
 
-<title>Archives | Hexo</title>
+<title>bug-自动化测试1-3  gem_rspec-rails报错nomethoderror/ undefined method &#39;this&#39; for | Hexo</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -116,42 +116,80 @@
 </nav>
       <section class="content-wra aa99">
         <div class="row">
-            <main class="col-md-9 main-content ">
-                <div id="main">
-  <div id="post-list">
-    <ul class="archives-post-list">
-    	<h1 class="info">年 月</h1>
-        
-          <li class="post-items" _href="/posts/723a2ffb/">
-            <h3 class="post-item-title">
-            	<a href="/posts/723a2ffb/"> bug-亚马逊awe_ec2 Swap file &#34;/etc/shadowsocks/.config.json.swp&#34; already exists! [O]pen Read-Only, (E)dit anyway, (R)ecover, (D)elete it, (Q </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/posts/9178391d/">
-            <h3 class="post-item-title">
-            	<a href="/posts/9178391d/"> bug-自动化测试1-3  gem_rspec-rails报错nomethoderror/ undefined method &#39;this&#39; for </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/posts/852d9f92/">
-            <h3 class="post-item-title">
-            	<a href="/posts/852d9f92/"> bug-seed档测试 ActiveRecord--StatementInvalid in Devise--SessionsController#create </a>
-            </h3>  
-          </li>
-        
-    </ul>
-  </div>
+            <main class="col-md-9 main-content m-post">
+                <p id="process"></p>
+<article class="post pp99">
+    <div class="post-head">
+        <h1 id="bug-自动化测试1-3  gem_rspec-rails报错nomethoderror/ undefined method &#39;this&#39; for">
+            
+	            bug-自动化测试1-3  gem_rspec-rails报错nomethoderror/ undefined method &#39;this&#39; for
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span>bug</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            bug
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/11/05</span>
+    </span>
 </div>
 
-    <nav class="pagination" role="navigation">
-        <div id="page-nav">
-            <a class="extend prev" rel="prev" href="/archives/"><i class='fa fa-angle-left'></i></a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <p>1、执行<code>rspec leap_year_spec.rb</code>报错如下：</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fl4zs344p3j30zy0hen0c.jpg" alt=""></p>
+<p>2、google搜索<code>gem rspec</code>找到两个github，一个是<a href="https://github.com/rspec" target="_blank" rel="noopener">rspec</a>/<strong>rspec</strong>（这个跟教材一样），一个是<a href="https://github.com/rspec" target="_blank" rel="noopener">rspec</a>/<strong>rspec-rails</strong>。用第二个，找到<code>gem &#39;rspec-rails&#39;</code>，在gemfile文件中安装，然后<code>bundle</code>。</p>
+<p>3、再测试<code>rspec leap_year_spec.rb</code>，搞定如下：</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fl4zvzvzirj30ym0pqadr.jpg" alt=""></p>
+
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
         </div>
-    </nav>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/posts/723a2ffb/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/posts/852d9f92/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
 
 
+    <div id="comments">
+        
+   <p>评论系统未开启，无法评论！</p>
 
+    </div>
 
 
             </main>

@@ -24,7 +24,7 @@
     <!--Title-->
 
 
-<title>Archives | Hexo</title>
+<title>bug-购物网4-4 carrierwave上传图片translation missing- en.errors.messages.mini_magick_processing_error | Hexo</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -116,42 +116,80 @@
 </nav>
       <section class="content-wra aa99">
         <div class="row">
-            <main class="col-md-9 main-content ">
-                <div id="main">
-  <div id="post-list">
-    <ul class="archives-post-list">
-    	<h1 class="info">年 月</h1>
-        
-          <li class="post-items" _href="/posts/723a2ffb/">
-            <h3 class="post-item-title">
-            	<a href="/posts/723a2ffb/"> bug-亚马逊awe_ec2 Swap file &#34;/etc/shadowsocks/.config.json.swp&#34; already exists! [O]pen Read-Only, (E)dit anyway, (R)ecover, (D)elete it, (Q </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/posts/9178391d/">
-            <h3 class="post-item-title">
-            	<a href="/posts/9178391d/"> bug-自动化测试1-3  gem_rspec-rails报错nomethoderror/ undefined method &#39;this&#39; for </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/posts/852d9f92/">
-            <h3 class="post-item-title">
-            	<a href="/posts/852d9f92/"> bug-seed档测试 ActiveRecord--StatementInvalid in Devise--SessionsController#create </a>
-            </h3>  
-          </li>
-        
-    </ul>
-  </div>
+            <main class="col-md-9 main-content m-post">
+                <p id="process"></p>
+<article class="post pp99">
+    <div class="post-head">
+        <h1 id="bug-购物网4-4 carrierwave上传图片translation missing- en.errors.messages.mini_magick_processing_error">
+            
+	            bug-购物网4-4 carrierwave上传图片translation missing- en.errors.messages.mini_magick_processing_error
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span>bug</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            bug
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/11/22</span>
+    </span>
 </div>
 
-    <nav class="pagination" role="navigation">
-        <div id="page-nav">
-            <a class="extend prev" rel="prev" href="/archives/"><i class='fa fa-angle-left'></i></a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h1 id="JDSTORE4-3，carrierwave和minimagic设置后，上传图片报错"><a href="#JDSTORE4-3，carrierwave和minimagic设置后，上传图片报错" class="headerlink" title="JDSTORE4-3，carrierwave和minimagic设置后，上传图片报错"></a>JDSTORE4-3，carrierwave和minimagic设置后，上传图片报错</h1><p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fl7d1jr5awj30q20as3zd.jpg" alt=""></p>
+<p>translation missing: en.errors.messages.mini_magick_processing_error</p>
+<h2 id="一、新的解法"><a href="#一、新的解法" class="headerlink" title="一、新的解法"></a>一、新的解法</h2><p>输入<code>brew install imagemagick</code>，会提示gem已安装是否要更新。</p>
+<p>输入<code>brew upgrade imagemagick</code>，更新完成，然后<code>bundle</code>搞定。</p>
+<h2 id="二、旧的解法（仍有bug）"><a href="#二、旧的解法（仍有bug）" class="headerlink" title="二、旧的解法（仍有bug）"></a>二、旧的解法（仍有bug）</h2><h4 id="原因：网上goolge，有的是说初始化问题，可以尝试重装。但是自己重新无效"><a href="#原因：网上goolge，有的是说初始化问题，可以尝试重装。但是自己重新无效" class="headerlink" title="原因：网上goolge，有的是说初始化问题，可以尝试重装。但是自己重新无效"></a>原因：网上goolge，有的是说初始化问题，可以尝试重装。但是自己重新无效</h4><h4 id="临时解决办法：在config-initializers下新建一个文件carrierwave-rb，然后写入代码，最后重开rails-s"><a href="#临时解决办法：在config-initializers下新建一个文件carrierwave-rb，然后写入代码，最后重开rails-s" class="headerlink" title="临时解决办法：在config/initializers下新建一个文件carrierwave.rb，然后写入代码，最后重开rails s"></a>临时解决办法：在<code>config/initializers</code>下新建一个文件<code>carrierwave.rb</code>，然后写入代码，最后重开<code>rails s</code></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CarrierWave.configure do |config|</span><br><span class="line">  config.storage = :file </span><br><span class="line">  config.enable_processing = false </span><br><span class="line">  config.fog_attributes = &#123;&apos;Cache-Control&apos;=&gt;&apos;max-age=315576000&apos;&#125; </span><br><span class="line">  config.cache_dir = Rails.root.join(&apos;tmp&apos;, &apos;uploads&apos;) </span><br><span class="line">  end</span><br></pre></td></tr></table></figure>
+<h4 id="新问题：上传的图片是原始大小"><a href="#新问题：上传的图片是原始大小" class="headerlink" title="新问题：上传的图片是原始大小"></a>新问题：上传的图片是原始大小</h4>
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
         </div>
-    </nav>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/posts/936990c3/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/posts/723a2ffb/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
 
 
+    <div id="comments">
+        
+   <p>评论系统未开启，无法评论！</p>
 
+    </div>
 
 
             </main>

@@ -24,7 +24,7 @@
     <!--Title-->
 
 
-<title>Archives | Hexo</title>
+<title>bug-亚马逊awe_ec2 Swap file &#34;/etc/shadowsocks/.config.json.swp&#34; already exists! [O]pen Read-Only, (E)dit anyway, (R)ecover, (D)elete it, (Q | Hexo</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -116,42 +116,85 @@
 </nav>
       <section class="content-wra aa99">
         <div class="row">
-            <main class="col-md-9 main-content ">
-                <div id="main">
-  <div id="post-list">
-    <ul class="archives-post-list">
-    	<h1 class="info">年 月</h1>
-        
-          <li class="post-items" _href="/posts/723a2ffb/">
-            <h3 class="post-item-title">
-            	<a href="/posts/723a2ffb/"> bug-亚马逊awe_ec2 Swap file &#34;/etc/shadowsocks/.config.json.swp&#34; already exists! [O]pen Read-Only, (E)dit anyway, (R)ecover, (D)elete it, (Q </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/posts/9178391d/">
-            <h3 class="post-item-title">
-            	<a href="/posts/9178391d/"> bug-自动化测试1-3  gem_rspec-rails报错nomethoderror/ undefined method &#39;this&#39; for </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/posts/852d9f92/">
-            <h3 class="post-item-title">
-            	<a href="/posts/852d9f92/"> bug-seed档测试 ActiveRecord--StatementInvalid in Devise--SessionsController#create </a>
-            </h3>  
-          </li>
-        
-    </ul>
-  </div>
+            <main class="col-md-9 main-content m-post">
+                <p id="process"></p>
+<article class="post pp99">
+    <div class="post-head">
+        <h1 id="bug-亚马逊awe_ec2 Swap file &#34;/etc/shadowsocks/.config.json.swp&#34; already exists! [O]pen Read-Only, (E)dit anyway, (R)ecover, (D)elete it, (Q">
+            
+	            bug-亚马逊awe_ec2 Swap file &#34;/etc/shadowsocks/.config.json.swp&#34; already exists! [O]pen Read-Only, (E)dit anyway, (R)ecover, (D)elete it, (Q
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span>bug</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            bug
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/11/14</span>
+    </span>
 </div>
 
-    <nav class="pagination" role="navigation">
-        <div id="page-nav">
-            <a class="extend prev" rel="prev" href="/archives/"><i class='fa fa-angle-left'></i></a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h1 id="亚马逊的AWS不能SSH登录了怎么办？"><a href="#亚马逊的AWS不能SSH登录了怎么办？" class="headerlink" title="亚马逊的AWS不能SSH登录了怎么办？"></a>亚马逊的AWS不能SSH登录了怎么办？</h1><p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1flhedxi3rpj30k004h3yq.jpg" alt=""></p>
+<h2 id="【bug】Swap-file-“-etc-shadowsocks-config-json-swp”-already-exists-O-pen-Read-Only-E-dit-anyway-R-ecover-D-elete-it-Q"><a href="#【bug】Swap-file-“-etc-shadowsocks-config-json-swp”-already-exists-O-pen-Read-Only-E-dit-anyway-R-ecover-D-elete-it-Q" class="headerlink" title="【bug】Swap file “/etc/shadowsocks/.config.json.swp” already exists! [O]pen Read-Only, (E)dit anyway, (R)ecover, (D)elete it, (Q"></a>【bug】Swap file “/etc/shadowsocks/.config.json.swp” already exists! [O]pen Read-Only, (E)dit anyway, (R)ecover, (D)elete it, (Q</h2><p>Linux下编程难免会开启多次vim编辑， 同一个文件如果在上一次编辑时未进行保存，则在下一次想要进行编辑时就会出现：</p>
+<p>swap file “*.swp” already exists!</p>
+<p>[O]pen Read-Only, (E)dit anyway, (R)ecover, (D)elete it, (Q)uit, (A)bort:</p>
+<p>原因：</p>
+<p>使用vim编辑文件实际是先copy一份临时文件并映射到内存给你编辑， 编辑的是临时文件， 当执行：w后才保存临时文件到原文件，执行：q后才删除临时文件。</p>
+<p>每次启动编辑时都会检索这个文件是否已经存在临时文件， 有则询问如何处理，就会出现如上情景。</p>
+<p> 解决方法（删除这个临时文件即可）：</p>
+<p>rm *.swp</p>
+<h1 id="linux用VI编辑后保存退出命令是什么啊？"><a href="#linux用VI编辑后保存退出命令是什么啊？" class="headerlink" title="linux用VI编辑后保存退出命令是什么啊？"></a>linux用VI编辑后保存退出命令是什么啊？</h1><p>按esc，再按住shift再按两下’z‘键。</p>
+
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
         </div>
-    </nav>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/posts/5082df0b/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/posts/9178391d/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
 
 
+    <div id="comments">
+        
+   <p>评论系统未开启，无法评论！</p>
 
+    </div>
 
 
             </main>
