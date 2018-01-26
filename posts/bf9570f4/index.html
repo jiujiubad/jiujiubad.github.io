@@ -94,7 +94,7 @@
                 <div class="collapse navbar-collapse" id="main-menu">
                     <ul class="menu">
                         
-                            <li role="presentation itit"><a href="/"><i class="fa fa-fw "></i>Home</a>
+                            <li role="presentation itit"><a href="/"><i class="fa fa-fw "></i>首页</a>
                             </li>
                         
                             <li role="presentation itit"><a href="/posts/d16694c4/"><i class="fa fa-fw "></i>页头</a>
@@ -189,13 +189,23 @@
     <div class="post-body post-content">
         <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem &apos;rspec-rails&apos;</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem &apos;capybara&apos;</span><br></pre></td></tr></table></figure>
-<p>自动化测试分成几种不同类型，目前学的这种是针对单一类别的方法进行测试，叫做单元测试(Unit Testing)。</p>
-<p>你会发现我们不需要一开始就把全部测试案例都先写上去(这样要一次通过所有测试会很辛苦)，而是新写一段测试码让测试失败，改一下实作让测试通过，然后再新写下一个测试码让测试失败，然后再改实作，如此迭代交替。</p>
+<h2 id="1-3-bug-执行rspec-leap-year-spec-rb报错"><a href="#1-3-bug-执行rspec-leap-year-spec-rb报错" class="headerlink" title="1.3 [bug] 执行rspec leap_year_spec.rb报错"></a>1.3 [bug] 执行rspec leap_year_spec.rb报错</h2><h3 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h3><p>用<code>gem install rspec</code>安装rspec，执行<code>rspec leap_year_spec.rb</code>时报错：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"> apple@bogon ⮀ ~/rails/rspect_app ⮀ ⭠ master± ⮀ rspec leap_year_spec.rb</span><br><span class="line"></span><br><span class="line">An error occurred while loading ./leap_year_spec.rb.</span><br><span class="line">Failure/Error: super</span><br><span class="line"></span><br><span class="line">NoMethodError:</span><br><span class="line">  undefined method `this&apos; for #&lt;Gem::Specification:0x3fc1e0143fac rspec-support-3.7.0&gt;</span><br><span class="line"># ./leap_year_spec.rb:3:in `&lt;top (required)&gt;&apos;</span><br><span class="line"># ------------------</span><br><span class="line"># --- Caused by: ---</span><br><span class="line"># LoadError:</span><br><span class="line">#   cannot load such file -- rspec/mocks</span><br><span class="line">#   ./leap_year_spec.rb:3:in `&lt;top (required)&gt;&apos;</span><br><span class="line">No examples found.</span><br><span class="line"></span><br><span class="line">Finished in 0.00026 seconds (files took 0.16653 seconds to load)</span><br><span class="line">0 examples, 0 failures, 1 error occurred outside of examples</span><br></pre></td></tr></table></figure>
+<h3 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h3><p>改用官网gemfile的安装方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">group :development, :test do</span><br><span class="line">  gem &apos;rspec-rails&apos;</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<h2 id="2-8-TDD"><a href="#2-8-TDD" class="headerlink" title="2-8 TDD"></a>2-8 TDD</h2><p>你会发现我们不需要一开始就把全部测试案例都先写上去(这样要一次通过所有测试会很辛苦)，而是新写一段测试码让测试失败，改一下实作让测试通过，然后再新写下一个测试码让测试失败，然后再改实作，如此迭代交替。</p>
 <p>这种技巧，在软件开发领域有一个很响亮的名称，叫做 TDD(Test-Driven Development)，流程是这样的（流程的最后一步是重构）：</p>
 <p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fm3scyrdfbj30s60djwf7.jpg" alt=""></p>
-<p>rspec测试文档vs，context 和 describe 作用一模一样，单纯只是分类组织而已，没有实际作用。</p>
-<p>在测试代码中，你可以直接 <code>puts</code> 变量，跑测试的时候就会印出来了。这是最简单的除错方式。或是你可以在任意地方放 <code>byebug</code> 下中断点，就会在执行到那一行时停下来，可以检查变量，输入 <code>continue</code> 就会继续执行下去。</p>
+<h2 id="3-8-debug除错方法"><a href="#3-8-debug除错方法" class="headerlink" title="3-8 debug除错方法"></a>3-8 debug除错方法</h2><p>在测试代码中，你可以直接 <code>puts</code> 变量，跑测试的时候就会印出来了。这是最简单的除错方式。或是你可以在任意地方放 <code>byebug</code> 下中断点，就会在执行到那一行时停下来，可以检查变量，输入 <code>continue</code> 就会继续执行下去。</p>
+<h3 id=""><a href="#" class="headerlink" title="==================================================="></a>===================================================</h3><p>rspec测试文档vs，context 和 describe 作用一模一样，单纯只是分类组织而已，没有实际作用。</p>
+<p>自动化测试分成几种不同类型，目前学的这种是针对单一类别的方法进行测试，叫做单元测试(Unit Testing)。</p>
 <p>刚刚都是跑单个测试档案，如果要跑全部测试，可以执行 <code>rake spec</code>。通常我们会在 git push 前，尽量跑过一次全部的测试。</p>
+<h2 id="5-1-5-9-三步写api测试"><a href="#5-1-5-9-三步写api测试" class="headerlink" title="5-1-5-9 三步写api测试"></a>5-1-5-9 三步写api测试</h2><p>1、测试http</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">expect(response).to have_http_status(200)</span><br></pre></td></tr></table></figure>
+<p>2、测试json。其中expect_result是一个hash。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">expect(response.body).to eq( &#123;:x=&gt;xxx, :y=&gt;xxx&#125;.to_json )</span><br></pre></td></tr></table></figure>
+<p>3、测试database有无数据。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">expect(new_user.email).to eq(&quot;admin@example.com&quot;)</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -213,10 +223,10 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/posts/7286171a/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+        <a href="/posts/e7d42cb4/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
     
     
-        <a href="/posts/d7c2c06c/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+        <a href="/posts/d646e837/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
     
 </div>
 
@@ -247,7 +257,7 @@
         
         <!-- 
     <div class="widget">
-        <h3 class="title">Search</h3>
+        <h3 class="title">搜索</h3>
         <div id="search-form">
             <div id="result-mask" class="hide"></div>
             <div class="search-area">
@@ -289,7 +299,7 @@
         
         
     <div class="widget">
-      <h3 class="title">Social</h3> 
+      <h3 class="title">社交</h3> 
         <div class="content social">
             
 	            <a href="//github.com/shenliyang" rel="external nofollow" title="Github" target="_blank">
@@ -323,25 +333,25 @@
         
         
     <div class="widget">
-        <h3 class="title">Categories</h3>
-        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ror功能/"><i class="fa" aria-hidden="true">ror功能</i></a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror知识点/"><i class="fa" aria-hidden="true">ror知识点</i></a><span class="category-list-count">26</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror系统/"><i class="fa" aria-hidden="true">ror系统</i></a><span class="category-list-count">21</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web页面/"><i class="fa" aria-hidden="true">web页面</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/"><i class="fa" aria-hidden="true">工具</i></a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/微信小程序/"><i class="fa" aria-hidden="true">微信小程序</i></a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link current" href="/categories/心得/"><i class="fa" aria-hidden="true">心得</i></a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/投资/"><i class="fa" aria-hidden="true">投资</i></a><span class="category-list-count">1</span></li></ul>
+        <h3 class="title">分类</h3>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link current" href="/categories/ror功能/"><i class="fa" aria-hidden="true">ror功能</i></a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror知识点/"><i class="fa" aria-hidden="true">ror知识点</i></a><span class="category-list-count">26</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror系统/"><i class="fa" aria-hidden="true">ror系统</i></a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web页面/"><i class="fa" aria-hidden="true">web页面</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/"><i class="fa" aria-hidden="true">工具</i></a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/微信小程序/"><i class="fa" aria-hidden="true">微信小程序</i></a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/心得/"><i class="fa" aria-hidden="true">心得</i></a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/投资/"><i class="fa" aria-hidden="true">投资</i></a><span class="category-list-count">1</span></li></ul>
     </div>
 
 
         
         
     <div class="widget">
-      <h3 class="title">Archives</h3>
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/"><i class="fa" aria-hidden="true">January 2018</i></a><span class="archive-list-count">31</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/"><i class="fa" aria-hidden="true">December 2017</i></a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/"><i class="fa" aria-hidden="true">November 2017</i></a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/"><i class="fa" aria-hidden="true">September 2017</i></a><span class="archive-list-count">1</span></li></ul>
+      <h3 class="title">归档</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/"><i class="fa" aria-hidden="true">January 2018</i></a><span class="archive-list-count">30</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/"><i class="fa" aria-hidden="true">December 2017</i></a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/"><i class="fa" aria-hidden="true">November 2017</i></a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/"><i class="fa" aria-hidden="true">September 2017</i></a><span class="archive-list-count">1</span></li></ul>
     </div>
 
 
         
         
   <div class="widget">
-    <h3 class="title">Tag Cloud</h3>
+    <h3 class="title">标签云</h3>
     <div class="content tag-cloud">
-        <a href="/tags/atom/" style="font-size: 14px;">atom</a> <a href="/tags/bug/" style="font-size: 18px;">bug</a> <a href="/tags/heroku/" style="font-size: 10px;">heroku</a> <a href="/tags/hexo/" style="font-size: 12px;">hexo</a> <a href="/tags/interview/" style="font-size: 11px;">interview</a> <a href="/tags/mac/" style="font-size: 12px;">mac</a> <a href="/tags/orid-day/" style="font-size: 10px;">orid-day</a> <a href="/tags/orid-month/" style="font-size: 11px;">orid-month</a> <a href="/tags/ror功能/" style="font-size: 14px;">ror功能</a> <a href="/tags/ror知识点/" style="font-size: 17px;">ror知识点</a> <a href="/tags/ror系统/" style="font-size: 19px;">ror系统</a> <a href="/tags/stackoverflow/" style="font-size: 10px;">stackoverflow</a> <a href="/tags/typora/" style="font-size: 10px;">typora</a> <a href="/tags/vps/" style="font-size: 16px;">vps</a> <a href="/tags/web页面/" style="font-size: 12px;">web页面</a> <a href="/tags/下载/" style="font-size: 10px;">下载</a> <a href="/tags/工具/" style="font-size: 20px;">工具</a> <a href="/tags/常用/" style="font-size: 13px;">常用</a> <a href="/tags/微信功能/" style="font-size: 13px;">微信功能</a> <a href="/tags/微信系统/" style="font-size: 15px;">微信系统</a> <a href="/tags/微信页面/" style="font-size: 11px;">微信页面</a> <a href="/tags/心得/" style="font-size: 15px;">心得</a> <a href="/tags/手机/" style="font-size: 10px;">手机</a> <a href="/tags/投资/" style="font-size: 10px;">投资</a> <a href="/tags/搬砖/" style="font-size: 10px;">搬砖</a> <a href="/tags/核聚编程/" style="font-size: 12px;">核聚编程</a> <a href="/tags/科学上网/" style="font-size: 14px;">科学上网</a> <a href="/tags/部署/" style="font-size: 13px;">部署</a>
+        <a href="/tags/atom/" style="font-size: 13.64px;">atom</a> <a href="/tags/bug/" style="font-size: 18.18px;">bug</a> <a href="/tags/heroku/" style="font-size: 10px;">heroku</a> <a href="/tags/hexo/" style="font-size: 11.82px;">hexo</a> <a href="/tags/interview/" style="font-size: 10.91px;">interview</a> <a href="/tags/mac/" style="font-size: 11.82px;">mac</a> <a href="/tags/orid-day/" style="font-size: 10px;">orid-day</a> <a href="/tags/orid-month/" style="font-size: 10.91px;">orid-month</a> <a href="/tags/ror功能/" style="font-size: 14.55px;">ror功能</a> <a href="/tags/ror知识点/" style="font-size: 17.27px;">ror知识点</a> <a href="/tags/ror系统/" style="font-size: 19.09px;">ror系统</a> <a href="/tags/stackoverflow/" style="font-size: 10px;">stackoverflow</a> <a href="/tags/typora/" style="font-size: 10px;">typora</a> <a href="/tags/vps/" style="font-size: 16.36px;">vps</a> <a href="/tags/web页面/" style="font-size: 11.82px;">web页面</a> <a href="/tags/下载/" style="font-size: 10px;">下载</a> <a href="/tags/工具/" style="font-size: 20px;">工具</a> <a href="/tags/常用/" style="font-size: 12.73px;">常用</a> <a href="/tags/微信功能/" style="font-size: 12.73px;">微信功能</a> <a href="/tags/微信系统/" style="font-size: 15.45px;">微信系统</a> <a href="/tags/微信页面/" style="font-size: 10.91px;">微信页面</a> <a href="/tags/心得/" style="font-size: 15.45px;">心得</a> <a href="/tags/手机/" style="font-size: 10px;">手机</a> <a href="/tags/投资/" style="font-size: 10px;">投资</a> <a href="/tags/搬砖/" style="font-size: 10px;">搬砖</a> <a href="/tags/核聚编程/" style="font-size: 11.82px;">核聚编程</a> <a href="/tags/科学上网/" style="font-size: 13.64px;">科学上网</a> <a href="/tags/部署/" style="font-size: 12.73px;">部署</a>
     </div>
   </div>
 
@@ -349,7 +359,7 @@
         
         
     <div class="widget">
-        <h3 class="title">Friends</h3>
+        <h3 class="title">友链</h3>
         <div class="content friends-link">
         
             <a href="http://www.shenliyang.com" class="fa" target="_blank">个人博客</a>
