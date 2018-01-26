@@ -24,7 +24,7 @@
     <!--Title-->
 
 
-<title>标签: ror功能 | Hexo</title>
+<title>Tag: ror功能 | Hexo</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -76,7 +76,7 @@
         <div class="branding1">
         	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
             
-                <h2 style="color:#ddd;letter-spacing:1.5px;"> 不忘积累，记录点滴 by 99 </h2>
+                <h2 style="color:#ddd;letter-spacing:1.5px;"> 幻想，不如记录 by 99 </h2>
             
     	</div>
     </div>
@@ -120,10 +120,10 @@
 </nav>
 
       <section class="content-wra aa99">
-        <div class="row">
+        <!-- <div class="row">
           
     <div class="widget" style="padding:0 15px;">
-        <div id="search-form" >
+        <div id="search-form" > 
             <div id="result-mask" class="hide"></div>
             <div class="search-area">
                 
@@ -149,7 +149,7 @@
     </div>
 
 
-        </div>
+        </div> -->
         <div class="row">
             <main class="col-md-9 main-content ">
                 <h3>
@@ -159,31 +159,6 @@
     
 </h3>
 
-    <article class="post">
-        
-            <div class="post-media">
-                <a href="/posts/c311c03b/">
-                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws3.sinaimg.cn/large/006tNc79gy1fnfvqdlgzej30d608s74i.jpg"  alt="ff纷纷-搜索gem ransack">
-                </a>
-            </div>
-        
-        <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title">
-                    <a href="/posts/c311c03b/">ff纷纷-搜索gem ransack</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2018年01月26日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-            </p>
-        </div>
-    </article>
- 
     <article class="post">
         
             <div class="post-media">
@@ -205,7 +180,7 @@
             </div>
             <p class="brief">
                 一、转出csv1、app/controllers/admin/product_controller.rb
-123456789101112131415161718require &apos;csv&apos;class Admin::ProductsController &lt; ApplicationControllerdef index  @products = Product.all  ...
+123456789101112131415161718require &apos;csv&apos;class Admin::ProductsController &lt; ApplicationControllerdef index  @prod...
             </p>
         </div>
     </article>
@@ -230,7 +205,7 @@
                 </div>
             </div>
             <p class="brief">
-                一、避免bug的写法Step1 先在model定义随机的scope，不同环境分开，否则服务端会报错12345if Rails.env.production? #远端  scope :random8, -&gt; &#123; limit(8).order(&quot;RAND()&quot;) &#125;elsif Rails.env.development? #本地  scope :ra...
+                一、避免bug的写法Step1 先在model定义随机的scope，不同环境分开，否则服务端会报错12345if Rails.env.production? #远端  scope :random8, -&gt; &#123; limit(8).order(&quot;RAND()&quot;) &#125;elsif Rails.env.develop...
             </p>
         </div>
     </article>
@@ -258,7 +233,7 @@
                 一、参考资料1、用gem elasticsearch-rails还是searchkick？1）searchkick有更多的基于个人用户的定制，gem elasticsearch-rails只是ElasticSearch团队的一个语言库。参考资料点击。
 2、Ruby on rails 实战圣经ActiveReord: 加强搜寻
 
-Ransack可以很快的针对ActiveRecord做出排序和复...
+Ransack可以很快的...
             </p>
         </div>
     </article>
@@ -283,7 +258,7 @@ Ransack可以很快的针对ActiveRecord做出排序和复...
                 </div>
             </div>
             <p class="brief">
-                忘了记录：1、ransack搜索两种做法，一种是放在navbar搜索时在新的search页显示，一种是放在index搜索的时候不跳转新页面。第一种做排序报错，没解决，第二种可以排序，但是模糊搜索的对象设置是放在view页面的感觉很奇怪。2、分类功能两种做法，一种是一对多对产品添加栏位，一种是多对多，多对多的好处是在后台两边都可以编辑和查看产品。第一种直接在ransack的模糊搜索设置中加入分...
+                忘了记录：1、ransack搜索两种做法，一种是放在navbar搜索时在新的search页显示，一种是放在index搜索的时候不跳转新页面。第一种做排序报错，没解决，第二种可以排序，但是模糊搜索的对象设置是放在view页面的感觉很奇怪。2、分类功能两种做法，一种是一对多对产品添加栏位，一种是多对多，多对多的好处是在后台两边都可以编辑和查看产品。第一种直...
             </p>
         </div>
     </article>
@@ -311,7 +286,7 @@ Ransack可以很快的针对ActiveRecord做出排序和复...
                 一种多对多的分类写法——99测试在job-listing上直接粘贴代码可行。
 https://forum.qzy.camp/t/topic/1381
 作品网站https://explorer-xiaofei.herokuapp.com/firsttool
-Githubhttps://github.com/kristennn/Explorer/blob/master/app/views/job...
+Githubhttps://github.com/kristennn/Explorer/blob/...
             </p>
         </div>
     </article>
@@ -325,9 +300,9 @@ Githubhttps://github.com/kristennn/Explorer/blob/master/app/views/job...
             
     <aside class="col-md-3 sidebar">
         
-        <!-- 
+        
     <div class="widget">
-        <h3 class="title">搜索</h3>
+        <h3 class="title">Search</h3>
         <div id="search-form">
             <div id="result-mask" class="hide"></div>
             <div class="search-area">
@@ -352,7 +327,7 @@ Githubhttps://github.com/kristennn/Explorer/blob/master/app/views/job...
             </div>
         </div>
     </div>
- -->
+
 
         
         
@@ -369,7 +344,7 @@ Githubhttps://github.com/kristennn/Explorer/blob/master/app/views/job...
         
         
     <div class="widget">
-      <h3 class="title">社交</h3> 
+      <h3 class="title">Social</h3> 
         <div class="content social">
             
 	            <a href="//github.com/shenliyang" rel="external nofollow" title="Github" target="_blank">
@@ -403,25 +378,25 @@ Githubhttps://github.com/kristennn/Explorer/blob/master/app/views/job...
         
         
     <div class="widget">
-        <h3 class="title">分类</h3>
-        <ul class="category-list"><li class="category-list-item"><a class="category-list-link current" href="/categories/ror功能/"><i class="fa" aria-hidden="true">ror功能</i></a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror知识点/"><i class="fa" aria-hidden="true">ror知识点</i></a><span class="category-list-count">27</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror系统/"><i class="fa" aria-hidden="true">ror系统</i></a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web页面/"><i class="fa" aria-hidden="true">web页面</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/"><i class="fa" aria-hidden="true">工具</i></a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/微信小程序/"><i class="fa" aria-hidden="true">微信小程序</i></a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/心得/"><i class="fa" aria-hidden="true">心得</i></a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/投资/"><i class="fa" aria-hidden="true">投资</i></a><span class="category-list-count">1</span></li></ul>
+        <h3 class="title">Categories</h3>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ror功能/"><i class="fa" aria-hidden="true">ror功能</i></a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror知识点/"><i class="fa" aria-hidden="true">ror知识点</i></a><span class="category-list-count">27</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror系统/"><i class="fa" aria-hidden="true">ror系统</i></a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web页面/"><i class="fa" aria-hidden="true">web页面</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/"><i class="fa" aria-hidden="true">工具</i></a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/微信小程序/"><i class="fa" aria-hidden="true">微信小程序</i></a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link current" href="/categories/心得/"><i class="fa" aria-hidden="true">心得</i></a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/投资/"><i class="fa" aria-hidden="true">投资</i></a><span class="category-list-count">1</span></li></ul>
     </div>
 
 
         
         
     <div class="widget">
-      <h3 class="title">归档</h3>
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/"><i class="fa" aria-hidden="true">January 2018</i></a><span class="archive-list-count">30</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/"><i class="fa" aria-hidden="true">December 2017</i></a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/"><i class="fa" aria-hidden="true">November 2017</i></a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/"><i class="fa" aria-hidden="true">September 2017</i></a><span class="archive-list-count">1</span></li></ul>
+      <h3 class="title">Archives</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/"><i class="fa" aria-hidden="true">January 2018</i></a><span class="archive-list-count">29</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/"><i class="fa" aria-hidden="true">December 2017</i></a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/"><i class="fa" aria-hidden="true">November 2017</i></a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/"><i class="fa" aria-hidden="true">September 2017</i></a><span class="archive-list-count">1</span></li></ul>
     </div>
 
 
         
         
   <div class="widget">
-    <h3 class="title">标签云</h3>
+    <h3 class="title">Tag Cloud</h3>
     <div class="content tag-cloud">
-        <a href="/tags/atom/" style="font-size: 13.64px;">atom</a> <a href="/tags/bug/" style="font-size: 18.18px;">bug</a> <a href="/tags/heroku/" style="font-size: 10px;">heroku</a> <a href="/tags/hexo/" style="font-size: 11.82px;">hexo</a> <a href="/tags/interview/" style="font-size: 10.91px;">interview</a> <a href="/tags/mac/" style="font-size: 11.82px;">mac</a> <a href="/tags/orid-day/" style="font-size: 10px;">orid-day</a> <a href="/tags/orid-month/" style="font-size: 10.91px;">orid-month</a> <a href="/tags/ror功能/" style="font-size: 14.55px;">ror功能</a> <a href="/tags/ror知识点/" style="font-size: 17.27px;">ror知识点</a> <a href="/tags/ror系统/" style="font-size: 19.09px;">ror系统</a> <a href="/tags/stackoverflow/" style="font-size: 10px;">stackoverflow</a> <a href="/tags/typora/" style="font-size: 10px;">typora</a> <a href="/tags/vps/" style="font-size: 16.36px;">vps</a> <a href="/tags/web页面/" style="font-size: 11.82px;">web页面</a> <a href="/tags/下载/" style="font-size: 10px;">下载</a> <a href="/tags/工具/" style="font-size: 20px;">工具</a> <a href="/tags/常用/" style="font-size: 12.73px;">常用</a> <a href="/tags/微信功能/" style="font-size: 12.73px;">微信功能</a> <a href="/tags/微信系统/" style="font-size: 15.45px;">微信系统</a> <a href="/tags/微信页面/" style="font-size: 10.91px;">微信页面</a> <a href="/tags/心得/" style="font-size: 15.45px;">心得</a> <a href="/tags/手机/" style="font-size: 10px;">手机</a> <a href="/tags/投资/" style="font-size: 10px;">投资</a> <a href="/tags/搬砖/" style="font-size: 10px;">搬砖</a> <a href="/tags/核聚编程/" style="font-size: 11.82px;">核聚编程</a> <a href="/tags/科学上网/" style="font-size: 13.64px;">科学上网</a> <a href="/tags/部署/" style="font-size: 12.73px;">部署</a>
+        <a href="/tags/atom/" style="font-size: 14px;">atom</a> <a href="/tags/bug/" style="font-size: 18px;">bug</a> <a href="/tags/heroku/" style="font-size: 10px;">heroku</a> <a href="/tags/hexo/" style="font-size: 12px;">hexo</a> <a href="/tags/interview/" style="font-size: 11px;">interview</a> <a href="/tags/mac/" style="font-size: 12px;">mac</a> <a href="/tags/orid-day/" style="font-size: 10px;">orid-day</a> <a href="/tags/orid-month/" style="font-size: 11px;">orid-month</a> <a href="/tags/ror功能/" style="font-size: 14px;">ror功能</a> <a href="/tags/ror知识点/" style="font-size: 17px;">ror知识点</a> <a href="/tags/ror系统/" style="font-size: 19px;">ror系统</a> <a href="/tags/stackoverflow/" style="font-size: 10px;">stackoverflow</a> <a href="/tags/typora/" style="font-size: 10px;">typora</a> <a href="/tags/vps/" style="font-size: 16px;">vps</a> <a href="/tags/web页面/" style="font-size: 12px;">web页面</a> <a href="/tags/下载/" style="font-size: 10px;">下载</a> <a href="/tags/工具/" style="font-size: 20px;">工具</a> <a href="/tags/常用/" style="font-size: 13px;">常用</a> <a href="/tags/微信功能/" style="font-size: 13px;">微信功能</a> <a href="/tags/微信系统/" style="font-size: 15px;">微信系统</a> <a href="/tags/微信页面/" style="font-size: 11px;">微信页面</a> <a href="/tags/心得/" style="font-size: 15px;">心得</a> <a href="/tags/手机/" style="font-size: 10px;">手机</a> <a href="/tags/投资/" style="font-size: 10px;">投资</a> <a href="/tags/搬砖/" style="font-size: 10px;">搬砖</a> <a href="/tags/核聚编程/" style="font-size: 12px;">核聚编程</a> <a href="/tags/科学上网/" style="font-size: 14px;">科学上网</a> <a href="/tags/部署/" style="font-size: 13px;">部署</a>
     </div>
   </div>
 
@@ -429,7 +404,7 @@ Githubhttps://github.com/kristennn/Explorer/blob/master/app/views/job...
         
         
     <div class="widget">
-        <h3 class="title">友链</h3>
+        <h3 class="title">Friends</h3>
         <div class="content friends-link">
         
             <a href="http://www.shenliyang.com" class="fa" target="_blank">个人博客</a>
