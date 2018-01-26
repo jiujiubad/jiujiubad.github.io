@@ -317,7 +317,7 @@ pre {
   line-height: 4em;
   display: block;
 }
-@media (min-width: 600px) {
+@media (min-width: 500px) {
   .main-navigation .menu li a {
     padding: 0 20px;
   }
@@ -380,12 +380,23 @@ pre {
   background: #fff;
   padding: 10px 0;
 }
-.post {
-  padding: 20px;
-  background: #fff;
-  margin-bottom: 15px;
-  position: relative;
-  overflow: hidden;
+@media(min-width: 500px){
+  .post {
+    padding: 20px;
+    background: #fff;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+  }
+}
+@media(max-width: 500px){
+  .post {
+    padding: 10px;
+    background: #fff;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+  }
 }
 .post .featured {
   position: absolute;
@@ -405,45 +416,47 @@ pre {
 .post .post-head {
   margin-bottom: 0.5em;
   text-align: center;
+  margin-top: -40px;
 }
-
-@media (min-width: 600px) {
+@media (min-width: 500px) {
   .post .post-head .post-title {
-    font-size: 1.5em;
+    font-size: 1.6em;
     line-height: 1.35em;
-    margin: 0;
+    background-color: #fff !important;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .post .post-head .post-title {
-    font-size: 1.1em;
+    font-size: 0.9em;
     line-height: 1.35em;
-    margin: 0;
+    margin-top: 35px !important;
+    margin-bottom: -10px !important;
+    background-color: #fff;
   }
 }
-@media(min-width: 600px){
+@media(min-width: 500px){
   .post .post-head .post-meta .post-date {
-    font-size: 1.1em;
+    font-size: 1em;
   }
 }
-@media(max-width: 600px){
+@media(max-width: 500px){
   .post .post-head .post-meta .post-date {
-    font-size: 0.5em;
-    margin-top: -30px;
+    font-size: 0.5em !important;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 500px) {
   .post .post-content .brief {
     font-size: 1em;
-    line-height: 1.35em;
+    line-height: 1.8em !important;
+    letter-spacing: 0.05em !important;
     margin: 0;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .post .post-content .brief {
     font-size: 0.5em;
     line-height: 1.35em;
-    margin: 0;
+    margin: -15px 0 -10px;
   }
 }
 
@@ -1334,12 +1347,12 @@ pre .javascript .function {
     margin-bottom: 10px;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 500px) {
   .aa99 {
     padding: 0 30px;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 500px) {
   .pp99 {
     padding-left: 35px;
   }
