@@ -440,7 +440,7 @@ pre {
 }
 @media (max-width: 500px) {
   .post .post-head .post-title {
-    font-size: 0.9em;
+    font-size: 1em !important;
     line-height: 1.35em;
     margin-top: 35px !important;
     margin-bottom: -10px !important;
@@ -449,12 +449,12 @@ pre {
 }
 @media(max-width: 500px){
   .post .post-head .post-meta .post-date {
-    font-size: 0.5em !important;
+    font-size: 0.6em !important;
   }
 }
 @media (max-width: 500px) {
   .post .post-content .brief {
-    font-size: 0.5em;
+    font-size: 0.6em;
     line-height: 1.35em;
     margin: -15px 0 -10px;
   }
