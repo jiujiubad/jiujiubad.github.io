@@ -587,32 +587,32 @@ pre {
   }
   .post-content h1 {
     font-family: "Open Sans","Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
-    color: #555;
+    color: #D23C83;
     margin: 1.3em 0 0.5em;
     padding: 0.2em 0;
     font-size: 1.2em;
     background-color: rgba(211,211,211,0.2);
     line-height: 1.4em;
     letter-spacing: 0.03em;
-    font-weight: 600;
+    font-weight: 500;
   }
   .post-content h2 {
     font-family: "Open Sans","Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
-    color: #555;
+    color: #C94D25;
     margin: 1em 0 0.8em;
     font-size: 1.1em;
     border-bottom: 0.05em #e9e9e9 solid;
     line-height: 1.35em;
     letter-spacing: 0.03e'm;
-    font-weight: 600;
+    font-weight: 500;
   }
   .post-content h3 {
     font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
-    color: #85991D;
+    color: #3891D2;
     margin: 1.2em 0 0.9em;
     font-size: 1em;
     letter-spacing: 0.03em;
-    font-weight: 600;
+    font-weight: 500;
   }
   .post-content h4 {
     font-family: "Open Sans","Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
@@ -638,13 +638,13 @@ pre {
 @media(min-width: 500px){
   .post .post-body p {
     font-size: 0.9em;
-    line-height: 1.7;
-    margin: 0 0 0.8em;
-    letter-spacing: 0.03em;
+    line-height: 1.8;
+    margin: 0 0 0.9em;
+    letter-spacing: 0.04em;
     font-weight: 400;
   }
   .post-content blockquote {
-    margin: 0 0 0.6em;
+    margin: 0 0 0.8em;
     border-left: 0.4em solid #e67e22;
     padding: 0.6em 1em 0.03em 1em;
     color: #666;
@@ -654,38 +654,38 @@ pre {
   }
   .post-content li {
     margin: 0.7em 0;
-    letter-spacing: 0.03em;
-    font-size: 1em;
+    letter-spacing: 0.04em;
+    font-size: 0.9em;
     line-height: 1.7;
   }
   .post-content h1 {
     font-family: "Open Sans","Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
-    color: #555;
+    color: #D23C83;
     margin: 1.3em 0 0.5em;
     padding: 0.2em 0;
     font-size: 1.8em;
     background-color: rgba(211,211,211,0.2);
     letter-spacing: 0.03em;
-    font-weight: 600;
+    font-weight: 500;
   }
   .post-content h2 {
     font-family: "Open Sans","Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
-    color: #555;
+    color: #C94D25;
     margin: 0.8em 0 0.8em;
     padding-bottom: 4px;
     font-size: 1.5em;
     border-bottom: 0.01em #e9e9e9 solid;
     line-height: 40px;
     letter-spacing: 0.03em;
-    font-weight: 600;
+    font-weight: 500;
   }
   .post-content h3 {
     font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
-    color: #555;
+    color: #3891D2;
     margin: 1.1em 0 0.8em;
     font-size: 1.2em;
     letter-spacing: 0.03em;
-    font-weight: 600;
+    font-weight: 500;
   }
   .post-content h4 {
     font-family: "Open Sans","Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
@@ -720,12 +720,12 @@ pre {
   border: none;
 }
 .post-content strong {
-  font-weight: 700;
-  color: #444;
+  font-weight: 600;
+  color: #85991D;
 }
 .post-content b {
-  font-weight: 700;
-  color: #444;
+  font-weight: 600;
+  color: #85991D;
 }
 .post-content em {
   font-style: italic;
