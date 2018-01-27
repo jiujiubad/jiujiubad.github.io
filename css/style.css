@@ -566,8 +566,8 @@ pre {
 @media(max-width: 500px){
   .post .post-body p {
     font-size: 0.9em;
-    line-height: 1.7;
-    margin: 0 0 0.9em;
+    line-height: 1.9;
+    margin: 0 0 1.1em;
     letter-spacing: 0.03em;
     font-weight: 400;
   }
