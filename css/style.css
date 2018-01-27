@@ -458,7 +458,7 @@ pre {
 }
 @media (max-width: 500px) {
   .post .post-head .post-title {
-    font-size: 0.8em;
+    font-size: 0.9em;
     line-height: 1.35em;
     margin-top: 2.8em;
     margin-bottom: -1em;
@@ -624,12 +624,10 @@ pre {
 }
 @media(max-width: 500px){
   .post-content h3 {
-    font-family: "Open Sans","Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
+    font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
     color: #555;
-    margin: 1em 0 0.7em;
+    margin: 1.1em 0 0.8em;
     font-size: 1em;
-    border-left: 0.4em solid blue;
-    padding-left: 0.6em;
     letter-spacing: 0.02em;
     font-weight: 600;
   }
@@ -718,8 +716,6 @@ pre {
     color: #555;
     margin: 1.1em 0 0.8em;
     font-size: 1.2em;
-    // border-left: 6px solid blue;
-    // padding-left: 10px;
     letter-spacing: 0.03em;
     font-weight: 600;
   }
@@ -1399,8 +1395,8 @@ pre .javascript .function {
   text-align: center;
 }
 .navbar-header i {
-  height: 40px;
-  line-height: 40px;
+  height: 50px;
+  line-height: 50px;
   font-size: 2em;
   cursor: pointer;
 }
@@ -1523,10 +1519,21 @@ pre .javascript .function {
     margin: 0.7em 0;
   }
 }
-.category-title h3{
-  background-color: #fff;
-  padding: 1em 0 1em 1em ;
-  margin: 0;
-  font-size: 1.5em;
-  margin-bottom: 0.7em;
+@media (max-width: 500px){
+  .category-title h3{
+    background-color: #fff;
+    padding: 1em 0 1em 1em ;
+    margin: 0;
+    font-size: 1em;
+    margin-bottom: 0.7em;
+  }
+}
+@media (min-width: 500px){
+  .category-title h3{
+    background-color: #fff;
+    padding: 1em 0 1em 1em ;
+    margin: 0;
+    font-size: 1.5em;
+    margin-bottom: 0.7em;
+  }
 }
