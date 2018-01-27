@@ -48,7 +48,7 @@ h4,
 h5,
 h6 {
   font-weight: 400;
-  color: #303030;
+  color: #555;
 }
 h1 {
   font-size: 2em;
@@ -98,16 +98,16 @@ a img {
   transition: all 0.2s ease-in-out;
 }
 .btn-default:hover {
-  border: 1px solid #303030;
-  background: #303030;
+  border: 1px solid #555;
+  background: #555;
   color: #fff;
 }
 .btn-default:focus {
   outline: none;
 }
 .btn-default[disabled] {
-  border: 1px solid #303030;
-  background: #303030;
+  border: 1px solid #555;
+  background: #555;
   color: #fff;
 }
 input[type="search"] {
@@ -208,7 +208,7 @@ pre {
   line-height: 70px;
   background-color: #f9f9f9;
   color: #f0ad4e;
-  border-bottom: 1px solid #303030;
+  border-bottom: 1px solid #555;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -370,26 +370,8 @@ pre {
   background: #fff;
   padding: 10px 0;
 }
-@media(min-width: 500px){
-  .post {
-    padding: 20px;
-    background: #fff;
-    margin-bottom: 15px;
-    position: relative;
-    overflow: hidden;
-  }
-}
-@media(max-width: 500px){
-  .post {
-    padding: 10px;
-    background: #fff;
-    margin-bottom: 15px;
-    position: relative;
-    overflow: hidden;
-  }
-}
 .post .featured {
-  position: absolute;
+  /*position: absolute;*/
   background: #e67e22;
   color: #fff;
   text-align: center;
@@ -408,11 +390,57 @@ pre {
   text-align: center;
   margin-top: -40px;
 }
+/*首页文章大框*/
+@media(min-width: 500px){
+  .post {
+    padding: 20px;
+    background: #fff;
+    margin-bottom: 15px;
+    /*position: relative;
+    overflow: hidden;*/
+  }
+}
+@media(max-width: 500px){
+  .post {
+    padding: 0.7em;
+    background: #fff;
+    margin-bottom: 15px;
+    /*position: relative;
+    overflow: hidden;*/
+  }
+}
+/*首页文章图片：因图片是用js引用，自适应col-md有些问题，暂时先用媒体查询处理*/
+@media(min-width: 600px) and (max-width: 800px){
+  .post .post-media img {
+    width: 65%;
+    height: 65%;
+  }
+}
+@media(min-width: 500px) and (max-width: 600px){
+  .post .post-media img {
+    width: 50%;
+    height: 50%;
+  }
+}
+@media(max-width: 500px){
+  .post .post-media img {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media(min-width: 800px){
+  .post .post-media img {
+    width: 100%;
+    height: 100%;
+  }
+}
+/*首页文章，标题和内容*/
 @media (min-width: 500px) {
   .post .post-head .post-title {
     font-size: 1.6em;
     line-height: 1.35em;
     background-color: #fff !important;
+    margin: 1.6em 0 -0.01em;
   }
 }
 @media(min-width: 500px){
@@ -445,12 +473,12 @@ pre {
 @media (max-width: 500px) {
   .post .post-content .brief {
     font-size: 0.6em;
-    margin: -1.3em 0 -0.2em;
+    margin: -1.1em 0 0;
   }
 }
 
 .post .post-head .post-title a {
-  color: #303030;
+  color: #555;
 }
 .post .post-head .post-title a:hover {
   text-decoration: none;
@@ -479,10 +507,6 @@ pre {
   float: left;
   overflow: hidden;
 }
-.post .post-media img {
-  width: 100%;
-  height: 100%;
-}
 .post .post-content .home-post-head {
   text-align: left;
 }
@@ -491,7 +515,7 @@ pre {
 }
 .post .post-body {
   margin-top: 15px;
-  padding: 25px 0;
+  padding: 0.8em 0;
   border-top: 1px solid #eee;
   overflow: hidden;
 }
@@ -552,6 +576,7 @@ pre {
     line-height: 1.5;
     margin: 0 0 0.6em;
     letter-spacing: 0.02em;
+    font-weight: 400;
   }
 }
 @media(max-width: 500px){
@@ -575,7 +600,7 @@ pre {
 @media(max-width: 500px){
   .post-content h1 {
     font-family: "Open Sans","Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
-    color: #444;
+    color: #555;
     margin: 1.1em 0 0.5em;
     padding: 0.2em 0;
     font-size: 1.2em;
@@ -588,7 +613,7 @@ pre {
 @media(max-width: 500px){
   .post-content h2 {
     font-family: "Open Sans","Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
-    color: #444;
+    color: #555;
     margin: 1em 0 0.7em;
     font-size: 1.1em;
     border-bottom: 0.05em #e9e9e9 solid;
@@ -600,7 +625,7 @@ pre {
 @media(max-width: 500px){
   .post-content h3 {
     font-family: "Open Sans","Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
-    color: #444;
+    color: #555;
     margin: 1em 0 0.7em;
     font-size: 1em;
     border-left: 0.4em solid blue;
@@ -636,10 +661,11 @@ pre {
 }
 @media(min-width: 500px){
   .post .post-body p {
-    font-size: 1em;
+    font-size: 0.9em;
     line-height: 1.7;
-    margin: 0 0 0.6em;
+    margin: 0 0 0.8em;
     letter-spacing: 0.03em;
+    font-weight: 400;
   }
 }
 @media(min-width: 500px){
@@ -658,12 +684,13 @@ pre {
     margin: 0.7em 0;
     letter-spacing: 0.03em;
     font-size: 1em;
+    line-height: 1.7;
   }
 }
 @media(min-width: 500px){
   .post-content h1 {
     font-family: "Open Sans","Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
-    color: #444;
+    color: #555;
     margin: 1.3em 0 0.5em;
     padding: 0.2em 0;
     font-size: 1.8em;
@@ -675,8 +702,8 @@ pre {
 @media(min-width: 500px){
   .post-content h2 {
     font-family: "Open Sans","Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
-    color: #444;
-    margin: 0.8em 0 0.7em;
+    color: #555;
+    margin: 0.8em 0 0.8em;
     padding-bottom: 4px;
     font-size: 1.5em;
     border-bottom: 0.01em #e9e9e9 solid;
@@ -687,12 +714,12 @@ pre {
 }
 @media(min-width: 500px){
   .post-content h3 {
-    font-family: "Open Sans","Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
-    color: #444;
-    margin: 1em 0 0.7em;
+    font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
+    color: #555;
+    margin: 1.1em 0 0.8em;
     font-size: 1.2em;
-    border-left: 6px solid blue;
-    padding-left: 10px;
+    // border-left: 6px solid blue;
+    // padding-left: 10px;
     letter-spacing: 0.03em;
     font-weight: 600;
   }
@@ -735,11 +762,11 @@ pre {
 }
 .post-content strong {
   font-weight: 700;
-  color: #333;
+  color: #444;
 }
 .post-content b {
   font-weight: 700;
-  color: #333;
+  color: #444;
 }
 .post-content em {
   font-style: italic;
@@ -758,7 +785,7 @@ pre {
   position: relative;
   clear: both;
   outline: 0;
-  margin: 10px 0;
+  margin: 1em 0 1.5em;
 }
 .post-content figure img {
   display: block;
@@ -829,9 +856,9 @@ pre {
   padding: 0;
 }
 .post-content code {
-  color: #e67e22;
-  font-size: 0.9em;
-  background-color: #f6f6f6;
+  color: #555;
+  font-size: 0.8em;
+  background-color: #e7e7e7;
   padding: 2px 8px;
   border: 1px solid #eee;
   -webkit-border-radius: 2px;
@@ -851,17 +878,6 @@ pre {
   border-radius: 2px;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   word-wrap: break-word;
-}
-.post-content pre {
-  margin: 1.64em 0;
-  border: none;
-  border-left: 3px solid #dadada;
-  padding-left: 10px;
-  overflow: auto;
-  line-height: 1.5;
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  color: #fff;
-  background-color: #f9f9f9;
 }
 .post-content pre code {
   color: #808080;
@@ -1179,7 +1195,7 @@ pre {
   color: #666666;
   padding-top: 20px;
   padding-bottom: 20px;
-  border-top: 1px solid #303030;
+  border-top: 1px solid #555;
 }
 .copyright span {
   margin: 0 .5em;
@@ -1215,6 +1231,19 @@ pre {
 /*====================================================
     highlight
 ====================================================*/
+/*代码块字体颜色*/
+.post-content pre {
+  margin: 1.64em 0;
+  border: none;
+  border-left: 3px solid #dadada;
+  padding-left: 10px;
+  overflow: auto;
+  line-height: 1.6;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  color: #777;
+  background-color: #f9f9f9;
+}
+/*代码块背景颜色*/
 pre,
 .highlight {
   overflow: auto;
@@ -1222,8 +1251,21 @@ pre,
   padding: 0;
   color: #c5c8c6;
   font-size: 13px;
-  background: #1d1f21;
+  background: #FFFECE;
   line-height: 1.6;
+}
+.highlight .code pre {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #FFFECE;
+}
+.highlight .gutter pre {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #777;
+  text-align: right;
+  background-color: #f7f6a5;
 }
 code {
   padding: 2px 4px;
@@ -1279,19 +1321,6 @@ pre .comment {
 }
 .highlight figcaption a:hover {
   border-bottom-color: #c5c8c6;
-}
-.highlight .gutter pre {
-  padding-left: 10px;
-  padding-right: 10px;
-  color: #888f96;
-  text-align: right;
-  background-color: #000;
-}
-.highlight .code pre {
-  width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: #1d1f21;
 }
 .highlight .line {
   height: 20px;
@@ -1411,6 +1440,10 @@ pre .javascript .function {
   }
   .post .post-head h1 {
     line-height: 1.25em;
+    margin: 2.2em 0 0.8em;
+    font-size: 1.7em;
+    font-weight: 600;
+    color: #555;
   }
   .post .post-content p.brief {
     text-overflow: ellipsis;
@@ -1438,8 +1471,13 @@ pre .javascript .function {
   .nav-toggle-button {
     display: none;
   }
-}
-@media (min-width: 1100px) {
+  .post .post-head h1 {
+    line-height: 1.4em;
+    margin: 2.2em 0 0.8em;
+    font-size: 2.2em;
+    font-weight: 600;
+    color: #555;
+  }
   .post-content blockquote blockquote {
     margin-left: 0;
   }
@@ -1472,4 +1510,23 @@ pre .javascript .function {
   .pp99 {
     padding-left: 35px;
   }
+}
+@media (min-width: 500px) {
+  .post-item-title {
+    font-size: 1.3em;
+    margin: 1em 0;
+  }
+}
+@media (max-width: 500px) {
+  .post-item-title {
+    font-size: 1em;
+    margin: 0.7em 0;
+  }
+}
+.category-title h3{
+  background-color: #fff;
+  padding: 1em 0 1em 1em ;
+  margin: 0;
+  font-size: 1.5em;
+  margin-bottom: 0.7em;
 }

@@ -76,7 +76,7 @@
         <div class="branding1">
         	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
             
-                <h2> 幻想，不如记录 by 99 </h2>
+                <h2> 记录，把握点滴  ——by 99 </h2>
             
     	</div>
     </div>
@@ -152,13 +152,18 @@
         </div> -->
         <div class="row">
             <main class="col-md-9 main-content ">
-                <h3>
-    
-        ror功能
-    
-</h3>
+                <div class="category-title">
+  <h3>> &nbsp;&nbsp;分类：
+      
+          ror功能
+      
+  </h3>
+</div>
+<div class="hr-1"></div>
 
     <article class="post">
+      <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-3">
         
             <div class="post-media">
                 <a href="/posts/a86e36c0/">
@@ -166,7 +171,9 @@
                 </a>
             </div>
         
-        <div class="post-content">
+        </div>
+        <div class="col-md-8 col-sm-8 col-xs-9">
+          <div class="post-content">
             <div class="post-head home-post-head">
                 <h1 class="post-title">
                     <a href="/posts/a86e36c0/">ror-function-导出excel/导出csv/导入csv</a>
@@ -181,10 +188,14 @@
                 一、转出csv1、app/controllers/admin/product_controller.rb
 123456789101112131415161718require &apos;csv&apos;class Admin::ProductsController &lt; ApplicationControllerdef index  @prod...
             </p>
+          </div>
         </div>
+      </div>
     </article>
  
     <article class="post">
+      <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-3">
         
             <div class="post-media">
                 <a href="/posts/f790badf/">
@@ -192,7 +203,9 @@
                 </a>
             </div>
         
-        <div class="post-content">
+        </div>
+        <div class="col-md-8 col-sm-8 col-xs-9">
+          <div class="post-content">
             <div class="post-head home-post-head">
                 <h1 class="post-title">
                     <a href="/posts/f790badf/">ror-function-random()随机商品</a>
@@ -206,10 +219,14 @@
             <p class="brief">
                 一、避免bug的写法Step1 先在model定义随机的scope，不同环境分开，否则服务端会报错12345if Rails.env.production? #远端  scope :random8, -&gt; &#123; limit(8).order(&quot;RAND()&quot;) &#125;elsif Rails.env.develop...
             </p>
+          </div>
         </div>
+      </div>
     </article>
  
     <article class="post">
+      <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-3">
         
             <div class="post-media">
                 <a href="/posts/c8b6f8d4/">
@@ -217,7 +234,9 @@
                 </a>
             </div>
         
-        <div class="post-content">
+        </div>
+        <div class="col-md-8 col-sm-8 col-xs-9">
+          <div class="post-content">
             <div class="post-head home-post-head">
                 <h1 class="post-title">
                     <a href="/posts/c8b6f8d4/">ror-function-搜索(大数据量)如elastic：gem searchkick</a>
@@ -234,10 +253,14 @@
 
 Ransack可以很快的...
             </p>
+          </div>
         </div>
+      </div>
     </article>
  
     <article class="post">
+      <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-3">
         
             <div class="post-media">
                 <a href="/posts/c311c03b/">
@@ -245,7 +268,9 @@ Ransack可以很快的...
                 </a>
             </div>
         
-        <div class="post-content">
+        </div>
+        <div class="col-md-8 col-sm-8 col-xs-9">
+          <div class="post-content">
             <div class="post-head home-post-head">
                 <h1 class="post-title">
                     <a href="/posts/c311c03b/">ror-function-搜索gem ransack</a>
@@ -259,10 +284,14 @@ Ransack可以很快的...
             <p class="brief">
                 忘了记录：1、ransack搜索两种做法，一种是放在navbar搜索时在新的search页显示，一种是放在index搜索的时候不跳转新页面。第一种做排序报错，没解决，第二种可以排序，但是模糊搜索的对象设置是放在view页面的感觉很奇怪。2、分类功能两种做法，一种是一对多对产品添加栏位，一种是多对多，多对多的好处是在后台两边都可以编辑和查看产品。第一种直...
             </p>
+          </div>
         </div>
+      </div>
     </article>
  
     <article class="post">
+      <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-3">
         
             <div class="post-media">
                 <a href="/posts/ba21773f/">
@@ -270,7 +299,9 @@ Ransack可以很快的...
                 </a>
             </div>
         
-        <div class="post-content">
+        </div>
+        <div class="col-md-8 col-sm-8 col-xs-9">
+          <div class="post-content">
             <div class="post-head home-post-head">
                 <h1 class="post-title">
                     <a href="/posts/ba21773f/">wx-function-分类功能之多对多many to many</a>
@@ -287,7 +318,9 @@ https://forum.qzy.camp/t/topic/1381
 作品网站https://explorer-xiaofei.herokuapp.com/firsttool
 Githubhttps://github.com/kristennn/Explorer/blob/...
             </p>
+          </div>
         </div>
+      </div>
     </article>
  
 
@@ -348,28 +381,16 @@ Githubhttps://github.com/kristennn/Explorer/blob/...
       <h3 class="title">Social</h3> 
         <div class="content social">
             
-	            <a href="//github.com/shenliyang" rel="external nofollow" title="Github" target="_blank">
-			    	<i class="git fa fa-git"></i>
+	            <a href="https://github.com/jiujiubad?tab=repositories" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="github fa fa-github"></i>
 			    </a>
             
-	            <a href="mailto:snippet@91h5.cc" rel="external nofollow" title="邮箱" target="_blank">
+	            <a href="jiujiubad@gmail.com" rel="external nofollow" title="邮箱" target="_blank">
 			    	<i class="envelope-o fa fa-envelope-o"></i>
 			    </a>
             
-	            <a href="/" rel="external nofollow" title="联系QQ" target="_blank">
-			    	<i class="qq fa fa-qq"></i>
-			    </a>
-            
-	            <a href="/" rel="external nofollow" title="微博" target="_blank">
-			    	<i class="weibo fa fa-weibo"></i>
-			    </a>
-            
-	            <a href="/" rel="external nofollow" title="QQ群" target="_blank">
-			    	<i class="users fa fa-users"></i>
-			    </a>
-            
-	            <a href="/atom.xml" rel="external nofollow" title="RSS" target="_blank">
-			    	<i class="feed fa fa-feed"></i>
+	            <a href="https://ws4.sinaimg.cn/large/006tNc79ly1fnvcxiavzgj30by0bymxg.jpg" rel="external nofollow" title="微信" target="_blank">
+			    	<i class="weixin fa fa-weixin"></i>
 			    </a>
             
         </div>
