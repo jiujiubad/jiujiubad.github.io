@@ -259,6 +259,14 @@
 <h3 id="Step3-md文档front-matter标签里加入代码"><a href="#Step3-md文档front-matter标签里加入代码" class="headerlink" title="Step3 md文档front-matter标签里加入代码"></a>Step3 md文档front-matter标签里加入代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">top: true</span><br></pre></td></tr></table></figure>
 <p>或者是</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">top: 数字 #数字越大越靠前</span><br></pre></td></tr></table></figure>
+<h2 id="5、本站配色，与白色搭配"><a href="#5、本站配色，与白色搭配" class="headerlink" title="5、本站配色，与白色搭配"></a>5、本站配色，与白色搭配</h2><p>橙色#e67e22，用于主题。</p>
+<p>粉红#D23C83，用于h1。</p>
+<p>红色#C94D25，用于h2。</p>
+<p>蓝色#3891D2，用于h3。</p>
+<p>绿色#85991D，用于加粗。</p>
+<p>土黄#B4881D</p>
+<p>蓝绿#33A197</p>
+<p>深蓝#2E8CD0</p>
 <h1 id="三、重要css"><a href="#三、重要css" class="headerlink" title="三、重要css"></a>三、重要css</h1><p>修改后注意对比手机自适应</p>
 <p>1）主页左右空白间距。themes/snippet/layout/layout.ejs</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div class=&quot;container-fluid&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;row&quot;&gt;</span><br><span class="line">      &lt;%- partial(&apos;_partial/header&apos;) %&gt;</span><br><span class="line">      &lt;%- partial(&apos;_partial/nav&apos;) %&gt;</span><br><span class="line">      &lt;section class=&quot;content-wra aa99&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;row&quot;&gt;</span><br><span class="line">            &lt;main class=&quot;col-md-9 main-content &lt;%if(is_post())&#123;%&gt;m-post&lt;%&#125;%&gt;&quot;&gt;</span><br><span class="line">                &lt;%- body %&gt;</span><br><span class="line">            &lt;/main&gt;</span><br><span class="line">            &lt;%- partial(&apos;_partial/sidebar&apos;, null, &#123;cache: !config.relative_link&#125;) %&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/section&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br></pre></td></tr></table></figure>
