@@ -192,7 +192,7 @@
     <div class="post-body post-content">
         <h1 id="一、Ruby-on-rails-1-简介"><a href="#一、Ruby-on-rails-1-简介" class="headerlink" title="一、Ruby on rails 1 简介"></a>一、Ruby on rails 1 简介</h1><h2 id="1、经历"><a href="#1、经历" class="headerlink" title="1、经历"></a>1、经历</h2><p>Perl CGI，用程式输出html。2000年动态网。</p>
 <p>php，在html里面内嵌程式的写法，<code>&lt;?php...?&gt;</code>。</p>
-<p>php&amp;mysql，开头&lt;?php..?&gt;里连接资料库，主体html里用sql操作资料库，用php把资料印出来。2000年初动态网。</p>
+<p>php&amp;mysql，开头在&lt;?php..?&gt;里连接资料库，主体html里用sql操作资料库，用php把资料印出来。2000年初动态网。</p>
 <p>2005，因为php代码会越做越混乱，自己刻php web framework，用于学校系统。 </p>
 <ul>
 <li>MVC，更系统地组织代码</li>
@@ -202,16 +202,18 @@
 <h2 id="2、ruby-on-rails特色"><a href="#2、ruby-on-rails特色" class="headerlink" title="2、ruby on rails特色"></a>2、ruby on rails特色</h2><p>ruby on rails设计原则与特色</p>
 <p>1、不重复自己。</p>
 <p>2、惯例优于设定。</p>
-<h1 id="二、Ruby-on-rails-2-安装"><a href="#二、Ruby-on-rails-2-安装" class="headerlink" title="二、Ruby on rails 2 安装"></a>二、Ruby on rails 2 安装</h1><p><code>gem list</code>，命令用于列出所有的gem清单。</p>
+<h1 id="二、Ruby-on-rails-2-安装"><a href="#二、Ruby-on-rails-2-安装" class="headerlink" title="二、Ruby on rails 2 安装"></a>二、Ruby on rails 2 安装</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem list #列出所有的gem清单</span><br></pre></td></tr></table></figure>
 <p>ruby安装</p>
 <p>rails安装</p>
-<h1 id="三、Ruby-on-rails-3-起步走"><a href="#三、Ruby-on-rails-3-起步走" class="headerlink" title="三、Ruby on rails 3 起步走"></a>三、Ruby on rails 3 起步走</h1><h2 id="1、新建专案"><a href="#1、新建专案" class="headerlink" title="1、新建专案"></a>1、新建专案</h2><p><code>rails new demo --skip-test-unit</code>， 命令附加参数是忽略掉测试的目录，因为我们会用rspc测试框架而不是rails内建的test-unit。</p>
+<h1 id="三、Ruby-on-rails-3-起步走"><a href="#三、Ruby-on-rails-3-起步走" class="headerlink" title="三、Ruby on rails 3 起步走"></a>三、Ruby on rails 3 起步走</h1><h2 id="1、新建专案"><a href="#1、新建专案" class="headerlink" title="1、新建专案"></a>1、新建专案</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rails new demo --skip-test-unit</span><br></pre></td></tr></table></figure>
+<p>命令附加参数是忽略掉测试的目录，因为我们会用rspc测试框架而不是rails内建的test-unit。不过2017版的ruby好像改善测试了。</p>
 <p><strong>index.html.erb</strong>，这里的erb是用ruby语法的意思，在文件里可以运算ruby，比如&lt;%= 1+1 %&gt;。</p>
 <p><strong>link_to</strong>是rails提供的方法，在view里我们叫它helper。</p>
 <h2 id="2、新建资料库"><a href="#2、新建资料库" class="headerlink" title="2、新建资料库"></a>2、新建资料库</h2><p><code>rake db:create</code>，建立sqlite3资料库。</p>
-<h2 id="3、快速产生预设demo样板"><a href="#3、快速产生预设demo样板" class="headerlink" title="3、快速产生预设demo样板"></a>3、快速产生预设demo样板</h2><p><code>rails g scaffold person name:string bio:text birthday:date</code>，会快速产生MVC程式码，快速产生CRUD、路由、model、view、db等预设的文件。——有经验的工程师一般不用。</p>
+<h2 id="3、快速产生预设demo样板"><a href="#3、快速产生预设demo样板" class="headerlink" title="3、快速产生预设demo样板"></a>3、快速产生预设demo样板</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rails g scaffold person name:string bio:text birthday:date</span><br></pre></td></tr></table></figure>
+<p>会快速产生MVC程式码，快速产生CRUD、路由、model、view、db等预设的文件。——有经验的工程师一般不用。</p>
 <p><code>rake db:migrate</code>，实际在资料库建立table。</p>
-<h1 id="四、Ruby-on-rails-4-手工打造CRUD应用程式"><a href="#四、Ruby-on-rails-4-手工打造CRUD应用程式" class="headerlink" title="四、Ruby on rails 4 手工打造CRUD应用程式"></a>四、Ruby on rails 4 手工打造CRUD应用程式</h1><h2 id="1、SourceTree工具，管理git"><a href="#1、SourceTree工具，管理git" class="headerlink" title="1、SourceTree工具，管理git"></a>1、SourceTree工具，管理git</h2><p>命令<code>stree</code>。</p>
+<h1 id="四、Ruby-on-rails-4-手工打造CRUD应用程式"><a href="#四、Ruby-on-rails-4-手工打造CRUD应用程式" class="headerlink" title="四、Ruby on rails 4 手工打造CRUD应用程式"></a>四、Ruby on rails 4 手工打造CRUD应用程式</h1><h2 id="1、SourceTree工具，管理git"><a href="#1、SourceTree工具，管理git" class="headerlink" title="1、SourceTree工具，管理git"></a>1、SourceTree工具，管理git</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stree #打开SourceTree工具</span><br></pre></td></tr></table></figure>
 <p>用法在5分钟的时候，看不懂？？？</p>
 <h2 id="2、rails-c里，操作资料库："><a href="#2、rails-c里，操作资料库：" class="headerlink" title="2、rails c里，操作资料库："></a>2、rails c里，操作资料库：</h2><p>x = Event.find(1)，查找id为1的资料。</p>
 <p>更新资料x.name = “RAisl”。</p>
@@ -222,12 +224,12 @@
 <h2 id="3、DB-Browser工具，查看migration"><a href="#3、DB-Browser工具，查看migration" class="headerlink" title="3、DB Browser工具，查看migration"></a>3、DB Browser工具，查看migration</h2><p>用于打开table的档案，看这个table长什么样子。</p>
 <p>rails migration的好处：①、纳入git版本管理；②、应用程式升级时，只要rake db:migrate；③、跨资料库通用的，不需要修改代码。</p>
 <p>添加栏位时，如果model已经建立过，就不需要再建立model，直接用rails g migration。</p>
-<h2 id="4、资料验证validation"><a href="#4、资料验证validation" class="headerlink" title="4、资料验证validation"></a>4、资料验证validation</h2><h2 id="5、外卡路由"><a href="#5、外卡路由" class="headerlink" title="5、外卡路由"></a>5、外卡路由</h2><p><code>match &#39;:controller(/:action(/:id(.:format)))&#39;, :via =&gt; :all</code>  ，万能的路由设置方法/foo/bar，第一段是controller，第二段是action。</p>
+<h2 id="4、资料验证validation"><a href="#4、资料验证validation" class="headerlink" title="4、资料验证validation"></a>4、资料验证validation</h2><h2 id="5、外卡路由（不安全）"><a href="#5、外卡路由（不安全）" class="headerlink" title="5、外卡路由（不安全）"></a>5、外卡路由（不安全）</h2><p><code>match &#39;:controller(/:action(/:id(.:format)))&#39;, :via =&gt; :all</code>  ，万能的路由设置方法/foo/bar，第一段是controller，第二段是action。</p>
 <p>放在最下面是因为处理顺序是从上到下，如果上面有自定义的会优先执行。</p>
 <h2 id="6、新建controller"><a href="#6、新建controller" class="headerlink" title="6、新建controller"></a>6、新建controller</h2><h3 id="6-1-event是什么？"><a href="#6-1-event是什么？" class="headerlink" title="6.1 @event是什么？"></a>6.1 @event是什么？</h3><p>所有在controller里带有小老鼠@的变量，都会传到template使用。</p>
 <h3 id="6-2-params-event-是什么？"><a href="#6-2-params-event-是什么？" class="headerlink" title="6.2 params[:event]是什么？"></a>6.2 params[:event]是什么？</h3><p>在create时，查看rails s里的信息，params就是送出的params代表的那笔资料。</p>
 <p>在rails c中，可以这样写Event.new( :name =&gt; “QQ”, :description =&gt; “fdsfds”)；</p>
-<p>在controller中，写法类似，都是在new里初始化一个hash，比如下面的params[:event]</p>
+<p>在controller中，写法类似，都是在new里初始化一个hash，比如下面的params[:event]就是用一个hash来传递参数。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def create</span><br><span class="line">  @event = Event.new(params[:event]) //因为浏览器安全过滤，这部分还要再提取到event_params里</span><br><span class="line">  @event.save</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
 <h2 id="7、页面"><a href="#7、页面" class="headerlink" title="7、页面"></a>7、页面</h2><p>simple_format，自动换行。</p>
 <h2 id="8、其他小功能"><a href="#8、其他小功能" class="headerlink" title="8、其他小功能"></a>8、其他小功能</h2><h2 id="1、layout"><a href="#1、layout" class="headerlink" title="1、layout"></a>1、layout</h2><p>比如在controller设置<code>@page_title = @event.name</code>，然后在layout设置</p>
@@ -236,7 +238,7 @@
 <h2 id="3、before-action"><a href="#3、before-action" class="headerlink" title="3、before_action"></a>3、before_action</h2><p>重构controller里的Event.find()。</p>
 <h2 id="4、新增-编辑时显示错误信息"><a href="#4、新增-编辑时显示错误信息" class="headerlink" title="4、新增/编辑时显示错误信息"></a>4、新增/编辑时显示错误信息</h2><p>reder，返回，会保留已经编辑了一半的数据。</p>
 <p>redirect_to，重定向，正在编辑的数据会被清除重新打开xx页面。</p>
-<h2 id="5、flash"><a href="#5、flash" class="headerlink" title="5、flash"></a>5、flash</h2><h2 id="6、rails-c跑回圈"><a href="#6、rails-c跑回圈" class="headerlink" title="6、rails c跑回圈"></a>6、rails c跑回圈</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">100.times do |i|</span><br><span class="line">Event.create( :name =&gt; &quot;Event #&#123;i&#125;&quot;)</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<h2 id="5、flash"><a href="#5、flash" class="headerlink" title="5、flash"></a>5、flash</h2><h2 id="6、rails-c跑回圈"><a href="#6、rails-c跑回圈" class="headerlink" title="6、rails c跑回圈"></a>6、rails c跑回圈</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">100.times do |i|</span><br><span class="line">  Event.create( :name =&gt; &quot;Event #&#123;i&#125;&quot;)</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
 <h2 id="7、分页kaminnari"><a href="#7、分页kaminnari" class="headerlink" title="7、分页kaminnari"></a>7、分页kaminnari</h2><h1 id="五、Ruby-on-rails-5-1-RESTFUL"><a href="#五、Ruby-on-rails-5-1-RESTFUL" class="headerlink" title="五、Ruby on rails 5-1 RESTFUL"></a>五、Ruby on rails 5-1 RESTFUL</h1><p>《ruby on rails实战圣经》<a href="https://ihower.tw/rails/" target="_blank" rel="noopener">https://ihower.tw/rails/</a></p>
 <p>取代外卡路由的写法，外卡路由代码臃肿，且太自由有安全隐患。</p>
 <h1 id="六、Ruby-on-rails-5-2-RESTFUL"><a href="#六、Ruby-on-rails-5-2-RESTFUL" class="headerlink" title="六、Ruby on rails 5-2 RESTFUL"></a>六、Ruby on rails 5-2 RESTFUL</h1><h1 id="七、Ruby-on-rails-5-3-RESTFUL"><a href="#七、Ruby-on-rails-5-3-RESTFUL" class="headerlink" title="七、Ruby on rails 5-3 RESTFUL"></a>七、Ruby on rails 5-3 RESTFUL</h1><p>REST的核心精神：</p>
