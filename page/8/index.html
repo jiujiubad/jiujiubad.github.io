@@ -164,8 +164,8 @@
     <div class="col-md-4 col-sm-4 col-xs-3">
     
         <div class="post-media">
-            <a href="/posts/19619b26/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"   alt="ror-system-数据库SQL">
+            <a href="/posts/7286171a/">
+                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"   alt="ror-system-网站安全">
             </a>
         </div>
     
@@ -174,7 +174,7 @@
     <div class="post-content">
         <div class="post-head home-post-head">
             <h1 class="post-title">
-                <a href="/posts/19619b26/">ror-system-数据库SQL</a>
+                <a href="/posts/7286171a/">ror-system-网站安全</a>
             </h1>
             <div class="post-meta">  &bull;
                 <time class="post-date" datetime="" title="">
@@ -183,12 +183,18 @@
             </div>
         </div>
         <p class="brief">
-            1.1、数据库
-数据库，可以保存大量数据，还提供了方便的查询(Query)机制，以及提供 CRUD(Create, Read, Update, Delete) 操作。
+            第二章
+XSS跨站脚本攻击是什么？
+是恶意用户，把代码注入网页的，安全漏洞攻击。
 
 
-关系型数据库，这种数据库包括开源的 SQLite、MySQL、PostgreSQL，以及需要付费的 Oracle、Microsoft SQL Server 等等。
-SQLite 是一...
+
+
+①、sanitize 白名单**过滤**
+只允许部分的 HTML 标籤：&lt;%= sanitize comment.content %&gt;
+
+
+②、由于 Rails 默认会脱逸 HTML 的关系，所以 Rails 对 XSS 是有了基本的防御。需用.htm...
         </p>
     </div>
     </div>
@@ -224,7 +230,7 @@ SQLite 是一...
         </div>
 
         <div class="post-permalink">
-            <a href="/posts/19619b26/" class="btn btn-default">阅读全文</a>
+            <a href="/posts/7286171a/" class="btn btn-default">阅读全文</a>
         </div>
     </footer>
   </div>
