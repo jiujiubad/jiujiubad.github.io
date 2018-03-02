@@ -193,7 +193,7 @@
         <p>我们绝大部分同学之前都不是程序员，在求职过程中难免会遇到各种问题。一个人求职太孤独，不如大家一起结伴打怪。<br>我建了个微信群，大家可以在这个群里相互交流职位信息、简历投递技巧、面试经验，面试、笔试题目。大家相互帮助，找到合适的工作</p>
 <p>如果扫码无效，可以加我的个人微信：185-5166-4870，注明求职交流群，我会拉你进群。</p>
 <p>面试官并没有提前仔细看我的简历，所以先让我做自我介绍，随便讲讲，所以我就把简历上的东西口述了一遍。</p>
-<p>1.Ruby的特点是什么？你对ruby的理解是什么？<br>注意：<br>1)问的不是rails的特点。因为我们的教材直接学的rails，所以很容易答非所问。<br>2)这个问题很多东西我也还没有搞懂，不过我个人认为只要能回答出一部分就可以。对Ruby的理解应该会随着学习的不断深入而不断变化。</p>
+<h2 id="1-Ruby的特点是什么？你对ruby的理解是什么？"><a href="#1-Ruby的特点是什么？你对ruby的理解是什么？" class="headerlink" title="1.Ruby的特点是什么？你对ruby的理解是什么？"></a>1.Ruby的特点是什么？你对ruby的理解是什么？</h2><p>注意：<br>1)问的不是rails的特点。因为我们的教材直接学的rails，所以很容易答非所问。<br>2)这个问题很多东西我也还没有搞懂，不过我个人认为只要能回答出一部分就可以。对Ruby的理解应该会随着学习的不断深入而不断变化。</p>
 <p>Ruby 的特点</p>
 <p>Ruby的特点</p>
 <p>我为什么喜欢Ruby</p>
@@ -235,7 +235,7 @@
 <p>public #唯一一个放什么就会出现什么的文件夹，sever会直接回传，不会经过rails处理<br>test<br>tmp<br>vendor #放第三方的CSS/JS库的源码<br>assets<br>javascripts<br>stylesheets</p>
 <p>.gitignore<br>Gemfile<br>Gemfile.lock<br>README.md</p>
 <p>5.说说你对active record的理解？<br>active record是MVC中的M（model），负责对象的创建和和将数据存储到数据库中。active record库的主要作用是把Ruby对象映射到数据表中，这个功能称为对象关系映射（ORM)，它结合了关系数据库（用于持久化）和面向对象编程（用于业务逻辑）的优点。<br>使用ORM，可以很容易地从数据库存储和检索对象的数据，不用写那些繁杂的数据库语句。<br>active record最重要的功能包括：<br>1）将model和data联系起来<br>2）将各个model联系起来，理清了他们的继承、层级关系<br>3）在model存入数据库前，对他们做有效性验证<br>4）用面向对象的方式对数据进行操作</p>
-<p>2.对controller的理解<br>Action Controller 是MVC中的C(控制器）。控制器是模型和视图的中间人，路由决定使用哪个控制器处理请求后，控制器负责接收、解析请求，从模型中获取数据，或把数据写入模型，再通过视图生成相应的HTML。</p>
+<p>2.对controller的理解<br>Action Controller 是MVC中的C(控制器）。控制器是模型和视图的中间人，路由决定使用哪个控制器处理请求后，控制器负责接收、解析请求，从模型中获取数据，或把数据写入模型，再通过视图生成相应的HTML。controller把htm发送给浏览器。</p>
 <p>6.执行rails s时背后发生了什么？<br>登录了一个叫做puma的网络服务器，它是和rails绑定的。你想通过浏览器访问你的rails应用时就可以使用rails s。<br>从敲下rails s命令开始，到服务器启动起来的过程：rails命令行解析，创建Rails::Server 对象，加载Rails.application,启动服务器监听用户请求。rack</p>
 <p>port -p<br>environment -e<br>IP -b<br>daemon -d</p>
 <p>rails s 启动过程分析</p>
@@ -509,7 +509,7 @@ end
         
         
     <div class="widget">
-        <h3 class="title">搜尋</h3>
+        <h3 class="title">Search</h3>
         <div id="search-form">
             <div id="result-mask" class="hide"></div>
             <div class="search-area">
@@ -551,7 +551,7 @@ end
         
         
     <div class="widget">
-      <h3 class="title">社交</h3> 
+      <h3 class="title">Social</h3> 
         <div class="content social">
             
 	            <a href="https://github.com/jiujiubad?tab=repositories" rel="external nofollow" title="Github" target="_blank">
@@ -573,25 +573,25 @@ end
         
         
     <div class="widget">
-        <h3 class="title">分類</h3>
-        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ror功能/"><i class="fa" aria-hidden="true">ror功能</i></a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror知识点/"><i class="fa" aria-hidden="true">ror知识点</i></a><span class="category-list-count">28</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror系统/"><i class="fa" aria-hidden="true">ror系统</i></a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web页面/"><i class="fa" aria-hidden="true">web页面</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/"><i class="fa" aria-hidden="true">工具</i></a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/微信小程序/"><i class="fa" aria-hidden="true">微信小程序</i></a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link current" href="/categories/心得/"><i class="fa" aria-hidden="true">心得</i></a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/投资/"><i class="fa" aria-hidden="true">投资</i></a><span class="category-list-count">1</span></li></ul>
+        <h3 class="title">Categories</h3>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ror功能/"><i class="fa" aria-hidden="true">ror功能</i></a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror知识点/"><i class="fa" aria-hidden="true">ror知识点</i></a><span class="category-list-count">28</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror系统/"><i class="fa" aria-hidden="true">ror系统</i></a><span class="category-list-count">25</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web页面/"><i class="fa" aria-hidden="true">web页面</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/"><i class="fa" aria-hidden="true">工具</i></a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/微信小程序/"><i class="fa" aria-hidden="true">微信小程序</i></a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link current" href="/categories/心得/"><i class="fa" aria-hidden="true">心得</i></a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/投资/"><i class="fa" aria-hidden="true">投资</i></a><span class="category-list-count">1</span></li></ul>
     </div>
 
 
         
         
     <div class="widget">
-      <h3 class="title">彙整</h3>
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/"><i class="fa" aria-hidden="true">February 2018</i></a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/"><i class="fa" aria-hidden="true">January 2018</i></a><span class="archive-list-count">37</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/"><i class="fa" aria-hidden="true">December 2017</i></a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/"><i class="fa" aria-hidden="true">November 2017</i></a><span class="archive-list-count">36</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/"><i class="fa" aria-hidden="true">September 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/"><i class="fa" aria-hidden="true">April 2017</i></a><span class="archive-list-count">1</span></li></ul>
+      <h3 class="title">Archives</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/"><i class="fa" aria-hidden="true">March 2018</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/"><i class="fa" aria-hidden="true">February 2018</i></a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/"><i class="fa" aria-hidden="true">January 2018</i></a><span class="archive-list-count">37</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/"><i class="fa" aria-hidden="true">December 2017</i></a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/"><i class="fa" aria-hidden="true">November 2017</i></a><span class="archive-list-count">36</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/"><i class="fa" aria-hidden="true">September 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/"><i class="fa" aria-hidden="true">April 2017</i></a><span class="archive-list-count">1</span></li></ul>
     </div>
 
 
         
         
   <div class="widget">
-    <h3 class="title">標籤雲</h3>
+    <h3 class="title">Tag Cloud</h3>
     <div class="content tag-cloud">
-        <a href="/tags/atom/" style="font-size: 13.33px;">atom</a> <a href="/tags/bug/" style="font-size: 18.33px;">bug</a> <a href="/tags/heroku/" style="font-size: 10px;">heroku</a> <a href="/tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="/tags/interview/" style="font-size: 14.17px;">interview</a> <a href="/tags/mac/" style="font-size: 11.67px;">mac</a> <a href="/tags/orid-day/" style="font-size: 10.83px;">orid-day</a> <a href="/tags/orid-month/" style="font-size: 11.67px;">orid-month</a> <a href="/tags/ror功能/" style="font-size: 13.33px;">ror功能</a> <a href="/tags/ror知识点/" style="font-size: 17.5px;">ror知识点</a> <a href="/tags/ror系统/" style="font-size: 20px;">ror系统</a> <a href="/tags/stackoverflow/" style="font-size: 10px;">stackoverflow</a> <a href="/tags/typora/" style="font-size: 10px;">typora</a> <a href="/tags/vps/" style="font-size: 16.67px;">vps</a> <a href="/tags/web页面/" style="font-size: 11.67px;">web页面</a> <a href="/tags/下载/" style="font-size: 10px;">下载</a> <a href="/tags/工具/" style="font-size: 20px;">工具</a> <a href="/tags/常用/" style="font-size: 13.33px;">常用</a> <a href="/tags/微信功能/" style="font-size: 12.5px;">微信功能</a> <a href="/tags/微信系统/" style="font-size: 15.83px;">微信系统</a> <a href="/tags/微信页面/" style="font-size: 10.83px;">微信页面</a> <a href="/tags/心得/" style="font-size: 19.17px;">心得</a> <a href="/tags/手机/" style="font-size: 10px;">手机</a> <a href="/tags/投资/" style="font-size: 10px;">投资</a> <a href="/tags/搬砖/" style="font-size: 10px;">搬砖</a> <a href="/tags/核聚编程/" style="font-size: 15px;">核聚编程</a> <a href="/tags/科学上网/" style="font-size: 13.33px;">科学上网</a> <a href="/tags/部署/" style="font-size: 12.5px;">部署</a>
+        <a href="/tags/atom/" style="font-size: 13.08px;">atom</a> <a href="/tags/bug/" style="font-size: 17.69px;">bug</a> <a href="/tags/heroku/" style="font-size: 10px;">heroku</a> <a href="/tags/hexo/" style="font-size: 11.54px;">hexo</a> <a href="/tags/interview/" style="font-size: 13.85px;">interview</a> <a href="/tags/mac/" style="font-size: 11.54px;">mac</a> <a href="/tags/orid-day/" style="font-size: 10.77px;">orid-day</a> <a href="/tags/orid-month/" style="font-size: 11.54px;">orid-month</a> <a href="/tags/ror功能/" style="font-size: 13.08px;">ror功能</a> <a href="/tags/ror知识点/" style="font-size: 16.92px;">ror知识点</a> <a href="/tags/ror系统/" style="font-size: 20px;">ror系统</a> <a href="/tags/stackoverflow/" style="font-size: 10px;">stackoverflow</a> <a href="/tags/typora/" style="font-size: 10px;">typora</a> <a href="/tags/vps/" style="font-size: 16.15px;">vps</a> <a href="/tags/web页面/" style="font-size: 11.54px;">web页面</a> <a href="/tags/下载/" style="font-size: 10px;">下载</a> <a href="/tags/工具/" style="font-size: 19.23px;">工具</a> <a href="/tags/常用/" style="font-size: 13.08px;">常用</a> <a href="/tags/微信功能/" style="font-size: 12.31px;">微信功能</a> <a href="/tags/微信系统/" style="font-size: 15.38px;">微信系统</a> <a href="/tags/微信页面/" style="font-size: 10.77px;">微信页面</a> <a href="/tags/心得/" style="font-size: 18.46px;">心得</a> <a href="/tags/手机/" style="font-size: 10px;">手机</a> <a href="/tags/投资/" style="font-size: 10px;">投资</a> <a href="/tags/搬砖/" style="font-size: 10px;">搬砖</a> <a href="/tags/核聚编程/" style="font-size: 14.62px;">核聚编程</a> <a href="/tags/科学上网/" style="font-size: 13.08px;">科学上网</a> <a href="/tags/部署/" style="font-size: 12.31px;">部署</a>
     </div>
   </div>
 
@@ -599,7 +599,7 @@ end
         
         
     <div class="widget">
-        <h3 class="title">友鏈</h3>
+        <h3 class="title">Friends</h3>
         <div class="content friends-link">
         
             <a href="http://www.shenliyang.com" class="fa" target="_blank">个人博客</a>
