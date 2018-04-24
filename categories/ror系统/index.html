@@ -24,7 +24,7 @@
     <!--Title-->
 
 
-<title>分类: ror系统 | Hexo</title>
+<title>Category: ror系统 | Hexo</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -401,6 +401,42 @@ luccake最必要：13. Rich Editor，10嵌套表单+19多图
         <div class="col-md-4 col-sm-4 col-xs-3">
         
             <div class="post-media">
+                <a href="/posts/867a72a6/">
+                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"  alt="ror-system-api最小可行代码">
+                </a>
+            </div>
+        
+        </div>
+        <div class="col-md-8 col-sm-8 col-xs-9">
+          <div class="post-content">
+            <div class="post-head home-post-head">
+                <h1 class="post-title">
+                    <a href="/posts/867a72a6/">ror-system-api最小可行代码</a>
+                </h1>
+                <div class="post-meta">  &bull;
+                    <time class="post-date" datetime="" title="">
+                        2017年12月14日
+                    </time>
+                </div>
+            </div>
+            <p class="brief">
+                
+201712
+编程+rails
+
+API最小可行代码1、index为例最小可行代码1）    config/routes
+12345namespace :api, :defaults =&gt; &#123; :format =&gt; :json &#125; do  namespace :v1 do    resources :products,...
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+ 
+    <article class="post">
+      <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-3">
+        
+            <div class="post-media">
                 <a href="/posts/70576f9e/">
                     <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"  alt="ror-system-rails guides 6-10">
                 </a>
@@ -518,42 +554,6 @@ ruby Where is the method ‘self’ defined in m...
         <div class="col-md-4 col-sm-4 col-xs-3">
         
             <div class="post-media">
-                <a href="/posts/867a72a6/">
-                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"  alt="ror-system-api最小可行代码">
-                </a>
-            </div>
-        
-        </div>
-        <div class="col-md-8 col-sm-8 col-xs-9">
-          <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title">
-                    <a href="/posts/867a72a6/">ror-system-api最小可行代码</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2017年12月14日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-201712
-编程+rails
-
-API最小可行代码1、index为例最小可行代码1）    config/routes
-12345namespace :api, :defaults =&gt; &#123; :format =&gt; :json &#125; do  namespace :v1 do    resources :products,...
-            </p>
-          </div>
-        </div>
-      </div>
-    </article>
- 
-    <article class="post">
-      <div class="row">
-        <div class="col-md-4 col-sm-4 col-xs-3">
-        
-            <div class="post-media">
                 <a href="/posts/bf9570f4/">
                     <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"  alt="ror-system-自动化测试">
                 </a>
@@ -592,8 +592,8 @@ API最小可行代码1、index为例最小可行代码1）    config/routes
         <div class="col-md-4 col-sm-4 col-xs-3">
         
             <div class="post-media">
-                <a href="/posts/19619b26/">
-                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"  alt="ror-system-数据库SQL">
+                <a href="/posts/7286171a/">
+                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"  alt="ror-system-网站安全">
                 </a>
             </div>
         
@@ -602,7 +602,7 @@ API最小可行代码1、index为例最小可行代码1）    config/routes
           <div class="post-content">
             <div class="post-head home-post-head">
                 <h1 class="post-title">
-                    <a href="/posts/19619b26/">ror-system-数据库SQL</a>
+                    <a href="/posts/7286171a/">ror-system-网站安全</a>
                 </h1>
                 <div class="post-meta">  &bull;
                     <time class="post-date" datetime="" title="">
@@ -615,11 +615,18 @@ API最小可行代码1、index为例最小可行代码1）    config/routes
 201712
 编程+rails
 
-1.1、数据库
-数据库，可以保存大量数据，还提供了方便的查询(Query)机制，以及提供 CRUD(Create, Read, Update, Delete) 操作。
+第二章
+XSS跨站脚本攻击是什么？
+是恶意用户，把代码注入网页的，安全漏洞攻击。
 
 
-关系型数据库，这种数据库包括开源的 SQLite、MySQL、PostgreSQL，以及需要付费的 Oracle、Microsoft SQL Se...
+
+
+①、sanitize 白名单**过滤**
+只允许部分的 HTML 标籤：&lt;%= sanitize comment.content %&gt;
+
+
+②、由于 Rails 默认会脱逸 HTML 的关系，所以 Rails 对 X...
             </p>
           </div>
         </div>
@@ -631,8 +638,8 @@ API最小可行代码1、index为例最小可行代码1）    config/routes
         <div class="col-md-4 col-sm-4 col-xs-3">
         
             <div class="post-media">
-                <a href="/posts/765fb13d/">
-                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"  alt="ror-system-Ajax交互式网页应用">
+                <a href="/posts/c0ce8aa/">
+                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"  alt="ror-system-Api">
                 </a>
             </div>
         
@@ -641,7 +648,7 @@ API最小可行代码1、index为例最小可行代码1）    config/routes
           <div class="post-content">
             <div class="post-head home-post-head">
                 <h1 class="post-title">
-                    <a href="/posts/765fb13d/">ror-system-Ajax交互式网页应用</a>
+                    <a href="/posts/c0ce8aa/">ror-system-Api</a>
                 </h1>
                 <div class="post-meta">  &bull;
                     <time class="post-date" datetime="" title="">
@@ -654,8 +661,10 @@ API最小可行代码1、index为例最小可行代码1）    config/routes
 201712
 编程+rails
 
-1.1、Jquery1jquery 就对javascript的一个扩展，封装，就是让javascript更好用，更简单。人家怎么说的来着，jquery就是要用更少的代码，漂亮的完成更多的功能。
-jQuery是一套最多人使用的 JavaScript 函式库，可以撰写各种网页效果，有丰富的社区和各种 Plugins 外挂...
+看第四遍，又看懂了一些东西
+1、爬虫的关键安装 rest-client 这个 gem，可以让我们用 Ruby 发送 HTTP 请求：
+透过 Nokogiri 这个库可以帮助我们解析 HTML，透过 CSS selector 从文件中比对出想要的资讯。
+123require &apos;nokogiri&apos;do...
             </p>
           </div>
         </div>
@@ -706,8 +715,8 @@ jQuery是一套最多人使用的 JavaScript 函式库，可以撰写各种网�
         <div class="col-md-4 col-sm-4 col-xs-3">
         
             <div class="post-media">
-                <a href="/posts/c0ce8aa/">
-                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"  alt="ror-system-Api">
+                <a href="/posts/765fb13d/">
+                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"  alt="ror-system-Ajax交互式网页应用">
                 </a>
             </div>
         
@@ -716,7 +725,7 @@ jQuery是一套最多人使用的 JavaScript 函式库，可以撰写各种网�
           <div class="post-content">
             <div class="post-head home-post-head">
                 <h1 class="post-title">
-                    <a href="/posts/c0ce8aa/">ror-system-Api</a>
+                    <a href="/posts/765fb13d/">ror-system-Ajax交互式网页应用</a>
                 </h1>
                 <div class="post-meta">  &bull;
                     <time class="post-date" datetime="" title="">
@@ -729,56 +738,8 @@ jQuery是一套最多人使用的 JavaScript 函式库，可以撰写各种网�
 201712
 编程+rails
 
-看第四遍，又看懂了一些东西
-1、爬虫的关键安装 rest-client 这个 gem，可以让我们用 Ruby 发送 HTTP 请求：
-透过 Nokogiri 这个库可以帮助我们解析 HTML，透过 CSS selector 从文件中比对出想要的资讯。
-123require &apos;nokogiri&apos;do...
-            </p>
-          </div>
-        </div>
-      </div>
-    </article>
- 
-    <article class="post">
-      <div class="row">
-        <div class="col-md-4 col-sm-4 col-xs-3">
-        
-            <div class="post-media">
-                <a href="/posts/7286171a/">
-                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"  alt="ror-system-网站安全">
-                </a>
-            </div>
-        
-        </div>
-        <div class="col-md-8 col-sm-8 col-xs-9">
-          <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title">
-                    <a href="/posts/7286171a/">ror-system-网站安全</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2017年12月14日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-201712
-编程+rails
-
-第二章
-XSS跨站脚本攻击是什么？
-是恶意用户，把代码注入网页的，安全漏洞攻击。
-
-
-
-
-①、sanitize 白名单**过滤**
-只允许部分的 HTML 标籤：&lt;%= sanitize comment.content %&gt;
-
-
-②、由于 Rails 默认会脱逸 HTML 的关系，所以 Rails 对 X...
+1.1、Jquery1jquery 就对javascript的一个扩展，封装，就是让javascript更好用，更简单。人家怎么说的来着，jquery就是要用更少的代码，漂亮的完成更多的功能。
+jQuery是一套最多人使用的 JavaScript 函式库，可以撰写各种网页效果，有丰富的社区和各种 Plugins 外挂...
             </p>
           </div>
         </div>
@@ -872,6 +833,45 @@ Ruby 编程语言和其他程式语言有什么不同?
         <div class="col-md-4 col-sm-4 col-xs-3">
         
             <div class="post-media">
+                <a href="/posts/19619b26/">
+                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"  alt="ror-system-数据库SQL">
+                </a>
+            </div>
+        
+        </div>
+        <div class="col-md-8 col-sm-8 col-xs-9">
+          <div class="post-content">
+            <div class="post-head home-post-head">
+                <h1 class="post-title">
+                    <a href="/posts/19619b26/">ror-system-数据库SQL</a>
+                </h1>
+                <div class="post-meta">  &bull;
+                    <time class="post-date" datetime="" title="">
+                        2017年12月14日
+                    </time>
+                </div>
+            </div>
+            <p class="brief">
+                
+201712
+编程+rails
+
+1.1、数据库
+数据库，可以保存大量数据，还提供了方便的查询(Query)机制，以及提供 CRUD(Create, Read, Update, Delete) 操作。
+
+
+关系型数据库，这种数据库包括开源的 SQLite、MySQL、PostgreSQL，以及需要付费的 Oracle、Microsoft SQL Se...
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+ 
+    <article class="post">
+      <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-3">
+        
+            <div class="post-media">
                 <a href="/posts/3ee41ba2/">
                     <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"  alt="ror-system-编程基础练习本-答案">
                 </a>
@@ -954,43 +954,6 @@ ruby中，变量用小写字母，并且用_分开
         <div class="col-md-4 col-sm-4 col-xs-3">
         
             <div class="post-media">
-                <a href="/posts/e434021/">
-                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"  alt="ror-system-rails101">
-                </a>
-            </div>
-        
-        </div>
-        <div class="col-md-8 col-sm-8 col-xs-9">
-          <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title">
-                    <a href="/posts/e434021/">ror-system-rails101</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2017年12月13日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-201802
-编程+rails
-
-2、基础建设rails new、git init，或者是git clone、cp config/database.yml.example config/database.yml、bundle install
-①、gem ‘bootstrap-sass’，css、html、flashes
-②、gem ‘devise’，...
-            </p>
-          </div>
-        </div>
-      </div>
-    </article>
- 
-    <article class="post">
-      <div class="row">
-        <div class="col-md-4 col-sm-4 col-xs-3">
-        
-            <div class="post-media">
                 <a href="/posts/f7a3e9a4/">
                     <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"  alt="ror-system-招聘网">
                 </a>
@@ -1024,6 +987,43 @@ ruby中，变量用小写字母，并且用_分开
 身为使用者，我必须要有「admin 身份注记」才能进入后台。
 
 5、基础建设与前后台jobrails new，或...
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+ 
+    <article class="post">
+      <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-3">
+        
+            <div class="post-media">
+                <a href="/posts/e434021/">
+                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws4.sinaimg.cn/large/006tNc79gy1fnfep1kp2qj30jk0dtwez.jpg"  alt="ror-system-rails101">
+                </a>
+            </div>
+        
+        </div>
+        <div class="col-md-8 col-sm-8 col-xs-9">
+          <div class="post-content">
+            <div class="post-head home-post-head">
+                <h1 class="post-title">
+                    <a href="/posts/e434021/">ror-system-rails101</a>
+                </h1>
+                <div class="post-meta">  &bull;
+                    <time class="post-date" datetime="" title="">
+                        2017年12月13日
+                    </time>
+                </div>
+            </div>
+            <p class="brief">
+                
+201802
+编程+rails
+
+2、基础建设rails new、git init，或者是git clone、cp config/database.yml.example config/database.yml、bundle install
+①、gem ‘bootstrap-sass’，css、html、flashes
+②、gem ‘devise’，...
             </p>
           </div>
         </div>
@@ -1162,7 +1162,7 @@ git commit重命名git commit –amend  进入vim编辑器修改最后一次comm
         
         
     <div class="widget">
-        <h3 class="title">搜索</h3>
+        <h3 class="title">Search</h3>
         <div id="search-form">
             <div id="result-mask" class="hide"></div>
             <div class="search-area">
@@ -1204,7 +1204,7 @@ git commit重命名git commit –amend  进入vim编辑器修改最后一次comm
         
         
     <div class="widget">
-      <h3 class="title">社交</h3> 
+      <h3 class="title">Social</h3> 
         <div class="content social">
             
 	            <a href="https://github.com/jiujiubad?tab=repositories" rel="external nofollow" title="Github" target="_blank">
@@ -1226,7 +1226,7 @@ git commit重命名git commit –amend  进入vim编辑器修改最后一次comm
         
         
     <div class="widget">
-        <h3 class="title">分类</h3>
+        <h3 class="title">Categories</h3>
         <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ror功能/"><i class="fa" aria-hidden="true">ror功能</i></a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror知识点/"><i class="fa" aria-hidden="true">ror知识点</i></a><span class="category-list-count">28</span></li><li class="category-list-item"><a class="category-list-link current" href="/categories/ror系统/"><i class="fa" aria-hidden="true">ror系统</i></a><span class="category-list-count">25</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web页面/"><i class="fa" aria-hidden="true">web页面</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/"><i class="fa" aria-hidden="true">工具</i></a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/微信小程序/"><i class="fa" aria-hidden="true">微信小程序</i></a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/心得/"><i class="fa" aria-hidden="true">心得</i></a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/投资/"><i class="fa" aria-hidden="true">投资</i></a><span class="category-list-count">1</span></li></ul>
     </div>
 
@@ -1234,7 +1234,7 @@ git commit重命名git commit –amend  进入vim编辑器修改最后一次comm
         
         
     <div class="widget">
-      <h3 class="title">归档</h3>
+      <h3 class="title">Archives</h3>
         <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/"><i class="fa" aria-hidden="true">March 2018</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/"><i class="fa" aria-hidden="true">February 2018</i></a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/"><i class="fa" aria-hidden="true">January 2018</i></a><span class="archive-list-count">37</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/"><i class="fa" aria-hidden="true">December 2017</i></a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/"><i class="fa" aria-hidden="true">November 2017</i></a><span class="archive-list-count">36</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/"><i class="fa" aria-hidden="true">September 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/"><i class="fa" aria-hidden="true">April 2017</i></a><span class="archive-list-count">1</span></li></ul>
     </div>
 
@@ -1242,7 +1242,7 @@ git commit重命名git commit –amend  进入vim编辑器修改最后一次comm
         
         
   <div class="widget">
-    <h3 class="title">标签云</h3>
+    <h3 class="title">Tag Cloud</h3>
     <div class="content tag-cloud">
         <a href="/tags/atom/" style="font-size: 13.08px;">atom</a> <a href="/tags/bug/" style="font-size: 17.69px;">bug</a> <a href="/tags/heroku/" style="font-size: 10px;">heroku</a> <a href="/tags/hexo/" style="font-size: 11.54px;">hexo</a> <a href="/tags/interview/" style="font-size: 13.85px;">interview</a> <a href="/tags/mac/" style="font-size: 11.54px;">mac</a> <a href="/tags/orid-day/" style="font-size: 10.77px;">orid-day</a> <a href="/tags/orid-month/" style="font-size: 11.54px;">orid-month</a> <a href="/tags/ror功能/" style="font-size: 13.08px;">ror功能</a> <a href="/tags/ror知识点/" style="font-size: 16.92px;">ror知识点</a> <a href="/tags/ror系统/" style="font-size: 20px;">ror系统</a> <a href="/tags/stackoverflow/" style="font-size: 10px;">stackoverflow</a> <a href="/tags/typora/" style="font-size: 10px;">typora</a> <a href="/tags/vps/" style="font-size: 16.15px;">vps</a> <a href="/tags/web页面/" style="font-size: 11.54px;">web页面</a> <a href="/tags/下载/" style="font-size: 10px;">下载</a> <a href="/tags/工具/" style="font-size: 19.23px;">工具</a> <a href="/tags/常用/" style="font-size: 13.08px;">常用</a> <a href="/tags/微信功能/" style="font-size: 12.31px;">微信功能</a> <a href="/tags/微信系统/" style="font-size: 15.38px;">微信系统</a> <a href="/tags/微信页面/" style="font-size: 10.77px;">微信页面</a> <a href="/tags/心得/" style="font-size: 18.46px;">心得</a> <a href="/tags/手机/" style="font-size: 10px;">手机</a> <a href="/tags/投资/" style="font-size: 10px;">投资</a> <a href="/tags/搬砖/" style="font-size: 10px;">搬砖</a> <a href="/tags/核聚编程/" style="font-size: 14.62px;">核聚编程</a> <a href="/tags/科学上网/" style="font-size: 13.08px;">科学上网</a> <a href="/tags/部署/" style="font-size: 12.31px;">部署</a>
     </div>
@@ -1252,7 +1252,7 @@ git commit重命名git commit –amend  进入vim编辑器修改最后一次comm
         
         
     <div class="widget">
-        <h3 class="title">友链</h3>
+        <h3 class="title">Friends</h3>
         <div class="content friends-link">
         
             <a href="http://www.shenliyang.com" class="fa" target="_blank">个人博客</a>
