@@ -205,6 +205,8 @@
 <li><p>设置密码并启动：</p>
 <p>（请自行替代指令中的<strong>中文提示</strong>）!!!</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ heroku config:set METHOD=aes-256-cfb PASSWORD=设置密码 SERVER_ADDRESS=0.0.0.0</span><br><span class="line">$ brew install node    #这一步是安装nodejs，已安装可跳过。如遇错，请看下文提示。</span><br><span class="line">$ npm install</span><br><span class="line">$ node local.js -s 第一步中生成的Herokuapp名称.herokuapp.com -l 1080 -m aes-256-cfb -k 设置的密码 -p 80</span><br></pre></td></tr></table></figure>
+<p>99的配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">heroku config:set METHOD=aes-256-cfb PASSWORD=Qq112233 SERVER_ADDRESS=0.0.0.0</span><br><span class="line">brew install node</span><br><span class="line">npm install</span><br><span class="line">node local.js -s vpn999.herokuapp.com -l 1080 -m aes-256-cfb -k Qq112233 -p 80</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>安装nodejs遇错，怎么办？直接<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">去官网下载安装包</a></p>
 </blockquote>
@@ -289,8 +291,7 @@
 <ol>
 <li><p>新建一个脚本：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ touch ~/开机自启heroku梯子脚本.sh</span><br><span class="line">$ chmod +x ~/开机自启heroku梯子脚本.sh     #此举进行引用</span><br></pre></td></tr></table></figure>
-<p>填入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~/shadowsocks-over-websocket</span><br><span class="line">node local.js -s 您的herokuapp名称.herokuapp.com -l 1080 -m aes-256-cfb -k 您的密码 -p 80</span><br></pre></td></tr></table></figure>
+<h3 id="99的配置："><a href="#99的配置：" class="headerlink" title="99的配置："></a>99的配置：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd ~/Documents/ror/active/vpn</span><br><span class="line">kill -9 $(lsof -i tcp:1080 -t)</span><br><span class="line">node local.js -s vpn999.herokuapp.com -l 1080 -m aes-256-cfb -k Qq112233 -p 80</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>设置脚本的的打开方式，选择<code>终端</code>（<code>Iterm</code>留着编程用）<a href="http://olmrxx9ks.bkt.clouddn.com/2017-10-20-051123.jpg" target="_blank" rel="noopener"><img src="http://olmrxx9ks.bkt.clouddn.com/2017-10-20-051123.jpg" alt="img"></a></p>
 <p><a href="http://olmrxx9ks.bkt.clouddn.com/2017-10-20-050825.jpg" target="_blank" rel="noopener"><img src="http://olmrxx9ks.bkt.clouddn.com/2017-10-20-050825.jpg" alt="img"></a></p>
@@ -331,10 +332,10 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/posts/5974411c/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+        <a href="/posts/8e9b1ad8/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
     
     
-        <a href="/posts/8e9b1ad8/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+        <a href="/posts/5974411c/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
     
 </div>
 
@@ -430,7 +431,7 @@
         
     <div class="widget">
         <h3 class="title">Categories</h3>
-        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ror功能/"><i class="fa" aria-hidden="true">ror功能</i></a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror知识点/"><i class="fa" aria-hidden="true">ror知识点</i></a><span class="category-list-count">28</span></li><li class="category-list-item"><a class="category-list-link current" href="/categories/ror系统/"><i class="fa" aria-hidden="true">ror系统</i></a><span class="category-list-count">25</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web页面/"><i class="fa" aria-hidden="true">web页面</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/"><i class="fa" aria-hidden="true">工具</i></a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/微信小程序/"><i class="fa" aria-hidden="true">微信小程序</i></a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/心得/"><i class="fa" aria-hidden="true">心得</i></a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/投资/"><i class="fa" aria-hidden="true">投资</i></a><span class="category-list-count">1</span></li></ul>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ror功能/"><i class="fa" aria-hidden="true">ror功能</i></a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror知识点/"><i class="fa" aria-hidden="true">ror知识点</i></a><span class="category-list-count">28</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ror系统/"><i class="fa" aria-hidden="true">ror系统</i></a><span class="category-list-count">25</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web页面/"><i class="fa" aria-hidden="true">web页面</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/"><i class="fa" aria-hidden="true">工具</i></a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/微信小程序/"><i class="fa" aria-hidden="true">微信小程序</i></a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link current" href="/categories/心得/"><i class="fa" aria-hidden="true">心得</i></a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/投资/"><i class="fa" aria-hidden="true">投资</i></a><span class="category-list-count">1</span></li></ul>
     </div>
 
 
