@@ -1,0 +1,387 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>用 VBA 将多个 Excel 文件里的数据汇总到一个 Excel 表 | Hexo</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+    <div class="hide">
+    	<script src="https://s4.cnzz.com/z_stat.php?id=1263868967&web_id=1263868967" language="JavaScript"></script>
+    </div>
+
+
+
+
+
+
+    
+</head>
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner2.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="">
+            <img src="/img/avatar.jpg" alt="logo头像">
+        </a>
+        <div class="branding1">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 记录，把握点滴  ——by 99 </h2>
+            
+    	</div>
+    </div>
+</header>
+
+      <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation itit"><a href="/"><i class="fa fa-fw "></i>主页</a>
+                            </li>
+                        
+                            <li role="presentation itit"><a href="/archives/"><i class="fa fa-fw "></i>所有</a>
+                            </li>
+                        
+                            <li role="presentation itit"><a href="/posts/d16694c4/"><i class="fa fa-fw "></i>标题</a>
+                            </li>
+                        
+                            <li role="presentation itit"><a href="/categories/ror系统/"><i class="fa fa-fw "></i>ror系统</a>
+                            </li>
+                        
+                            <li role="presentation itit"><a href="/categories/微信小程序/"><i class="fa fa-fw "></i>微信小程序</a>
+                            </li>
+                        
+                            <li role="presentation itit"><a href="/"><i class="fa fa-fw "></i>关于我</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+      <section class="content-wra aa99">
+        <!-- <div class="row">
+          
+    <div class="widget" style="padding:0 15px;">
+        <div id="search-form" > 
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?" style="width:100%;border-radius:0;">
+
+                
+                
+            </div>
+            <div id="result-wrap" class="hide" style="padding:0 20px;">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+
+        </div> -->
+        <div class="row">
+            <main class="col-md-9 main-content m-post">
+                <p id="process"></p>
+<article class="post pp99">
+    <div class="post-head">
+        <h1 id="用 VBA 将多个 Excel 文件里的数据汇总到一个 Excel 表">
+            
+	            用 VBA 将多个 Excel 文件里的数据汇总到一个 Excel 表
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span>Excel</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            null
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2019/03/18</span>
+    </span>
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>给出一个空汇总表，和若干单独的 Excel 文件，每个文件里头有一个表格里存有一个人的信息，要将这些文件里的信息全部对应地导入到汇总表里。</p>
+<p>以前写的，也不给实际例子了，直接上代码，逻辑不复杂，看看就明白。记在这里备以后查。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Sub</span> ExportMyFile()</span><br><span class="line">    <span class="keyword">Dim</span> myPath, myFileName</span><br><span class="line">    <span class="keyword">Dim</span> myCurOpenWB <span class="keyword">As</span> Workbook <span class="comment">'work工作簿</span></span><br><span class="line">    <span class="keyword">Dim</span> myCurOpenWS <span class="keyword">As</span> Worksheet <span class="comment">'work工作表</span></span><br><span class="line">    <span class="keyword">Dim</span> myTotalWS <span class="keyword">As</span> Worksheet <span class="comment">'汇总工作表</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">Dim</span> myFolderName <span class="keyword">As</span> <span class="built_in">String</span></span><br><span class="line">    myFolderName = <span class="string">"六堰"</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">Set</span> myTotalWS = ThisWorkbook.Sheets(<span class="string">"附件4"</span>)    <span class="comment">'汇总到表名为附件4的表格里</span></span><br><span class="line">    </span><br><span class="line">    myPath = ThisWorkbook.Path &amp; <span class="string">"/"</span> &amp; myFolderName &amp; <span class="string">"/*.xls"</span></span><br><span class="line">    myFileName = Dir(myPath)   <span class="comment"><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span>''</span></span><br><span class="line">    <span class="comment">'Dim iCounter As Integer</span></span><br><span class="line">    <span class="comment">'iCounter = 0</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">'遍历指定目录下的文件并操作</span></span><br><span class="line">    <span class="keyword">Do</span> <span class="comment"><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span>'</span></span><br><span class="line">        Debug.Print myFileName</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">Dim</span> searchStr <span class="keyword">As</span> <span class="built_in">String</span> <span class="comment">'通用搜索字符串</span></span><br><span class="line">        <span class="keyword">Dim</span> resStr <span class="keyword">As</span> <span class="built_in">String</span> <span class="comment">'通用结果字符串</span></span><br><span class="line">        <span class="keyword">Dim</span> iCount <span class="keyword">As</span> <span class="built_in">Integer</span> <span class="comment">'通用计数器</span></span><br><span class="line">        </span><br><span class="line">        myFileName = ThisWorkbook.Path &amp; <span class="string">"/"</span> &amp; myFolderName &amp; <span class="string">"/"</span> &amp; myFileName</span><br><span class="line">        </span><br><span class="line">        <span class="comment">'打开指定目录里的一个*.xls文件</span></span><br><span class="line">        <span class="comment">'Debug.Print myFileName</span></span><br><span class="line">        <span class="keyword">Set</span> myCurOpenWB = Workbooks.Open(myFileName)</span><br><span class="line">        <span class="keyword">Set</span> myCurOpenWS = myCurOpenWB.Sheets(<span class="string">"附件1"</span>)   <span class="comment">'打开文件的sheet附件1里是分条数据</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">'插入内容行</span></span><br><span class="line">        <span class="keyword">Dim</span> iC <span class="keyword">As</span> <span class="built_in">Integer</span></span><br><span class="line">        <span class="keyword">For</span> iC = <span class="number">0</span> <span class="keyword">To</span> <span class="number">3</span></span><br><span class="line">            <span class="comment">'插入内容行</span></span><br><span class="line">            myTotalWS.Rows(<span class="number">6</span>).Insert</span><br><span class="line">            myTotalWS.Rows(<span class="number">6</span>).RowHeight = <span class="number">14.25</span></span><br><span class="line">            myTotalWS.Range(<span class="string">"B6:Q6"</span>).NumberFormat = <span class="string">"@"</span>   <span class="comment">'将它们的数字格式设置成文本</span></span><br><span class="line">        <span class="keyword">Next</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">'##################################复制数据过程######################################</span></span><br><span class="line">        <span class="comment">'序号 =Row()-5</span></span><br><span class="line">        myTotalWS.Range(<span class="string">"A6"</span>).Formula = <span class="string">"=INT(Row()/4)"</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">'姓名   C4</span></span><br><span class="line">        myTotalWS.Range(<span class="string">"B6"</span>).Value = myCurOpenWS.Range(<span class="string">"C4"</span>).Value</span><br><span class="line"></span><br><span class="line">        <span class="comment">'性别   F4</span></span><br><span class="line">        myTotalWS.Range(<span class="string">"C6"</span>).Value = myCurOpenWS.Range(<span class="string">"F4"</span>).Value</span><br><span class="line">        </span><br><span class="line">        <span class="comment">'出生年月   C6</span></span><br><span class="line">        myTotalWS.Range(<span class="string">"D6"</span>).Value = myCurOpenWS.Range(<span class="string">"C6"</span>).Value</span><br><span class="line">        </span><br><span class="line">        <span class="comment">'身份证 D8</span></span><br><span class="line">        myTotalWS.Range(<span class="string">"E6"</span>).Value = myCurOpenWS.Range(<span class="string">"D8"</span>).Value</span><br><span class="line">        </span><br><span class="line">        <span class="comment">'进厂劳动时间   B21-B25</span></span><br><span class="line">        myTotalWS.Range(<span class="string">"F6"</span>).Value = myCurOpenWS.Range(<span class="string">"B21"</span>).Value</span><br><span class="line">        myTotalWS.Range(<span class="string">"F7"</span>).Value = myCurOpenWS.Range(<span class="string">"B22"</span>).Value</span><br><span class="line">        myTotalWS.Range(<span class="string">"F8"</span>).Value = myCurOpenWS.Range(<span class="string">"B23"</span>).Value</span><br><span class="line">        myTotalWS.Range(<span class="string">"F9"</span>).Value = myCurOpenWS.Range(<span class="string">"B24"</span>).Value</span><br><span class="line">        </span><br><span class="line">        <span class="comment">'离岗时间   B21-B25</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">'劳动年限   I26</span></span><br><span class="line">        myTotalWS.Range(<span class="string">"H6"</span>).Value = myCurOpenWS.Range(<span class="string">"I26"</span>).Value</span><br><span class="line">        </span><br><span class="line">        <span class="comment">'原用工单位 D21-D25</span></span><br><span class="line">        <span class="comment">'myTotalWS.Range("I6").Value = myFolderName</span></span><br><span class="line">        myTotalWS.Range(<span class="string">"I6"</span>).Value = myCurOpenWS.Range(<span class="string">"D21"</span>).Value</span><br><span class="line">        myTotalWS.Range(<span class="string">"I7"</span>).Value = myCurOpenWS.Range(<span class="string">"D22"</span>).Value</span><br><span class="line">        myTotalWS.Range(<span class="string">"I8"</span>).Value = myCurOpenWS.Range(<span class="string">"D23"</span>).Value</span><br><span class="line">        myTotalWS.Range(<span class="string">"I9"</span>).Value = myCurOpenWS.Range(<span class="string">"D24"</span>).Value</span><br><span class="line">        </span><br><span class="line">        <span class="comment">'用工类别   D26</span></span><br><span class="line">        myTotalWS.Range(<span class="string">"J6"</span>).Value = <span class="string">"家属工"</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">'已享受保障 B28-B30</span></span><br><span class="line">        searchStr = myCurOpenWS.Range(<span class="string">"B28"</span>).Value</span><br><span class="line">        resStr = <span class="string">""</span></span><br><span class="line">        iCount = <span class="number">0</span></span><br><span class="line">        <span class="keyword">If</span> InStr(searchStr, <span class="string">"√"</span>) &lt;&gt; <span class="number">0</span> <span class="keyword">Then</span></span><br><span class="line">            resStr = resStr &amp; <span class="string">"城市最低生活保障"</span></span><br><span class="line">            iCount = iCount + <span class="number">1</span></span><br><span class="line">        <span class="keyword">End</span> <span class="keyword">If</span></span><br><span class="line">        searchStr = myCurOpenWS.Range(<span class="string">"B29"</span>).Value</span><br><span class="line">        <span class="keyword">If</span> InStr(searchStr, <span class="string">"√"</span>) &lt;&gt; <span class="number">0</span> <span class="keyword">Then</span></span><br><span class="line">            <span class="keyword">If</span> iCount &lt;&gt; <span class="number">0</span> <span class="keyword">Then</span></span><br><span class="line">                resStr = resStr &amp; <span class="string">"、"</span></span><br><span class="line">            <span class="keyword">End</span> <span class="keyword">If</span></span><br><span class="line">            resStr = resStr &amp; <span class="string">"遗属生活困难补助"</span></span><br><span class="line">            iCount = iCount + <span class="number">1</span></span><br><span class="line">        <span class="keyword">End</span> <span class="keyword">If</span></span><br><span class="line">        searchStr = myCurOpenWS.Range(<span class="string">"B30"</span>).Value</span><br><span class="line">        <span class="keyword">If</span> InStr(searchStr, <span class="string">"√"</span>) &lt;&gt; <span class="number">0</span> <span class="keyword">Then</span></span><br><span class="line">            <span class="keyword">If</span> iCount &lt;&gt; <span class="number">0</span> <span class="keyword">Then</span></span><br><span class="line">                resStr = resStr &amp; <span class="string">"、"</span></span><br><span class="line">            <span class="keyword">End</span> <span class="keyword">If</span></span><br><span class="line">            resStr = resStr &amp; <span class="string">"供养亲属抚恤费"</span></span><br><span class="line">        <span class="keyword">End</span> <span class="keyword">If</span></span><br><span class="line">        myTotalWS.Range(<span class="string">"K6"</span>).Value = resStr</span><br><span class="line">        </span><br><span class="line">        <span class="comment">'已参加社保 B32-B34</span></span><br><span class="line">        searchStr = myCurOpenWS.Range(<span class="string">"B32"</span>).Value</span><br><span class="line">        resStr = <span class="string">""</span></span><br><span class="line">        iCount = <span class="number">0</span></span><br><span class="line">        <span class="keyword">If</span> InStr(searchStr, <span class="string">"√"</span>) &lt;&gt; <span class="number">0</span> <span class="keyword">Then</span></span><br><span class="line">            resStr = resStr &amp; <span class="string">"企业职工养老保险"</span></span><br><span class="line">            iCount = iCount + <span class="number">1</span></span><br><span class="line">        <span class="keyword">End</span> <span class="keyword">If</span></span><br><span class="line">        searchStr = myCurOpenWS.Range(<span class="string">"B33"</span>).Value</span><br><span class="line">        <span class="keyword">If</span> InStr(searchStr, <span class="string">"√"</span>) &lt;&gt; <span class="number">0</span> <span class="keyword">Then</span></span><br><span class="line">            <span class="keyword">If</span> iCount &lt;&gt; <span class="number">0</span> <span class="keyword">Then</span></span><br><span class="line">                resStr = resStr &amp; <span class="string">"、"</span></span><br><span class="line">            <span class="keyword">End</span> <span class="keyword">If</span></span><br><span class="line">            resStr = resStr &amp; <span class="string">"灵活就业人员养老保险"</span></span><br><span class="line">            iCount = iCount + <span class="number">1</span></span><br><span class="line">        <span class="keyword">End</span> <span class="keyword">If</span></span><br><span class="line">        searchStr = myCurOpenWS.Range(<span class="string">"B34"</span>).Value</span><br><span class="line">        <span class="keyword">If</span> InStr(searchStr, <span class="string">"√"</span>) &lt;&gt; <span class="number">0</span> <span class="keyword">Then</span></span><br><span class="line">            <span class="keyword">If</span> iCount &lt;&gt; <span class="number">0</span> <span class="keyword">Then</span></span><br><span class="line">                resStr = resStr &amp; <span class="string">"、"</span></span><br><span class="line">            <span class="keyword">End</span> <span class="keyword">If</span></span><br><span class="line">            resStr = resStr &amp; <span class="string">"城镇居民医疗保险"</span></span><br><span class="line">        <span class="keyword">End</span> <span class="keyword">If</span></span><br><span class="line">        myTotalWS.Range(<span class="string">"L6"</span>).Value = resStr</span><br><span class="line">        </span><br><span class="line">        <span class="comment">'配偶姓名   C10</span></span><br><span class="line">        myTotalWS.Range(<span class="string">"M6"</span>).Value = myCurOpenWS.Range(<span class="string">"C10"</span>).Value</span><br><span class="line">        </span><br><span class="line">        <span class="comment">'配偶现所在单位</span></span><br><span class="line">        myTotalWS.Range(<span class="string">"N6"</span>).Value = <span class="string">"重型车厂"</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">'配偶人员类别   C12</span></span><br><span class="line">        <span class="comment">'myTotalWS.Range("O6").Value = myCurOpenWS.Range("C12").Value</span></span><br><span class="line">        searchStr = myCurOpenWS.Range(<span class="string">"C12"</span>).Value</span><br><span class="line">        <span class="keyword">If</span> InStr(searchStr, <span class="string">"√去世"</span>) &lt;&gt; <span class="number">0</span> <span class="keyword">Then</span></span><br><span class="line">            myTotalWS.Range(<span class="string">"O6"</span>).Value = <span class="string">"去世"</span></span><br><span class="line">        <span class="keyword">ElseIf</span> InStr(searchStr, <span class="string">"√离休"</span>) &lt;&gt; <span class="number">0</span> <span class="keyword">Then</span></span><br><span class="line">            myTotalWS.Range(<span class="string">"O6"</span>).Value = <span class="string">"离休"</span></span><br><span class="line">        <span class="keyword">ElseIf</span> InStr(searchStr, <span class="string">"√退休"</span>) &lt;&gt; <span class="number">0</span> <span class="keyword">Then</span></span><br><span class="line">            myTotalWS.Range(<span class="string">"O6"</span>).Value = <span class="string">"退休"</span></span><br><span class="line">        <span class="keyword">ElseIf</span> InStr(searchStr, <span class="string">"√退养"</span>) &lt;&gt; <span class="number">0</span> <span class="keyword">Then</span></span><br><span class="line">            myTotalWS.Range(<span class="string">"O6"</span>).Value = <span class="string">"退养"</span></span><br><span class="line">        <span class="keyword">Else</span></span><br><span class="line">            myTotalWS.Range(<span class="string">"O6"</span>).Value = <span class="string">"在职"</span></span><br><span class="line">        <span class="keyword">End</span> <span class="keyword">If</span></span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">        <span class="comment">'备注</span></span><br><span class="line">        myTotalWS.Range(<span class="string">"P6"</span>).Value = myFolderName</span><br><span class="line">        </span><br><span class="line">        <span class="comment">'联系电话</span></span><br><span class="line">        myTotalWS.Range(<span class="string">"Q6"</span>).Value = myCurOpenWS.Range(<span class="string">"H18"</span>).Value</span><br><span class="line"></span><br><span class="line">        <span class="comment">'################################复制数据过程结束#############################</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">'关闭打开的文件</span></span><br><span class="line">        myCurOpenWB.Close</span><br><span class="line">                </span><br><span class="line">        myFileName = Dir   <span class="comment"><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span></span></span><br><span class="line">    <span class="comment">'    iCounter = iCounter + 1</span></span><br><span class="line">    <span class="keyword">Loop</span> <span class="keyword">Until</span> myFileName = <span class="string">""</span> <span class="comment"><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span><span class="doctag">'''</span>''</span></span><br><span class="line">    </span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">by 99</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/posts/b8bb9cb/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/posts/7df240fc/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMzE1My85NzEx">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
+
+
+            </main>
+            
+    <aside class="col-md-3 sidebar">
+        
+        
+    <div class="widget">
+        <h3 class="title">Search</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
+                    <button type="button" class="search-form-submit" id="search-local">搜索</button>
+                
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+
+        
+        
+    <div class="widget notification">
+        <h3 class="title">网站公告</h3>
+        <div>
+            <p>你好，我是99。<br/>欢迎来到我的博客。<br/>
+<br/>
+<hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
+</p>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget">
+      <h3 class="title">Social</h3> 
+        <div class="content social">
+            
+	            <a href="https://github.com/jiujiubad?tab=repositories" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="github fa fa-github"></i>
+			    </a>
+            
+	            <a href="jiujiubad@gmail.com" rel="external nofollow" title="邮箱" target="_blank">
+			    	<i class="envelope-o fa fa-envelope-o"></i>
+			    </a>
+            
+	            <a href="https://ws4.sinaimg.cn/large/006tNc79ly1fnvcxiavzgj30by0bymxg.jpg" rel="external nofollow" title="微信" target="_blank">
+			    	<i class="weixin fa fa-weixin"></i>
+			    </a>
+            
+        </div>
+    </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">Categories</h3>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link current" href="/categories/Algorithm/"><i class="fa" aria-hidden="true">Algorithm</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Excel/"><i class="fa" aria-hidden="true">Excel</i></a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/IDE-工具/"><i class="fa" aria-hidden="true">IDE 工具</i></a><span class="category-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+    <div class="widget">
+      <h3 class="title">Archives</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/"><i class="fa" aria-hidden="true">March 2019</i></a><span class="archive-list-count">4</span></li></ul>
+    </div>
+
+
+        
+        
+
+        
+        
+    <div class="widget">
+        <h3 class="title">Friends</h3>
+        <div class="content friends-link">
+        
+            <a href="http://www.shenliyang.com" class="fa" target="_blank">个人博客</a>
+        
+        </div>
+    </div>
+
+
+        
+    </aside>
+
+
+        </div>
+      </section>
+    </div>
+  </div>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2018
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>

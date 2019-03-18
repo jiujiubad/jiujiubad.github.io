@@ -1,0 +1,431 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>Rubymine 入门 第一章 | Hexo</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+    <div class="hide">
+    	<script src="https://s4.cnzz.com/z_stat.php?id=1263868967&web_id=1263868967" language="JavaScript"></script>
+    </div>
+
+
+
+
+
+
+    
+</head>
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner2.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="">
+            <img src="/img/avatar.jpg" alt="logo头像">
+        </a>
+        <div class="branding1">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 记录，把握点滴  ——by 99 </h2>
+            
+    	</div>
+    </div>
+</header>
+
+      <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation itit"><a href="/"><i class="fa fa-fw "></i>主页</a>
+                            </li>
+                        
+                            <li role="presentation itit"><a href="/archives/"><i class="fa fa-fw "></i>所有</a>
+                            </li>
+                        
+                            <li role="presentation itit"><a href="/posts/d16694c4/"><i class="fa fa-fw "></i>标题</a>
+                            </li>
+                        
+                            <li role="presentation itit"><a href="/categories/ror系统/"><i class="fa fa-fw "></i>ror系统</a>
+                            </li>
+                        
+                            <li role="presentation itit"><a href="/categories/微信小程序/"><i class="fa fa-fw "></i>微信小程序</a>
+                            </li>
+                        
+                            <li role="presentation itit"><a href="/"><i class="fa fa-fw "></i>关于我</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+      <section class="content-wra aa99">
+        <!-- <div class="row">
+          
+    <div class="widget" style="padding:0 15px;">
+        <div id="search-form" > 
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?" style="width:100%;border-radius:0;">
+
+                
+                
+            </div>
+            <div id="result-wrap" class="hide" style="padding:0 20px;">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+
+        </div> -->
+        <div class="row">
+            <main class="col-md-9 main-content m-post">
+                <p id="process"></p>
+<article class="post pp99">
+    <div class="post-head">
+        <h1 id="Rubymine 入门 第一章">
+            
+	            Rubymine 入门 第一章
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span>IDE 工具</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            null
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2019/03/16</span>
+    </span>
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <p>Rubymine 是一个 IDE 工具，主要针对 Ruby。</p>
+<h2 id="1-1-基本设置"><a href="#1-1-基本设置" class="headerlink" title="1.1 基本设置"></a>1.1 基本设置</h2><h3 id="1-1-1-导出自己的-Rubymine-配置"><a href="#1-1-1-导出自己的-Rubymine-配置" class="headerlink" title="1.1.1 导出自己的 Rubymine 配置"></a>1.1.1 导出自己的 Rubymine 配置</h3><p>「文件 → 导出设置 → 类型全选、选择文件夹 → 确定」</p>
+<h3 id="1-1-2-快捷键方案"><a href="#1-1-2-快捷键方案" class="headerlink" title="1.1.2 快捷键方案"></a>1.1.2 快捷键方案</h3><p>「设置 → 快捷键：Mac OS X 10.5+」</p>
+<h3 id="1-1-3-字体-侧边栏"><a href="#1-1-3-字体-侧边栏" class="headerlink" title="1.1.3 字体 - 侧边栏"></a>1.1.3 字体 - 侧边栏</h3><p>「设置 → 外观 &amp; 行为 → 外观 → 勾选『使用自定义字体』、字体选择『Roboto Mono for Powerline』、大小9 → 确定」，<a href="https://jingyan.baidu.com/article/d3b74d64e005201f77e609ff.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/d3b74d64e005201f77e609ff.html</a></p>
+<h3 id="1-1-4-字体-Terminal-终端"><a href="#1-1-4-字体-Terminal-终端" class="headerlink" title="1.1.4 字体 - Terminal 终端"></a>1.1.4 字体 - Terminal 终端</h3><p>「设置 → 编辑器 → 切换配色方案 → Console Font → 勾选『使用控制台字体代替』、字体选择『Roboto Mono for Powerline』、大小9 → 确定 → 重启才能生效」</p>
+<h3 id="1-1-5-gitignore-的文件灰色显示"><a href="#1-1-5-gitignore-的文件灰色显示" class="headerlink" title="1.1.5 .gitignore 的文件灰色显示"></a>1.1.5 <code>.gitignore</code> 的文件灰色显示</h3><p>「设置 → Plugins → 搜索『ignore』→ 安装 → 重启 Rubymine 」，然后「文件 → 关闭项目 → 重新打开项目生效」</p>
+<h3 id="1-1-6-显示内存使用多少"><a href="#1-1-6-显示内存使用多少" class="headerlink" title="1.1.6 显示内存使用多少"></a>1.1.6 显示内存使用多少</h3><p>「设置 → 外观 &amp; 行为 → 外观 → 窗口选项勾选『显示内存指示』，会在窗口右下角出现」</p>
+<blockquote>
+<p>如何修改 Rubymine 内存分配：<a href="https://blog.csdn.net/qq_27093465/article/details/81947933" target="_blank" rel="noopener">https://blog.csdn.net/qq_27093465/article/details/81947933</a></p>
+</blockquote>
+<h3 id="1-1-7-刷新当前窗口（暂不用）"><a href="#1-1-7-刷新当前窗口（暂不用）" class="headerlink" title="1.1.7 刷新当前窗口（暂不用）"></a>1.1.7 刷新当前窗口（暂不用）</h3><p><code>command + fn +  F5</code>，用于新建文件后，如果 Rubymine 没有新增文件，则手动刷新</p>
+<blockquote>
+<p>注意：实测发现有时不灵，还不如新建文件后点击左侧目录栏，即可激活显示新增的文件</p>
+</blockquote>
+<h3 id="1-1-8-自动换行"><a href="#1-1-8-自动换行" class="headerlink" title="1.1.8 自动换行"></a>1.1.8 自动换行</h3><p>「设置 → 编辑器 → 常规 → 自动换行 → 勾选『在编辑窗口使用自动换行』『仅显示当前行的换行指示器』，反选『自动换行时显示原始的缩进』」</p>
+<h3 id="1-1-9-修改内存大小"><a href="#1-1-9-修改内存大小" class="headerlink" title="1.1.9 修改内存大小"></a>1.1.9 修改内存大小</h3><p>修改内存大小-使得idea运行更流畅：<a href="https://blog.csdn.net/qq_27093465/article/details/81947933" target="_blank" rel="noopener">https://blog.csdn.net/qq_27093465/article/details/81947933</a><br>「打开Finder → 应用程序 → 右键『Rubymine.app』 → 显示包内容 → 修改内存 Contents/bin/rubymine.vmoptions」<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-Xms1024m</span><br><span class="line">-Xmx2048m</span><br><span class="line">-XX:ReservedCodeCacheSize=1024m</span><br><span class="line">-XX:+UseCompressedOops</span><br></pre></td></tr></table></figure></p>
+<h3 id="1-1-10-Markdown-Css-自定义"><a href="#1-1-10-Markdown-Css-自定义" class="headerlink" title="1.1.10 Markdown Css 自定义"></a>1.1.10 Markdown Css 自定义</h3><p>「设置 → 语言&amp;框架 → Markdown → Custom Css 勾选『Add Css Rules』」<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">13px</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">1.6</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h1</span> &#123;</span><br><span class="line">    <span class="attribute">padding-bottom</span>: .<span class="number">3em</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">2.1em</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">0em</span>;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">0.85em</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">1.2</span>;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#eee</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h2</span> &#123;</span><br><span class="line">    <span class="attribute">padding-bottom</span>: .<span class="number">3em</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">1.7em</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">1.275em</span>;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">0.85em</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">1.3</span>;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#eee</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h3</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">1.3em</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">1.275em</span>;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">0.85em</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">1.43</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="1-1-11-代码样式"><a href="#1-1-11-代码样式" class="headerlink" title="1.1.11 代码样式"></a>1.1.11 代码样式</h3><p>「设置 → 编辑器 → Code Style → 分别修改 Ruby 和 其他文件类型（Markdown）」，在设置界面的右侧有效果预览图，根据预览选择自己的喜好</p>
+<h2 id="1-2-快捷键自定义"><a href="#1-2-快捷键自定义" class="headerlink" title="1.2 快捷键自定义"></a>1.2 快捷键自定义</h2><h3 id="1-2-1-编辑器操作"><a href="#1-2-1-编辑器操作" class="headerlink" title="1.2.1 编辑器操作"></a>1.2.1 编辑器操作</h3><p>移动插入符号到行首：<code>ctrl + a</code><br>移动插入符号到行首：<code>ctrl + e</code><br>移动插入符号到行首并选择（删除光标左右侧的代码）：<code>ctrl + option + a</code><br>移动插入符号到行尾并选择（删除光标左右侧的代码）：<code>ctrl + option + e</code><br>移动插入符号到文本的开始处：<code>command + ↑</code><br>移动插入符号到文本的末尾处：<code>command + ↓</code><br>在上方克隆插入符号：<code>option + command + ↑</code><br>在下方克隆插入符号：<code>option + command + ↓</code><br>开始新行：<code>command + 回车</code><br>在当前位置之前开始新行：<code>shift + command + 回车</code>  </p>
+<h3 id="1-2-2-主菜单"><a href="#1-2-2-主菜单" class="headerlink" title="1.2.2 主菜单"></a>1.2.2 主菜单</h3><p>导航 - 后退（是光标位置）：<code>command + ←</code>，返回到上一个操作的位置<br>导航 - 向前（是光标位置）：<code>command + →</code>，返回到下一个操作的位置<br>窗口 - 编辑器选项卡 - 选择上一个选项卡（Tab 标签左右切换）：<code>option + command + ←</code><br>窗口 - 编辑器选项卡 - 选择下一个选项卡（Tab 标签左右切换）：<code>option + command + →</code><br>编辑 - 查找 - 将下一个匹配项添加到选择：<code>command + d</code><br>编辑 - 查找 - 选择所有匹配项：<code>command + fn + F2</code><br>视图 - 最近的文件：<code>command + p</code><br>VCS - Git - 与同一个版本库比较：<code>ctrl + option + command + b</code>  </p>
+<h3 id="1-2-3-工具窗口"><a href="#1-2-3-工具窗口" class="headerlink" title="1.2.3 工具窗口"></a>1.2.3 工具窗口</h3><p>终端 - Terminal：ctrl + `</p>
+<h2 id="1-3-快捷键补充"><a href="#1-3-快捷键补充" class="headerlink" title="1.3 快捷键补充"></a>1.3 快捷键补充</h2><h3 id="1-3-1-Rubymine-自带"><a href="#1-3-1-Rubymine-自带" class="headerlink" title="1.3.1 Rubymine 自带"></a>1.3.1 Rubymine 自带</h3><ul>
+<li>代码补全 Autocomplete（补全任何类、方法、变量）</li>
+<li>代码语法检测 Linter：自带</li>
+<li>Emmet 展开 html 代码（div.notice&gt;ul&gt;li*5）：自带</li>
+</ul>
+<h3 id="1-3-2-主菜单"><a href="#1-3-2-主菜单" class="headerlink" title="1.3.2 主菜单"></a>1.3.2 主菜单</h3><p><strong>打开任何文件（最好用！搜索时巧用*代表任意文字）：双击 <code>shift</code></strong></p>
+<blockquote>
+<p>比如，搜索 <code>app/views/orders/new.html.erb</code> 页面，只需搜索 <code>vi*or*new</code></p>
+</blockquote>
+<p>（搜索后选中所有搜索到的词）：<code>command + f</code> 然后 <code>option + 回车</code><br>替换 - 当前文件：<code>command + r</code><br>替换 - 全局：<code>command + shift + r</code><br>重命名：<code>command + fn + F6</code></p>
+<h3 id="1-3-3-编辑器操作"><a href="#1-3-3-编辑器操作" class="headerlink" title="1.3.3 编辑器操作"></a>1.3.3 编辑器操作</h3><p>缩进、反缩进：<code>tab</code>，<code>shfit + tab</code>，因为 Rubymine 有自动格式化所以不太需要。<br>插入代码片段 snippet（html、js等）：<code>command + J</code><br>格式化 Beautify：<code>command + option + L</code>，部分缩进不规范（特别是 html 页）但总体 ok<br>注释：<code>command + /</code>，或 <code>shift + command + /</code><br>整行代码 - 复制：<code>command + c</code><br>整行代码 - 删除：<code>command + x</code><br>整行代码 - 上下移动（有时失灵，光标最好放在行首尾再操作）：<code>shift + command + 上/下</code><br>饥饿退格：<code>shift + command + 退格delete</code><br>展开或收缩 - 代码 ：<code>command + +</code> 和 <code>command + -</code><br>展开或收缩 - 全部代码：<code>shift + command + +</code> 和 <code>shift + command + -</code></p>
+<h2 id="1-4-Ruby-China-解答常见问题"><a href="#1-4-Ruby-China-解答常见问题" class="headerlink" title="1.4 Ruby China 解答常见问题"></a>1.4 Ruby China 解答常见问题</h2><blockquote>
+<p>Rubymine 优点总结：跳转（读源码好工具），Debug，代码补全，能连接数据库，</p>
+</blockquote>
+<h3 id="1-4-1-Vim-比-Rubymine-高端？"><a href="#1-4-1-Vim-比-Rubymine-高端？" class="headerlink" title="1.4.1 Vim 比 Rubymine 高端？"></a>1.4.1 Vim 比 Rubymine 高端？</h3><p>flowerwrong-2015：完全是个人喜好，用了 N 年 <code>Vim</code> 又怎样，我认识一哥们 N 年后换了 <code>Sublime</code>。我系统装了 <code>Atom</code>、<code>Vim</code>、  <code>Sublime</code>、 <code>Rubymine</code>，每次第一个出现在脑海的名字就打开。</p>
+<h3 id="1-4-2-怎么学习-Rails-源码？"><a href="#1-4-2-怎么学习-Rails-源码？" class="headerlink" title="1.4.2 怎么学习 Rails 源码？"></a>1.4.2 怎么学习 Rails 源码？</h3><p>jasl-2018：用 <code>RubyMine</code> 干活，心情好的时候按住 <code>command 点一下方法名</code>，就跳进 <code>Rails 源码</code>了，顺着翻就行了</p>
+<h3 id="1-4-3-Sublime、Vim、Rubymine（IDE），到底用哪个？"><a href="#1-4-3-Sublime、Vim、Rubymine（IDE），到底用哪个？" class="headerlink" title="1.4.3 Sublime、Vim、Rubymine（IDE），到底用哪个？"></a>1.4.3 Sublime、Vim、Rubymine（IDE），到底用哪个？</h3><p>jasl-2018：<code>IDE</code> 的智能感知的实现原理和编辑器不一样，相比来说 <code>IDE</code> 的准确率更高一些。不用纠结，用惯了干活都一样，到时候见招拆招就行了</p>
+<ul>
+<li>Rei-2011：喜欢用什么就用什么，只要代码规范简洁易读。用什么都好，<strong>一定要把自己的工具用到滚瓜烂熟</strong>。</li>
+<li>xautjzd-2013：不喜欢折腾就 <code>Rubymine</code>，喜欢折腾建议 <code>Vim</code></li>
+<li>railsboy-2017：之前一直用 <code>vim</code>，新公司用的 <code>RubyMine</code>，用挺方便的，就不用 <code>vim</code>，咋舒服咋来</li>
+<li>guyanbiao-2017：<code>Rubymine</code> 的 <code>vim</code> 模式是最好的</li>
+</ul>
+<h3 id="1-4-4-Rubymine-的代码格式化对齐问题？"><a href="#1-4-4-Rubymine-的代码格式化对齐问题？" class="headerlink" title="1.4.4 Rubymine 的代码格式化对齐问题？"></a>1.4.4 Rubymine 的代码格式化对齐问题？</h3><p>jasl-2017：<a href="https://ruby-china.org/topics/34139，要去配的" target="_blank" rel="noopener">https://ruby-china.org/topics/34139，要去配的</a>… 我记得 <code>Rubymine</code> 默认 <code>&lt;%</code> 不算缩进</p>
+<h3 id="1-4-5-2018-RubyMine-加强了对-I18n-的支持"><a href="#1-4-5-2018-RubyMine-加强了对-I18n-的支持" class="headerlink" title="1.4.5 2018 RubyMine 加强了对 I18n 的支持"></a>1.4.5 2018 RubyMine 加强了对 I18n 的支持</h3><p><a href="https://ruby-china.org/topics/37573" target="_blank" rel="noopener">https://ruby-china.org/topics/37573</a></p>
+<h3 id="1-4-6-为什么-before-action-没有智能提示？"><a href="#1-4-6-为什么-before-action-没有智能提示？" class="headerlink" title="1.4.6 为什么 before_action 没有智能提示？"></a>1.4.6 为什么 <code>before_action</code> 没有智能提示？</h3><p>zhufenggood-2017：<a href="https://github.com/rails/rails/blob/master/actionpack/lib/abstract_controller/callbacks.rb#L186&gt;" target="_blank" rel="noopener">https://github.com/rails/rails/blob/master/actionpack/lib/abstract_controller/callbacks.rb#L186&gt;</a>  这几个 <code>callback</code> 方法是元编程出来的，<code>RubyMine</code> 对 <code>dynamic</code> 出来的代码智能提示一般。jasl-2017：试试刚发布的2017.3</p>
+<h3 id="1-4-7-Rubymine-的块注释会标黄线报警怎么解决？"><a href="#1-4-7-Rubymine-的块注释会标黄线报警怎么解决？" class="headerlink" title="1.4.7 Rubymine 的块注释会标黄线报警怎么解决？"></a>1.4.7 Rubymine 的块注释会标黄线报警怎么解决？</h3><p>jasl-2017：可以关 <code>inspection</code> 的，另外如果你项目配置了  <code>rubocop</code>，<code>RubyMine</code> 会自动使用 <code>rubocop</code> 的配置，其实相比编辑器要方便的多的。mingyuan0715-2017：头下角头像 - <code>Configure inspections</code> - 搜索  <code>reference</code> - 反选 <code>Ruby</code> 下的 <code>Unresolved Ruby reference</code> </p>
+<h3 id="1-4-8-我-rubocop-总是找不到路径，必须在项目目录下-mine-才好使，atom-也是这样，求大哥给支个招，我用的-rvm？"><a href="#1-4-8-我-rubocop-总是找不到路径，必须在项目目录下-mine-才好使，atom-也是这样，求大哥给支个招，我用的-rvm？" class="headerlink" title="1.4.8 我 rubocop 总是找不到路径，必须在项目目录下 mine . 才好使，atom 也是这样，求大哥给支个招，我用的 rvm？"></a>1.4.8 我 rubocop 总是找不到路径，必须在项目目录下 <code>mine .</code> 才好使，atom 也是这样，求大哥给支个招，我用的 rvm？</h3><p>jasl-2017：在rubymine的设置里 有个选择ruby sdk的 选和你rvm的一致就可以了</p>
+
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">by 99</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/posts/f3306ad0/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMzE1My85NzEx">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
+
+
+            </main>
+            
+    <aside class="col-md-3 sidebar">
+        
+        
+    <div class="widget">
+        <h3 class="title">Search</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
+                    <button type="button" class="search-form-submit" id="search-local">搜索</button>
+                
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+
+        
+        
+    <div class="widget notification">
+        <h3 class="title">网站公告</h3>
+        <div>
+            <p>你好，我是99。<br/>欢迎来到我的博客。<br/>
+<br/>
+<hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
+</p>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget">
+      <h3 class="title">Social</h3> 
+        <div class="content social">
+            
+	            <a href="https://github.com/jiujiubad?tab=repositories" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="github fa fa-github"></i>
+			    </a>
+            
+	            <a href="jiujiubad@gmail.com" rel="external nofollow" title="邮箱" target="_blank">
+			    	<i class="envelope-o fa fa-envelope-o"></i>
+			    </a>
+            
+	            <a href="https://ws4.sinaimg.cn/large/006tNc79ly1fnvcxiavzgj30by0bymxg.jpg" rel="external nofollow" title="微信" target="_blank">
+			    	<i class="weixin fa fa-weixin"></i>
+			    </a>
+            
+        </div>
+    </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">Categories</h3>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link current" href="/categories/Algorithm/"><i class="fa" aria-hidden="true">Algorithm</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Excel/"><i class="fa" aria-hidden="true">Excel</i></a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/IDE-工具/"><i class="fa" aria-hidden="true">IDE 工具</i></a><span class="category-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+    <div class="widget">
+      <h3 class="title">Archives</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/"><i class="fa" aria-hidden="true">March 2019</i></a><span class="archive-list-count">4</span></li></ul>
+    </div>
+
+
+        
+        
+
+        
+        
+    <div class="widget">
+        <h3 class="title">Friends</h3>
+        <div class="content friends-link">
+        
+            <a href="http://www.shenliyang.com" class="fa" target="_blank">个人博客</a>
+        
+        </div>
+    </div>
+
+
+        
+    </aside>
+
+
+        </div>
+      </section>
+    </div>
+  </div>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2018
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>
